@@ -1,0 +1,1 @@
+{"params": {"s": 3, "t": 3, "n": 6}, "naive": 2, "search": 2, "bound": null, "sense": "min", "search_answer": "001111101011000", "budget_s": 10.0}

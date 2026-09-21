@@ -1,0 +1,19 @@
+\appendixpage
+\section{Evaluation settings and example prompt}
+\label{app:runner}
+\subsection{Inference settings}
+The twelve tool-free configurations follow Section~\ref{sec:protocol}. For each instance, we retain the first completed response or generation-budget stop. Completed responses are verified; invalid answers and generation-budget exhaustion score zero and are not retried. Network and service failures are unscored, and the evaluation may resume or be resubmitted after recovery. Bounded transport reconnection is permitted, so an evaluation can involve more than one generation request. Usage records include all reported tokens, with unreported usage on interrupted requests marked as unknown. Code-family, thirteen-dimensional kissing and Claude Fable 5.1 high evaluations use a two-hour generation deadline, followed by a separate 60-second verification limit. Appendix~\ref{app:tools} describes the tool-assisted protocol.
+
+All configurations receive identical mathematical prompts and format instructions. API models receive a mathematical-construction system message; CLI models retain their native system instructions. No follow-up prompts are used to extend completed answers.
+\paragraph{Claude Fable 5.1.} Claude Code 2.1.269 at medium and high effort, using independent sessions and the model identifier \texttt{claude-fable-5-1}. Medium-effort responses were collected on 12--17 September 2026 and high-effort responses on 20 September 2026.
+\paragraph{GPT-6 Astra and GPT-5.6 Luna.} Codex CLI 0.154.0 at the reasoning-effort levels indicated in the results.
+\paragraph{DeepSeek V4.1 Flash.} Chat-completions API with reasoning enabled at low or high effort.
+\paragraph{Qwen models.} vLLM 0.29.0 at high reasoning effort. The 27B checkpoints use FP8 weights; serving settings are supplied with the release.
+\paragraph{Reference searches.} Each search uses a fixed random seed and one process, with iterated greedy construction or local optimisation as appropriate to the family. We report results at 10 and 600 seconds.
+\subsection{Example prompt}
+\label{app:prompt}
+Prompts specify the problem, parameters and supported answer format. The following prompt was used for the ten-dimensional cap-set instance.
+\begin{taskbox}[title=Model prompt]
+\input{tables/example_prompt}
+\end{taskbox}
+In the tool-free track, each prompt also states that tools are unavailable and requests a single JSON answer.

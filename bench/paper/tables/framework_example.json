@@ -1,0 +1,104 @@
+{
+  "illustrative": true,
+  "family": "apfree_q",
+  "params": {
+    "q": 5,
+    "n": 2
+  },
+  "points": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "reference_points": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "objective": 5,
+  "reference": 6,
+  "reference_type": "small-instance optimum",
+  "ratio": 0.8333333333333334,
+  "verification": {
+    "candidate": {
+      "primary": [
+        true,
+        5,
+        ""
+      ],
+      "independent": [
+        true,
+        5
+      ]
+    },
+    "reference": {
+      "primary": [
+        true,
+        6,
+        ""
+      ],
+      "independent": [
+        true,
+        6
+      ]
+    },
+    "optimal_reference": {
+      "optimal_size": 6,
+      "excluded_size": 7,
+      "search_nodes": 23,
+      "method": "Exhaustive extension search after affine-frame normalisation.",
+      "normalised_affine_frame": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  }
+}

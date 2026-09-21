@@ -1,0 +1,24 @@
+\newcommand{\benchyes}{\textcolor{paperink}{$\checkmark$}}
+\newcommand{\benchno}{\textcolor{papermuted}{$\times$}}
+\begingroup
+\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{1.8pt}
+\begin{tabularx}{\linewidth}{@{}Yccccccc@{}}
+\toprule
+Dataset & Problems & Difficulty & Unsolved & Non-proof & Open eval. & Auto-check & Uncapped score \\
+\midrule
+FrontierMath & 338 & Univ.--Res. & \benchno & \benchyes & \benchno & \benchyes & \benchno \\
+FrontierMath: Open Problems & 50 & Research & \benchyes & \benchyes & \benchno & \benchyes & \benchno \\
+IMProofBench & 77 & Research & \benchyes & \benchno & \benchno & \benchno$^{*}$ & \benchno \\
+First Proof & 10 & Research & \benchno & \benchno & \benchno & \benchno & \benchno \\
+Erd\H{o}s Problems & 1,217 & Research & \benchyes & \benchno & \benchno & \benchno & \benchno \\
+IMO-AnswerBench & 400 & Olympiad & \benchno & \benchyes & \benchyes & \benchyes & \benchno \\
+Opt. Constants & 115 & Research & \benchyes & \benchyes & \benchno & \benchno & \benchno \\
+MathConstruct & 127 & Olympiad & \benchno & \benchyes & \benchyes & \benchyes & \benchno \\
+MathConstraint & 329 & Tunable & \benchno & \benchyes & \benchyes & \benchyes & \benchno \\
+HorizonMath & 113 & Research & \benchyes & \benchyes & \benchyes & \benchyes & \benchno \\
+\midrule
+\rowcolor{paperresulttitle}\textbf{Endless Exam} & \textbf{69} & Research & \benchyes & \benchyes & \benchyes & \benchyes & \benchyes \\
+\bottomrule
+\end{tabularx}
+\endgroup

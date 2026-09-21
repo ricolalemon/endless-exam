@@ -1,0 +1,57 @@
+{
+  "kind": "literature_reconstruction",
+  "model_calls": 0,
+  "scope": "Selected published constructions at fixed k=8; not an exhaustive record chronology.",
+  "verification": "Construction existence follows from cited papers; this script checks scoring arithmetic, not the original colorings.",
+  "changes_to_frozen_frontiers": false,
+  "rows": [
+    {
+      "label": "Recursive extension",
+      "citation": "fredricksen2000schur",
+      "formula": "3\\cdot1680+1",
+      "value": 5041,
+      "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v7i1r32",
+      "evidence": "p. 1 Eq. (1), S(k)>=3S(k-1)+1; p. 2, S(7)>=1680. The k=8 value is derived here.",
+      "family": "schur",
+      "parameters": {
+        "k": 8
+      },
+      "historical_reference": 5041,
+      "ratio": 1.0,
+      "exact_ratio": "1/1",
+      "breakthrough": 0
+    },
+    {
+      "label": "Rowley template",
+      "citation": "rowley2021templates",
+      "formula": "33\\cdot160+6",
+      "value": 5286,
+      "source": "https://arxiv.org/abs/2107.03560",
+      "evidence": "p. 4 gives S(k+3)>=33S(k)+6; use the published S(5)>=160. Year is the cited exposition.",
+      "family": "schur",
+      "parameters": {
+        "k": 8
+      },
+      "historical_reference": 5041,
+      "ratio": 1.0486014679627058,
+      "exact_ratio": "5286/5041",
+      "breakthrough": 1
+    },
+    {
+      "label": "Shifted template",
+      "citation": "bengone2026schur",
+      "formula": "10\\cdot536+2",
+      "value": 5362,
+      "source": "https://arxiv.org/abs/2607.15034",
+      "evidence": "Section IV explicitly derives S(8)>=10*536+2=5362.",
+      "family": "schur",
+      "parameters": {
+        "k": 8
+      },
+      "historical_reference": 5041,
+      "ratio": 1.0636778416980759,
+      "exact_ratio": "5362/5041",
+      "breakthrough": 1
+    }
+  ]
+}

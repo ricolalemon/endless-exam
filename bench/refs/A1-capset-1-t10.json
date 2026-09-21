@@ -1,0 +1,1 @@
+{"params": {"d": 3}, "naive": 8, "search": 9, "bound": null, "sense": "max", "search_answer": ["020", "201", "111", "121", "221", "002", "102", "012", "212"], "budget_s": 10.0}

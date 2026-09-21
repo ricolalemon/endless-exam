@@ -1,0 +1,13 @@
+\begin{center}\begin{minipage}{\linewidth}\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+test construction & words & primary (s) & independent (s) \\
+\midrule
+rank 12, $m=1$ & 531,441 & 5.61 & 8.66 \\
+rank 12, $m=3$ & 531,441 & 21.63 & 37.70 \\
+concatenation, $n=1024$ & $5.154\times10^{47}$ & $<0.01$ & $<0.01$ \\
+\bottomrule
+\end{tabular}
+\captionof{table}{Measured verification times for reference constructions. Both implementations check the certificate and exact code size. The length-1024 example illustrates verification at a scale beyond the evaluated model answers.}
+\label{tab:trifference_verifier}
+\end{minipage}\end{center}

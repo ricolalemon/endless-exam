@@ -1,0 +1,42 @@
+name: Benchmark checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install -r requirements-paper.txt
+      - name: Public entry point and frozen cohort
+        run: |
+          python bench/test_exam.py
+          python bench/test_publication_data.py
+          python bench/test_result_selection.py
+          python bench/paper/test_analysis.py
+          python bench/paper/test_appendix_redesign.py
+      - name: Mathematical verifiers
+        run: |
+          python bench/test_verifiers.py
+          python bench/test_quadratic_kissing.py
+          python bench/test_candidate_families.py
+          python bench/test_trifference_certificates.py
+          python bench/test_construction_references.py
+          python bench/verify_reference_witnesses.py
+      - name: Offline quick start
+        run: |
+          python scripts/index_results.py
+          python bench/exam.py export --output /tmp/endless-exam-prompts.jsonl
+          python bench/exam.py verify --family capset --params '{"d":2}' --answer examples/capset.json

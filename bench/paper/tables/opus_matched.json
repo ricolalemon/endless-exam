@@ -1,0 +1,707 @@
+{
+  "calls": 45,
+  "systems": {
+    "opus": {
+      "label": "Claude Opus 5 medium",
+      "model": "claude-opus-5",
+      "source_core_config": "headless-medium@128k",
+      "source_code_config": "headless-medium@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.4790483134165563,
+        "ci": [
+          0.3405497096754474,
+          0.6327221249084964
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.5465996975568057,
+        "ci": [
+          0.3888108117622936,
+          0.7131419329197691
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 52.40825695100559,
+        "ci": [
+          40.86581326409865,
+          64.13069077671928
+        ]
+      },
+      "calls": 45,
+      "accepted": 39,
+      "valid": 0.8666666666666667,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.004430250413146251,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.007088400661034001
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.004430250413146251,
+      "headroom_instances": 40
+    },
+    "qwen4": {
+      "label": "Qwen3.5-4B high",
+      "model": "Qwen/Qwen3.5-4B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.08465674483587933,
+        "ci": [
+          0.020859931029422556,
+          0.16718679658184754
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.07302310509462745,
+        "ci": [
+          0.0247809167526206,
+          0.14110657598885162
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 7.6900985008378075,
+        "ci": [
+          3.5322840291210316,
+          12.508142052820464
+        ]
+      },
+      "calls": 45,
+      "accepted": 17,
+      "valid": 0.37777777777777777,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.0,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 40
+    },
+    "qwen9": {
+      "label": "Qwen3.5-9B high",
+      "model": "Qwen/Qwen3.5-9B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.14352505019454778,
+        "ci": [
+          0.08052243450526456,
+          0.21596912304806576
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.18258169608671185,
+        "ci": [
+          0.07125233896466336,
+          0.31271469768959376
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 16.956281412265714,
+        "ci": [
+          8.803620493222986,
+          25.44905571634517
+        ]
+      },
+      "calls": 45,
+      "accepted": 21,
+      "valid": 0.4666666666666667,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.0,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 40
+    },
+    "qwen35": {
+      "label": "Qwen3.5-27B high",
+      "model": "Qwen/Qwen3.5-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.16797143218352342,
+        "ci": [
+          0.056729278473464526,
+          0.3209932036651328
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.1720039279645053,
+        "ci": [
+          0.07342171402036787,
+          0.2896872331971881
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 17.065976270417803,
+        "ci": [
+          8.780650338300509,
+          25.497223535986375
+        ]
+      },
+      "calls": 45,
+      "accepted": 24,
+      "valid": 0.5333333333333333,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.0,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 40
+    },
+    "qwen38": {
+      "label": "Qwen3.8-27B high",
+      "model": "Qwen/Qwen3.8-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.3655008592171431,
+        "ci": [
+          0.1942691248602325,
+          0.5537767504529949
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.431903912628607,
+        "ci": [
+          0.2594500243268338,
+          0.6230029828492015
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 40.97695614914524,
+        "ci": [
+          27.72098981760658,
+          54.0023463319619
+        ]
+      },
+      "calls": 45,
+      "accepted": 29,
+      "valid": 0.6444444444444445,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.006278829758768504,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.010046127614029607
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.006278829758768504,
+      "headroom_instances": 40
+    },
+    "luna_medium": {
+      "label": "GPT-5.6 Luna medium",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-medium@128k.once-full",
+      "source_code_config": "codex-medium@128k.once-full",
+      "p1": {
+        "n": 15,
+        "mean": 0.1821751416452266,
+        "ci": [
+          0.08873015873015873,
+          0.2882678559469905
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.21435943715301825,
+        "ci": [
+          0.1071610530917629,
+          0.33912802691816996
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 20.363133865042105,
+        "ci": [
+          12.376044975048089,
+          28.820618687762302
+        ]
+      },
+      "calls": 45,
+      "accepted": 29,
+      "valid": 0.6444444444444445,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.0,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 40
+    },
+    "luna_high": {
+      "label": "GPT-5.6 Luna high",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-high@128k.once-full",
+      "source_code_config": "codex-high@128k.once-full",
+      "p1": {
+        "n": 15,
+        "mean": 0.2339183519345826,
+        "ci": [
+          0.10962199312714777,
+          0.3725861763668951
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.374520185329976,
+        "ci": [
+          0.24674550137699428,
+          0.5058823334001687
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 32.76529075315115,
+        "ci": [
+          23.009021474101527,
+          42.410335923682105
+        ]
+      },
+      "calls": 45,
+      "accepted": 32,
+      "valid": 0.7111111111111111,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.0,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 40
+    },
+    "deepseek_low": {
+      "label": "DeepSeek V4.1 Flash low",
+      "model": "deepseek-flash",
+      "source_core_config": "think-low@128k",
+      "source_code_config": "think-low@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.425260111780963,
+        "ci": [
+          0.2803655832677679,
+          0.5804140772144013
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.3018321525059172,
+        "ci": [
+          0.17598563773466822,
+          0.44193632716816733
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 34.29748055975991,
+        "ci": [
+          23.847591808984927,
+          44.39852649197021
+        ]
+      },
+      "calls": 45,
+      "accepted": 36,
+      "valid": 0.8,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.0003666630370184549,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0005866608592295278
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0003666630370184549,
+      "headroom_instances": 40
+    },
+    "deepseek_high": {
+      "label": "DeepSeek V4.1 Flash high",
+      "model": "deepseek-flash",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.3400288461168026,
+        "ci": [
+          0.17892235279990112,
+          0.5213016558310943
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.5109675166661574,
+        "ci": [
+          0.31717388297485155,
+          0.7163151717749136
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 45.39879598163724,
+        "ci": [
+          30.835296479897593,
+          59.93574561011249
+        ]
+      },
+      "calls": 45,
+      "accepted": 35,
+      "valid": 0.7777777777777778,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.009343951181306128,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.014950321890089803
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.009343951181306128,
+      "headroom_instances": 40
+    },
+    "fable": {
+      "label": "Claude Fable 5.1 medium",
+      "model": "claude-fable-5-1",
+      "source_core_config": "headless-medium@128k",
+      "source_code_config": "headless-medium@128k",
+      "p1": {
+        "n": 15,
+        "mean": 0.5402671613269632,
+        "ci": [
+          0.37183569871890293,
+          0.7122227506850627
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.8644535965488844,
+        "ci": [
+          0.6725984873826615,
+          1.0636786579502178
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 75.63914514749106,
+        "ci": [
+          60.83460141547084,
+          89.78212085283528
+        ]
+      },
+      "calls": 45,
+      "accepted": 39,
+      "valid": 0.8666666666666667,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.019862575907082937,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.031780121451332695
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.019862575907082937,
+      "headroom_instances": 40
+    },
+    "fable_high": {
+      "label": "Claude Fable 5.1 high",
+      "model": "claude-fable-5-1",
+      "source_core_config": "headless-high@128k.frozen69",
+      "source_code_config": "headless-high@128k.frozen69",
+      "p1": {
+        "n": 15,
+        "mean": 0.5362915272942875,
+        "ci": [
+          0.3351040667416353,
+          0.7431874216617305
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.2851316394200617,
+        "ci": [
+          0.13748063608859695,
+          0.4536883481154722
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 36.885160204480364,
+        "ci": [
+          23.76053258812564,
+          50.04081857574231
+        ]
+      },
+      "calls": 45,
+      "accepted": 20,
+      "valid": 0.4444444444444444,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.001623504375822519,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0025976070013160302
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.001623504375822519,
+      "headroom_instances": 40
+    },
+    "astra_medium": {
+      "label": "GPT-6 Astra medium",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-medium@nocap",
+      "source_code_config": "codex-medium@nocap",
+      "p1": {
+        "n": 15,
+        "mean": 0.6030672193720401,
+        "ci": [
+          0.4831443189155938,
+          0.7262830464332364
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.8169605418481118,
+        "ci": [
+          0.6744399876161408,
+          0.9625951830280264
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 74.56627676894213,
+        "ci": [
+          63.70846531875044,
+          85.02005047675964
+        ]
+      },
+      "calls": 45,
+      "accepted": 44,
+      "valid": 0.9777777777777777,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.009123885395433,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.014598216632692802
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.009123885395433,
+      "headroom_instances": 40
+    },
+    "astra_high": {
+      "label": "GPT-6 Astra high",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-high@nocap",
+      "source_code_config": "codex-high@128k.once",
+      "p1": {
+        "n": 15,
+        "mean": 0.7429314143469893,
+        "ci": [
+          0.6284807955591594,
+          0.8496292954844548
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 1.0007285881955836,
+        "ci": [
+          0.8531202154368533,
+          1.165725127066402
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 91.47961969127189,
+        "ci": [
+          80.56874240197644,
+          102.64242876150034
+        ]
+      },
+      "calls": 45,
+      "accepted": 45,
+      "valid": 1.0,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.020868848080404713,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.033390156928647545
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.006037937859621236
+      },
+      "headroom": 0.020868848080404713,
+      "headroom_instances": 40
+    }
+  }
+}

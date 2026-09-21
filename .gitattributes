@@ -1,0 +1,6 @@
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary
+LICENSES/*.txt -whitespace
+bench/results/pilots/**/remote-logs/*.log -whitespace

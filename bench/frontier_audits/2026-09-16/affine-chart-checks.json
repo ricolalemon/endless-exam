@@ -1,0 +1,104 @@
+[
+  {
+    "params": {
+      "q": 5,
+      "n": 5
+    },
+    "projective_points": 195,
+    "source_sha256": "df7d89cb4e8c0b27ce79758daf96dc260a08c7e23d72281bc5703e2a536f5473",
+    "hyperplanes_enumerated": 3906,
+    "minimum_intersection": 1,
+    "max_affine_points_in_this_projective_cap": 194,
+    "chart_functional": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "primary": [
+      true,
+      194,
+      ""
+    ],
+    "independent": [
+      true,
+      194
+    ],
+    "intersection_histogram": {
+      "1": 3,
+      "2": 1,
+      "15": 6,
+      "22": 72,
+      "23": 120,
+      "24": 2,
+      "25": 4,
+      "33": 80,
+      "34": 160,
+      "35": 72,
+      "36": 264,
+      "37": 420,
+      "38": 420,
+      "39": 194,
+      "40": 682,
+      "41": 584,
+      "42": 120,
+      "44": 134,
+      "45": 256,
+      "46": 72,
+      "47": 96,
+      "48": 120,
+      "51": 15,
+      "52": 6,
+      "65": 1,
+      "66": 2
+    }
+  },
+  {
+    "params": {
+      "q": 5,
+      "n": 6
+    },
+    "projective_points": 675,
+    "source_sha256": "c61b490ed95aa75dd9c54facbe235fb837761edb2f0d5730c5551a1f24cb0f64",
+    "hyperplanes_enumerated": 19531,
+    "minimum_intersection": 26,
+    "max_affine_points_in_this_projective_cap": 649,
+    "chart_functional": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "primary": [
+      true,
+      649,
+      ""
+    ],
+    "independent": [
+      true,
+      649
+    ],
+    "intersection_histogram": {
+      "26": 2,
+      "31": 48,
+      "50": 1,
+      "122": 576,
+      "127": 3648,
+      "131": 240,
+      "132": 5776,
+      "135": 720,
+      "136": 5760,
+      "147": 144,
+      "151": 8,
+      "152": 912,
+      "155": 60,
+      "156": 192,
+      "157": 1444
+    }
+  }
+]

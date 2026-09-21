@@ -1,0 +1,54 @@
+{
+  "calibration": "docs/DATA.md#construction-baselines",
+  "description": "Verified offline construction references; distinct from frozen timed searches.",
+  "entries": {
+    "corners|{\"n\": 138}": {
+      "method": "translated ternary digit set",
+      "objective": 3120,
+      "witness": "bench/reference_calibration/2026-09-16/formal-01-corners.json",
+      "witness_sha256": "d7590c7d43fd33b1d5a17a29bd535e523e9b544d427fdfd83d3b5eeb6b5b16e6"
+    },
+    "corners|{\"n\": 150}": {
+      "method": "translated ternary digit set",
+      "objective": 3504,
+      "witness": "bench/reference_calibration/2026-09-16/formal-02-corners.json",
+      "witness_sha256": "3ea1c3661e2076d2c45a07db16d0225fa0196009ca066975359490163e9c3fdc"
+    },
+    "corners|{\"n\": 162}": {
+      "method": "translated ternary digit set",
+      "objective": 3888,
+      "witness": "bench/reference_calibration/2026-09-16/formal-03-corners.json",
+      "witness_sha256": "1bc4fc0f6df87c2ece61ba77c66a9dbecbcf362ee315c6b52a26fc9fbe35ca04"
+    },
+    "corners|{\"n\": 183}": {
+      "method": "translated ternary digit set",
+      "objective": 4698,
+      "witness": "bench/reference_calibration/2026-09-16/formal-04-corners.json",
+      "witness_sha256": "e57682211a0e12dd1232c6e69c0da78ba4a1baf805c6263e690bff281c65593c"
+    },
+    "corners|{\"n\": 185}": {
+      "method": "translated ternary digit set",
+      "objective": 4786,
+      "witness": "bench/reference_calibration/2026-09-16/formal-05-corners.json",
+      "witness_sha256": "0d178fc68764e321d4edc39bf409cbb2463f24655a0a2734b57b4ed4f9167921"
+    },
+    "kissing_theta|{\"cos100\": 24, \"d\": 12}": {
+      "method": "signed weight 5, greedy seed=4",
+      "objective": 28,
+      "witness": "bench/reference_calibration/2026-09-16/formal-06-kissing_theta.json",
+      "witness_sha256": "1dd266675ab330cd058d15a1bf9c7fc00f2b5712b8ad0a48f52b30122f633ea1"
+    },
+    "kissing_theta|{\"cos100\": 36, \"d\": 12}": {
+      "method": "binary sign code, greedy seed=0",
+      "objective": 152,
+      "witness": "bench/reference_calibration/2026-09-16/formal-07-kissing_theta.json",
+      "witness_sha256": "e0336ed9e095de51b532cecc462489868c3c6f36c56c2bb23e8faa5c34e71f9b"
+    },
+    "kissing_theta|{\"cos100\": 39, \"d\": 12}": {
+      "method": "binary sign code, greedy seed=0",
+      "objective": 152,
+      "witness": "bench/reference_calibration/2026-09-16/formal-09-kissing_theta.json",
+      "witness_sha256": "20b811853de85c24ef5a83dd4f9595ca450a1fc5622742a044ca55596b52cabc"
+    }
+  }
+}

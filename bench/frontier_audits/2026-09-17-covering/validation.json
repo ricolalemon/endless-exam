@@ -1,0 +1,135 @@
+{
+  "dataset": "https://zenodo.org/records/19735294",
+  "records": [
+    {
+      "family": "covering",
+      "params": {
+        "v": 24,
+        "k": 6,
+        "t": 3
+      },
+      "reference": 116,
+      "witness": "bench/frontier_audits/2026-09-17-covering/covering_24_6_3.json",
+      "sha256": "995c35b2daeb68e72e99a7d882d3c238f63717a462a96cadad7507a38f109a5f",
+      "primary": {
+        "call_id": "a3-covering-2",
+        "instance_id": "covering-e208a41ac8b5",
+        "family": "covering",
+        "params": {
+          "v": 24,
+          "k": 6,
+          "t": 3
+        },
+        "reference": 116,
+        "reference_type": "published",
+        "valid": true,
+        "objective": 116,
+        "message": "",
+        "ratio": 1.0,
+        "published_breakthrough": false
+      },
+      "independent": [
+        true,
+        116
+      ],
+      "primary_seconds": 0.0007101669907569885,
+      "independent_seconds": 0.005068791098892689,
+      "output_tokens": {
+        "cl100k_base": 1397,
+        "o200k_base": 1397
+      },
+      "ascii_bytes": 2050,
+      "matching_call_ids": [
+        "a3-covering-2"
+      ]
+    },
+    {
+      "family": "covering",
+      "params": {
+        "v": 30,
+        "k": 6,
+        "t": 3
+      },
+      "reference": 225,
+      "witness": "bench/frontier_audits/2026-09-17-covering/covering_30_6_3.json",
+      "sha256": "3d1d4d7d3b66a29f454198680d44c267d097af0ef112eecf880ee59a5ae2454b",
+      "primary": {
+        "call_id": "a3-covering-1",
+        "instance_id": "covering-551581f999ca",
+        "family": "covering",
+        "params": {
+          "v": 30,
+          "k": 6,
+          "t": 3
+        },
+        "reference": 225,
+        "reference_type": "published",
+        "valid": true,
+        "objective": 225,
+        "message": "",
+        "ratio": 1.0,
+        "published_breakthrough": false
+      },
+      "independent": [
+        true,
+        225
+      ],
+      "primary_seconds": 0.00041545811109244823,
+      "independent_seconds": 0.016856249887496233,
+      "output_tokens": {
+        "cl100k_base": 2705,
+        "o200k_base": 2705
+      },
+      "ascii_bytes": 4062,
+      "matching_call_ids": [
+        "a3-covering-1"
+      ]
+    },
+    {
+      "family": "covering",
+      "params": {
+        "v": 18,
+        "k": 7,
+        "t": 4
+      },
+      "reference": 126,
+      "witness": "bench/frontier_audits/2026-09-17-covering/covering_18_7_4.json",
+      "sha256": "3cdc98e503ca421c7a466d521bd823d76bf4a425d9a6943fb9d47fa96b4fcc7c",
+      "primary": {
+        "call_id": "a3-covering-0",
+        "instance_id": "covering-96b61f7899e7",
+        "family": "covering",
+        "params": {
+          "v": 18,
+          "k": 7,
+          "t": 4
+        },
+        "reference": 126,
+        "reference_type": "published",
+        "valid": true,
+        "objective": 126,
+        "message": "",
+        "ratio": 1.0,
+        "published_breakthrough": false
+      },
+      "independent": [
+        true,
+        126
+      ],
+      "primary_seconds": 0.00038666604086756706,
+      "independent_seconds": 0.01276408415287733,
+      "output_tokens": {
+        "cl100k_base": 1769,
+        "o200k_base": 1769
+      },
+      "ascii_bytes": 2421,
+      "matching_call_ids": [
+        "a3-covering-0"
+      ]
+    }
+  ],
+  "all_passed": true,
+  "model_calls": 0,
+  "reference_values_changed": false,
+  "answer_format_changed": false
+}

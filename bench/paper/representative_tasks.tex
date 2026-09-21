@@ -1,0 +1,21 @@
+\subsection{Representative tasks}
+\label{sec:representative_tasks}
+These three examples are drawn from the \DistinctN{} evaluation instances and illustrate graphs, geometry and compactly represented codes. Reference values appear here to explain scoring; model prompts contain only the task and answer requirements.
+
+\begin{taskbox}[title={Degree--diameter graphs: degree 4, diameter 5},before upper={\setlength{\parskip}{4pt}}]
+\textbf{Task.} Construct an undirected graph with as many vertices as possible, subject to two constraints: each vertex has at most four neighbours, and any two vertices can be connected by a path of at most five edges. Self-loops and repeated edges are not allowed. The challenge is to connect many vertices while keeping both the number of neighbours and the distances between vertices small.
+
+\textbf{Answer and verification.} An edge list specifies the graph. The verifier checks the edges, counts each vertex's neighbours and computes shortest paths to check the distance constraint. For a valid graph, the objective is its number of vertices. GPT-6 Astra at high effort without tools submits a graph with \TaskGraphVertices{} vertices, compared with the published frontier of \TaskGraphReference{}. Its relative quality is therefore $\TaskGraphVertices/\TaskGraphReference\approx\TaskGraphRatio$ (Section~\ref{sec:scoring}).
+\end{taskbox}
+
+\begin{taskbox}[title={Heilbronn triangles: 46 points in a square},before upper={\setlength{\parskip}{4pt}}]
+\textbf{Task.} Place 46 distinct points in the unit square so that the smallest triangle formed by any three points has the largest possible area. Each coordinate must be a multiple of $10^{-4}$. A single nearly collinear triple can make the objective small, so the arrangement must keep every triple sufficiently far from collinearity.
+
+\textbf{Answer and verification.} Each point is submitted as two integers between 0 and 10,000; dividing each integer by 10,000 gives its coordinate in the unit square. The verifier checks that there are 46 distinct points within the square, then computes every triangle's area using exact integer arithmetic before applying the coordinate scale. The minimum area is the objective: increasing it improves the score. This instance is evaluated against a construction baseline, illustrating the geometric optimisation tasks chosen outside published construction tables.
+\end{taskbox}
+
+\begin{taskbox}[title={Trifference codes: ternary strings of length 64},before upper={\setlength{\parskip}{4pt}}]
+\textbf{Task.} Find as many distinct length-64 strings over $\{0,1,2\}$ as possible. For every three distinct strings, there must be at least one position where their symbols are all different: one is 0, one is 1 and one is 2. The objective is the number of strings satisfying this condition together.
+
+\textbf{Answer and verification.} Small codes can be submitted as lists of strings. Larger codes can be described by a generator matrix: its rows are length-64 strings, and the code consists of all linear combinations of these rows modulo 3. The verifier checks the three-string condition algebraically and counts the codewords from the number of linearly independent rows, without enumerating the full code. For this instance, GPT-6 Astra at high effort with tools submits an $11\times64$ matrix with 11 independent rows. Choosing a coefficient of 0, 1 or 2 for each row gives $3^{11}=\ToolTriWords$ distinct strings. This is \ToolTriRatio{} times the construction baseline, so its relative quality is \ToolTriRatio{}. Appendix~\ref{app:trifference_certificates} describes the certificate check.
+\end{taskbox}

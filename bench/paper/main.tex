@@ -1,0 +1,273 @@
+\documentclass{article}
+\usepackage{iclr2027_conference,times}
+\usepackage{iftex}
+\ifxetex
+\usepackage{fontspec}
+\ifdefined\EndlessExamPreprint
+% Filename lookup works on arXiv without relying on local system fonts.
+\setmainfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf]
+\setmonofont{texgyrecursor-regular.otf}[BoldFont=texgyrecursor-bold.otf,ItalicFont=texgyrecursor-italic.otf,BoldItalicFont=texgyrecursor-bolditalic.otf]
+\else
+\setmainfont{Times New Roman}\setmonofont{Courier New}
+\fi
+\fi
+\input{math_commands.tex}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{booktabs,tabularx,array,longtable}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\input{visual_theme}
+\usepackage[most]{tcolorbox}
+\usepackage{capt-of}
+\input{appendix_style}
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+\input{tables/result_numbers.tex}
+\input{tables/tool_numbers.tex}
+
+\title{The Endless Exam: Mathematical Constructions\\from Today's Models toward Superintelligence}
+
+\ifdefined\EndlessExamPreprint
+\author{Muhan Zhang\\The University of Texas at Arlington}
+\iclrfinalcopy
+\else
+\author{Anonymous authors\\Paper under double-blind review}
+\fi
+
+\begin{document}
+\maketitle
+\ifdefined\EndlessExamPreprint
+\lhead{}\renewcommand{\headrulewidth}{0pt}
+\fi
+
+\begin{abstract}
+We introduce the Endless Exam, a benchmark for measuring mathematical progress from today's models toward artificial superintelligence through fourteen parameterised construction families. Each submitted object is checked automatically for validity and assigned a relative quality score against a published frontier or construction baseline, without capping improvements at $1$. The families draw on open mathematical problems for long-term targets and generate new instances at larger parameters, where compact certificates keep large constructions verifiable. Across eight models evaluated on \DistinctN{} distinct instances, continuous quality scores distinguish performance even though no evaluated system surpasses a published frontier. Size--quality curves show how construction quality changes as problem size increases. We release the generators, verifiers, references, model responses and analysis to support continued measurement before and beyond human frontiers.
+\end{abstract}
+
+\section{Introduction}
+
+Measuring progress toward artificial superintelligence (ASI) requires both scores that distinguish advances beyond the best human answers and tasks that continue to offer room for improvement. Mathematical construction problems meet these needs because finding a better object can demand a new idea, while checking its properties and quality can remain straightforward. Varying the problem's parameters then provides a continuing supply of harder instances.
+
+Benchmark saturation makes this need immediate: a recent study finds that 29 of 60 language-model benchmarks exhibit high or very high saturation, limiting their ability to distinguish leading models~\citep{akhtar2026saturation}. ARC Prize recently reported $99.9\%$ for GPT-6 Astra on ARC-AGI-3 Semi-Private with its Provider Adapter harness~\citep{kamradt2026astra}.\footnote{The $99.9\%$ result uses high reasoning effort. With the Standard evaluation setup, the same report gives $62.7\%$ at max effort.} Once models reach benchmark ceilings, evaluation must continue to distinguish their progress and offer harder instances.
+
+We introduce \emph{The Endless Exam}, a benchmark built from fourteen parameterised families of mathematical construction problems, with 69 evaluation instances. Consider a progression-free set: a collection of points in $\mathbb{F}_5^n$ containing no three distinct points $x,y,z$ with $x+z=2y$ (Figure~\ref{fig:framework}). Given a proposed set, the evaluator checks for forbidden triples and counts its points, rewarding larger valid sets even when they exceed every published construction. Changing the dimension produces a new task. We apply the same approach to graphs and codes, checking each construction and scoring its quality.
+
+In many of these families, the best published constructions still leave a substantial gap to the proven upper bounds. For seven-colour Schur partitions and progression-free sets in $\mathbb F_5^6$, these bounds are $\SchurBoundRatio$ and $\APBoundRatio$ times the best published construction sizes, respectively, and the optimal sizes remain unknown.
+
+To assess current model performance on these construction problems, we evaluate eight models in twelve tool-free configurations: GPT-6 Astra, GPT-5.6 Luna, Claude Fable 5.1, DeepSeek V4.1 Flash, Qwen3.8-27B and Qwen3.5 at 4B, 9B and 27B. To examine the effect of tool access, we additionally evaluate Astra high and Luna high with code and web access on the 69 instances.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig0_framework.pdf}
+\caption{An illustrative AP-free set in $\mathbb F_5^2$. Here $x,y,z$ denote distinct selected points, with coordinate-wise arithmetic modulo 5. Dividing the five valid points by the six-point optimum gives a relative quality of $5/6\approx0.833$.}
+\label{fig:framework}
+\end{figure}
+
+\begin{samepage}
+Our contributions are:
+\begin{enumerate}
+\item \textbf{An uncapped measure of mathematical progress.} Relative quality puts diverse construction objectives on a common scale and preserves the magnitude of improvements beyond a reference, including scores of $1.01$, $1.5$ and $2$.
+\item \textbf{An expandable suite of construction problems.} Fourteen families generate new instances by varying parameters such as dimension, graph degree and code length; we evaluate \DistinctN{} instances.
+\item \textbf{Automatic verification at large scales.} We verify constructions through their mathematical properties, even when the optimum is unknown. Compact descriptions and algebraic certificates support evaluation of objects too large to enumerate, including submitted codes with over a trillion codewords (Section~\ref{sec:formats}).
+\end{enumerate}
+\end{samepage}
+
+The Endless Exam is an open-source benchmark, and we welcome community contributions of new constructions, task families and verifier improvements.
+\ifdefined\EndlessExamPreprint
+Code and data are available at \mbox{\url{https://github.com/ricolalemon/endless-exam}}.
+\fi
+
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Mathematical reasoning benchmarks.}
+Humanity's Last Exam~\citep{phan2025hle} and FrontierMath~\citep{glazer2024frontiermath,epoch2026frontiermath} assess expert-level problem solving. IMProofBench~\citep{schmitt2025improofbench} and First Proof~\citep{abouzaid2026firstproof} evaluate research-level proofs, IMO-AnswerBench~\citep{luong2025imobench} evaluates Olympiad answers, and ARC-AGI~\citep{chollet2019arc,chollet2025arcagi2} tests abstract reasoning. Table~\ref{tab:benchmark_comparison} compares representative mathematical benchmarks and problem collections.
+
+\paragraph{Verifiable constructions and problem generation.}
+MathConstruct~\citep{balunovic2025mathconstruct} checks constructed objects and varies problem parameters to assess robustness, while MathConstraint~\citep{pati2026mathconstraint} generates constraint problems, uses solvers to determine whether solutions exist, and checks submitted constructions. Endless Exam assigns graded scores to valid constructions: for the same instance, more set elements, more graph vertices or fewer scalar multiplications receive higher scores. This permits measurement both of improvements toward an unknown optimum and of changes in construction quality as problems grow.
+
+\pagebreak
+\paragraph{Open mathematical problems.}
+FrontierMath: Open Problems and the Erd\H{o}s Problems and Optimization Constants collections track unsolved questions and mathematical bounds~\citep{epoch2026openproblems,bloom2021erdosproblems,davis2026constants}. HorizonMath~\citep{horizonmath2026} evaluates open problems with automated verification and reports the proportion solved. Endless Exam incorporates construction quality into an \emph{uncapped overall score}, preserving the magnitude of successive advances because every improvement raises the score, including after a published frontier is surpassed.
+
+\begin{table}[t]
+\centering\footnotesize\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.06}
+\input{tables/benchmark_comparison}
+\caption{Comparison of mathematical benchmarks and problem collections, using the cited releases. Unsolved indicates inclusion of open research targets. Our 69 instances span 14 families. $^{*}$IMProofBench's main proofs are human-graded; follow-up answers are automatically checked.}
+\label{tab:benchmark_comparison}
+\end{table}
+
+\paragraph{Mathematical discovery systems.}
+FunSearch~\citep{romera2024funsearch}, AlphaEvolve~\citep{novikov2025alphaevolve} and AlphaTensor~\citep{fawzi2022alphatensor} have improved mathematical constructions. AlphaEvolve evolves programs using numerical quality feedback, and its mathematical study spans 67 problems with generalisation across parameters~\citep{georgiev2025exploration}. To compare such progress across systems, families and problem sizes, Endless Exam combines relative quality, an uncapped overall score and size--quality curves within a common evaluation framework.
+
+\section{The exam}
+\label{sec:exam}
+
+\subsection{Design principles}
+\label{sec:principles}
+We select construction families that support continued measurement through improving construction quality and increasing problem size. Each task specifies the conditions a construction must satisfy and an objective to optimise, such as maximising the number of graph vertices or minimising the number of scalar multiplications in a matrix multiplication algorithm. Among valid constructions, every improvement in the objective raises the score, including improvements beyond the reference. The evaluator checks each construction's mathematical properties and computes its objective value directly, without a model judge. These checks do not require knowing the optimum, allowing progress to be measured even on open problems. Basing scores on the submitted object also makes them resistant to reward hacking through persuasive prose or unsupported quality claims. Compact descriptions and certificates extend this approach to objects too large to enumerate. Varying the parameters creates new instances under the same mathematical rules; larger instances admit more possible constructions and can make high-quality ones harder to find, providing more demanding tasks as models advance.
+
+\subsection{Families and instances}
+\label{sec:tiers}
+The fourteen families span forbidden-pattern sets, geometry, graphs, codes and algebraic designs (Table~\ref{tab:families}). We evaluate \DistinctN{} instances from these families, using two sources of reference. For \PanelOneN{} instances, we use \emph{published frontiers} to measure how closely models approach existing mathematical results and whether they can improve on them. For the remaining \PanelTwoN{}, we choose parameters outside published construction tables to reduce direct web retrieval of ready-made answers and test adaptation and combination of known methods. We establish \emph{construction baselines} for these instances through established mathematical constructions and computational search. Both groups use the same score, which rewards progress below and above the reference (Section~\ref{sec:scoring}).
+
+\input{representative_tasks}
+
+\subsection{Answer formats and verification}
+\label{sec:formats}
+The examples in Section~\ref{sec:representative_tasks} illustrate two accepted forms of answer: an explicit object and a compact description. Across the suite, compact forms include products, lattice orbits, digit sets, difference sets, Cayley generators and algebraic certificates. The verifier either expands the description and checks the resulting object, or verifies the components and algebraic conditions that establish its validity and size. In our evaluations, checking the finite factors of a submitted Shannon code certifies over a trillion codewords (Appendix~\ref{case:shannon}).
+
+The primary verifier checks whether each submitted construction satisfies the mathematical constraints and computes its objective value. For every construction it judges valid, a second verifier checks the same constraints and recomputes the objective value using a separate implementation of the mathematical checks. The two verifiers agree on validity and objective value for all these model constructions and all 69 reference constructions. We also test the verifiers on deliberately invalid constructions and compare their decisions with exhaustive checks on small Shannon and trifference instances. They reject all invalid test cases and agree with the exhaustive checks (Appendix~\ref{app:verifier_validation}). Appendix~\ref{app:formats} gives the certificate checks and their size and time limits.
+
+\subsection{Evaluation protocol}
+\label{sec:protocol}
+All configurations receive the same instances, with prompts specifying the problem, its parameters and the required answer format (Appendix~\ref{app:tiers}). In the tool-free track, models produce one response per instance within a budget of 128k output tokens, including reasoning tokens. Invalid responses and generation-budget exhaustion score zero. Each effort level is evaluated as a separate configuration (Appendix~\ref{app:runner}).
+
+The tool-assisted track gives GPT-6 Astra and GPT-5.6 Luna, both at high effort, code execution and web access while retaining the mathematical prompts and answer formats. Each evaluation has four CPU threads, 16\,GiB of memory and a two-hour wall-clock limit, with no limit on total output tokens. When it ends, including when a resource limit is reached, we verify the construction saved within the time limit and score it if valid; missing or invalid submissions receive zero (Appendix~\ref{app:tools}).
+
+\section{Scoring}
+\label{sec:scoring}
+
+\subsection{Relative quality and overall score}
+We measure \emph{relative quality} with the same formula for both reference groups. For parameters $p$, verified objective $a$ and reference $h(p)$,
+\[
+r(a,p)=
+\begin{cases}
+a/h(p), & \text{valid maximisation answer},\\
+h(p)/a, & \text{valid minimisation answer},\\
+0, & \text{invalid or empty response}.
+\end{cases}
+\]
+Relative quality $1$ matches the reference, and every further improvement increases the ratio. References remain unchanged within each benchmark version, so successive improvements remain comparable.
+
+For instances with a published frontier, $h(p)$ is the objective value of the cited construction. For the remaining instances, the construction baseline $h(p)$ is the best verified objective value obtained from established mathematical constructions and computational search. Relative quality above $1$ indicates improvement over the reference; surpassing a published frontier yields a candidate mathematical record. Appendix~\ref{app:lit} documents the references and baseline procedures.
+
+Published eight-colour Schur constructions illustrate how scores distinguish successive improvements. Against the historical reference of 5,041 elements derived from \citet{fredricksen2000schur}, constructions of sizes 5,286~\citep{rowley2021templates} and 5,362~\citep{bengone2026schur} receive scores of $1.049$ and $1.064$, respectively. Both surpass the reference, but the scores distinguish their quality. The current benchmark uses 5,362 as its eight-colour reference (Appendix~\ref{case:schur}).
+
+The \textbf{overall score} is $S=(100/69)\sum_{i=1}^{69}r_i$, where $r_i$ is the relative quality for instance $i$. Invalid submissions receive zero, and a score of 100 matches the references on average. Table~\ref{tab:headline} also reports mean relative quality for each reference group, with $95\%$ confidence intervals obtained by bootstrapping instances within that group.
+
+\pagebreak
+Each construction instance provides a richer picture of performance than a binary correct/incorrect label. Verification establishes whether the answer is valid, and relative quality measures how well the construction performs against its published frontier or construction baseline. For example, valid constructions with relative quality scores of $0.5$, $0.9$ and $1.2$ would all pass a validity check, but receive different quality scores. Our \DistinctN{} instances therefore reveal more than \DistinctN{} success-or-failure outcomes: they show how close each construction comes to its reference and how far it improves beyond it.
+
+\subsection{Gap closed}
+\label{sec:headroom}
+Gap closed measures progress from the reference $h$ to a proven bound $b$. For maximisation it is $\max(0,\ln(a/h)/\ln(b/h))$. For minimisation, the ratios $a/h$ and $b/h$ are replaced by $h/a$ and $h/b$. Constructions that do not improve on the reference score $0$, while reaching the bound scores $1$; invalid answers also score $0$. We average over the \GapN{} instances whose proven bounds leave room for improvement beyond the reference: \GapPublishedN{} with published frontiers and \GapConstructionN{} with construction baselines. The \TargetN{} LABS instances use a conjectured target and are reported separately (Appendix~\ref{app:gap_breakdown}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig1_scale.pdf}
+\caption{Mean relative quality across fourteen families. Model points and bar endpoints are normalised to the reference and averaged over the same instances in each row; model means include zero scores. Upper rows use published frontiers; lower rows use construction baselines. A ratio of $1$ matches the reference. Grey bars extend from the reference level of $1$ to mathematical bounds or conjectured targets. A solid mark at the right end indicates a proven bound; a dashed mark indicates a conjectured target. An arrow means the endpoint lies beyond the plotted range. Filled markers indicate tool-free evaluations and hollow markers tool-assisted evaluations. Crosses mark means below 0.001. AP-free: arithmetic-progression-free; LABS: low-autocorrelation binary sequences; MOLS: mutually orthogonal Latin squares.}
+\label{fig:scale}
+\end{figure}
+
+\section{Results}
+\label{sec:results}
+
+\begin{table}[t]
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\input{tables/headline_table}
+\caption{Results on 69 instances. The final two rows use code and web access (Section~\ref{sec:protocol}). Overall score is uncapped. Brackets show $95\%$ confidence intervals. Validity uses all 69 responses; gap closed uses \GapN{} instances with proven bounds (Section~\ref{sec:headroom}).}
+\label{tab:headline}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig_score_tokens.pdf}
+\caption{Overall score and output tokens for 69 instances, including reasoning and all model turns. For models marked with an asterisk, some output-token counts are unavailable, so the plotted totals are lower bounds. All Qwen models use high effort; tokenisation varies by model.}
+\label{fig:score_tokens}
+\end{figure}
+
+
+\subsection{Distinguishing today's models}
+Tool-free overall scores span $\ScoreMin$--$\ScoreMax$ (Table~\ref{tab:headline}). On the 30 instances with published frontiers, mean relative quality spans $\POneMin$--$\POneMax$ despite a $\BinaryBreakthroughMaxPct\%$ breakthrough rate for all twelve configurations. GPT-6 Astra at high effort reaches $\AstraHighPOne$ ($95\%$ CI $\AstraHighCILow$--$\AstraHighCIHigh$). Mean relative quality on the 39 instances with construction baselines ranges from $\PTwoMin$ to $\PTwoMax$. Astra high also achieves the largest tool-free mean gap closed, at $\HeadroomMaxPct\%$ across the \GapN{} instances with proven bounds. Figure~\ref{fig:scale} and Appendix~\ref{app:more} show the differences across families.
+
+\begin{samepage}
+Both model size and reasoning effort affect quality. On instances with published frontiers, Qwen3.5's mean relative quality rises from $\QwenFourPOne$ to $\QwenNinePOne$ to $\QwenTwentySevenPOne$ at 4B, 9B and 27B (Figure~\ref{fig:model_size}). Raising effort from medium to high increases Astra's mean from $\AstraMedPOne$ to $\AstraHighPOne$ and GPT-5.6 Luna's from $\LunaMedPOne$ to $\LunaHighPOne$. Claude Fable 5.1's overall score instead falls from $\FableScore$ at medium effort to $\FableHighScore$ at high effort, where \FableHighBudgetStops{} of the \DistinctN{} responses exhaust the 128k output budget. Additional reasoning effort can therefore consume the budget without producing a completed construction. Figure~\ref{fig:score_tokens} relates overall scores to output tokens: Astra medium outscores Fable 5.1 medium with fewer tokens, while Qwen3.8-27B uses the most reported output tokens but scores below both.
+\par
+\end{samepage}
+
+\paragraph{Code and web access.}
+GPT-6 Astra at high effort produces valid constructions on all \DistinctN{} instances without tools. With code and web access, it improves their average quality, raising its overall score from $\AstraHighScore$ to $\ToolScore$ while maintaining $100\%$ validity. GPT-5.6 Luna's score at high effort rises from $\LunaToolFreeScore$ to $\LunaToolScore$ as its valid answers increase from \LunaToolFreeValid{} to \LunaToolValid{}. On the \LunaBothValidN{} instances with valid answers in both tracks, its mean relative quality also rises from $\LunaBothValidFreeQuality$ to $\LunaBothValidToolQuality$. Luna therefore improves both its ability to produce valid answers and the quality of those answers.
+
+On the \PanelOneN{} instances with published frontiers, tool-assisted Astra and Luna match \ToolPublishedMatched{} and \LunaToolPublishedMatched{} references, respectively, without surpassing any. Reaching published constructions is thus already observed across much of this group, while improving them remains a further challenge. On the \PanelTwoN{} instances chosen outside published construction tables, Astra and Luna improve on the construction baselines for \ToolConstructionAbove{} and \LunaToolConstructionAbove{} instances (Appendix~\ref{app:tools}). These improvements already demonstrate scoring beyond $1$; future improvements over published frontiers would be measured in the same way.
+
+
+
+\subsection{Quality as problem size increases}
+\label{sec:ladder}
+With tools at high effort, mean gap closed remains small: $\ToolGapClosedPct\%$ for GPT-6 Astra and $\LunaToolGapClosedPct\%$ for GPT-5.6 Luna across the \GapN{} instances with proven bounds. Thus, exceeding some references still leaves most of the measured logarithmic gap to those bounds unclosed. These results place current models near the reference end of this scale, with mathematical bounds providing longer-term targets.
+
+If future models close a substantial fraction of these gaps and the existing instances become easy, larger parameter settings can provide more demanding tasks under the same mathematical rules. The name \emph{Endless Exam} reflects these two routes for continued measurement: improving construction quality within an instance and extending the task to larger dimensions, graph diameters or codeword lengths as models advance.
+
+To examine how current construction methods scale, we evaluate four configurations: DeepSeek V4.1 Flash at low effort, and Qwen3.8-27B, GPT-6 Astra and GPT-5.6 Luna at high effort. Each configuration is tested at four sizes in five benchmark families and an additional integer progression-free task, with two independent responses per size and the same token budget. Size--quality curves show whether construction quality keeps pace with the reference as the task grows. Figure~\ref{fig:ladder} shows three families; Appendix~\ref{app:more} gives all six tasks and an additional graph series with maximum degree four.
+
+Larger graph and spherical-code instances expose widening gaps to the reference constructions. For graphs of maximum degree three, all four models have lower mean relative quality at diameter 10 than at diameter 4. At diameter 10, the means are $\CubicLFourAstra$ for Astra, $\CubicLFourLuna$ for Luna, $\CubicLFourQwen$ for Qwen3.8-27B and $\CubicLFourDS$ for DeepSeek V4.1 Flash. Astra, Luna and Qwen3.8-27B still return valid graphs at this size, but their constructions fall well below the reference. All four models' spherical-code scores also fall between dimensions 10 and 16. On the larger instances, some models fail to produce valid constructions, while others return valid constructions that fall further below the reference.
+
+The gap to a proven bound can also widen while a model stays close to the reference. For cap sets in six dimensions, \CapLOneSize{} points meet both the reference and the proven upper bound. In twelve dimensions, both Astra answers combine two such caps to obtain \CapLFourSize{} points, reaching relative quality $\CapLFour$ against the reference of \CapLFourReference{} points. The proven upper bound is \CapLFourBound{}, so these answers reach only $\CapLFourBoundPct\%$ of that bound. The gap between the reference and the proven upper bound also grows across the graph and Schur size series (Appendix~\ref{app:more}). These bounds need not be attainable; their separation from known constructions marks an unresolved mathematical gap at larger sizes.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig6_ladder_main.pdf}
+\caption{Size--quality curves with a budget of 128k output tokens. Upper panels show mean relative quality over two independent responses per size, including zero scores; whiskers show their range and hollow markers indicate at least one invalid response. Grey dash-dot lines show the baseline relative to the reference. Lower panels rescale valid construction sizes to compare their growth with references and proven bounds; whiskers span the valid responses. Crosses below the axes mark sizes with no valid construction, using the model's colour. For cap sets, $|S|^{1/d}=c$ when a construction has $c^d$ points. Here $|S|$ is cap-set size, $K$ is the number of spherical-code vectors and $N$ is the number of graph vertices; $d$ denotes dimension and $k$ diameter. The full comparison appears in Appendix~\ref{app:ladder_results}.}
+\label{fig:ladder}
+\end{figure}
+
+Across these six tasks, Astra returns \LadderValidAstra{} valid answers out of \LadderCalls{}, compared with \LadderValidDS{} for DeepSeek V4.1 Flash, \LadderValidQwen{} for Qwen3.8-27B and \LadderValidLuna{} for Luna. Relative quality captures both failures and construction quality, while the lower panels show how the sizes of valid constructions scale.
+
+\begin{samepage}
+\subsection{Sensitivity to computational search budget}
+\label{sec:search}
+The reference searches also let us examine how much construction quality improves with additional computation. For these procedures, eight families are classified as \emph{search-resistant}, with strong constructions based on products, lattices, digit sets or recursions, while five can benefit from direct search. Across all eight search-resistant families, increasing the search budget from 10 to 600 seconds improves the baseline by less than $10\%$ on every measured instance, while Heilbronn benefits more (Figure~\ref{fig:search}; Appendix~\ref{app:search_audit}). Trifference is excluded because its baseline procedure selects and combines existing codes without using the search-time budget.
+\par
+\end{samepage}
+
+These measurements describe the tested search algorithms. Tool-assisted models can use broader methods, and discovery systems such as AlphaEvolve can develop new algorithms~\citep{georgiev2025exploration}. As stronger methods narrow the gap to mathematical bounds, future benchmark versions can add larger instances. Each released version retains its original instances and references so that scores remain comparable.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figs/fig5_search.pdf}
+\caption{Effect of increasing reference search time. Light grey shows the improvement in the search result from 10 to 600 seconds. Dark grey shows the improvement after taking the better of the search result and the established construction at each budget. Ochre compares the best valid tool-free answer with the 10-second search result. For minimisation, ratios are inverted before taking logarithms; log ratios are then averaged over distinct instances. The dotted line marks a 1.1-fold improvement.}
+\label{fig:search}
+\end{figure}
+
+\FloatBarrier
+\section{Limitations}
+\label{sec:limitations}
+Within the available evaluation budget, we test selected models and reasoning-effort levels, using one response per instance and configuration in the main comparison. Repeated evaluations would quantify run-to-run variability, while broader coverage of models and effort levels would extend the empirical comparison.
+
+\begin{samepage}
+\section{Conclusion}
+The Endless Exam measures mathematical progress before and beyond published frontiers by combining uncapped scores with parameterised families and compact certificates. At high effort, tools raise GPT-6 Astra's and GPT-5.6 Luna's scores to $\ToolScore$ and $\LunaToolScore$, with gains beyond construction baselines while published frontiers remain unbeaten. Historical Schur constructions show how scores distinguish subsequent breakthroughs, and size--quality curves extend the comparison to larger tasks, providing ways to continue measurement toward superintelligence.
+\par
+\label{page:mainend}
+\end{samepage}
+
+\clearpage
+\ifdefined\EndlessExamPreprint
+\section*{Acknowledgments}
+The author thanks Prof. Peiran Yu for providing computational resources for the experiments.
+\fi
+
+\section*{Reproducibility statement}
+Our repository provides generators, verifiers, reference constructions, model responses, inference settings and analysis scripts to reproduce every score, table and figure. Instances are specified by family, parameters and random seed. Published constructions link to their sources; independent verifiers and regression tests accompany the release.
+\ifdefined\EndlessExamPreprint
+Large language models assisted with code development, verification checks, analysis and writing; the author is responsible for the final content.
+\else
+\section*{AI use statement}
+Claude and GPT-6 Astra assisted with code, verification checks, analysis and manuscript preparation under the author's direction. Both are evaluated systems. Benchmark responses were collected independently under the stated evaluation protocols. The author is responsible for the final manuscript and released results.
+\fi
+
+\bibliography{references}
+\bibliographystyle{iclr2027_conference}
+
+\clearpage
+\appendix
+\input{appendix/appendix}
+
+\end{document}

@@ -1,0 +1,3337 @@
+{
+  "illustrations": {
+    "capset": {
+      "q": 3,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "apfree_q": {
+      "q": 5,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "corners": {
+      "n": 5,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    "schur": {
+      "N": 4,
+      "colors": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    "spherical_code": {
+      "vectors": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ]
+    },
+    "labs": {
+      "sequence": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "autocorrelations": [
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "merit_factor": 8.166666666666666
+    },
+    "heilbronn": {
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "min_area": 0.5
+    },
+    "degdiam": {
+      "graph": "cycle",
+      "vertices": 5,
+      "degree": 2,
+      "diameter": 2
+    },
+    "lineq": {
+      "n": 9,
+      "a": 1,
+      "b": 1,
+      "set": [
+        1,
+        2,
+        4,
+        8
+      ]
+    },
+    "covering": {
+      "v": 4,
+      "k": 3,
+      "t": 2,
+      "blocks": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    },
+    "matmul": {
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "rank": 7,
+      "basis_pairs_verified": 16
+    },
+    "mols": {
+      "squares": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ]
+      ]
+    },
+    "shannon": {
+      "q": 5,
+      "d": 2,
+      "words": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    "trifference": {
+      "n": 2,
+      "m": 2,
+      "words": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    }
+  },
+  "catalogue_examples": [
+    {
+      "task": "capset",
+      "params": {
+        "d": 10
+      },
+      "baseline": 2240,
+      "search": 1140,
+      "reference": 2432,
+      "published": true,
+      "anchor": 5619,
+      "anchor_kind": "bound",
+      "baseline_ratio": 0.9210526315789473
+    },
+    {
+      "task": "corners",
+      "params": {
+        "n": 138
+      },
+      "baseline": 3120,
+      "search": 2504,
+      "reference": 3120,
+      "published": false,
+      "anchor": 19044,
+      "anchor_kind": "trivial",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "schur",
+      "params": {
+        "k": 7
+      },
+      "baseline": 1093,
+      "search": 1093,
+      "reference": 1696,
+      "published": true,
+      "anchor": 13699,
+      "anchor_kind": "bound",
+      "baseline_ratio": 0.6444575471698113
+    },
+    {
+      "task": "apfree_q",
+      "params": {
+        "q": 5,
+        "n": 6
+      },
+      "baseline": 360,
+      "search": 360,
+      "reference": 649,
+      "published": true,
+      "anchor": 7497,
+      "anchor_kind": "bound",
+      "baseline_ratio": 0.5546995377503852
+    },
+    {
+      "task": "kissing",
+      "params": {
+        "d": 14
+      },
+      "baseline": 1932,
+      "search": 876,
+      "reference": 1932,
+      "published": true,
+      "anchor": 3174,
+      "anchor_kind": "bound",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "kissing_theta",
+      "params": {
+        "d": 12,
+        "cos100": 24
+      },
+      "baseline": 28,
+      "search": 24,
+      "reference": 28,
+      "published": false,
+      "anchor": 1431,
+      "anchor_kind": "bound",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "labs",
+      "params": {
+        "N": 280
+      },
+      "baseline": 5.577689243027889,
+      "search": 4.470802919708029,
+      "reference": 5.577689243027889,
+      "published": false,
+      "anchor": 12.32,
+      "anchor_kind": "conjecture",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "heilbronn",
+      "params": {
+        "n": 46
+      },
+      "baseline": 0.00047375,
+      "search": 0.00047375,
+      "reference": 0.00047375,
+      "published": false,
+      "anchor": 0.022727272727272728,
+      "anchor_kind": "trivial",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "heilbronn_shape",
+      "params": {
+        "n": 32,
+        "T": [
+          [
+            9026,
+            8197
+          ],
+          [
+            1769,
+            9178
+          ],
+          [
+            7298,
+            1276
+          ]
+        ]
+      },
+      "baseline": 0.0014884960025223,
+      "search": 0.0014884960025223,
+      "reference": 0.0014884960025223,
+      "published": false,
+      "anchor": 0.03333333333333333,
+      "anchor_kind": "trivial",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "degdiam",
+      "params": {
+        "d": 4,
+        "k": 5
+      },
+      "baseline": 61,
+      "search": 61,
+      "reference": 364,
+      "published": true,
+      "anchor": 485,
+      "anchor_kind": "bound",
+      "baseline_ratio": 0.16758241758241757
+    },
+    {
+      "task": "lineq",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 19044
+      },
+      "baseline": 630,
+      "search": 630,
+      "reference": 630,
+      "published": false,
+      "anchor": 19044,
+      "anchor_kind": "trivial",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "covering",
+      "params": {
+        "v": 18,
+        "k": 7,
+        "t": 4
+      },
+      "baseline": 179,
+      "search": 179,
+      "reference": 126,
+      "published": true,
+      "anchor": 111,
+      "anchor_kind": "bound",
+      "baseline_ratio": 0.7039106145251397
+    },
+    {
+      "task": "matmul",
+      "params": {
+        "n": 4,
+        "m": 4,
+        "p": 5
+      },
+      "baseline": 72,
+      "search": 72,
+      "reference": 61,
+      "published": true,
+      "anchor": 20,
+      "anchor_kind": "bound",
+      "baseline_ratio": 0.8472222222222222
+    },
+    {
+      "task": "mols",
+      "params": {
+        "n": 14
+      },
+      "baseline": 4,
+      "search": 1,
+      "reference": 4,
+      "published": true,
+      "anchor": 12,
+      "anchor_kind": "bound",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "shannon",
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "baseline": 1941100559147,
+      "search": 1941100559147,
+      "reference": 1941100559147,
+      "published": false,
+      "anchor": 3162187977651,
+      "anchor_kind": "bound",
+      "baseline_ratio": 1.0
+    },
+    {
+      "task": "trifference",
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "baseline": 19683,
+      "search": 19683,
+      "reference": 19683,
+      "published": false,
+      "anchor": 372280745758,
+      "anchor_kind": "bound",
+      "baseline_ratio": 1.0
+    }
+  ],
+  "parameters": {
+    "formal": [
+      {
+        "task": "capset",
+        "params": {
+          "d": 10
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "capset",
+        "params": {
+          "d": 11
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "capset",
+        "params": {
+          "d": 9
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 11
+          }
+        ]
+      },
+      {
+        "task": "corners",
+        "params": {
+          "n": 138
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "corners",
+        "params": {
+          "n": 183
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "corners",
+        "params": {
+          "n": 150
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "corners",
+        "params": {
+          "n": 162
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "corners",
+        "params": {
+          "n": 185
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "schur",
+        "params": {
+          "k": 7
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "schur",
+        "params": {
+          "k": 6
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "schur",
+        "params": {
+          "k": 8
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "apfree_q",
+        "params": {
+          "n": 6,
+          "q": 5
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "apfree_q",
+        "params": {
+          "n": 5,
+          "q": 5
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "apfree_q",
+        "params": {
+          "n": 4,
+          "q": 7
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 6
+          }
+        ]
+      },
+      {
+        "task": "kissing",
+        "params": {
+          "d": 14
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "kissing",
+        "params": {
+          "d": 15
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "kissing_theta",
+        "params": {
+          "cos100": 24,
+          "d": 12
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "kissing_theta",
+        "params": {
+          "cos100": 39,
+          "d": 12
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "kissing_theta",
+        "params": {
+          "cos100": 36,
+          "d": 14
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "kissing_theta",
+        "params": {
+          "cos100": 39,
+          "d": 14
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "kissing_theta",
+        "params": {
+          "cos100": 36,
+          "d": 12
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "kissing",
+        "params": {
+          "d": 13,
+          "representation": "quadratic"
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 6
+          }
+        ]
+      },
+      {
+        "task": "labs",
+        "params": {
+          "N": 280
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "labs",
+        "params": {
+          "N": 375
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "labs",
+        "params": {
+          "N": 357
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "labs",
+        "params": {
+          "N": 281
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "labs",
+        "params": {
+          "N": 240
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "heilbronn",
+        "params": {
+          "n": 46
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "heilbronn",
+        "params": {
+          "n": 26
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "heilbronn",
+        "params": {
+          "n": 40
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "heilbronn",
+        "params": {
+          "n": 50
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "heilbronn",
+        "params": {
+          "n": 48
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "heilbronn_shape",
+        "params": {
+          "T": [
+            [
+              9026,
+              8197
+            ],
+            [
+              1769,
+              9178
+            ],
+            [
+              7298,
+              1276
+            ]
+          ],
+          "n": 32
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "heilbronn_shape",
+        "params": {
+          "T": [
+            [
+              578,
+              9933
+            ],
+            [
+              8598,
+              7337
+            ],
+            [
+              2075,
+              588
+            ]
+          ],
+          "n": 34
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "heilbronn_shape",
+        "params": {
+          "T": [
+            [
+              411,
+              7999
+            ],
+            [
+              9004,
+              9890
+            ],
+            [
+              3031,
+              713
+            ]
+          ],
+          "n": 31
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "heilbronn_shape",
+        "params": {
+          "T": [
+            [
+              7922,
+              8793
+            ],
+            [
+              9917,
+              1548
+            ],
+            [
+              1510,
+              3942
+            ]
+          ],
+          "n": 40
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "heilbronn_shape",
+        "params": {
+          "T": [
+            [
+              526,
+              8526
+            ],
+            [
+              8696,
+              8279
+            ],
+            [
+              8084,
+              1688
+            ]
+          ],
+          "n": 26
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "params": {
+          "d": 4,
+          "k": 5
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "params": {
+          "d": 7,
+          "k": 3
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "params": {
+          "d": 4,
+          "k": 4
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "params": {
+          "d": 3,
+          "k": 7
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "params": {
+          "d": 6,
+          "k": 3
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 7
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "params": {
+          "d": 5,
+          "k": 4
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 8
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "params": {
+          "d": 3,
+          "k": 6
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 20
+          }
+        ]
+      },
+      {
+        "task": "lineq",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "n": 19044
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "lineq",
+        "params": {
+          "a": 2,
+          "b": 5,
+          "n": 18883
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "lineq",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "n": 17965
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "lineq",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "n": 13312
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "lineq",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "n": 6248
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "covering",
+        "params": {
+          "k": 7,
+          "t": 4,
+          "v": 18
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "covering",
+        "params": {
+          "k": 6,
+          "t": 3,
+          "v": 30
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "covering",
+        "params": {
+          "k": 6,
+          "t": 3,
+          "v": 24
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "matmul",
+        "params": {
+          "m": 4,
+          "n": 4,
+          "p": 5
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "matmul",
+        "params": {
+          "m": 5,
+          "n": 5,
+          "p": 5
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 4
+          }
+        ]
+      },
+      {
+        "task": "matmul",
+        "params": {
+          "m": 5,
+          "n": 4,
+          "p": 5
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 6
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "params": {
+          "n": 14
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "params": {
+          "n": 10
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "params": {
+          "n": 18
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "params": {
+          "n": 15
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 6
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "params": {
+          "n": 12
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 9
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "params": {
+          "n": 20
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 17
+          }
+        ]
+      },
+      {
+        "task": "shannon",
+        "params": {
+          "d": 24,
+          "q": 7
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "shannon",
+        "params": {
+          "d": 40,
+          "q": 7
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 1
+          }
+        ]
+      },
+      {
+        "task": "shannon",
+        "params": {
+          "d": 48,
+          "q": 9
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 2
+          }
+        ]
+      },
+      {
+        "task": "shannon",
+        "params": {
+          "d": 64,
+          "q": 9
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "A3",
+            "seed": 3
+          }
+        ]
+      },
+      {
+        "task": "trifference",
+        "params": {
+          "m": 1,
+          "n": 64,
+          "representation": "certified"
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "T1",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "trifference",
+        "params": {
+          "m": 1,
+          "n": 96,
+          "representation": "certified"
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "T2",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "trifference",
+        "params": {
+          "m": 1,
+          "n": 144,
+          "representation": "certified"
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "T3",
+            "seed": 0
+          }
+        ]
+      },
+      {
+        "task": "trifference",
+        "params": {
+          "m": 1,
+          "n": 192,
+          "representation": "certified"
+        },
+        "calls": 1,
+        "source_cases": [
+          {
+            "tier": "T4",
+            "seed": 0
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "task": "capset",
+        "tier": "A1",
+        "draws": [
+          {
+            "d": 3
+          },
+          {
+            "d": 3
+          },
+          {
+            "d": 4
+          }
+        ]
+      },
+      {
+        "task": "capset",
+        "tier": "A2",
+        "draws": [
+          {
+            "d": 8
+          },
+          {
+            "d": 7
+          },
+          {
+            "d": 7
+          }
+        ]
+      },
+      {
+        "task": "corners",
+        "tier": "A1",
+        "draws": [
+          {
+            "n": 23
+          },
+          {
+            "n": 15
+          },
+          {
+            "n": 22
+          }
+        ]
+      },
+      {
+        "task": "corners",
+        "tier": "A2",
+        "draws": [
+          {
+            "n": 66
+          },
+          {
+            "n": 50
+          },
+          {
+            "n": 79
+          }
+        ]
+      },
+      {
+        "task": "schur",
+        "tier": "A1",
+        "draws": [
+          {
+            "k": 4
+          },
+          {
+            "k": 4
+          },
+          {
+            "k": 3
+          }
+        ]
+      },
+      {
+        "task": "schur",
+        "tier": "A2",
+        "draws": [
+          {
+            "k": 5
+          },
+          {
+            "k": 5
+          },
+          {
+            "k": 6
+          }
+        ]
+      },
+      {
+        "task": "apfree_q",
+        "tier": "A1",
+        "draws": [
+          {
+            "q": 5,
+            "n": 4
+          },
+          {
+            "q": 5,
+            "n": 4
+          },
+          {
+            "q": 5,
+            "n": 4
+          }
+        ]
+      },
+      {
+        "task": "apfree_q",
+        "tier": "A2",
+        "draws": [
+          {
+            "q": 7,
+            "n": 3
+          },
+          {
+            "q": 7,
+            "n": 4
+          },
+          {
+            "q": 7,
+            "n": 4
+          }
+        ]
+      },
+      {
+        "task": "kissing",
+        "tier": "A1",
+        "draws": [
+          {
+            "d": 7
+          },
+          {
+            "d": 7
+          },
+          {
+            "d": 7
+          }
+        ]
+      },
+      {
+        "task": "kissing",
+        "tier": "A2",
+        "draws": [
+          {
+            "d": 11
+          },
+          {
+            "d": 12
+          },
+          {
+            "d": 9
+          }
+        ]
+      },
+      {
+        "task": "kissing_theta",
+        "tier": "A1",
+        "draws": [
+          {
+            "d": 6,
+            "cos100": 37
+          },
+          {
+            "d": 6,
+            "cos100": 35
+          },
+          {
+            "d": 6,
+            "cos100": 48
+          }
+        ]
+      },
+      {
+        "task": "kissing_theta",
+        "tier": "A2",
+        "draws": [
+          {
+            "d": 10,
+            "cos100": 47
+          },
+          {
+            "d": 10,
+            "cos100": 45
+          },
+          {
+            "d": 9,
+            "cos100": 20
+          }
+        ]
+      },
+      {
+        "task": "labs",
+        "tier": "A1",
+        "draws": [
+          {
+            "N": 19
+          },
+          {
+            "N": 25
+          },
+          {
+            "N": 29
+          }
+        ]
+      },
+      {
+        "task": "labs",
+        "tier": "A2",
+        "draws": [
+          {
+            "N": 68
+          },
+          {
+            "N": 74
+          },
+          {
+            "N": 91
+          }
+        ]
+      },
+      {
+        "task": "heilbronn",
+        "tier": "A1",
+        "draws": [
+          {
+            "n": 7
+          },
+          {
+            "n": 6
+          },
+          {
+            "n": 5
+          }
+        ]
+      },
+      {
+        "task": "heilbronn",
+        "tier": "A2",
+        "draws": [
+          {
+            "n": 18
+          },
+          {
+            "n": 17
+          },
+          {
+            "n": 18
+          }
+        ]
+      },
+      {
+        "task": "heilbronn_shape",
+        "tier": "A1",
+        "draws": [
+          {
+            "n": 9,
+            "T": [
+              [
+                6725,
+                380
+              ],
+              [
+                9888,
+                9190
+              ],
+              [
+                167,
+                1766
+              ]
+            ]
+          },
+          {
+            "n": 12,
+            "T": [
+              [
+                1150,
+                3876
+              ],
+              [
+                9943,
+                1242
+              ],
+              [
+                4678,
+                9521
+              ]
+            ]
+          },
+          {
+            "n": 11,
+            "T": [
+              [
+                8357,
+                127
+              ],
+              [
+                910,
+                9269
+              ],
+              [
+                1567,
+                730
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "task": "heilbronn_shape",
+        "tier": "A2",
+        "draws": [
+          {
+            "n": 16,
+            "T": [
+              [
+                421,
+                5948
+              ],
+              [
+                6687,
+                2095
+              ],
+              [
+                8512,
+                9922
+              ]
+            ]
+          },
+          {
+            "n": 14,
+            "T": [
+              [
+                5749,
+                817
+              ],
+              [
+                1261,
+                5176
+              ],
+              [
+                9203,
+                9182
+              ]
+            ]
+          },
+          {
+            "n": 12,
+            "T": [
+              [
+                276,
+                439
+              ],
+              [
+                8658,
+                4015
+              ],
+              [
+                348,
+                8886
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "tier": "A1",
+        "draws": [
+          {
+            "d": 4,
+            "k": 3
+          },
+          {
+            "d": 3,
+            "k": 3
+          },
+          {
+            "d": 3,
+            "k": 3
+          }
+        ]
+      },
+      {
+        "task": "degdiam",
+        "tier": "A2",
+        "draws": [
+          {
+            "d": 10,
+            "k": 2
+          },
+          {
+            "d": 5,
+            "k": 3
+          },
+          {
+            "d": 3,
+            "k": 5
+          }
+        ]
+      },
+      {
+        "task": "lineq",
+        "tier": "A1",
+        "draws": [
+          {
+            "a": 3,
+            "b": 4,
+            "n": 129
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "n": 101
+          },
+          {
+            "a": 2,
+            "b": 3,
+            "n": 155
+          }
+        ]
+      },
+      {
+        "task": "lineq",
+        "tier": "A2",
+        "draws": [
+          {
+            "a": 3,
+            "b": 5,
+            "n": 1394
+          },
+          {
+            "a": 1,
+            "b": 3,
+            "n": 1445
+          },
+          {
+            "a": 3,
+            "b": 4,
+            "n": 1439
+          }
+        ]
+      },
+      {
+        "task": "covering",
+        "tier": "A1",
+        "draws": [
+          {
+            "v": 12,
+            "k": 6,
+            "t": 3
+          },
+          {
+            "v": 13,
+            "k": 4,
+            "t": 2
+          },
+          {
+            "v": 10,
+            "k": 5,
+            "t": 3
+          }
+        ]
+      },
+      {
+        "task": "covering",
+        "tier": "A2",
+        "draws": [
+          {
+            "v": 16,
+            "k": 6,
+            "t": 3
+          },
+          {
+            "v": 15,
+            "k": 7,
+            "t": 4
+          },
+          {
+            "v": 16,
+            "k": 6,
+            "t": 3
+          }
+        ]
+      },
+      {
+        "task": "matmul",
+        "tier": "A1",
+        "draws": [
+          {
+            "n": 2,
+            "m": 2,
+            "p": 4
+          },
+          {
+            "n": 3,
+            "m": 3,
+            "p": 3
+          },
+          {
+            "n": 2,
+            "m": 2,
+            "p": 4
+          }
+        ]
+      },
+      {
+        "task": "matmul",
+        "tier": "A2",
+        "draws": [
+          {
+            "n": 3,
+            "m": 3,
+            "p": 5
+          },
+          {
+            "n": 3,
+            "m": 3,
+            "p": 4
+          },
+          {
+            "n": 4,
+            "m": 4,
+            "p": 5
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "tier": "A1",
+        "draws": [
+          {
+            "n": 12
+          },
+          {
+            "n": 10
+          },
+          {
+            "n": 10
+          }
+        ]
+      },
+      {
+        "task": "mols",
+        "tier": "A2",
+        "draws": [
+          {
+            "n": 15
+          },
+          {
+            "n": 14
+          },
+          {
+            "n": 14
+          }
+        ]
+      },
+      {
+        "task": "shannon",
+        "tier": "A1",
+        "draws": [
+          {
+            "q": 7,
+            "d": 3
+          },
+          {
+            "q": 9,
+            "d": 3
+          },
+          {
+            "q": 7,
+            "d": 4
+          }
+        ]
+      },
+      {
+        "task": "shannon",
+        "tier": "A2",
+        "draws": [
+          {
+            "q": 9,
+            "d": 12
+          },
+          {
+            "q": 7,
+            "d": 8
+          },
+          {
+            "q": 7,
+            "d": 12
+          }
+        ]
+      }
+    ],
+    "triangle_domains": [
+      [
+        1,
+        [
+          [
+            9026,
+            8197
+          ],
+          [
+            1769,
+            9178
+          ],
+          [
+            7298,
+            1276
+          ]
+        ]
+      ],
+      [
+        2,
+        [
+          [
+            578,
+            9933
+          ],
+          [
+            8598,
+            7337
+          ],
+          [
+            2075,
+            588
+          ]
+        ]
+      ],
+      [
+        3,
+        [
+          [
+            411,
+            7999
+          ],
+          [
+            9004,
+            9890
+          ],
+          [
+            3031,
+            713
+          ]
+        ]
+      ],
+      [
+        4,
+        [
+          [
+            7922,
+            8793
+          ],
+          [
+            9917,
+            1548
+          ],
+          [
+            1510,
+            3942
+          ]
+        ]
+      ],
+      [
+        5,
+        [
+          [
+            526,
+            8526
+          ],
+          [
+            8696,
+            8279
+          ],
+          [
+            8084,
+            1688
+          ]
+        ]
+      ]
+    ]
+  },
+  "cases": {
+    "capset": {
+      "params": {
+        "d": 12
+      },
+      "factor_sizes": [
+        112,
+        112
+      ],
+      "objective": 12544,
+      "reference": 12928,
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-high@128k.once-refresh#L4",
+        "tier": "L4",
+        "file": "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L4.jsonl",
+        "sha256": "c408a94e8bb52ec664de35ddc403787684c299bcaeaa67ab3e9c8011b20df47c"
+      }
+    },
+    "shannon": {
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "factors": [
+        [
+          343,
+          5,
+          4
+        ],
+        [
+          10,
+          2,
+          2
+        ]
+      ],
+      "objective": 1384128720100,
+      "reference": 1941100559147,
+      "comparison_objective": 1000000000000,
+      "source": {
+        "model": "Qwen/Qwen3.8-27B-FP8",
+        "configuration": "think-high@128k#A3",
+        "tier": "A3",
+        "file": "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#A3.jsonl",
+        "sha256": "e85596952ddbae368dab69184160b4df85f1d6303e7593ede1c127e0fe78360c"
+      },
+      "comparison_sources": [
+        {
+          "model": "gpt-6-astra",
+          "configuration": "codex-medium@128k.once-refresh#A3",
+          "tier": "A3",
+          "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+          "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+        },
+        {
+          "model": "deepseek-flash",
+          "configuration": "think-low@128k#A3",
+          "tier": "A3",
+          "file": "bench/results/deepseek-flash-think-low@128k#A3.jsonl",
+          "sha256": "bf2b144cf16e7683269445ba5f29e3461ad4dac41fd126aba66a52652b6f6580"
+        }
+      ]
+    },
+    "trifference": {
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "generator": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          1,
+          0,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          1,
+          1,
+          2,
+          0,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          1,
+          0,
+          1,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2,
+          1,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          1,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      "rank": 10,
+      "objective": 59049,
+      "reference": 19683,
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-high@128k.once#T1",
+        "tier": "T1",
+        "file": "bench/results/gpt-6-astra-codex-high@128k.once#T1.jsonl",
+        "sha256": "8ee369becca6de318e1e0bec4b9677c652644e415119c7de56f0ded2c3604fc4"
+      }
+    },
+    "schur": {
+      "kind": "literature_reconstruction",
+      "model_calls": 0,
+      "scope": "Selected published constructions at fixed k=8; not an exhaustive record chronology.",
+      "verification": "Construction existence follows from cited papers; this script checks scoring arithmetic, not the original colorings.",
+      "changes_to_frozen_frontiers": false,
+      "rows": [
+        {
+          "label": "Recursive extension",
+          "citation": "fredricksen2000schur",
+          "formula": "3\\cdot1680+1",
+          "value": 5041,
+          "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v7i1r32",
+          "evidence": "p. 1 Eq. (1), S(k)>=3S(k-1)+1; p. 2, S(7)>=1680. The k=8 value is derived here.",
+          "family": "schur",
+          "parameters": {
+            "k": 8
+          },
+          "historical_reference": 5041,
+          "ratio": 1.0,
+          "exact_ratio": "1/1",
+          "breakthrough": 0
+        },
+        {
+          "label": "Rowley template",
+          "citation": "rowley2021templates",
+          "formula": "33\\cdot160+6",
+          "value": 5286,
+          "source": "https://arxiv.org/abs/2107.03560",
+          "evidence": "p. 4 gives S(k+3)>=33S(k)+6; use the published S(5)>=160. Year is the cited exposition.",
+          "family": "schur",
+          "parameters": {
+            "k": 8
+          },
+          "historical_reference": 5041,
+          "ratio": 1.0486014679627058,
+          "exact_ratio": "5286/5041",
+          "breakthrough": 1
+        },
+        {
+          "label": "Shifted template",
+          "citation": "bengone2026schur",
+          "formula": "10\\cdot536+2",
+          "value": 5362,
+          "source": "https://arxiv.org/abs/2607.15034",
+          "evidence": "Section IV explicitly derives S(8)>=10*536+2=5362.",
+          "family": "schur",
+          "parameters": {
+            "k": 8
+          },
+          "historical_reference": 5041,
+          "ratio": 1.0636778416980759,
+          "exact_ratio": "5362/5041",
+          "breakthrough": 1
+        }
+      ]
+    }
+  },
+  "ladder_rows": [
+    [
+      "cap set",
+      "L1",
+      "d=6",
+      "112",
+      "112",
+      "0.00 (0/2)",
+      "0.36 (1/2)",
+      "0.65 (2/2)",
+      "1.00 (2/2)"
+    ],
+    [
+      "cap set",
+      "L2",
+      "d=8",
+      "512",
+      "512",
+      "0.32 (1/2)",
+      "0.78 (2/2)",
+      "0.57 (2/2)",
+      "0.91 (2/2)"
+    ],
+    [
+      "cap set",
+      "L3",
+      "d=10",
+      "2432",
+      "2240",
+      "0.63 (2/2)",
+      "0.63 (2/2)",
+      "0.60 (2/2)",
+      "0.88 (2/2)"
+    ],
+    [
+      "cap set",
+      "L4",
+      "d=12",
+      "12928",
+      "12544",
+      "0.31 (1/2)",
+      "0.51 (2/2)",
+      "0.41 (2/2)",
+      "0.97 (2/2)"
+    ],
+    [
+      "kissing",
+      "L1",
+      "d=8",
+      "240",
+      "240",
+      "1.00 (2/2)",
+      "0.00 (0/2)",
+      "1.00 (2/2)",
+      "1.00 (2/2)"
+    ],
+    [
+      "kissing",
+      "L2",
+      "d=10",
+      "510",
+      "510",
+      "0.30 (1/2)",
+      "0.67 (2/2)",
+      "0.82 (2/2)",
+      "0.98 (2/2)"
+    ],
+    [
+      "kissing",
+      "L3",
+      "d=13",
+      "1154",
+      "1154",
+      "0.36 (1/2)",
+      "0.52 (2/2)",
+      "0.27 (2/2)",
+      "0.46 (1/2)"
+    ],
+    [
+      "kissing",
+      "L4",
+      "d=16",
+      "4320",
+      "4320",
+      "0.26 (1/2)",
+      "0.11 (2/2)",
+      "0.26 (1/2)",
+      "0.53 (2/2)"
+    ],
+    [
+      "max. degree 3 graphs",
+      "L1",
+      "d=3, k=4",
+      "38",
+      "16",
+      "0.32 (1/2)",
+      "0.39 (1/2)",
+      "0.32 (1/2)",
+      "0.89 (2/2)"
+    ],
+    [
+      "max. degree 3 graphs",
+      "L2",
+      "d=3, k=6",
+      "132",
+      "24",
+      "0.18 (1/2)",
+      "0.20 (1/2)",
+      "0.17 (2/2)",
+      "0.95 (2/2)"
+    ],
+    [
+      "max. degree 3 graphs",
+      "L3",
+      "d=3, k=8",
+      "360",
+      "46",
+      "0.11 (1/2)",
+      "0.20 (1/2)",
+      "0.28 (2/2)",
+      "0.66 (2/2)"
+    ],
+    [
+      "max. degree 3 graphs",
+      "L4",
+      "d=3, k=10",
+      "1250",
+      "94",
+      "0.09 (2/2)",
+      "0.17 (2/2)",
+      "0.00 (0/2)",
+      "0.30 (2/2)"
+    ],
+    [
+      "Schur",
+      "L1",
+      "k=5",
+      "160",
+      "121",
+      "0.00 (0/2)",
+      "0.00 (0/2)",
+      "0.76 (2/2)",
+      "0.86 (2/2)"
+    ],
+    [
+      "Schur",
+      "L2",
+      "k=6",
+      "536",
+      "364",
+      "0.34 (1/2)",
+      "0.00 (0/2)",
+      "0.18 (1/2)",
+      "0.75 (2/2)"
+    ],
+    [
+      "Schur",
+      "L3",
+      "k=7",
+      "1696",
+      "1093",
+      "0.06 (1/2)",
+      "0.00 (0/2)",
+      "0.00 (0/2)",
+      "0.71 (2/2)"
+    ],
+    [
+      "Schur",
+      "L4",
+      "k=8",
+      "5362",
+      "3280",
+      "0.00 (0/2)",
+      "0.02 (1/2)",
+      "0.00 (0/2)",
+      "0.74 (2/2)"
+    ],
+    [
+      "covering",
+      "L1",
+      "v=12, k=6, t=3",
+      "15",
+      "16",
+      "0.00 (0/2)",
+      "0.72 (2/2)",
+      "0.00 (0/2)",
+      "1.00 (2/2)"
+    ],
+    [
+      "covering",
+      "L2",
+      "v=16, k=6, t=3",
+      "38",
+      "48",
+      "0.30 (1/2)",
+      "0.70 (2/2)",
+      "0.30 (1/2)",
+      "0.86 (2/2)"
+    ],
+    [
+      "covering",
+      "L3",
+      "v=24, k=6, t=3",
+      "116",
+      "181",
+      "0.53 (2/2)",
+      "0.26 (1/2)",
+      "0.26 (1/2)",
+      "0.94 (2/2)"
+    ],
+    [
+      "covering",
+      "L4",
+      "v=30, k=6, t=3",
+      "225",
+      "366",
+      "0.20 (1/2)",
+      "0.00 (0/2)",
+      "0.25 (1/2)",
+      "0.84 (2/2)"
+    ],
+    [
+      "max. degree 4 graphs",
+      "M1",
+      "d=4, k=4",
+      "104",
+      "41",
+      "--",
+      "--",
+      "0.77 (1/1)",
+      "0.84 (1/1)"
+    ],
+    [
+      "max. degree 4 graphs",
+      "M2",
+      "d=4, k=5",
+      "364",
+      "61",
+      "--",
+      "--",
+      "0.00 (0/1)",
+      "0.53 (1/1)"
+    ],
+    [
+      "max. degree 4 graphs",
+      "M3",
+      "d=4, k=6",
+      "745",
+      "83",
+      "--",
+      "--",
+      "0.07 (1/1)",
+      "0.98 (1/1)"
+    ],
+    [
+      "max. degree 4 graphs",
+      "M4",
+      "d=4, k=7",
+      "1320",
+      "113",
+      "--",
+      "--",
+      "0.09 (1/1)",
+      "0.15 (1/1)"
+    ],
+    [
+      "AP-free (control)",
+      "L1",
+      "k=3, n=300",
+      "52*",
+      "52",
+      "0.46 (1/2)",
+      "0.46 (1/2)",
+      "0.45 (1/2)",
+      "1.00 (2/2)"
+    ],
+    [
+      "AP-free (control)",
+      "L2",
+      "k=3, n=2000",
+      "165*",
+      "165",
+      "0.00 (0/2)",
+      "0.78 (2/2)",
+      "0.44 (1/2)",
+      "1.00 (2/2)"
+    ],
+    [
+      "AP-free (control)",
+      "L3",
+      "k=3, n=8000",
+      "384*",
+      "384",
+      "0.50 (1/2)",
+      "1.00 (2/2)",
+      "0.50 (1/2)",
+      "1.04 (2/2)"
+    ],
+    [
+      "AP-free (control)",
+      "L4",
+      "k=3, n=32000",
+      "1024*",
+      "1024",
+      "0.50 (1/2)",
+      "1.00 (2/2)",
+      "0.50 (1/2)",
+      "1.00 (2/2)"
+    ]
+  ]
+}

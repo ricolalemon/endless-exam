@@ -1,0 +1,84 @@
+{
+  "cases": [
+    {
+      "tier": "T1",
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "objective": 19683,
+      "ratio": 1.0,
+      "latency_s": 52.348,
+      "valid": true,
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#T1",
+        "tier": "T1",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T1.jsonl",
+        "sha256": "f106b1ea0a586d3240d71e9ebfe48c93b8d616eed0f5f2f3dd8aa7a81c8462d9"
+      }
+    },
+    {
+      "tier": "T2",
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "objective": 531441,
+      "ratio": 1.0,
+      "latency_s": 53.786,
+      "valid": true,
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#T2",
+        "tier": "T2",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T2.jsonl",
+        "sha256": "f25bc6aa95520ddb42767210ba46a19c47904450247624e33af06b4205a65aec"
+      }
+    },
+    {
+      "tier": "T3",
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "latency_s": 36.967,
+      "valid": true,
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#T3",
+        "tier": "T3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T3.jsonl",
+        "sha256": "13820fe2fc25bd5be6d05e9c2bbe8c62e36f505542ed5ae6c16f2458deba23fb"
+      }
+    },
+    {
+      "tier": "T4",
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "latency_s": 63.84,
+      "valid": true,
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#T4",
+        "tier": "T4",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T4.jsonl",
+        "sha256": "706880994c6f115eb33e9a6ba7297ee2d6c743501301b2c812b3e69b77d966ee"
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "name": "linear-rank-12",
+    "params": {
+      "n": 144,
+      "m": 1,
+      "representation": "certified"
+    },
+    "objective": 531441,
+    "primary_s": 5.61052120802924,
+    "secondary_s": 8.655703334021382,
+    "certificate_bytes": 1793,
+    "format": "linear_code"
+  },
+  {
+    "name": "linear-rank-12-m3",
+    "params": {
+      "n": 432,
+      "m": 3,
+      "representation": "certified"
+    },
+    "objective": 531441,
+    "primary_s": 21.630480458959937,
+    "secondary_s": 37.700296541908756,
+    "certificate_bytes": 5249,
+    "format": "linear_code"
+  },
+  {
+    "name": "reference-64",
+    "params": {
+      "n": 64,
+      "m": 1,
+      "representation": "certified"
+    },
+    "objective": 19683,
+    "primary_s": 0.00014837505295872688,
+    "secondary_s": 7.779209408909082e-05,
+    "certificate_bytes": 162,
+    "format": "rs_concat"
+  },
+  {
+    "name": "reference-96",
+    "params": {
+      "n": 96,
+      "m": 1,
+      "representation": "certified"
+    },
+    "objective": 531441,
+    "primary_s": 6.045796908438206e-05,
+    "secondary_s": 9.67920059338212e-05,
+    "certificate_bytes": 163,
+    "format": "rs_concat"
+  },
+  {
+    "name": "reference-144",
+    "params": {
+      "n": 144,
+      "m": 1,
+      "representation": "certified"
+    },
+    "objective": 387420489,
+    "primary_s": 7.862504571676254e-05,
+    "secondary_s": 6.349990144371986e-05,
+    "certificate_bytes": 163,
+    "format": "rs_concat"
+  },
+  {
+    "name": "reference-192",
+    "params": {
+      "n": 192,
+      "m": 1,
+      "representation": "certified"
+    },
+    "objective": 10460353203,
+    "primary_s": 5.483301356434822e-05,
+    "secondary_s": 5.6750024668872356e-05,
+    "certificate_bytes": 163,
+    "format": "rs_concat"
+  },
+  {
+    "name": "reference-1024",
+    "params": {
+      "n": 1024,
+      "m": 1,
+      "representation": "certified"
+    },
+    "objective": 515377520732011331036461129765621272702107522001,
+    "primary_s": 0.00017787504475563765,
+    "secondary_s": 0.00024166691582649946,
+    "certificate_bytes": 201,
+    "format": "rs_concat"
+  }
+]

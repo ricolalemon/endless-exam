@@ -1,0 +1,220 @@
+{
+  "cases": [
+    {
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "objective": 1000000000000,
+      "valid": true,
+      "ratio": 0.515171661399882,
+      "normalized": {
+        "name": "shannon_base",
+        "value": 3.162277660168379,
+        "better": "higher",
+        "lower": null,
+        "upper": 3.317667207394097,
+        "note": "M^(1/d); rigorous rational upper bound on Lovasz theta"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    },
+    {
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "objective": 100000000000000000000,
+      "valid": true,
+      "ratio": 0.3038585674283234,
+      "normalized": {
+        "name": "shannon_base",
+        "value": 3.1622776601683795,
+        "better": "higher",
+        "lower": null,
+        "upper": 3.317667207394097,
+        "note": "M^(1/d); rigorous rational upper bound on Lovasz theta"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    },
+    {
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "objective": 3433683820292512484657849089281,
+      "valid": true,
+      "ratio": 1.0,
+      "normalized": {
+        "name": "shannon_base",
+        "value": 4.3267487109222245,
+        "better": "higher",
+        "lower": null,
+        "upper": 4.3600895814340666,
+        "note": "M^(1/d); rigorous rational upper bound on Lovasz theta"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    },
+    {
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "objective": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "ratio": 1.0,
+      "normalized": {
+        "name": "shannon_base",
+        "value": 4.321443449475271,
+        "better": "higher",
+        "lower": null,
+        "upper": 4.3600895814340666,
+        "note": "M^(1/d); rigorous rational upper bound on Lovasz theta"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    },
+    {
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 30,
+        "m": 1
+      },
+      "reference": 729,
+      "objective": 729,
+      "valid": true,
+      "ratio": 1.0,
+      "normalized": {
+        "name": "trifference_rate",
+        "value": 0.3169925001442312,
+        "better": "higher",
+        "lower": null,
+        "upper": 0.618295819199291,
+        "note": "log2(M)/n"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    },
+    {
+      "family": "trifference",
+      "seed": 1,
+      "params": {
+        "n": 36,
+        "m": 2
+      },
+      "reference": 729,
+      "objective": 729,
+      "valid": true,
+      "ratio": 1.0,
+      "normalized": {
+        "name": "trifference_rate",
+        "value": 0.26416041678685936,
+        "better": "higher",
+        "lower": null,
+        "upper": 0.6127402709932679,
+        "note": "log2(M)/n"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    },
+    {
+      "family": "trifference",
+      "seed": 2,
+      "params": {
+        "n": 42,
+        "m": 3
+      },
+      "reference": 729,
+      "objective": 729,
+      "valid": true,
+      "ratio": 1.0,
+      "normalized": {
+        "name": "trifference_rate",
+        "value": 0.22642321438873658,
+        "better": "higher",
+        "lower": null,
+        "upper": 0.6087720242240107,
+        "note": "log2(M)/n"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    },
+    {
+      "family": "trifference",
+      "seed": 3,
+      "params": {
+        "n": 56,
+        "m": 1
+      },
+      "reference": 2187,
+      "objective": 6561,
+      "valid": true,
+      "ratio": 3.0,
+      "normalized": {
+        "name": "trifference_rate",
+        "value": 0.22642321438873658,
+        "better": "higher",
+        "lower": null,
+        "upper": 0.6028196435769665,
+        "note": "log2(M)/n"
+      },
+      "source": {
+        "model": "gpt-6-astra",
+        "configuration": "codex-medium@128k.once-refresh#A3",
+        "tier": "A3",
+        "file": "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl",
+        "sha256": "49a12377d10bc5ee94166583a3d054fc7f6d0ccea1677ad71853de856fd0e471"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+\appendixpage
+\section{Instance parameters and resource limits}
+\label{app:tiers}
+We use three parameter ranges: A1 contains small familiar instances, while A2 and A3 increase size. Family selection for A3 screened the first sampled setting for a ratio of at least 1.4 between the implemented baseline $z$ and a bound or target $b$: $b/z$ for maximisation and $z/b$ for minimisation. This screening identifies families with room for improvement; the remaining instances vary the parameters within those families. Answers must also fit the representation limits and be verifiable within 60 seconds. Sorting networks and Kakeya are evaluated separately as controls. For example, the Kakeya setting $(q,n)=(13,3)$ has a proven lower bound of 595~\citep{bukh2021kakeya} and a construction of size 703, leaving a ratio of only 1.18.
+
+The main evaluation contains 69 instances: 61 in the twelve non-code families, four Shannon instances and four trifference instances. Each configuration contributes one response per instance under the protocol in Appendix~\ref{app:runner}. The released manifest specifies the selected instances. Table~\ref{tab:tiers} lists the instances, and Table~\ref{tab:triangle_domains} specifies the triangular domains. Kakeya provides a separate control for the family-selection comparison. Smaller-instance parameters appear in Table~\ref{tab:aux_parameters}.
+\small\setlength{\tabcolsep}{4pt}
+\input{tables/formal_parameters}
+\normalsize
+\subsection{Triangular domains}
+\small\input{tables/triangle_domains}\normalsize
+Each triangle is specified by its three integer-coordinate vertices. The objective is the minimum triangle area divided by the area of the containing domain.
+\appendixpage
+\subsection{Smaller-instance parameter draws}
+\small\input{tables/auxiliary_parameters}\normalsize

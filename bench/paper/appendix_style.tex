@@ -1,0 +1,19 @@
+% Shared appendix presentation. Definitions do not alter the main-text layout.
+\colorlet{appendixink}{paperink}
+\colorlet{appendixgold}{paperaccent}
+\tcbset{appendixbase/.style={enhanced,boxrule=.35pt,arc=1.4pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,before skip=8pt,after skip=8pt,
+  fonttitle=\bfseries,coltitle=black}}
+\newtcolorbox{taskbox}[1][]{appendixbase,colback=paperwhite,colframe=black!22,
+  colbacktitle=paperwarmgray,#1}
+\newtcolorbox{constructionbox}[1][]{appendixbase,colback=paperwhite,
+  colframe=appendixink!35,colbacktitle=paperwarmgray,#1}
+\newtcolorbox{resultbox}[1][]{appendixbase,colback=paperresult,
+  colframe=appendixgold!45,colbacktitle=paperresulttitle,#1}
+\newcommand{\catalogueheading}[2]{\refstepcounter{subsection}\label{family:#1}%
+  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#2}%
+  \noindent{\large\bfseries\color{appendixink}\thesubsection\quad #2}\par\smallskip}
+\newcommand{\appendixpage}{\par\clearpage}
+\newcommand{\appendixfigure}[3]{\begin{center}\includegraphics[width=\linewidth]{#1}%
+  \captionof{figure}{#2}\label{#3}\end{center}}
+\newcommand{\readingnote}[1]{\begin{constructionbox}#1\end{constructionbox}}

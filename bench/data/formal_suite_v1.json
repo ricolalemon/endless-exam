@@ -1,0 +1,818 @@
+{
+  "version": "1",
+  "calls": [
+    {
+      "tier": "A3",
+      "family": "capset",
+      "seed": 0,
+      "params": {
+        "d": 10
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-capset-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "capset",
+      "seed": 2,
+      "params": {
+        "d": 11
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-capset-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "labs",
+      "seed": 0,
+      "params": {
+        "N": 280
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-labs-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "labs",
+      "seed": 1,
+      "params": {
+        "N": 375
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-labs-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "labs",
+      "seed": 2,
+      "params": {
+        "N": 357
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-labs-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "labs",
+      "seed": 3,
+      "params": {
+        "N": 281
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-labs-3-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "labs",
+      "seed": 4,
+      "params": {
+        "N": 240
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-labs-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn",
+      "seed": 0,
+      "params": {
+        "n": 46
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn",
+      "seed": 1,
+      "params": {
+        "n": 26
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn",
+      "seed": 2,
+      "params": {
+        "n": 40
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn",
+      "seed": 3,
+      "params": {
+        "n": 50
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn-3-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn",
+      "seed": 4,
+      "params": {
+        "n": 48
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing",
+      "seed": 0,
+      "params": {
+        "d": 14
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing",
+      "seed": 1,
+      "params": {
+        "d": 15
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "corners",
+      "seed": 0,
+      "params": {
+        "n": 138
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-corners-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "corners",
+      "seed": 1,
+      "params": {
+        "n": 183
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-corners-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "corners",
+      "seed": 2,
+      "params": {
+        "n": 150
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-corners-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "corners",
+      "seed": 3,
+      "params": {
+        "n": 162
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-corners-3-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "corners",
+      "seed": 4,
+      "params": {
+        "n": 185
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-corners-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing_theta",
+      "seed": 0,
+      "params": {
+        "d": 12,
+        "cos100": 24
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing_theta-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing_theta",
+      "seed": 1,
+      "params": {
+        "d": 12,
+        "cos100": 39
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing_theta-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing_theta",
+      "seed": 2,
+      "params": {
+        "d": 14,
+        "cos100": 36
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing_theta-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing_theta",
+      "seed": 3,
+      "params": {
+        "d": 14,
+        "cos100": 39
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing_theta-3-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing_theta",
+      "seed": 4,
+      "params": {
+        "d": 12,
+        "cos100": 36
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing_theta-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn_shape",
+      "seed": 0,
+      "params": {
+        "n": 32,
+        "T": [
+          [
+            9026,
+            8197
+          ],
+          [
+            1769,
+            9178
+          ],
+          [
+            7298,
+            1276
+          ]
+        ]
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn_shape-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn_shape",
+      "seed": 1,
+      "params": {
+        "n": 34,
+        "T": [
+          [
+            578,
+            9933
+          ],
+          [
+            8598,
+            7337
+          ],
+          [
+            2075,
+            588
+          ]
+        ]
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn_shape-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn_shape",
+      "seed": 2,
+      "params": {
+        "n": 31,
+        "T": [
+          [
+            411,
+            7999
+          ],
+          [
+            9004,
+            9890
+          ],
+          [
+            3031,
+            713
+          ]
+        ]
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn_shape-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn_shape",
+      "seed": 3,
+      "params": {
+        "n": 40,
+        "T": [
+          [
+            7922,
+            8793
+          ],
+          [
+            9917,
+            1548
+          ],
+          [
+            1510,
+            3942
+          ]
+        ]
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn_shape-3-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "heilbronn_shape",
+      "seed": 4,
+      "params": {
+        "n": 26,
+        "T": [
+          [
+            526,
+            8526
+          ],
+          [
+            8696,
+            8279
+          ],
+          [
+            8084,
+            1688
+          ]
+        ]
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-heilbronn_shape-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "matmul",
+      "seed": 0,
+      "params": {
+        "n": 4,
+        "m": 4,
+        "p": 5
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-matmul-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "matmul",
+      "seed": 4,
+      "params": {
+        "n": 5,
+        "m": 5,
+        "p": 5
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-matmul-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "degdiam",
+      "seed": 0,
+      "params": {
+        "d": 4,
+        "k": 5
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-degdiam-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "degdiam",
+      "seed": 1,
+      "params": {
+        "d": 7,
+        "k": 3
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-degdiam-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "degdiam",
+      "seed": 3,
+      "params": {
+        "d": 4,
+        "k": 4
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-degdiam-3-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "degdiam",
+      "seed": 4,
+      "params": {
+        "d": 3,
+        "k": 7
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-degdiam-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "lineq",
+      "seed": 0,
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 19044
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-lineq-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "lineq",
+      "seed": 1,
+      "params": {
+        "a": 2,
+        "b": 5,
+        "n": 18883
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-lineq-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "lineq",
+      "seed": 2,
+      "params": {
+        "a": 2,
+        "b": 3,
+        "n": 17965
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-lineq-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "lineq",
+      "seed": 3,
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 13312
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-lineq-3-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "lineq",
+      "seed": 4,
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 6248
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-lineq-4-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "apfree_q",
+      "seed": 0,
+      "params": {
+        "q": 5,
+        "n": 6
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-apfree_q-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "apfree_q",
+      "seed": 1,
+      "params": {
+        "q": 5,
+        "n": 5
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-apfree_q-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "mols",
+      "seed": 0,
+      "params": {
+        "n": 14
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-mols-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "mols",
+      "seed": 1,
+      "params": {
+        "n": 10
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-mols-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "mols",
+      "seed": 2,
+      "params": {
+        "n": 18
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-mols-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "capset",
+      "seed": 11,
+      "params": {
+        "d": 9
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-capset-11-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "kissing",
+      "seed": 6,
+      "params": {
+        "d": 13,
+        "representation": "quadratic"
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-kissing-6-quadratic-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "matmul",
+      "seed": 6,
+      "params": {
+        "n": 4,
+        "m": 5,
+        "p": 5
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-matmul-6-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "degdiam",
+      "seed": 7,
+      "params": {
+        "d": 6,
+        "k": 3
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-degdiam-7-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "degdiam",
+      "seed": 8,
+      "params": {
+        "d": 5,
+        "k": 4
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-degdiam-8-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "degdiam",
+      "seed": 20,
+      "params": {
+        "d": 3,
+        "k": 6
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-degdiam-20-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "apfree_q",
+      "seed": 6,
+      "params": {
+        "q": 7,
+        "n": 4
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-apfree_q-6-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "mols",
+      "seed": 6,
+      "params": {
+        "n": 15
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-mols-6-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "mols",
+      "seed": 9,
+      "params": {
+        "n": 12
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-mols-9-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "mols",
+      "seed": 17,
+      "params": {
+        "n": 20
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-mols-17-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "schur",
+      "seed": 0,
+      "params": {
+        "k": 7
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-schur-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "schur",
+      "seed": 1,
+      "params": {
+        "k": 6
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-schur-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "schur",
+      "seed": 2,
+      "params": {
+        "k": 8
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-schur-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "covering",
+      "seed": 0,
+      "params": {
+        "v": 18,
+        "k": 7,
+        "t": 4
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-covering-0-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "covering",
+      "seed": 1,
+      "params": {
+        "v": 30,
+        "k": 6,
+        "t": 3
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-covering-1-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "covering",
+      "seed": 2,
+      "params": {
+        "v": 24,
+        "k": 6,
+        "t": 3
+      },
+      "block": "core12",
+      "reference_path": "bench/refs/A3-covering-2-t10.json"
+    },
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference_path": "bench/refs/A3-shannon-0-t10.json",
+      "block": "codes"
+    },
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference_path": "bench/refs/A3-shannon-1-t10.json",
+      "block": "codes"
+    },
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference_path": "bench/refs/A3-shannon-2-t10.json",
+      "block": "codes"
+    },
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference_path": "bench/refs/A3-shannon-3-t10.json",
+      "block": "codes"
+    },
+    {
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference_path": "bench/refs/T1-trifference-0-t10.json",
+      "block": "codes"
+    },
+    {
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference_path": "bench/refs/T2-trifference-0-t10.json",
+      "block": "codes"
+    },
+    {
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference_path": "bench/refs/T3-trifference-0-t10.json",
+      "block": "codes"
+    },
+    {
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference_path": "bench/refs/T4-trifference-0-t10.json",
+      "block": "codes"
+    }
+  ],
+  "selection_rule": "For each identical family and parameter object, retain the smallest original numeric seed, breaking ties by tier and original order. Apply identically to all models without consulting outcomes.",
+  "instances": 69,
+  "calls_per_configuration": 69
+}

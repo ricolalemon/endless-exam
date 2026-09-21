@@ -1,0 +1,21 @@
+\begin{tabularx}{\linewidth}{@{}P{.16\linewidth}YP{.12\linewidth}P{.09\linewidth}P{.22\linewidth}@{}}
+\toprule
+family & construction & objective & class & reference; bound or target \\
+\midrule
+\hyperref[family:capset]{cap set} & $S \subseteq \mathbb{F}_3^d$; no three collinear points (cap set) & $|S|$ & R & published; proven bound \\
+\hyperref[family:spherical_code]{spherical codes} & vectors with exact coordinates; pairwise angle $\ge\theta$; $60^\circ$ or variable & count & R & mixed; proven bound \\
+\hyperref[family:matmul]{matrix multiplication} & bilinear scheme for $(n\times m)$ by $(m\times p)$ matrices; computes the product exactly & rank $r$ (min) & S & published; proven bound \\
+\hyperref[family:degdiam]{degree--diameter} & graph with max degree $d$; diameter $\le k$ & vertices & S & published; proven bound \\
+\hyperref[family:covering]{covering} & $k$-subsets (blocks) of $[v]$; every $t$-subset lies in a block & blocks (min) & S & published; proven bound \\
+\hyperref[family:schur]{Schur} & $k$-colouring of $\{1..N\}$; no monochromatic $x, y, x{+}y$ & $N$ & R & published; proven bound \\
+\hyperref[family:apfree_q]{$\mathbb{F}_q^n$ AP-free} & $S \subseteq \mathbb{F}_q^n$, $q\in\{5,7\}$; no 3-term progression & $|S|$ & R & mixed; proven bound \\
+\hyperref[family:mols]{MOLS} & Latin squares of order $n$, $n$ not a prime power; pairwise orthogonal & number of squares & R & published; proven bound \\
+\midrule
+\hyperref[family:labs]{LABS} & $\pm1$ sequence of length $N$; well-formed sequence & merit factor & S & construction; conjectured target \\
+\hyperref[family:heilbronn]{Heilbronn} & $n$ points in a square or triangle; distinct points in the domain & min triangle area & S & construction; trivial bound \\
+\hyperref[family:corners]{corners} & $S \subseteq [n]^2$; no corner & $|S|$ & R & construction; trivial bound \\
+\hyperref[family:lineq]{linear-equation-free} & $S \subseteq \{1..n\}$; no non-trivial solution of the specified linear equation & $|S|$ & R & construction; trivial bound \\
+\hyperref[family:shannon]{Shannon} & code in $\{0,\ldots,q-1\}^d$; every pair separates on the cycle & $|C|$ & R & construction; proven bound \\
+\hyperref[family:trifference]{trifference} & ternary code of length $n$; every triple has at least $m$ coordinates with three distinct symbols & $|C|$ & U & construction; proven bound \\
+\bottomrule
+\end{tabularx}

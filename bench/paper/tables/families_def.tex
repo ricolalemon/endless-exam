@@ -1,0 +1,91 @@
+\subsection{cap set}
+
+Maximise $|S|$ for $S\subseteq\mathbb F_3^d$ containing no three distinct points $x,y,z$ with $x+y+z=0$.
+
+Example: $d=10$. Baseline: 2240 (expert construction); 10 s search: 1140. Scoring reference: 2432 (published). Bound or target: 5619 (bound).
+
+\subsection{LABS}
+
+Choose $s\in\{-1,1\}^N$ to maximise the merit factor $N^2/(2\sum_{k=1}^{N-1}C_k^2)$, where $C_k=\sum_{i=1}^{N-k}s_i s_{i+k}$ is the aperiodic autocorrelation.
+
+Example: $N=280$. Baseline: 5.57769 (expert construction); 10 s search: 4.4708. Scoring reference: 5.57769 (construction baseline). Bound or target: 12.32 (conjecture).
+
+\subsection{Heilbronn}
+
+\paragraph{Square.} Place $n$ distinct points in $[0,1]^2$ to maximise the smallest area of a triangle determined by three points. Coordinates are multiples of $10^{-4}$.
+
+Example: $n=46$. Baseline: 0.00047375 (reference search); 10 s search: 0.00047375. Scoring reference: 0.00047375 (construction baseline). Bound or target: 0.0227273 (trivial).
+
+\paragraph{Triangle.} Place $n$ distinct integer-grid points in a specified triangle $T$ to maximise the smallest triangle area, divided by the area of $T$.
+
+Example: $n=32,\ T=\operatorname{conv}\{(9026,8197),(1769,9178),(7298,1276)\}$. Baseline: 0.0014885 (reference search); 10 s search: 0.0014885. Scoring reference: 0.0014885 (construction baseline). Bound or target: 0.0333333 (trivial).
+
+\subsection{spherical codes}
+
+\paragraph{Fixed angle ($60^\circ$).} Maximise the number of nonzero vectors whose pairwise angles are at least $60^\circ$. After normalisation these give a kissing configuration. Coordinates are integers in $[-1000,1000]$; at $d=13$, we also allow $a+b\sqrt3$ with integer $|a|,|b|\le1000$.
+
+Example: $d=14$. Baseline: 1932 (expert construction); 10 s search: 876. Scoring reference: 1932 (published). Bound or target: 3174 (bound).
+
+\paragraph{Variable angle.} Maximise the number of nonzero vectors in $\mathbb Z^d$ satisfying $u\cdot v\le c\|u\|\|v\|$ for every distinct pair. Coordinates lie in $[-1000,1000]$, and the prescribed rational value $c=\cos\theta$ is checked exactly.
+
+Example: $d=12,\ c=24/100$. Baseline: 28 (offline construction); 10 s search: 24. Scoring reference: 28 (construction baseline). Bound or target: 1431 (bound).
+
+\subsection{corners}
+
+Maximise $|S|$ for $S\subseteq\{0,\ldots,n-1\}^2$ containing no triple $(x,y),(x+t,y),(x,y+t)$ with $t\ne0$, including negative $t$.
+
+Example: $n=138$. Baseline: 3120 (offline construction); 10 s search: 2504. Scoring reference: 3120 (construction baseline). Bound or target: 19044 (trivial).
+
+\subsection{matrix multiplication}
+
+Minimise the number $r$ of scalar multiplications in a bilinear algorithm for $A\in\mathbb R^{n\times m}$ and $B\in\mathbb R^{m\times p}$. The identity $AB=\sum_{j=1}^r (u_j\cdot A)(v_j\cdot B)W_j$ must hold for all inputs, with each dot product taken over matrix entries. Coefficients are integers in $[-4,4]$.
+
+Example: $n=4,\ m=4,\ p=5$. Baseline: 72 (reference search); 10 s search: 72. Scoring reference: 61 (published). Bound or target: 20 (bound).
+
+\subsection{degree-diameter}
+
+Maximise the number of vertices of a simple connected undirected graph with maximum degree at most $d$ and diameter at most $k$.
+
+Example: $d=4,\ k=5$. Baseline: 61 (reference search); 10 s search: 61. Scoring reference: 364 (published). Bound or target: 485 (bound).
+
+\subsection{linear-equation-free}
+
+Maximise $|S|$ for $S\subseteq\{1,\ldots,n\}$ such that $ax+by=(a+b)z$ has no solution in $S$ except $x=y=z$.
+
+Example: $a=3,\ b=4,\ n=19044$. Baseline: 630 (reference search); 10 s search: 630. Scoring reference: 630 (construction baseline). Bound or target: 19044 (trivial).
+
+\subsection{covering}
+
+Minimise the number of $k$-element blocks drawn from a $v$-element set such that every $t$-element subset is contained in at least one block.
+
+Example: $v=18,\ k=7,\ t=4$. Baseline: 179 (reference search); 10 s search: 179. Scoring reference: 126 (published). Bound or target: 111 (bound).
+
+\subsection{Schur}
+
+Maximise $N$ such that $\{1,\ldots,N\}$ can be coloured with $k$ colours without a monochromatic solution of $x+y=z$. Solutions with $x=y$ are also forbidden.
+
+Example: $k=7$. Baseline: 1093 (reference search); 10 s search: 1093. Scoring reference: 1696 (published). Bound or target: 13699 (bound).
+
+\subsection{finite-field AP-free}
+
+Maximise $|S|$ for $S\subseteq\mathbb F_q^n$ containing no three distinct points satisfying $x+z=2y$.
+
+Example: $q=5,\ n=6$. Baseline: 360 (reference search); 10 s search: 360. Scoring reference: 649 (published). Bound or target: 7497 (bound).
+
+\subsection{MOLS}
+
+Find as many mutually orthogonal Latin squares of order $n$ as possible. Each symbol appears once in every row and column; superimposing any two squares must give all $n^2$ ordered symbol pairs exactly once.
+
+Example: $n=14$. Baseline: 4 (expert construction); 10 s search: 1. Scoring reference: 4 (published). Bound or target: 12 (bound).
+
+\subsection{Shannon codes}
+
+Maximise the size of a code $C\subseteq\mathbb Z_q^d$ such that every two distinct words differ by cyclic distance at least two in some coordinate. Equivalently, $C$ is an independent set in the $d$-fold strong power of the cycle $C_q$.
+
+Example: $q=7,\ d=24$. Baseline: $1.9411\times10^{12}$ (reference search); 10 s search: $1.9411\times10^{12}$. Scoring reference: $1.9411\times10^{12}$ (construction baseline). Bound or target: $3.16219\times10^{12}$ (bound).
+
+\subsection{trifference codes}
+
+Maximise the size of a ternary code $C\subseteq\{0,1,2\}^n$ such that, for every three distinct words, at least $m$ coordinates contain all three symbols.
+
+Example: $n=64,\ m=1$. Baseline: 19683 (reference search); 10 s search: 19683. Scoring reference: 19683 (construction baseline). Bound or target: $3.72281\times10^{11}$ (bound).

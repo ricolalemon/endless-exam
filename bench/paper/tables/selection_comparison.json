@@ -1,0 +1,649 @@
+{
+  "aggregation": "One response per formal instance; the separate Kakeya control retains its original repeat aggregation.",
+  "core_groups": {
+    "capset": [
+      "capset"
+    ],
+    "labs": [
+      "labs"
+    ],
+    "heilbronn": [
+      "heilbronn",
+      "heilbronn_shape"
+    ],
+    "spherical_code": [
+      "kissing",
+      "kissing_theta"
+    ],
+    "corners": [
+      "corners"
+    ],
+    "matmul": [
+      "matmul"
+    ],
+    "degdiam": [
+      "degdiam"
+    ],
+    "lineq": [
+      "lineq"
+    ],
+    "covering": [
+      "covering"
+    ],
+    "schur": [
+      "schur"
+    ],
+    "apfree_q": [
+      "apfree_q"
+    ],
+    "mols": [
+      "mols"
+    ]
+  },
+  "snapshots": {
+    "legacy15": {
+      "file": "bench/frontiers/v1.json",
+      "sha256": "5db3f2458c7d09e1e64d456cf4ac84c90f50dd8aca3ca7d66a4e641eeb2c3bc9"
+    },
+    "core12": {
+      "file": "bench/frontiers/v1-core.json",
+      "sha256": "4678ccddf0841b275a9d2879686deff00b35f78301ca6ea605d577887ef76710"
+    }
+  },
+  "systems": {
+    "Qwen/Qwen3.5-4B:think-high@128k": {
+      "name": "Qwen3.5-4B high",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.0673626583634123,
+          "ci": [
+            0.028678640004196638,
+            0.11452766552135808
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.06971132899198954
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.08756179175967985,
+          "ci": [
+            0.02802859375549199,
+            0.1583143382667838
+          ],
+          "records": null,
+          "family_balanced_mean": 0.153068299694757
+        },
+        "calls": 66,
+        "valid": 0.3333333333333333,
+        "headroom": 0.0
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.0673626583634123,
+          "ci": [
+            0.028678640004196638,
+            0.11452766552135808
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.06971132899198954
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.09603551354287466,
+          "ci": [
+            0.032398391146842356,
+            0.18182331110489644
+          ],
+          "records": null,
+          "family_balanced_mean": 0.204091066259676
+        },
+        "calls": 61,
+        "valid": 0.36065573770491804,
+        "headroom": 0.0
+      }
+    },
+    "Qwen/Qwen3.5-9B:think-high@128k": {
+      "name": "Qwen3.5-9B high",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.11798935765066647,
+          "ci": [
+            0.06630190888665465,
+            0.17462248170131991
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.12173472574116881
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.1910080975370092,
+          "ci": [
+            0.0839713836977135,
+            0.30468408166763095
+          ],
+          "records": null,
+          "family_balanced_mean": 0.24483793738326473
+        },
+        "calls": 66,
+        "valid": 0.4090909090909091,
+        "headroom": 0.0
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.11798935765066647,
+          "ci": [
+            0.06630190888665465,
+            0.17462248170131991
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.12173472574116881
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.2020599564384402,
+          "ci": [
+            0.09056301319803052,
+            0.33593069154764116
+          ],
+          "records": null,
+          "family_balanced_mean": 0.30100875018780665
+        },
+        "calls": 61,
+        "valid": 0.4262295081967213,
+        "headroom": 0.0
+      }
+    },
+    "Qwen/Qwen3.5-27B-FP8:think-high@128k": {
+      "name": "Qwen3.5-27B high",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.1317399843944729,
+          "ci": [
+            0.060862510692552524,
+            0.21820262493393586
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.15785672080266963
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.18430904115529484,
+          "ci": [
+            0.08575999759959146,
+            0.291917607764562
+          ],
+          "records": null,
+          "family_balanced_mean": 0.24063649157027264
+        },
+        "calls": 66,
+        "valid": 0.48484848484848486,
+        "headroom": 0.0
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.1317399843944729,
+          "ci": [
+            0.060862510692552524,
+            0.21820262493393586
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.15785672080266963
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.19182340664275646,
+          "ci": [
+            0.08914959065627166,
+            0.3160406944905102
+          ],
+          "records": null,
+          "family_balanced_mean": 0.29655729555915994
+        },
+        "calls": 61,
+        "valid": 0.4918032786885246,
+        "headroom": 0.0
+      }
+    },
+    "Qwen/Qwen3.8-27B-FP8:think-high@128k": {
+      "name": "Qwen3.8-27B high",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.30959200535079906,
+          "ci": [
+            0.19544705588668462,
+            0.4237182276100304
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.3614890250020929
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.4251442201579162,
+          "ci": [
+            0.25786179981009033,
+            0.5911967100373596
+          ],
+          "records": null,
+          "family_balanced_mean": 0.38633568890941106
+        },
+        "calls": 66,
+        "valid": 0.5909090909090909,
+        "headroom": 0.004688391328197712
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.30959200535079906,
+          "ci": [
+            0.19544705588668462,
+            0.4237182276100304
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.3614890250020929
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.41797152835026485,
+          "ci": [
+            0.2581061671845599,
+            0.6122103006400625
+          ],
+          "records": null,
+          "family_balanced_mean": 0.3755094412973383
+        },
+        "calls": 61,
+        "valid": 0.6065573770491803,
+        "headroom": 0.00448487839912036
+      }
+    },
+    "gpt-5.6-luna:codex-medium@128k.once-full": {
+      "name": "GPT-5.6 Luna medium",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.16379044431922102,
+          "ci": [
+            0.09510362661050081,
+            0.23867867226638526
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.15306028539484232
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.20279752963497727,
+          "ci": [
+            0.10275854634383061,
+            0.3124339464678241
+          ],
+          "records": null,
+          "family_balanced_mean": 0.18011678173970866
+        },
+        "calls": 66,
+        "valid": 0.5606060606060606,
+        "headroom": 0.0
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.16379044431922102,
+          "ci": [
+            0.09510362661050081,
+            0.23867867226638526
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.15306028539484232
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.2074446165996951,
+          "ci": [
+            0.10510940033293482,
+            0.32818818521456905
+          ],
+          "records": null,
+          "family_balanced_mean": 0.19712270703088983
+        },
+        "calls": 61,
+        "valid": 0.5901639344262295,
+        "headroom": 0.0
+      }
+    },
+    "gpt-5.6-luna:codex-high@128k.once-full": {
+      "name": "GPT-5.6 Luna high",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.25225582230527727,
+          "ci": [
+            0.15976565072659102,
+            0.3457213309513598
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.231718194610068
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.4187715374581584,
+          "ci": [
+            0.2801275909554756,
+            0.5552594933665427
+          ],
+          "records": null,
+          "family_balanced_mean": 0.5249316242356878
+        },
+        "calls": 66,
+        "valid": 0.6818181818181818,
+        "headroom": 0.0022947925173266532
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.25225582230527727,
+          "ci": [
+            0.15976565072659102,
+            0.3457213309513598
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.231718194610068
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.40847709761028056,
+          "ci": [
+            0.2776430868907929,
+            0.5580434693473223
+          ],
+          "records": null,
+          "family_balanced_mean": 0.5796355980213377
+        },
+        "calls": 61,
+        "valid": 0.6885245901639344,
+        "headroom": 0.0024177278307548665
+      }
+    },
+    "deepseek-flash:think-low@128k": {
+      "name": "DeepSeek V4.1 Flash low",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.3909162323098981,
+          "ci": [
+            0.2922495260774607,
+            0.49053952613912427
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.4349574564322411
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.2832472594951825,
+          "ci": [
+            0.16216150698542356,
+            0.4042891925325744
+          ],
+          "records": null,
+          "family_balanced_mean": 0.25035087469854994
+        },
+        "calls": 66,
+        "valid": 0.7272727272727273,
+        "headroom": 0.00024858510984302026
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.3909162323098981,
+          "ci": [
+            0.2922495260774607,
+            0.49053952613912427
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.4349574564322411
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.29209563145733924,
+          "ci": [
+            0.17171963400166806,
+            0.43534205198075954
+          ],
+          "records": null,
+          "family_balanced_mean": 0.2785144502308347
+        },
+        "calls": 61,
+        "valid": 0.7704918032786885,
+        "headroom": 0.00026190216929889635
+      }
+    },
+    "deepseek-flash:think-high@128k": {
+      "name": "DeepSeek V4.1 Flash high",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.3785294554561002,
+          "ci": [
+            0.2605274812671958,
+            0.49669986026102125
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.43786579963787264
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.4695513103529945,
+          "ci": [
+            0.29283895464554216,
+            0.6482243116811246
+          ],
+          "records": null,
+          "family_balanced_mean": 0.4493579442786474
+        },
+        "calls": 66,
+        "valid": 0.7272727272727273,
+        "headroom": 0.006334882156817714
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.3785294554561002,
+          "ci": [
+            0.2605274812671958,
+            0.49669986026102125
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.43786579963787264
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.5098307630749848,
+          "ci": [
+            0.3338115779517962,
+            0.7218220999138781
+          ],
+          "records": null,
+          "family_balanced_mean": 0.5684439665596657
+        },
+        "calls": 61,
+        "valid": 0.7704918032786885,
+        "headroom": 0.006674250843790091
+      }
+    },
+    "claude-fable-5-1:headless-medium@128k": {
+      "name": "Claude Fable 5.1 medium",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.5901052098702387,
+          "ci": [
+            0.4823650605672833,
+            0.6929547072224486
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.6196738087974033
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.8795435789080677,
+          "ci": [
+            0.6980678976285106,
+            1.046491971279984
+          ],
+          "records": null,
+          "family_balanced_mean": 0.8946994207126342
+        },
+        "calls": 66,
+        "valid": 0.8939393939393939,
+        "headroom": 0.013466153157344363
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.5901052098702387,
+          "ci": [
+            0.4823650605672833,
+            0.6929547072224486
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.6196738087974033
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.867886505899171,
+          "ci": [
+            0.68511403497217,
+            1.0694134313998427
+          ],
+          "records": null,
+          "family_balanced_mean": 0.956624673955038
+        },
+        "calls": 61,
+        "valid": 0.8852459016393442,
+        "headroom": 0.014187554219344955
+      }
+    },
+    "gpt-6-astra:codex-medium@nocap": {
+      "name": "GPT-6 Astra medium",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.6561895846265096,
+          "ci": [
+            0.580269041084654,
+            0.7288914242429301
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.6956275562415756
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 0.83770096761747,
+          "ci": [
+            0.702060502489981,
+            0.9634145590682726
+          ],
+          "records": null,
+          "family_balanced_mean": 0.8591689154013405
+        },
+        "calls": 66,
+        "valid": 0.9848484848484849,
+        "headroom": 0.006229774208564888
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.6561895846265096,
+          "ci": [
+            0.580269041084654,
+            0.7288914242429301
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.6956275562415756
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 0.821925485221004,
+          "ci": [
+            0.6880425277757911,
+            0.9666932445085915
+          ],
+          "records": null,
+          "family_balanced_mean": 0.9072275349408612
+        },
+        "calls": 61,
+        "valid": 0.9836065573770492,
+        "headroom": 0.006517060996737858
+      }
+    },
+    "gpt-6-astra:codex-high@nocap": {
+      "name": "GPT-6 Astra high",
+      "in_paper": true,
+      "legacy15": {
+        "published": {
+          "n": 30,
+          "mean": 0.7624057710284659,
+          "ci": [
+            0.6937995242768172,
+            0.826791726972346
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.7957044701749918
+        },
+        "stand_in": {
+          "n": 34,
+          "mean": 1.0145833714240637,
+          "ci": [
+            0.8771702657579645,
+            1.1494835575028655
+          ],
+          "records": null,
+          "family_balanced_mean": 1.0550851260992433
+        },
+        "calls": 66,
+        "valid": 1.0,
+        "headroom": 0.017356803743696123
+      },
+      "core": {
+        "published": {
+          "n": 30,
+          "mean": 0.7624057710284659,
+          "ci": [
+            0.6937995242768172,
+            0.826791726972346
+          ],
+          "records": 0,
+          "family_balanced_mean": 0.7957044701749918
+        },
+        "stand_in": {
+          "n": 31,
+          "mean": 1.0141720443233178,
+          "ci": [
+            0.8709475158607048,
+            1.1766699330266408
+          ],
+          "records": null,
+          "family_balanced_mean": 1.1229147995850268
+        },
+        "calls": 61,
+        "valid": 1.0,
+        "headroom": 0.01727765160265643
+      }
+    }
+  }
+}

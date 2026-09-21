@@ -1,0 +1,411 @@
+{
+  "phase": "calibration",
+  "algorithm_sha256": "652858cc9114762963c2d2f45b5664c507f5a7d3034f743c5d26a149dfc7f4ea",
+  "records": [
+    {
+      "family": "corners",
+      "params": {
+        "n": 96
+      },
+      "objective": 1776,
+      "method": "translated ternary digit set",
+      "difference_set": [
+        -81,
+        -80,
+        -78,
+        -77,
+        -72,
+        -71,
+        -69,
+        -68,
+        -54,
+        -53,
+        -51,
+        -50,
+        -45,
+        -44,
+        -42,
+        -41,
+        0,
+        1,
+        3,
+        4,
+        9,
+        10,
+        12,
+        13,
+        27,
+        28,
+        30,
+        31,
+        36,
+        37,
+        39,
+        40
+      ],
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 1.587318249978125,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-00-corners.json",
+      "witness_sha256": "2b2c670e35a1a93a7d5f31c2003414a718d18ead748dd0b749e8a91ef39821cf"
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 120
+      },
+      "objective": 2544,
+      "method": "translated ternary digit set",
+      "difference_set": [
+        -81,
+        -80,
+        -78,
+        -77,
+        -72,
+        -71,
+        -69,
+        -68,
+        -54,
+        -53,
+        -51,
+        -50,
+        -45,
+        -44,
+        -42,
+        -41,
+        0,
+        1,
+        3,
+        4,
+        9,
+        10,
+        12,
+        13,
+        27,
+        28,
+        30,
+        31,
+        36,
+        37,
+        39,
+        40
+      ],
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.02379191596992314,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-01-corners.json",
+      "witness_sha256": "e288136e0951c25681fb7c84a123baa1e46c50b971eff1d27713b2a2c890eef6"
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 174
+      },
+      "objective": 4332,
+      "method": "translated ternary digit set",
+      "difference_set": [
+        -171,
+        -170,
+        -168,
+        -167,
+        -162,
+        -161,
+        -159,
+        -158,
+        -36,
+        -35,
+        -33,
+        -32,
+        -27,
+        -26,
+        -24,
+        -23,
+        -9,
+        -8,
+        -6,
+        -5,
+        0,
+        1,
+        3,
+        4,
+        45,
+        46,
+        48,
+        49,
+        54,
+        55,
+        57,
+        58,
+        72,
+        73,
+        75,
+        76,
+        81,
+        82,
+        84,
+        85
+      ],
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.04369112499989569,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-02-corners.json",
+      "witness_sha256": "dd023f70578203a5e980c99c14032943cc0a61350d47bef911dbae2f8f8017b4"
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 210
+      },
+      "objective": 5976,
+      "method": "translated ternary digit set",
+      "difference_set": [
+        -189,
+        -188,
+        -186,
+        -185,
+        -180,
+        -179,
+        -177,
+        -176,
+        -162,
+        -161,
+        -159,
+        -158,
+        -153,
+        -152,
+        -150,
+        -149,
+        -27,
+        -26,
+        -24,
+        -23,
+        -18,
+        -17,
+        -15,
+        -14,
+        0,
+        1,
+        3,
+        4,
+        9,
+        10,
+        12,
+        13,
+        54,
+        55,
+        57,
+        58,
+        63,
+        64,
+        66,
+        67,
+        81,
+        82,
+        84,
+        85,
+        90,
+        91,
+        93,
+        94
+      ],
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.05163237499073148,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-03-corners.json",
+      "witness_sha256": "dd63582484195a5131649cca3ccd79bf62abfa864bb74b0867108e81f73c3523"
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "d": 10,
+        "cos100": 28
+      },
+      "objective": 30,
+      "method": "binary sign code, greedy seed=6",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.02036125003360212,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-04-kissing_theta.json",
+      "witness_sha256": "b0f7b9caf3484b37622efbfcfa528ab08be5789c66a5ce8852070884b20b8614"
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "d": 10,
+        "cos100": 40
+      },
+      "objective": 84,
+      "method": "binary sign code, greedy seed=0",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.0359307921025902,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-05-kissing_theta.json",
+      "witness_sha256": "af3e12b4fe65e71741c1b9d6628b93486095a07699330555eff070bcc2cc9f7b"
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "d": 13,
+        "cos100": 30
+      },
+      "objective": 58,
+      "method": "binary sign code, greedy seed=0",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.11189233302138746,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-06-kissing_theta.json",
+      "witness_sha256": "2c9577b2e7a819d1745c87862cd5778662678e7c165ffc875e141742b705320c"
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "d": 13,
+        "cos100": 42
+      },
+      "objective": 282,
+      "method": "binary sign code, greedy seed=0",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.25933883409015834,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-07-kissing_theta.json",
+      "witness_sha256": "f133b6596f886524c3b5ff7dc48d3d8c628475d90971f2ee045b6520e76a1b87"
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 1,
+        "b": 2,
+        "n": 4096
+      },
+      "objective": 177,
+      "method": "blocked-triple greedy order=-2",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.0733670829795301,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-08-lineq.json",
+      "witness_sha256": "44edb90a3dde83cfa8345b212c5ad92346678063920a6724b2ea29d0ab453eb7"
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 2,
+        "b": 5,
+        "n": 10000
+      },
+      "objective": 425,
+      "method": "blocked-triple greedy order=-2",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.20272412500344217,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-09-lineq.json",
+      "witness_sha256": "57d8237c1e26b4f51d6cdad28e80409a971dc1e79f85a346625beb84ed52156b"
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 8000
+      },
+      "objective": 377,
+      "method": "blocked-triple greedy order=-2",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.1749165840446949,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-10-lineq.json",
+      "witness_sha256": "2838260b0b62576dfbd9fa04364821f5930f41d334a72f3eb18f1e352574a639"
+    },
+    {
+      "family": "apfree_q",
+      "params": {
+        "q": 7,
+        "n": 2
+      },
+      "objective": 10,
+      "method": "finite-field blocked-triple greedy seed=1",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.004565292038023472,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-11-apfree_q.json",
+      "witness_sha256": "322218cfe53a18f91c0750d609fba5a1181cdf00c5b22a1b479351f6caaef6fd"
+    },
+    {
+      "family": "apfree_q",
+      "params": {
+        "q": 7,
+        "n": 3
+      },
+      "objective": 32,
+      "method": "finite-field blocked-triple greedy seed=18",
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.015801999950781465,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-12-apfree_q.json",
+      "witness_sha256": "cecc37cb66d1203a2f3c5122647dfc9a018f35703bc2cf2712168a8163e4fbfd"
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "n": 48,
+        "m": 1,
+        "representation": "certified"
+      },
+      "objective": 729,
+      "method": "existing frozen pool + PG(1,3) Reed-Solomon composition audit",
+      "new_ingredient_improved": false,
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.0014758750330656767,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-13-trifference.json",
+      "witness_sha256": "029dbd3e74d754997370bb8b04f4ce551baa550f8cdcf6aca041e6a58bdbafd6"
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "n": 80,
+        "m": 1,
+        "representation": "certified"
+      },
+      "objective": 19683,
+      "method": "existing frozen pool + PG(1,3) Reed-Solomon composition audit",
+      "new_ingredient_improved": false,
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.0005547080654650927,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-14-trifference.json",
+      "witness_sha256": "202da9f8620db608136c89cfd8b87c00692764129500950b2cdf182df632ada3"
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "n": 112,
+        "m": 1,
+        "representation": "certified"
+      },
+      "objective": 531441,
+      "method": "existing frozen pool + PG(1,3) Reed-Solomon composition audit",
+      "new_ingredient_improved": false,
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.0005230000242590904,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-15-trifference.json",
+      "witness_sha256": "d5e6d8fb1404fb085dadd4015facd0ab39e536e5284561e665182b7922b1c104"
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "n": 160,
+        "m": 1,
+        "representation": "certified"
+      },
+      "objective": 387420489,
+      "method": "existing frozen pool + PG(1,3) Reed-Solomon composition audit",
+      "new_ingredient_improved": false,
+      "primary_verified": true,
+      "independent_verified": true,
+      "elapsed_s": 0.0006690840236842632,
+      "witness": "bench/reference_calibration/2026-09-16/calibration-16-trifference.json",
+      "witness_sha256": "693d758e38de420ed524abc88b9b895b35540dce4b2c0c3ab6a16174e7140076"
+    }
+  ]
+}

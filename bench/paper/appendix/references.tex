@@ -1,0 +1,75 @@
+\appendixpage
+\section{References, bounds and targets}
+\label{app:lit}
+\subsection{Verified reference constructions}
+\label{app:reference_witnesses}
+For every one of the 69 evaluated instances, we verified a construction matching its reference, covering all 30 published frontiers and all 39 construction baselines. Each object uses an accepted answer format, fits within the 128k output limit and passes both verifiers within 60 seconds. Together, these constructions establish that a relative quality of $1$ is attainable throughout the evaluation under the allowed answer formats and verification time. All 69 objects and their verification results are included with the benchmark.
+\input{tables/reference_witnesses}
+\subsection{Published constructions}
+Table~\ref{tab:lit} gives selected published frontiers and the proven bounds used to measure gap closed. Values follow the listed parameter order.
+\begin{center}\small\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}P{.20\linewidth}YY@{}}
+\toprule
+Family / parameters & Reference and source & Bound and source\\
+\midrule
+Cap set, $d=10,11$ & 2432, 5504; Edel and Karapetyan--Karapetyan constructions~\citep{edel2004capset,karapetyan2023caps}. & 5619, 16857; proven bounds from \citet{versluis2017capset} and slicing. \\
+\addlinespace
+Kissing, $d=13,14,15$ & 1154, 1932, 2564; constructions~\citep{zinoviev1999contact,ganzhinov2025lines,leech1971sphere}. & 2064, 3174, 4853; proven bounds~\citep{leijenhorst2024clustered}. \\
+\addlinespace
+Matrix multiplication, $(4,4,5)$, $(5,5,5)$ & 61, 93; schemes from the Lille FMM catalogue. & 20, 25; proven lower bounds from tensor flattenings. \\
+\addlinespace
+Degree--diameter, $(4,5)$, $(7,3)$, $(3,7)$, $(4,4)$ & 364, 168, 196, 104; graphs from \citet{comellas_degdiam}. & 485, 302, 382, 161; proven Moore bounds~\citep{miller2013degdiam}. \\
+\addlinespace
+$\mathbb{F}_5^n$ AP-free, $n=5,6$ & 194, 649; affine charts of Edel's projective caps~\citep{edel_caps,elsholtz2020caps}. & 1296, 7497; proven bounds from the polynomial-method count~\citep{ellenberg2017capset}. \\
+\addlinespace
+MOLS, $n=10,14,18$ & 2, 4, 5; constructions~\citep{miller2024mols,todorov2012mols,abel2015mols}. & 8, 12, 17; proven $n-2$ or $n-1$ bounds, including \citet{lam1989order10}. \\
+\addlinespace
+Schur, $k=6,7,8$ & 536, 1696, 5362; partitions~\citep{fredricksen2000schur,rowley2021templates,bengone2026schur}. & 1896 at $k=6$; general factorial upper bound at $k=7,8$; proven. \\
+\addlinespace
+Covering, $(v,k,t)$: $(18,7,4)$, $(24,6,3)$, $(30,6,3)$ & 126, 116, 225; block lists from the La Jolla repository~\citep{ljcr}. & 111, 112, 210; proven lower bounds recorded in the repository~\citep{ljcr}. \\
+\bottomrule
+\end{tabularx}
+\captionof{table}{Selected published frontiers and proven bounds. Values follow the listed parameter order; minimisation tasks use lower bounds.}\label{tab:lit}
+\end{center}
+\appendixpage
+\subsection{Construction baselines and controls}
+\begin{center}\small\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}P{.20\linewidth}YY@{}}
+\toprule
+Family / parameters & Reference and source & Bound or target and source\\
+\midrule
+Kakeya control, $(q,n)=(13,3)$, $(7,4)$, $(11,4)$ & Expert constructions of sizes 703, 553, 2741~\citep{saraf2008kakeya}; construction baselines. & 595, 375, 2105; proven lower bounds~\citep{bukh2021kakeya}. \\
+\addlinespace
+LABS & Rotated Legendre construction or reference search~\citep{packebusch2016labs}. & Merit factor 12.32; conjectured target. \\
+\addlinespace
+Heilbronn (both domains) & Expert construction or reference search; see Appendix~\ref{app:families}. & $1/(n-2)$; trivial proven bound from triangulation. \\
+\addlinespace
+Linear-equation-free sets; corners & Digit constructions or reference search~\citep{behrend1946,ruzsa1993lineq}. & $n$ and $n^2$; trivial proven bounds. \\
+\addlinespace
+Spherical codes & Expert construction or reference search. & Cap-packing bound; proven. \\
+\bottomrule
+\end{tabularx}
+\captionof{table}{Construction baselines and controls, with proven bounds or the conjectured LABS target.}\label{tab:construction_refs}
+\end{center}
+\subsection{Constructing the code references}
+Shannon references optimise products of small codes: the Polak--Schrijver 367-word code in $C_7^5$, its projections, and the 81-word code $\{(i,j,2i+4j\bmod9):i,j\in\mathbb Z_9\}$ in $C_9^3$. The ten-second search modifies these small codes and recomputes their best products. The resulting references reach roughly $4.8\times10^{40}$ words and have short certificates. Recent recursive improvements~\citep{tandon2026shannon} suggest further composition methods.
+
+For the shorter trifference instances, references include 729-word linear codes of lengths 26, 35 and 41 with separation multiplicities 1, 2 and 3, and a 2,187-word code of length 49. The first three augment a published generator array with selected coordinates; the last uses projective columns of weight one or two. Zero padding gives codes at the required lengths.
+
+At lengths 64, 96, 144 and 192 with $m=1$, the reference library combines 27-word and 81-word inner codes of lengths 9 and 14, finite-geometry constructions, and a 6,561-word length-56 construction generated by GPT-6 Astra. The source constructions are included in the release. References maximise code size over the library's inner codes and outer parameters and were fixed before evaluating these lengths. This procedure does not use the search-time budget, so trifference is excluded from the timed comparison. Astra medium matches all four references through concatenation (Table~\ref{tab:trifference_scaling}). Better inner codes can improve these results. Table~\ref{tab:trifference_verifier} shows that both verifiers also handle much larger constructions within 60 seconds.
+\input{tables/trifference_scaling}
+\appendixpage
+\subsection{Reference searches and algebraic constructions}
+\label{app:search_audit}
+Expert constructions can leave the baseline unchanged even when search improves. Let $r_t$ be the search objective after $t$ seconds and $z_t$ the better of that result and the expert construction. Table~\ref{tab:search_audit} compares both quantities at 10 and 600 seconds using the same expert construction. In dimension ten, for example, cap-set search improves from 1140 to 1202 points, both below the 2240-point product construction. The baseline therefore stays at 2240. For Schur with six, seven and eight colours, both search budgets return 364, 1,093 and 3,280 elements, respectively. The longer covering searches reduce the numbers of blocks from 179, 366 and 181 to 178, 361 and 178, respectively. Shannon search leaves all four code sizes unchanged. The reported gains concern the specific search procedures tested.
+
+\paragraph{Algebraic construction baselines.}
+For corners, translated ternary digit sets give AP-free difference sets $D$ and corner-free grids $\{(x,y):x-y\in D\}$. For spherical codes, candidate vectors combine selected nonzero coordinates and signs, binary sign vectors and coordinate axes; pairwise angles are checked exactly. These procedures were calibrated on 17 separate parameter settings after model responses were collected, then applied uniformly to all 20 evaluation instances.
+
+Every reference construction passes both verifiers and is shared by all models. Calibration is separate from the timed searches, which use the same algebraic baseline at both budgets.
+\begin{center}
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{\input{tables/search_budget_table}}
+\captionof{table}{Search gains for seeds 0--2, with all four evaluated instances included for Shannon. R denotes search-resistant families; S denotes families that can benefit from search, for the procedures studied here. $\Delta_r$ compares raw 600- and 10-second search objectives; $\Delta_z$ compares the baselines after including the expert construction. Both are log improvement ratios, with direction adjusted for minimisation. Repeats are averaged within each instance before computing the means; maxima are over paired runs.}
+\label{tab:search_audit}
+\end{center}

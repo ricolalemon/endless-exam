@@ -1,0 +1,1 @@
+{"params": {"n": 144, "m": 1, "representation": "certified"}, "naive": 387420489, "search": 387420489, "bound": 45516755744095603989155195, "sense": "max", "search_answer": {"rs_concat": {"inner": {"linear_code": ["101012011", "011000112", "000111111"]}, "inner_n": 9, "inner_m": 1, "field": [1, 0, 2, 1], "length": 16, "dimension": 6}}, "budget_s": 10}

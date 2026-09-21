@@ -1,0 +1,55 @@
+\appendixpage
+\section{Verification of constructions}
+\label{app:formats}
+The accepted formats can express constructions that match the references for all 69 evaluated instances. Appendix~\ref{app:reference_witnesses} documents these reference constructions; the representations below include explicit objects, compact constructions and algebraic certificates.
+\subsection{Verifier validation}
+\label{app:verifier_validation}
+The verifiers use separate code for mathematical checks and objective calculations, and share code for extracting answers and expanding compact descriptions. They agree for all model constructions that pass the primary verifier and all 69 reference constructions.
+
+Tests include forbidden configurations, duplicates, incorrect dimensions and types, false cardinality claims and invalid certificates. Spherical-code tests exercise exact angle boundaries. For small Shannon and trifference codes, exhaustive checks compare verifier decisions with the defining constraints, and certificate tests compare the certified result with an explicitly expanded code. All deliberately invalid test cases are rejected, and the exhaustive and certificate-expansion checks agree with the verifiers. These checks and expected outcomes accompany the release.
+
+\subsection{Compact representations}
+\begin{taskbox}[title=Mathematical ingredients]
+Compact descriptions specify a construction through its mathematical ingredients:
+\begin{itemize}
+\item \emph{Orbits}: apply coordinate permutations and sign changes to generator vectors, with duplicate vectors counted once.
+\item \emph{Products}: take the Cartesian product of smaller cap sets.
+\item \emph{Digit sets}: select integers by their base-$b$ digits, optionally restricting the sum of squared digits as in Behrend-type constructions.
+\item \emph{Difference sets}: form a corner-free grid $\{(x,y):x-y\in D\}$ from a specified set $D$.
+\item \emph{Cayley graphs}: specify cyclic-group orders and generators, including inverses for undirected edges.
+\end{itemize}
+Descriptions are expanded before verification, except for the algebraic code certificates below. Expansion is limited to 60{,}000 elements, with any smaller family-specific limit taking precedence. Digit enumeration allows at most 480{,}000 search nodes. Expansion and verification together have a 60-second limit; exceeding it scores zero. Prompts state the accepted representation.
+\end{taskbox}
+\paragraph{Exact quadratic coordinates.}
+For the thirteen-dimensional kissing instance, a coordinate may be written as $a+b\sqrt3$, encoded by an integer pair $(a,b)$ with $|a|,|b|\le1000$. Both verifiers check the angle constraints exactly in $\mathbb Q(\sqrt3)$, without floating-point tolerances. This format represents the full 1,154-point published construction~\citep{zinoviev1999contact}; its JSON answer fits within 128k tokens and passes both verifiers within the 60-second limit. Submissions may contain at most 20,000 vectors.
+\subsection{Code products and explicit codewords}
+Shannon codes may be listed explicitly, expanded as products of up to 4,096 words, or specified by factors $C_i$ and integer powers $r_i$. The factors must satisfy $\sum_i r_i\dim(C_i)=d$. Verifying each factor establishes the full product's separation property, and its exact size is $\prod_i|C_i|^{r_i}$. Certificates may list at most 16,384 factor words in total and describe dimension at most 256. The supported alphabets are $q\in\{5,7,9\}$, with $C_5$ used for calibration. We compute a rational upper bound on $\vartheta(C_q)^d$~\citep{lovasz1979shannon} and round it down to an integer, since code sizes are integers.
+
+Explicit trifference representations allow up to 6,561 words of length at most 128, or up to eight ternary generator rows. For a verified linear code, translating a triple to include zero reduces verification to pairs of codewords. Nonlinear codes require the direct triple check. Both procedures have the same 60-second limit.
+\appendixpage
+\subsection{Linear trifference certificates}
+\label{app:trifference_certificates}
+The main trifference instances use algebraic certificates to represent codes beyond the explicit-list limit. A linear-code certificate specifies a ternary generator matrix with at most 16 rows, rank $k\le12$, length $n\le1024$ and $m\in\{1,2,3\}$. The verifier computes the rank and certifies the exact size $3^k$.
+\begin{constructionbox}[title=Hyperplane verification]
+For a full-rank ternary generator matrix $G$, translate a triple to $(0,uG,vG)$ and put $z=u+v$, $a=u-v$. Coordinate $j$ separates the triple exactly when $(zG)_j=0$ and $(aG)_j\ne0$. The case $z=0$ requires the full code to have minimum distance at least $m$. For each nonzero projective $z$, restrict $G$ to the coordinates where $zG$ is zero. The remaining requirement is equivalent to that restriction having rank $k-1$ and minimum distance at least $m$. This extends the minimal-code characterisation of trifference~\citep{bishnoi2024trifferent,bishnoi2025generalized} into a direct check.
+
+Verification enumerates $(3^k-1)/2$ projective directions. For $m\le3$, reduced row-echelon form allows exact distance checking using only combinations with at most $m-1$ nonzero pivot coefficients. A second verifier checks the rank and distance conditions independently.
+\end{constructionbox}
+\input{tables/trifference_verifier}
+\begin{minipage}{\linewidth}
+\subsection{Reed--Solomon concatenation}
+\begin{constructionbox}[title=Construction and separation guarantee]
+A Reed--Solomon concatenation certificate supplies a verified inner code of length $a$ and size $q=3^r$, a monic irreducible polynomial defining $\mathbb F_q$, and outer parameters $1\le K\le N\le q$. Every triple of distinct inner codewords must be separated in at least $b$ coordinates. The outer code evaluates all polynomials of degree below $K$ at $N$ distinct field elements. Replacing its symbols by the $q$ inner words gives exactly $q^K$ words of length $aN$, with zero padding to $n$ allowed.
+
+The separation guarantee follows from the outer code's distance. Two distinct outer polynomials agree at most $K-1$ times, so their distance is at least $D=N-K+1$. If three outer words have $t$ coordinates where all three symbols differ, their three pairwise distances sum to at most $2N+t$ and at least $3D$. Hence $t\ge N-3K+3$, and the certificate is valid when $b(N-3K+3)\ge m$. This gives an exact construction and count without expanding its words.
+
+Both checkers verify the inner code and field irreducibility. For irreducibility, one implementation uses Frobenius/gcd tests and the other uses monic trial division. The representation supports a single concatenation layer.
+\end{constructionbox}
+\begin{resultbox}[title=What the certificate establishes]
+\begin{tabularx}{\linewidth}{@{}XXX@{}}
+Length & Number of words & Guaranteed separation\\
+$aN$ & $q^K$ & $b(N-3K+3)$
+\end{tabularx}
+\end{resultbox}
+The certificate is accepted when its guaranteed separation $b(N-3K+3)$ is at least $m$. The finite inner code and irreducible polynomial make both the cardinality and the separation claim checkable.
+\end{minipage}

@@ -1,0 +1,41 @@
+{
+  "model": "claude-fable-5-1",
+  "configuration": "headless-high@128k.frozen69",
+  "effort": "high",
+  "instances": 69,
+  "collection_date": "2026-09-20",
+  "maximum_collection_concurrency": 43,
+  "cli_version": "2.1.269 (Claude Code)",
+  "cli_sha256": "c942e1228b93cb4d52183b3dfbc77f28264f35aa947acd9c0853d029164cf450",
+  "output_budget": 128000,
+  "generation_timeout_seconds": 7200,
+  "tools": [],
+  "source_audit_sha256": "ec00fe128b497c6b5cb8f3636982dd03f200a99fee984d1950d074860e6c4c9f",
+  "source_results_sha256": "20ecdae67ea650af42f9a6b37ff88b5abe0fa778c3f33d1d7c79ab12c7d5834e",
+  "outputs": {
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#A3.jsonl": {
+      "sha256": "00a78087154d33781d1ebd26db76a32af312e7ea11cee59667825114e67e2b9b",
+      "rows": 65
+    },
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T1.jsonl": {
+      "sha256": "83a1af1e996a9b2ec08654e28160538761cfa27643f4d4700e69529db7581807",
+      "rows": 1
+    },
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T2.jsonl": {
+      "sha256": "2439e0268541756380820fdad1a1bbdf2284fd9a7695a1a5fcf5220fce4527ba",
+      "rows": 1
+    },
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T3.jsonl": {
+      "sha256": "8a01b988254aa2b3f11c0a9fef5f4b1e7022ef16dd5f9aa0fc9156b8097decc4",
+      "rows": 1
+    },
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T4.jsonl": {
+      "sha256": "cbd5b783cf4c4761ebad9426ab358327de7418bbb69370127959ffa8e4d63951",
+      "rows": 1
+    }
+  },
+  "usage_policy": "Selected evaluations retain all reported native usage and unknown interrupted usage. Earlier unscored histories remain in the collection audit.",
+  "reference_changes": false,
+  "medium_replaced": false,
+  "quality_reselection": false
+}

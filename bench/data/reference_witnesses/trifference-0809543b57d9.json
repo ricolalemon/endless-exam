@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "rs_concat": {
+      "dimension": 4,
+      "field": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "inner": {
+        "linear_code": [
+          "101012011",
+          "011000112",
+          "000111111"
+        ]
+      },
+      "inner_m": 1,
+      "inner_n": 9,
+      "length": 10
+    }
+  },
+  "source": "existing F.naive constructor",
+  "family": "trifference",
+  "params": {
+    "n": 96,
+    "m": 1,
+    "representation": "certified"
+  },
+  "reference": 531441,
+  "reference_type": "construction"
+}

@@ -1,0 +1,2838 @@
+{
+  "families": 14,
+  "task_variants": 16,
+  "calls_per_configuration": 69,
+  "distinct_instances": 69,
+  "published_instances": 30,
+  "stand_in_instances": 39,
+  "snapshot": "v1-trifference",
+  "systems": {
+    "qwen4": {
+      "label": "Qwen3.5-4B high",
+      "model": "Qwen/Qwen3.5-4B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.0673626583634123,
+        "ci": [
+          0.028678640004196638,
+          0.11452766552135808
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.08178774410892942,
+        "ci": [
+          0.030875113690092517,
+          0.14624267692231255
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 7.551596769783502,
+        "ci": [
+          4.045965163875517,
+          11.859715150825199
+        ]
+      },
+      "calls": 69,
+      "accepted": 26,
+      "valid": 0.37681159420289856,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 64
+    },
+    "qwen9": {
+      "label": "Qwen3.5-9B high",
+      "model": "Qwen/Qwen3.5-9B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.11798935765066647,
+        "ci": [
+          0.06630190888665465,
+          0.17462248170131991
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.1660635833336097,
+        "ci": [
+          0.06968025520514545,
+          0.2739864566893926
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 14.516174608015614,
+        "ci": [
+          8.631766779167336,
+          20.92442504187885
+        ]
+      },
+      "calls": 69,
+      "accepted": 30,
+      "valid": 0.43478260869565216,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 64
+    },
+    "qwen35": {
+      "label": "Qwen3.5-27B high",
+      "model": "Qwen/Qwen3.5-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.1317399843944729,
+        "ci": [
+          0.060862510692552524,
+          0.21820262493393586
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.18487556338555186,
+        "ci": [
+          0.08931034212850142,
+          0.2935494513192148
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 16.17731377372567,
+        "ci": [
+          9.769924876820443,
+          22.9985552719633
+        ]
+      },
+      "calls": 69,
+      "accepted": 36,
+      "valid": 0.5217391304347826,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 64
+    },
+    "qwen38": {
+      "label": "Qwen3.8-27B high",
+      "model": "Qwen/Qwen3.8-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.30959200535079906,
+        "ci": [
+          0.19544705588668462,
+          0.4237182276100304
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.43533730935767156,
+        "ci": [
+          0.281800880214094,
+          0.5933841498585325
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 38.06654380503357,
+        "ci": [
+          27.934699079948395,
+          48.11308561035672
+        ]
+      },
+      "calls": 69,
+      "accepted": 43,
+      "valid": 0.6231884057971014,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.003924268599230315,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.007386858539727653
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.003924268599230315,
+      "headroom_instances": 64
+    },
+    "luna_medium": {
+      "label": "GPT-5.6 Luna medium",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-medium@128k.once-full",
+      "source_code_config": "codex-medium@128k.once-full",
+      "p1": {
+        "n": 30,
+        "mean": 0.16379044431922102,
+        "ci": [
+          0.09510362661050081,
+          0.23867867226638526
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.1693964642798221,
+        "ci": [
+          0.08301231908525719,
+          0.26962143239142067
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 16.695906429695206,
+        "ci": [
+          10.726307331256004,
+          23.216036185330747
+        ]
+      },
+      "calls": 69,
+      "accepted": 39,
+      "valid": 0.5652173913043478,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0,
+      "headroom_instances": 64
+    },
+    "luna_high": {
+      "label": "GPT-5.6 Luna high",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-high@128k.once-full",
+      "source_code_config": "codex-high@128k.once-full",
+      "p1": {
+        "n": 30,
+        "mean": 0.25225582230527727,
+        "ci": [
+          0.15976565072659102,
+          0.3457213309513598
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.42261077576274114,
+        "ci": [
+          0.2939143583150172,
+          0.5525255464922175
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 34.85434046942786,
+        "ci": [
+          26.502529327216497,
+          43.4024299419386
+        ]
+      },
+      "calls": 69,
+      "accepted": 47,
+      "valid": 0.6811594202898551,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0021155118519105083,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.003982139956537427
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0021155118519105083,
+      "headroom_instances": 64
+    },
+    "deepseek_low": {
+      "label": "DeepSeek V4.1 Flash low",
+      "model": "deepseek-flash",
+      "source_core_config": "think-low@128k",
+      "source_code_config": "think-low@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.3909162323098981,
+        "ci": [
+          0.2922495260774607,
+          0.49053952613912427
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.35577862938764626,
+        "ci": [
+          0.22583060146609035,
+          0.4843032534418933
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 37.10558480494949,
+        "ci": [
+          28.85009087210999,
+          45.28202519966962
+        ]
+      },
+      "calls": 69,
+      "accepted": 54,
+      "valid": 0.782608695652174,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0002291643981365343,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.00043136827884524107
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0002291643981365343,
+      "headroom_instances": 64
+    },
+    "deepseek_high": {
+      "label": "DeepSeek V4.1 Flash high",
+      "model": "deepseek-flash",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.3785294554561002,
+        "ci": [
+          0.2605274812671958,
+          0.49669986026102125
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.503173945747506,
+        "ci": [
+          0.34047933142307824,
+          0.6680233299204736
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 44.89806890990687,
+        "ci": [
+          34.06736224400497,
+          55.745269141610656
+        ]
+      },
+      "calls": 69,
+      "accepted": 52,
+      "valid": 0.7536231884057971,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.00583996948831633,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.01099288374271309
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.00583996948831633,
+      "headroom_instances": 64
+    },
+    "fable": {
+      "label": "Claude Fable 5.1 medium",
+      "model": "claude-fable-5-1",
+      "source_core_config": "headless-medium@128k",
+      "source_code_config": "headless-medium@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.5901052098702387,
+        "ci": [
+          0.4823650605672833,
+          0.6929547072224486
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.8180636328942129,
+        "ci": [
+          0.6534199793423418,
+          0.9912281933795362
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 71.89512750577023,
+        "ci": [
+          60.8304321577824,
+          82.70981525470302
+        ]
+      },
+      "calls": 69,
+      "accepted": 59,
+      "valid": 0.855072463768116,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.012414109941926835,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.023367736361274042
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.012414109941926835,
+      "headroom_instances": 64
+    },
+    "fable_high": {
+      "label": "Claude Fable 5.1 high",
+      "model": "claude-fable-5-1",
+      "source_core_config": "headless-high@128k.frozen69",
+      "source_code_config": "headless-high@128k.frozen69",
+      "p1": {
+        "n": 30,
+        "mean": 0.5398261924645702,
+        "ci": [
+          0.4039144434235245,
+          0.6762815479079137
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.3584906063749043,
+        "ci": [
+          0.2043760672427233,
+          0.5121335729340291
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 43.733216554432424,
+        "ci": [
+          32.95191540211688,
+          53.76902823082978
+        ]
+      },
+      "calls": 69,
+      "accepted": 36,
+      "valid": 0.5217391304347826,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0031302020867995826,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0058921451045639206
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.0031302020867995826,
+      "headroom_instances": 64
+    },
+    "astra_medium": {
+      "label": "GPT-6 Astra medium",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-medium@nocap",
+      "source_code_config": "codex-medium@nocap",
+      "p1": {
+        "n": 30,
+        "mean": 0.6561895846265097,
+        "ci": [
+          0.580269041084654,
+          0.7288914242429301
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.8281723146328034,
+        "ci": [
+          0.7117532974975256,
+          0.9464430702416894
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 75.33972146300668,
+        "ci": [
+          67.56599599674784,
+          83.10757993624442
+        ]
+      },
+      "calls": 69,
+      "accepted": 68,
+      "valid": 0.9855072463768116,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.005702428372145626,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.010733982818156473
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.005702428372145626,
+      "headroom_instances": 64
+    },
+    "astra_high": {
+      "label": "GPT-6 Astra high",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-high@nocap",
+      "source_code_config": "codex-high@128k.once",
+      "p1": {
+        "n": 30,
+        "mean": 0.7624057710284657,
+        "ci": [
+          0.6937995242768172,
+          0.826791726972346
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 1.0394010518091605,
+        "ci": [
+          0.8879941306529008,
+          1.2189868589114963
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 91.89683210349455,
+        "ci": [
+          82.36371000244822,
+          103.07489605242439
+        ]
+      },
+      "calls": 69,
+      "accepted": 69,
+      "valid": 1.0,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.016142439549545924,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.03038576856385115
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.006037937859621236
+      },
+      "headroom": 0.016142439549545924,
+      "headroom_instances": 64
+    }
+  },
+  "code_cases": [
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 282429536481,
+      "ratio": 0.14549969353731537,
+      "tokens": null,
+      "latency_s": 261.23358664661646,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 12157665459056928801,
+      "ratio": 0.03694210809661848,
+      "tokens": null,
+      "latency_s": 209.3789423443377,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 79228162514264337593543950336,
+      "ratio": 0.02307380838213431,
+      "tokens": null,
+      "latency_s": 234.56334388349205,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 340282366920938463463374607431768211456,
+      "ratio": 0.00710549040306418,
+      "tokens": null,
+      "latency_s": 140.9811234632507,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 125.02113732602447,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: words must have length 3 over 012",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 154.57627747301012,
+      "finish_reason": "stop",
+      "verify_msg": "malformed concatenation certificate",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 111.61923699267209,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "qwen4",
+      "label": "Qwen3.5-4B high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 116.84248204901814,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: strings 0,1,2 separate in only 0 positions",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 282429536481,
+      "ratio": 0.14549969353731537,
+      "tokens": null,
+      "latency_s": 300.48868115153164,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 12157665459056928801,
+      "ratio": 0.03694210809661848,
+      "tokens": null,
+      "latency_s": 383.706934902817,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 79228162514264337593543950336,
+      "ratio": 0.02307380838213431,
+      "tokens": null,
+      "latency_s": 535.556249092333,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 340282366920938463463374607431768211456,
+      "ratio": 0.00710549040306418,
+      "tokens": null,
+      "latency_s": 509.4915110068396,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 505.48039944749326,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 1767.7160561000928,
+      "finish_reason": "length",
+      "verify_msg": "no JSON answer found",
+      "outcome": "length"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 625.9696970693767,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "qwen9",
+      "label": "Qwen3.5-9B high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 181.41830197162926,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: linear span has a translated triple with too few separating coordinates",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 282429536481,
+      "ratio": 0.14549969353731537,
+      "tokens": null,
+      "latency_s": 670.1613816116005,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 12157665459056928801,
+      "ratio": 0.03694210809661848,
+      "tokens": null,
+      "latency_s": 663.8558948906139,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 572.5035306327045,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 340282366920938463463374607431768211456,
+      "ratio": 0.00710549040306418,
+      "tokens": null,
+      "latency_s": 424.4154380308464,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 729,
+      "ratio": 0.037037037037037035,
+      "tokens": null,
+      "latency_s": 959.2616786770523,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 19683,
+      "ratio": 0.037037037037037035,
+      "tokens": null,
+      "latency_s": 834.0294123925269,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 2210.232539284043,
+      "finish_reason": "length",
+      "verify_msg": "no JSON answer found",
+      "outcome": "length"
+    },
+    {
+      "system": "qwen35",
+      "label": "Qwen3.5-27B high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 2210.2310406509787,
+      "finish_reason": "length",
+      "verify_msg": "no JSON answer found",
+      "outcome": "length"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1384128720100,
+      "ratio": 0.7130638923252093,
+      "tokens": null,
+      "latency_s": 1512.3877704907209,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 100000000000000000000,
+      "ratio": 0.3038585674283234,
+      "tokens": null,
+      "latency_s": 1466.3869439549744,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 790.798816642724,
+      "finish_reason": "stop",
+      "verify_msg": "no JSON answer found",
+      "outcome": "empty_final"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 999.1464130980894,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 19683,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 1131.874694683589,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 1205.285134905018,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 2454.363968207501,
+      "finish_reason": "length",
+      "verify_msg": "answer must contain 1..6561 words",
+      "outcome": "length"
+    },
+    {
+      "system": "qwen38",
+      "label": "Qwen3.8-27B high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 43046721,
+      "ratio": 0.00411522633744856,
+      "tokens": null,
+      "latency_s": 2004.5619366448373,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 282429536481,
+      "ratio": 0.14549969353731537,
+      "tokens": 4801,
+      "latency_s": 90.8,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 4537,
+      "latency_s": 84.3,
+      "finish_reason": "stop",
+      "verify_msg": "invalid factor: word 2 has a confusable partner",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 79228162514264337593543950336,
+      "ratio": 0.02307380838213431,
+      "tokens": 2589,
+      "latency_s": 49.0,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 340282366920938463463374607431768211456,
+      "ratio": 0.00710549040306418,
+      "tokens": 5138,
+      "latency_s": 95.0,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 3724,
+      "latency_s": 69.3,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 7147,
+      "latency_s": 132.3,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: a hyperplane restriction has deficient rank",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 2617,
+      "latency_s": 49.1,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_medium",
+      "label": "GPT-5.6 Luna medium",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 4058,
+      "latency_s": 74.7,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1000000000000,
+      "ratio": 0.515171661399882,
+      "tokens": 9013,
+      "latency_s": 164.3,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 100000000000000000000,
+      "ratio": 0.3038585674283234,
+      "tokens": 9219,
+      "latency_s": 169.6,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": 7354,
+      "latency_s": 136.174,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": 10933,
+      "latency_s": 199.6,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 6834,
+      "latency_s": 125.3,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 9942,
+      "latency_s": 182.2,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 11434,
+      "latency_s": 213.923,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "luna_high",
+      "label": "GPT-5.6 Luna high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "tokens": 22177,
+      "latency_s": 401.9,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1000000000000,
+      "ratio": 0.515171661399882,
+      "tokens": null,
+      "latency_s": 177.98166983295232,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 100000000000000000000,
+      "ratio": 0.3038585674283234,
+      "tokens": null,
+      "latency_s": 175.3163122080732,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 107.64013962505851,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 158.94053066603374,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 19683,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 206.57621716696303,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 239.65071066701785,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": true,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 163.5539806250017,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_low",
+      "label": "DeepSeek V4.1 Flash low",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 14348907,
+      "ratio": 0.0013717421124828531,
+      "tokens": null,
+      "latency_s": 297.2489057079656,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1000000000000,
+      "ratio": 0.515171661399882,
+      "tokens": null,
+      "latency_s": 236.96132308302913,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 100000000000000000000,
+      "ratio": 0.3038585674283234,
+      "tokens": null,
+      "latency_s": 233.95919974998105,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 244.41147420799825,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 238.30196104198694,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 346.77117529092357,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: a hyperplane restriction has deficient rank",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": null,
+      "latency_s": 297.45237145898864,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 374.5567772499053,
+      "finish_reason": "length",
+      "verify_msg": "no JSON answer found",
+      "outcome": "length"
+    },
+    {
+      "system": "deepseek_high",
+      "label": "DeepSeek V4.1 Flash high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 267.6436799170915,
+      "finish_reason": "stop",
+      "verify_msg": "inner code: generator row has wrong length or alphabet",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 128000,
+      "latency_s": 1406.4,
+      "finish_reason": "length",
+      "verify_msg": "length",
+      "outcome": "length"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 128000,
+      "latency_s": 1434.8,
+      "finish_reason": "length",
+      "verify_msg": "length",
+      "outcome": "length"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 3362,
+      "latency_s": 41.8,
+      "finish_reason": "stop",
+      "verify_msg": "invalid factor: word 6 has a confusable partner",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": 5169,
+      "latency_s": 63.3,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 19683,
+      "ratio": 1.0,
+      "tokens": 42579,
+      "latency_s": 530.2,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": 9659,
+      "latency_s": 118.4,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": true,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "tokens": 5839,
+      "latency_s": 70.8,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable",
+      "label": "Claude Fable 5.1 medium",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "tokens": 11304,
+      "latency_s": 138.9,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 1430.0745495830197,
+      "finish_reason": "length",
+      "verify_msg": "length",
+      "outcome": "length"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 1420.277220332995,
+      "finish_reason": "length",
+      "verify_msg": "length",
+      "outcome": "length"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": 5565,
+      "latency_s": 63.50218666600995,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": 6929,
+      "latency_s": 85.44211625005119,
+      "finish_reason": "stop",
+      "verify_msg": "invalid factor: word 60 has a confusable partner",
+      "outcome": "rejected_answer"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 1624.208260500105,
+      "finish_reason": "length",
+      "verify_msg": "length",
+      "outcome": "length"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": 10268,
+      "latency_s": 125.37733950000256,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": true,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "tokens": 10885,
+      "latency_s": 127.94970237486996,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "fable_high",
+      "label": "Claude Fable 5.1 high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "tokens": 25802,
+      "latency_s": 313.0186454579234,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1000000000000,
+      "ratio": 0.515171661399882,
+      "tokens": 5219,
+      "latency_s": 162.764,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 100000000000000000000,
+      "ratio": 0.3038585674283234,
+      "tokens": 2800,
+      "latency_s": 88.13,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": 1483,
+      "latency_s": 47.474,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": 1621,
+      "latency_s": 53.243,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 19683,
+      "ratio": 1.0,
+      "tokens": 1611,
+      "latency_s": 52.348,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": 1664,
+      "latency_s": 53.786,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": true,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "tokens": 1123,
+      "latency_s": 36.967,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_medium",
+      "label": "GPT-6 Astra medium",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "tokens": 1987,
+      "latency_s": 63.84,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1000000000000,
+      "ratio": 0.515171661399882,
+      "tokens": 17996,
+      "latency_s": 545.183,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 191581231380566414401,
+      "ratio": 0.5821359851345307,
+      "tokens": 14070,
+      "latency_s": 424.4,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": 2120,
+      "latency_s": 71.6,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": 4156,
+      "latency_s": 128.8,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 59049,
+      "ratio": 3.0,
+      "tokens": 9002,
+      "latency_s": 273.2,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": 3024,
+      "latency_s": 104.0,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": true,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "tokens": 1418,
+      "latency_s": 45.4,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "astra_high",
+      "label": "GPT-6 Astra high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "tokens": 2348,
+      "latency_s": 81.8,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    }
+  ],
+  "source_sha256": {
+    "bench/frontiers/v1-trifference.json": "95dfa1e78f3348263c6c7647037f672fed2ec40ecc151b6e4efbb65f03a1dde9",
+    "bench/construction_references.json": "e9aeb855a5922a8a4d2f4094a6a2ac452e934e3b64869769aabb66ac837909ce",
+    "bench/data/fable_high_publication.json": "c04f9a2b8665ee90abf3b4d315b3117f7fa9342bd0a9b4039a21613820c62f4d",
+    "bench/data/formal_suite_v1.json": "5ab37c4a6dea8981d38b7d658ec2562747d555d46bbcf6260d460d9cbdded074",
+    "bench/evaluation_outcomes.py": "cc726323ddd666144d53ddcf8d8856ee2910602c16686fd132f215e0e5cfeb54",
+    "bench/exam.py": "04991478dac918e0788620e97ac0e0ca8ea7a38fa75197893826e89691b85450",
+    "bench/formal_cohort.py": "5617ca525f961e0ced6791760347d87724bbd310b4158832781123b4f4e66987",
+    "bench/freeze_frontier.py": "337543b7ba9da03fd1a1bffd63fc331a03b9b094c0b2441bc849488b0bd488ea",
+    "bench/openceiling.py": "1b22bf7c7ebf360f8bddd88d45f1b42707d55a834b43094d57f5ca0609d5df36",
+    "bench/paper/publication_data.py": "730f889802831a30a5e0bb51266898b8692194975f29e813d5fbd1e5c4d7b6b1",
+    "bench/quadratic_kissing.py": "ae8f888c8578c67cebc9e6cfa752c9565d341031d850e2931f7aafd52d5477d0",
+    "bench/reference_calibration/2026-09-16/formal-01-corners.json": "d7590c7d43fd33b1d5a17a29bd535e523e9b544d427fdfd83d3b5eeb6b5b16e6",
+    "bench/reference_calibration/2026-09-16/formal-02-corners.json": "3ea1c3661e2076d2c45a07db16d0225fa0196009ca066975359490163e9c3fdc",
+    "bench/reference_calibration/2026-09-16/formal-03-corners.json": "1bc4fc0f6df87c2ece61ba77c66a9dbecbcf362ee315c6b52a26fc9fbe35ca04",
+    "bench/reference_calibration/2026-09-16/formal-04-corners.json": "e57682211a0e12dd1232c6e69c0da78ba4a1baf805c6263e690bff281c65593c",
+    "bench/reference_calibration/2026-09-16/formal-05-corners.json": "0d178fc68764e321d4edc39bf409cbb2463f24655a0a2734b57b4ed4f9167921",
+    "bench/reference_calibration/2026-09-16/formal-06-kissing_theta.json": "1dd266675ab330cd058d15a1bf9c7fc00f2b5712b8ad0a48f52b30122f633ea1",
+    "bench/reference_calibration/2026-09-16/formal-07-kissing_theta.json": "e0336ed9e095de51b532cecc462489868c3c6f36c56c2bb23e8faa5c34e71f9b",
+    "bench/reference_calibration/2026-09-16/formal-09-kissing_theta.json": "20b811853de85c24ef5a83dd4f9595ca450a1fc5622742a044ca55596b52cabc",
+    "bench/result_selection.py": "904f8389072d23c7e3998dc7fe7408a1e8bd17e2c84f9470873b7f2c6c7f7c9a",
+    "bench/data/result_replacements.json": "351b65a49b53a3b23af08b6507bc6ba37fbb60088a610ad2799c9f5442b41d9d",
+    "bench/data/kissing13_quadratic.json": "2eef54abc37a28cae6d1e6bab2710d4b38971fda2e490c1bc51c43ff33bab3d6",
+    "bench/results/gpt-6-astra-codex-xhigh@128k.once-refresh#A2.jsonl": "c63309379b399445613c26e2977e8917e91fd652236dab5b4b9b1710be3f011a",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T2.jsonl": "5d9faa2bf6e643cc976e8a512475aff8caf88cf35b44c2371d6c060c34924971",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl": "e52ca23df2e5656749044b5ff73172d0eecc1856b755e5d396c782f44f98406c",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k.kissing-q3.once#A3.jsonl": "78c8a480e90c4df66559642d0826802740ee79144c4e6426a109ce550aa3a6ac",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A2.jsonl": "1686964e7f1313fe044f86729596b450c97f15fcff3b150b57e84fab0477872a",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M3.jsonl": "3b53d5231e5071b14d1b46abe3dfef3d560f6a803df380cdbe359d7a8e4fe18b",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k.kissing-q3.once#A3.jsonl": "c5632c8a73a09241b7ffae80851cd5a2c09d13a6850dbce474667083b7db2dc5",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#T3.jsonl": "9b05305d0dba4fdb16943a42604e6884c94c3bd41ddf1406fd0f065a3330e9c9",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M2.jsonl": "ccdbb885fdddff09395aa937ace95ff81b60486f6a2572b8a432a40d014b8214",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M1.jsonl": "f6ea83e8a46640fd54be9644d097f7cc13a2ae327fecbc0d75c7b4d37064327d",
+    "bench/refs/A3-kissing-6-quadratic-t10.json": "1dc091289ecbebebb1d612ebcb930a08fae2cb008ce100e922dd0affe6873f9f",
+    "bench/results/gpt-6-astra-codex-high@128k.kissing-q3.once#A3.jsonl": "2678208bdedaf913f90627f8366ed59bd79532180cd40d49920b41d3e231a844",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L3.jsonl": "0072f1259c79e7ff67f20a4f291ade1d7b3fe1d4fa4beb74600dc0dfc2d24d85",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#A3.jsonl": "1d514b5312c1a3d2b8dbc7955cea185fb3b19de51d654a230efb9e234dc0ec6d",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T4.jsonl": "76377dda36bd9dd055e6f2f0f5d7f9b303f1870e28f45de4b9fda7ea753d65e0",
+    "bench/results/deepseek-flash-think-low@128k.kissing-q3.once#L3.jsonl": "32510618c43fe623a104e29808c446e8f4a371603b06d16973c244ef8d338c6f",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M4.jsonl": "64592c15eb08b06d24faf5d1b725f8d413bbb762e161095cec0a6f29f7494e28",
+    "bench/results/deepseek-flash-think-high@128k.kissing-q3.once#A3.jsonl": "60af0522f0a6994ac8444bded84270465f66776d13f35bc01befd748240165ca",
+    "bench/results/gpt-5.6-luna-codex-high@128k.kissing-q3.once#A3.jsonl": "6f5c862c7bae9315c23588e042bf1bdd53da873618e71eb169467f601a68c62f",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k.kissing-q3.once#L3.jsonl": "f668e27fa3f2915181bd08f445b424fdae127cb06db64eea60300da51b357f50",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L1.jsonl": "2c194bba0e1a00f8855c6174c036e39368a4aae9c8e87d3b5dde33f716f53d75",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k.kissing-q3.once#A3.jsonl": "c1805a3b9f99ed5a132c8bf71cb1fa86686188ee86d3748ea064e5a0dcc29524",
+    "bench/results/gpt-6-astra-codex-medium@128k.kissing-q3.once#A3.jsonl": "a32e8eeeb7193853b4fb26ed68cf25720ebc604ffa2ee64c90d91977dcc29e9b",
+    "bench/results/deepseek-flash-think-low@128k.kissing-q3.once#A3.jsonl": "911550d9efd1f73c7e4c8e512b06de77bd485e2ae2a34a6c439dbf47371b8618",
+    "bench/results/claude-fable-5-1-headless-medium@128k.kissing-q3.once#A3.jsonl": "f18db6df68d656ffce9adadb59ecca6d2bd7b90ad2ca681fa65c9e99dec273c4",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#A3.jsonl": "a18f0ebe067d7736a75b67a3fc11bef120c0daec91950bbd2442bd6c2fc48424",
+    "bench/results/gpt-6-astra-codex-high@128k.infra-recovery#A3.jsonl": "1c9ee2f552fa30fb7db19a9ca0df2b21dfb7e1ccd933ae1502a48e7896fe052b",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k.kissing-q3.once#A3.jsonl": "8317650f7f241323975c3d8bbb4d700a4f76a3453fb37f5316a5305d04c6a523",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L3.jsonl": "d8dc15b571c6fdf8f59ae771fc58f0be4532282d4a30056c4325200ffc1eff1d",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T3.jsonl": "3966df783548387760ada3a6dfa191ad66583baf6c72dce08ccd526657559c9d",
+    "bench/results/gpt-5.6-luna-codex-high@128k.kissing-q3.once#L3.jsonl": "581b2b522a9812fbe2cdeae0cb9ceaec4c5d699c4f8f69ec0db684f36e1f1a91",
+    "bench/results/gpt-6-astra-codex-high@128k.kissing-q3.once#L3.jsonl": "7db51b7395adbf2fb36c44030439b9375a937e8cb9c9b8ab32d30401b89807a0",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L4.jsonl": "a17a7a6428ac3916b83b6e121b837fc744c0b80770eeacac497ecdb49c930e66",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L2.jsonl": "e04f12891683a4a6875464d980c64a0723ff563d09660792324b583871d0b4b8",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#A2.jsonl": "053869a2a341fbf6dd7bc95db24c867bb2e29e2825efcb5404b3ad31b10fe082",
+    "bench/refs/L3-kissing-0-quadratic-t10.json": "cf3a697568563adb40aac5a0456e9eae4d777c8c698180a8cffa2a1e722d172b",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T1.jsonl": "399cef7339fa87ed1a98ced3e0b399a7b5c6f90e56059a94099f078c0b362c0e",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L1.jsonl": "d7ee900f9fbdaeac6b8589b44e62d3e601d79e023e78621b915134513f51daeb",
+    "bench/refs/L3-kissing-1-quadratic-t10.json": "52f6edd3777dd416fc6790b050ede28750f3592ea6769de5c287318e91339898",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.kissing-q3.once#A3.jsonl": "eb87de0b1175f3070d444687038aef34e43eb95c8984261443b10816204df9f7",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L4.jsonl": "5e5c0b644127fd42e01f526a54ce28e21f174051c0dfc12d373ad93af70c32cb",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L2.jsonl": "110ab7b61a286f7a60fd9ff1357889210ee5998e5e1f972f325cbeae7ac34df0",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.infra-recovery#A3.jsonl": "3183caf9735630c0ee8b6f3865d511c9fd8e3d67c92278dc6ef0fa8f3a71489c",
+    "bench/refs/A3-capset-0-t10.json": "4eaf8a0f9145e06809c558de9631c35d8146e3936d0731825fa9e37a7337d810",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#A3.jsonl": "b6b6ce6129972039fa8db633de394013731aa3288186a8d44cdd7775f98bffbe",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#A3.jsonl": "aafcaf4b40589e012ababf92769316e81eafa023d68a4759553dd60633082593",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#A3.jsonl": "7349620e0df7e5ee968f85435bc512ce7339c353ff93a790e14cf5a1513c5b6f",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#A3.jsonl": "c4532b92c3a27a7adda7062263b7a1c6bce266933e8b4a333aa873b887fe28fb",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#A3.jsonl": "82880d34d696722fee367c7334ff1524c3efdb4993004c76704934f790d5fed0",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#A3.jsonl": "610935ac3004102e56e74235fda768152b7052fba9a6b7b63cd7a0110d181633",
+    "bench/results/deepseek-flash-think-low@128k#A3.jsonl": "2847063f86daab91c37a1b9354a13b08ae4a9774b2cb8ef203a64e1c8cf4e8bc",
+    "bench/results/deepseek-flash-think-high@128k#A3.jsonl": "57179af0cd2f8ca02845fe9a4429bbb006631eeed12424e1fb039292c4bbe306",
+    "bench/results/claude-fable-5-1-headless-medium@128k#A3.jsonl": "f8bc86d142439a8c7c26bccf5c2c46c09271bb48ed0a2fe1948da64c3bac77f9",
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#A3.jsonl": "88ed1fd4256163151a44b220195abb1be43c163e33d95317749fc0be51e54524",
+    "bench/refs/A3-capset-2-t10.json": "9ff0a2432a87c6a8ae286bdf236366eddaabc3b1312d0c949bce7030c338f1b8",
+    "bench/refs/A3-labs-0-t10.json": "20e573990232ce3f6fe6002c27c378b8776f3c074b1650a41ce3286617d81d16",
+    "bench/refs/A3-labs-1-t10.json": "e3a31f0f774872c3394b11d0a0c585149145da4a88d0917f8d57ceecb0e01813",
+    "bench/refs/A3-labs-2-t10.json": "7580dafa53bee68dcc10bcc9b7ab95183973ef5c0bb117a2124da722570cb8f7",
+    "bench/refs/A3-labs-3-t10.json": "8a4a1b51c47f7ea124c2f3df22e6e4072981540621aee1f399c0aa610cb68a2a",
+    "bench/refs/A3-labs-4-t10.json": "2360bc931f4b575c9f65c2086fb2467f6bc47f19303b3f6818fcb88e13c6d511",
+    "bench/refs/A3-heilbronn-0-t10.json": "a491fa818526a4e0248b90e4265174f6abe856f02ef93ba33d1ff1b4fbebb471",
+    "bench/refs/A3-heilbronn-1-t10.json": "aed005767e52b454a7e7ed178312c96830d3160fe4ab1f9f57b08037975f2f32",
+    "bench/refs/A3-heilbronn-2-t10.json": "cf3d813aa941e9904bf9991ebaaa558bf2e669c97b7742b9cf261e0d326f061a",
+    "bench/refs/A3-heilbronn-3-t10.json": "22f7d15723e3c2597e06895773e8bd8bb6f9ada1151ecc81cfc7087fe807a6fc",
+    "bench/refs/A3-heilbronn-4-t10.json": "5b8f06cdecdb4aa0279c90cf65dfe268906fa6a1ba6d25612a07956c0e3df324",
+    "bench/refs/A3-kissing-0-t10.json": "9a3f054472130c16fb9fb7f0101e79849064f17e004277e262b169a9dbbbf6b8",
+    "bench/refs/A3-kissing-1-t10.json": "3920255b30893a0f50ee21ee5110c3291dba5611cfb0a4e4c23cfc6664977d01",
+    "bench/refs/A3-corners-0-t10.json": "f6ffed8ab0f2c79752b1fccaea3af2bdc91e46772f5315f70485872bc71e0d1e",
+    "bench/refs/A3-corners-1-t10.json": "e360530c87eb7f02aa92d48acb2635c530d6130d9c0307c748bbb57460f3e872",
+    "bench/refs/A3-corners-2-t10.json": "c21fc600e0ca2ad23fd72a9dd347a40fc7c8169cf891f8993eebaa21752a832e",
+    "bench/refs/A3-corners-3-t10.json": "4685a1030e6539cee0bdf4b4aac5a3f3eb438a252e403c541b152786a4a48a7a",
+    "bench/refs/A3-corners-4-t10.json": "b3c29e3311ecf3665cbadd2804a460486571214041489bf7f7e53435a3b91362",
+    "bench/refs/A3-kissing_theta-0-t10.json": "29651d4dc52bf8f2f6d4badb77443be439676c5a02d12d484358d113d9c3098c",
+    "bench/refs/A3-kissing_theta-1-t10.json": "77412c5882a7e89afb54a68f4a509dacbb11c202a0d60219fed34c4a07bf68fc",
+    "bench/refs/A3-kissing_theta-2-t10.json": "2cb2b86e84ce30ce036bfab176e9e57d8832eda45c4731e947cecf5891a125a1",
+    "bench/refs/A3-kissing_theta-3-t10.json": "d6f620efe28ed9b25b20d6e0313677af65796cc89f5a76117286d7a9e5e799ee",
+    "bench/refs/A3-kissing_theta-4-t10.json": "0b850e030e9a3a6d39d04a02dfd390cbc14f79c4a54249813840d3614b15389c",
+    "bench/refs/A3-heilbronn_shape-0-t10.json": "83e86a8fdb1e672ec1111c03147b927a92f6231affe0c20fc09cb932cc2ba558",
+    "bench/refs/A3-heilbronn_shape-1-t10.json": "5db25319af311a955bb2b53fb9c7072bb3fc5bad628ea45e75fe8f508263cb11",
+    "bench/refs/A3-heilbronn_shape-2-t10.json": "c5e2b22d3d15eb4729046c84e1b1e1aab968cfef26f5ff9e545c1491856e36e7",
+    "bench/refs/A3-heilbronn_shape-3-t10.json": "c94105d51b68ec54525d35104d545b038ecf58504533a9e9c19289d40fe1527a",
+    "bench/refs/A3-heilbronn_shape-4-t10.json": "716df68e1fcfb20e456168ece79cf05bcfdfdb88f0d2a5735ee7322753ee6c23",
+    "bench/refs/A3-matmul-0-t10.json": "714f9b5d1fb5b486a88c3b899e8c1401a891f50d24607ee1a41f3871b8bc92ee",
+    "bench/refs/A3-matmul-4-t10.json": "b8f55b826b5a3e16219bd41a2d697a188d11dd2e5095c9d389d51d2fd831dbcd",
+    "bench/refs/A3-degdiam-0-t10.json": "0c67c1f5bc2dab75928c9231f989328823fabee7718183b300534f1db6d7bbee",
+    "bench/refs/A3-degdiam-1-t10.json": "ce727d90dbde80aa04e9f7d4326381317648c222d0f301bd0586537d8b9efa03",
+    "bench/refs/A3-degdiam-3-t10.json": "72c38ea82b07318def687032ccf73cb3e74006747bd988a7e81a31b9bb3afda9",
+    "bench/refs/A3-degdiam-4-t10.json": "cfa07c1ef6c2744b97939c3214bd2c752d2eaa6583950bb5c0ccce8940c41736",
+    "bench/refs/A3-lineq-0-t10.json": "063ac2f6993831c63628ac3e015c2bc1adf5f8e17a2fe89eb30ab71f6f5e15e5",
+    "bench/refs/A3-lineq-1-t10.json": "eaacf4c991826361055e48d015be7c20df0c66e9895e0519bd85866408aa2bfe",
+    "bench/refs/A3-lineq-2-t10.json": "3bc36fd0e9606e5e64050ebc70adbf86e8fbae20332c5b12ba79c327bfb99a61",
+    "bench/refs/A3-lineq-3-t10.json": "04bfc0855858857c011d7fae0a1cdda9302ee718ae99c9ad3932e795805cadb2",
+    "bench/refs/A3-lineq-4-t10.json": "29a365ba9857e3ef4467ff77afb21cae74a6aa5d61c5f98fd80b4dd9f2c74c86",
+    "bench/refs/A3-apfree_q-0-t10.json": "aa130db29d84d5ef621bf0a2e325588dfa4665710d0a0ed3c9d9590675e17367",
+    "bench/refs/A3-apfree_q-1-t10.json": "f1ff366f8d63f61cf4dc56a00003cd6fb19003f55cbae73e2102504fa7181dfd",
+    "bench/refs/A3-mols-0-t10.json": "81b28d265a99b25f53c352bf5a9dc4bf28550cbe299efd0a27dc5b554b2dae88",
+    "bench/refs/A3-mols-1-t10.json": "fa959f95c22fb02a22cb82c5e0cb64a1c9bc8d81c175b662d222787b392fe2cc",
+    "bench/refs/A3-mols-2-t10.json": "fdde53d3a4b7b3442b69d8da23270c0da3470596de4a1851bc8f1e27cfa6140a",
+    "bench/refs/A3-capset-11-t10.json": "e152138ceb96b8f9c065c20ae57c1010f14f02b405f94804d3c1d0bec3630379",
+    "bench/refs/A3-matmul-6-t10.json": "10cd56650751b9146a1ab033e68b7453919bced4fe872b95a7782ff4a0d1f2b8",
+    "bench/refs/A3-degdiam-7-t10.json": "05e751c5f26796abb1326c397de7787e2d40990c676abc72be6748b170433796",
+    "bench/refs/A3-degdiam-8-t10.json": "8d6c5e67073da878722a58e4175db3c03c8d895a6b3c84e5d794130adfe82104",
+    "bench/refs/A3-degdiam-20-t10.json": "4c5c4e5d3860973bcc6799ace7316d0a83b366a07006cfc0c198b1be86a2433f",
+    "bench/refs/A3-apfree_q-6-t10.json": "19de8ddf74d24dc844a36e00655146c8589668aacc4144f7928c1637fa0eb14a",
+    "bench/refs/A3-mols-6-t10.json": "53e80304da8456ee5974712cd77a7bfa7d64fe3bf95baf8d055eb27aed073dd0",
+    "bench/refs/A3-mols-9-t10.json": "c5036e34c5ffca093d56d899a697b642c3946ee8d0134448c0fafbc561dea91f",
+    "bench/refs/A3-mols-17-t10.json": "9465737c6eeb0b8687ffc471d5c623ca4a38bda41e70f1c269f799c751da5315",
+    "bench/refs/A3-schur-0-t10.json": "c5b53b1206a3b4435aeea1de2d7641af2874e249484687224f45bbe8b8fe5552",
+    "bench/refs/A3-schur-1-t10.json": "1d8abc5a59923a53ba701990d939d504b943203aaf79eacd49cc9d4b8388a4f5",
+    "bench/refs/A3-schur-2-t10.json": "7f5ac16b302f5be0884688a577237abc59e5d451f14cae4256f0e9cad18beff2",
+    "bench/refs/A3-covering-0-t10.json": "b356c5a1bf5287cb80c8e3cccb43885c09e994bf4b437d72b847c102479318c9",
+    "bench/refs/A3-covering-1-t10.json": "1e163afdc3e6d6f3e0b441c962bac0bd2ff3481980d632009afa9b07a735e55a",
+    "bench/refs/A3-covering-2-t10.json": "932099c407cb529166cf425ec506a73c4e9bc131029adcd358c1ac2d08dd127f",
+    "bench/refs/A3-shannon-0-t10.json": "ad88282eacb0fd111c962e3a2b1567fe26d0356ef5e3a1a9c8dd865d987d5232",
+    "bench/refs/A3-shannon-1-t10.json": "5de7feee24eeb47783f4523cb464f4b8350917cba6eb4d6fa7f984c12f61037e",
+    "bench/results/gpt-6-astra-codex-high@128k.once#A3.jsonl": "a26f9a4333fc464983751769bc19c68262cbd9cb8a3dea2c4a1298b9a3b62224",
+    "bench/refs/A3-shannon-2-t10.json": "6a1e1e3ff1172f8abadfde87cbaabeea7104a6e3b932421e6f45ac801d2c6758",
+    "bench/refs/A3-shannon-3-t10.json": "36a8b7feef8060933240d2acb8a27d146d0dab7d95b42945146274ecd81296ee",
+    "bench/refs/T1-trifference-0-t10.json": "457ecde4f69e766a49996341c27c470a931e779d9d6da3656a94ec44e5f9b401",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T1.jsonl": "d2791ae7276825b6baa32e96e8f4ac1a372da10957d4065fc930d08331386c54",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T1.jsonl": "74461bbab2ab9e83af1c0d7886d6bc3e49e6ddffe14019f05ae9c842ec2bbc76",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T1.jsonl": "d4dcf6c81f1fed424ffcd1e7b99a3d5dc92c5dc09d54adbfc1e479e8ab13e3cb",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T1.jsonl": "c7cdd16d34fe9c141011ce74d2f810c4108bd593956e5d56c062184dab1d73ac",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T1.jsonl": "b5c90f4403392bc6e8d1a24300cc89c0deef56dfd1f5b4d7e7aed578560fe9af",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#T1.jsonl": "bd2693400ff0cd7a45a9feca8ac96310170d2fba024f8feba9010de492eb4de0",
+    "bench/results/deepseek-flash-think-low@128k#T1.jsonl": "faf3640a15a0f5527a254eedfc16033fdb5dcdaf459f757a9206c3c8eb65fbf9",
+    "bench/results/deepseek-flash-think-high@128k#T1.jsonl": "83077f81f334e149fd4f23a9502c549482eb01a54f395bdd0734d0c3f8259f5a",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T1.jsonl": "6e76a78e35cef69db6b48038383d014406234c523daea77baaedc0afcf4b1eb9",
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T1.jsonl": "7adaef4feb3f4cfe9ad8cc26f3ff55b07388fb558905d8400755d3da238c7805",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T1.jsonl": "50dd7ecd72bda26dedd1c554877435439d854dce9c4c89ed53b22eeabaf6be87",
+    "bench/refs/T2-trifference-0-t10.json": "ca5e86bcc53594304e43e5247ff288bc0f18a9ade8f2613b62dce44e84401af0",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T2.jsonl": "531d5205bd881a44f67a228daf0c4bd14d914f658588055a3d40bdf927c94ed1",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T2.jsonl": "f6e7a8a77e76f331e4a441920a9ba079a0efabd1e1067ae713e5b4ee995177e6",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T2.jsonl": "fae7cb4ba7b6ff13fc8190cf2522a67481e4fd7338beeb90bdb369285107d2a0",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T2.jsonl": "b1be0f8c6869f144d5e4b9d4df23e9d1911fc4f4f00d1c0efc28e62627e56387",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T2.jsonl": "79ddd33b0e25a2b1ba511ee6983c011690ec4c9a2592276229ffd8082f05acfe",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#T2.jsonl": "6f594ddbffee2edf1d25d1c7f991c87e630903cc06146bed95b55894244d0b9b",
+    "bench/results/deepseek-flash-think-low@128k#T2.jsonl": "1a64db3780e41b5f69b33b4c330137332eb316ea311404099a357df2e15e218a",
+    "bench/results/deepseek-flash-think-high@128k#T2.jsonl": "e69663b64849d9a843cc79d3e1e06eb8103b7304ad4b2245f19c64e8537f9b13",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T2.jsonl": "fa8fcc00bb46428ba880011220f9302efa03efe70eaedf719f187cd6998bf3bd",
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T2.jsonl": "7e5a612e46e15ad041fa23bb0965362aeba212b10fcd16ef8febac3acb46beb8",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T2.jsonl": "0422d4ee25a09c7fa13968acc81325fc9bc88528e543e9af47808051780073e6",
+    "bench/refs/T3-trifference-0-t10.json": "7b7c64010a9c2394c4fa9784125d1ece7febd6925a1e944c5a884572f7fd0a2c",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T3.jsonl": "7ed88c09bd739c67b9b530e84cbdc7bdc43214f1cf5507d673f2d8ca575125fa",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T3.jsonl": "812f760e334ef02a9488d39c9a779d492959170a3280f85c22f3927a023feac8",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T3.jsonl": "6cbb4065540454669ff25a807acf8ed1e722e7bac3964237443506eeb3c57415",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T3.jsonl": "0e48c6e5da01240b3c9a7b42ad0dea29d717010f7fa06836f217e79df12e933e",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T3.jsonl": "22622a15ad5a86f0d5532d155050b2ee3fa8ab4f7527dee50f74c57a6000dfcf",
+    "bench/results/deepseek-flash-think-low@128k#T3.jsonl": "e0afae7d5288a63894c7594bcce495741691f939942a1ecf2075124fc1e1898e",
+    "bench/results/deepseek-flash-think-high@128k#T3.jsonl": "71c8ec0b184938d97271392ebc28f5390fbb4ab7bc512c7fdbdd6f56da21496d",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T3.jsonl": "f6d58af48fb2179a90fbdae8e41e1fdb0d881f6f30684e9d76c7724e761d8780",
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T3.jsonl": "0b5abb9b39c71e7c12729bdb4a14d4f609570553c461e662a6e06368bbc17a37",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T3.jsonl": "8a3e0885b94b2f07adb64bfb750501974be479c5fe2d0b75bec5d6b73cab5af3",
+    "bench/refs/T4-trifference-0-t10.json": "4c139f8c00f5a3b6bceb8ca8ea018b0ebb684ff7ce98ce26e3944fe3db974cb9",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T4.jsonl": "54e362a1a8f5153e056375d9a0407ce72ae7ac40835b7aa8d6f249adaa29843f",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T4.jsonl": "38a4bfe6090fb72ae46044eb3338562e17e648355a4f29bd235261f1baffea5b",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T4.jsonl": "8af4c014acef415402dfe32f8ca79f47175282c16b97037044425cdbc101ea02",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T4.jsonl": "001fa15e3554fc33964e32d33b8403f7aa041099dfd7e22c2b816e5d0fbfd8e9",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T4.jsonl": "7c44c53ce8ee10dc73b7ed6d975b62ca2fa4a9f591b2a208288a894a80ff17e7",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#T4.jsonl": "674e5ae58a8617bdced13a988cba5ffac1e5fffca3dceaf2f7bbed3f9ef3ddad",
+    "bench/results/deepseek-flash-think-low@128k#T4.jsonl": "ddb66d27be56b58fd53c6f6eb57b42bd7807e9bde1d70e3e04b3e43962ad35e6",
+    "bench/results/deepseek-flash-think-high@128k#T4.jsonl": "01fe50e6a670dbc9853d4e8e8a9d2f508b0c73e29303d8ad82e0be9d56a24536",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T4.jsonl": "552a9557cfa449c246d459637fa09433a2250587663943721e6da927f1fa689f",
+    "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T4.jsonl": "fa29369b5b64684a53b44e373dc7c623445e5a90e5021c0c61db2e5c7efb254f",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T4.jsonl": "1bdd20b5a08355a36dff0a11f682658bbeabeba8c61d1440af68161553a6e86a"
+  },
+  "overall_score": {
+    "definition": "100 times the mean relative quality over all 69 distinct instances.",
+    "reference_parity": 100,
+    "clipped": false,
+    "panel_weights": {
+      "published": 30,
+      "stand_in": 39
+    }
+  },
+  "gap_closed_definition": {
+    "start": "same fixed reference as the relative quality",
+    "endpoint": "proven mathematical bound, including proven trivial bounds",
+    "formula": "max(0, log(a/h)/log(b/h)); invert both ratios for minimisation",
+    "instances": 64,
+    "published_instances": 30,
+    "construction_instances": 34,
+    "conjectured_target_instances_separately": 5
+  },
+  "aggregation": "One selected response per instance; equal weight over the 69 unique instances.",
+  "result_selection": "bench/data/result_replacements.json"
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "name": "edel_index.html",
+    "url": "https://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html",
+    "resolved_url": "https://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html",
+    "bytes": 15275,
+    "sha256": "8aa5a2837a51d261c7b030e500c2c99e396d9ce7a653ecce8bc9badf6c1e2817",
+    "retrieved_utc": "2026-09-16T08:08:09.244781+00:00"
+  },
+  {
+    "name": "cap195.html",
+    "url": "https://www.yvesedel.de/Matritzen/CAPs/Matrizen/(195,5,5).html",
+    "resolved_url": "https://www.yvesedel.de/Matritzen/CAPs/Matrizen/(195,5,5).html",
+    "bytes": 2663,
+    "sha256": "df7d89cb4e8c0b27ce79758daf96dc260a08c7e23d72281bc5703e2a536f5473",
+    "retrieved_utc": "2026-09-16T08:08:09.224065+00:00"
+  },
+  {
+    "name": "cohn_kissing.html",
+    "url": "https://cohn.mit.edu/kissing-numbers/",
+    "resolved_url": "https://cohn.mit.edu/kissing-numbers/",
+    "bytes": 65950,
+    "sha256": "4d31659f2e1731f086da3067c97021bd14ea8b5f3a440d6c019f72606f914fe0",
+    "retrieved_utc": "2026-09-16T08:08:09.601800+00:00"
+  },
+  {
+    "name": "comellas_table.html",
+    "url": "https://web.mat.upc.edu/francesc.comellas/delta-d/taula_delta_d.html",
+    "resolved_url": "https://web.mat.upc.edu/francesc.comellas/delta-d/taula_delta_d.html",
+    "bytes": 41464,
+    "sha256": "d2b9ff3dbab2fef265a75db2c83dfceb983fceb49bbc47d1fdd7ac355cc725be",
+    "retrieved_utc": "2026-09-16T08:08:11.388665+00:00"
+  },
+  {
+    "name": "fmm.html",
+    "url": "https://fmm.univ-lille.fr/",
+    "resolved_url": "https://fmm.univ-lille.fr/",
+    "bytes": 3587537,
+    "sha256": "d835805a049d78ade54ff96c2c769bd6487206027b47a6d7bc92710d8f789436",
+    "retrieved_utc": "2026-09-16T08:08:11.255952+00:00"
+  },
+  {
+    "name": "elsholtz_pach.pdf",
+    "url": "https://arxiv.org/pdf/1903.08266",
+    "error": "HTTP Error 406: Not Acceptable"
+  },
+  {
+    "name": "rowley_schur.html",
+    "url": "https://arxiv.org/abs/2107.03560",
+    "resolved_url": "https://arxiv.org/abs/2107.03560",
+    "bytes": 40423,
+    "sha256": "b04f2060b540303e8a43b8aa9d388c06f628d522149aba904b126705043143d2",
+    "retrieved_utc": "2026-09-16T08:08:09.996780+00:00"
+  },
+  {
+    "name": "capsurvey.pdf",
+    "url": "https://www.yvesedel.de/Papers/CapSurvey.pdf",
+    "bytes": 244851,
+    "sha256": "66ebda0dda4c6e3f7c37bceece4baab8df233be6db82ac6283f628ad493380da",
+    "retrieved_utc": "2026-09-16T08:10:21.534334+00:00"
+  },
+  {
+    "name": "rowley.xls",
+    "url": "https://arxiv.org/src/2107.03560v1/anc/Specimens_S_7____TFTs-4,5,6.xls",
+    "bytes": 308224,
+    "sha256": "c50cf981c1c437557b261cb8a66e193ee2cf77a8a50b0ae70c986b1c1cbb6fbb",
+    "retrieved_utc": "2026-09-16T08:10:21.774358+00:00"
+  },
+  {
+    "name": "cap675.html",
+    "url": "https://www.yvesedel.de/Matritzen/CAPs/Matrizen/(675,6,5).html",
+    "bytes": 5775,
+    "sha256": "c61b490ed95aa75dd9c54facbe235fb837761edb2f0d5730c5551a1f24cb0f64",
+    "retrieved_utc": "2026-09-16T08:15:59.208358+00:00"
+  },
+  {
+    "name": "coverdata.json",
+    "url": "https://raw.githubusercontent.com/dmgordo/LJCR/main/coverings/coverdata.json",
+    "sha256": "0984bb8b4c89fe07268569b9814794e3c8852302d075f0794140f202e83d7fef",
+    "bytes": 6517686,
+    "retrieved_utc": "2026-09-16T08:18:34.396953+00:00"
+  },
+  {
+    "name": "karapetyan2023.pdf",
+    "url": "https://csit.am/2023/proceedings/DMCA/DMCA_6.pdf",
+    "sha256": "f00c49414385d38a1fb46a1cd8b48ca71cfaf9d4ada1fdcab37c520ecc761af6",
+    "bytes": 338529
+  }
+]

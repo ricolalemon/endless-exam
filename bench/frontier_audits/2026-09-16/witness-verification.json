@@ -1,0 +1,32 @@
+[
+  {
+    "file": "capset_d11_5504.json",
+    "source": "https://csit.am/2023/proceedings/DMCA/DMCA_6.pdf",
+    "sha256": "ac55d363e930734e52bb0f1d5b981a3503ab203936a6f7689935c42f36c8cd61",
+    "primary": [
+      true,
+      5504,
+      ""
+    ],
+    "independent": [
+      true,
+      5504
+    ],
+    "seconds": 11.815
+  },
+  {
+    "file": "schur7_1696.json",
+    "source": "https://arxiv.org/src/2107.03560v1/anc/Specimens_S_7____TFTs-4,5,6.xls",
+    "sha256": "e440f912d1df623d6f1a067a24fc58ceef57bd476cdeb4c5490cfa99d3e9e218",
+    "primary": [
+      true,
+      1696,
+      ""
+    ],
+    "independent": [
+      true,
+      1696
+    ],
+    "seconds": 0.031
+  }
+]

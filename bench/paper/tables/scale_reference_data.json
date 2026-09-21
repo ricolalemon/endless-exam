@@ -1,0 +1,1454 @@
+{
+  "grey_span_start_ratio": 1.0,
+  "aggregation": "Arithmetic mean of per-instance normalized anchor ratios over the same family/reference group as model points; normalize before averaging and clip only for display.",
+  "groups": [
+    {
+      "family": "capset",
+      "reference_type": "published",
+      "n": 3,
+      "anchor_ratio": 2.428749869908619,
+      "baseline_ratio": 0.9277152899227823,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "capset",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "d": 10
+          },
+          "sense": "max",
+          "reference": 2432,
+          "anchor": 5619,
+          "anchor_kind": "bound",
+          "anchor_ratio": 2.3104440789473686,
+          "baseline": 2240,
+          "baseline_ratio": 0.9210526315789473
+        },
+        {
+          "family": "capset",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "d": 11
+          },
+          "sense": "max",
+          "reference": 5504,
+          "anchor": 16857,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.0626816860465116,
+          "baseline": 5040,
+          "baseline_ratio": 0.9156976744186046
+        },
+        {
+          "family": "capset",
+          "plot_seed": 11,
+          "source_tier": "A3",
+          "source_seed": 11,
+          "params": {
+            "d": 9
+          },
+          "sense": "max",
+          "reference": 1082,
+          "anchor": 2070,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.9131238447319778,
+          "baseline": 1024,
+          "baseline_ratio": 0.9463955637707948
+        }
+      ]
+    },
+    {
+      "family": "spherical_code",
+      "reference_type": "published",
+      "n": 3,
+      "anchor_ratio": 1.7747214592718397,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "kissing",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "d": 14
+          },
+          "sense": "max",
+          "reference": 1932,
+          "anchor": 3174,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.6428571428571428,
+          "baseline": 1932,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "kissing",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "d": 15
+          },
+          "sense": "max",
+          "reference": 2564,
+          "anchor": 4853,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.892745709828393,
+          "baseline": 2564,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "kissing",
+          "plot_seed": 6,
+          "source_tier": "A3",
+          "source_seed": 6,
+          "params": {
+            "d": 13,
+            "representation": "quadratic"
+          },
+          "sense": "max",
+          "reference": 1154,
+          "anchor": 2064,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.7885615251299827,
+          "baseline": 1154,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "matmul",
+      "reference_type": "published",
+      "n": 3,
+      "anchor_ratio": 3.27,
+      "baseline_ratio": 0.8227269912052521,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "matmul",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "n": 4,
+            "m": 4,
+            "p": 5
+          },
+          "sense": "min",
+          "reference": 61,
+          "anchor": 20,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.05,
+          "baseline": 72,
+          "baseline_ratio": 0.8472222222222222
+        },
+        {
+          "family": "matmul",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "n": 5,
+            "m": 5,
+            "p": 5
+          },
+          "sense": "min",
+          "reference": 93,
+          "anchor": 25,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.72,
+          "baseline": 117,
+          "baseline_ratio": 0.7948717948717948
+        },
+        {
+          "family": "matmul",
+          "plot_seed": 6,
+          "source_tier": "A3",
+          "source_seed": 6,
+          "params": {
+            "n": 4,
+            "m": 5,
+            "p": 5
+          },
+          "sense": "min",
+          "reference": 76,
+          "anchor": 25,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.04,
+          "baseline": 92,
+          "baseline_ratio": 0.8260869565217391
+        }
+      ]
+    },
+    {
+      "family": "degdiam",
+      "reference_type": "published",
+      "n": 7,
+      "anchor_ratio": 1.6800865330418662,
+      "baseline_ratio": 0.2889534126057037,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "degdiam",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "d": 4,
+            "k": 5
+          },
+          "sense": "max",
+          "reference": 364,
+          "anchor": 485,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.3324175824175823,
+          "baseline": 61,
+          "baseline_ratio": 0.16758241758241757
+        },
+        {
+          "family": "degdiam",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "d": 7,
+            "k": 3
+          },
+          "sense": "max",
+          "reference": 168,
+          "anchor": 302,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.7976190476190477,
+          "baseline": 66,
+          "baseline_ratio": 0.39285714285714285
+        },
+        {
+          "family": "degdiam",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "d": 4,
+            "k": 4
+          },
+          "sense": "max",
+          "reference": 104,
+          "anchor": 161,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.5480769230769231,
+          "baseline": 41,
+          "baseline_ratio": 0.3942307692307692
+        },
+        {
+          "family": "degdiam",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "d": 3,
+            "k": 7
+          },
+          "sense": "max",
+          "reference": 196,
+          "anchor": 382,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.9489795918367347,
+          "baseline": 28,
+          "baseline_ratio": 0.14285714285714285
+        },
+        {
+          "family": "degdiam",
+          "plot_seed": 7,
+          "source_tier": "A3",
+          "source_seed": 7,
+          "params": {
+            "d": 6,
+            "k": 3
+          },
+          "sense": "max",
+          "reference": 111,
+          "anchor": 187,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.6846846846846846,
+          "baseline": 49,
+          "baseline_ratio": 0.44144144144144143
+        },
+        {
+          "family": "degdiam",
+          "plot_seed": 8,
+          "source_tier": "A3",
+          "source_seed": 8,
+          "params": {
+            "d": 5,
+            "k": 4
+          },
+          "sense": "max",
+          "reference": 212,
+          "anchor": 426,
+          "anchor_kind": "bound",
+          "anchor_ratio": 2.009433962264151,
+          "baseline": 64,
+          "baseline_ratio": 0.3018867924528302
+        },
+        {
+          "family": "degdiam",
+          "plot_seed": 20,
+          "source_tier": "A3",
+          "source_seed": 20,
+          "params": {
+            "d": 3,
+            "k": 6
+          },
+          "sense": "max",
+          "reference": 132,
+          "anchor": 190,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.4393939393939394,
+          "baseline": 24,
+          "baseline_ratio": 0.18181818181818182
+        }
+      ]
+    },
+    {
+      "family": "covering",
+      "reference_type": "published",
+      "n": 3,
+      "anchor_ratio": 1.0807593307593308,
+      "baseline_ratio": 0.6531828969287826,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "covering",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "v": 18,
+            "k": 7,
+            "t": 4
+          },
+          "sense": "min",
+          "reference": 126,
+          "anchor": 111,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.135135135135135,
+          "baseline": 179,
+          "baseline_ratio": 0.7039106145251397
+        },
+        {
+          "family": "covering",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "v": 30,
+            "k": 6,
+            "t": 3
+          },
+          "sense": "min",
+          "reference": 225,
+          "anchor": 210,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.0714285714285714,
+          "baseline": 366,
+          "baseline_ratio": 0.6147540983606558
+        },
+        {
+          "family": "covering",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "v": 24,
+            "k": 6,
+            "t": 3
+          },
+          "sense": "min",
+          "reference": 116,
+          "anchor": 112,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.0357142857142858,
+          "baseline": 181,
+          "baseline_ratio": 0.6408839779005525
+        }
+      ]
+    },
+    {
+      "family": "schur",
+      "reference_type": "published",
+      "n": 3,
+      "anchor_ratio": 10.684896092375979,
+      "baseline_ratio": 0.645091357508377,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "schur",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "k": 7
+          },
+          "sense": "max",
+          "reference": 1696,
+          "anchor": 13699,
+          "anchor_kind": "bound",
+          "anchor_ratio": 8.077240566037736,
+          "baseline": 1093,
+          "baseline_ratio": 0.6444575471698113
+        },
+        {
+          "family": "schur",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "k": 6
+          },
+          "sense": "max",
+          "reference": 536,
+          "anchor": 1896,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.537313432835821,
+          "baseline": 364,
+          "baseline_ratio": 0.6791044776119403
+        },
+        {
+          "family": "schur",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "k": 8
+          },
+          "sense": "max",
+          "reference": 5362,
+          "anchor": 109600,
+          "anchor_kind": "bound",
+          "anchor_ratio": 20.440134278254384,
+          "baseline": 3280,
+          "baseline_ratio": 0.6117120477433793
+        }
+      ]
+    },
+    {
+      "family": "apfree_q",
+      "reference_type": "published",
+      "n": 2,
+      "anchor_ratio": 9.116015122392897,
+      "baseline_ratio": 0.6794116245452957,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "apfree_q",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "q": 5,
+            "n": 6
+          },
+          "sense": "max",
+          "reference": 649,
+          "anchor": 7497,
+          "anchor_kind": "bound",
+          "anchor_ratio": 11.551617873651772,
+          "baseline": 360,
+          "baseline_ratio": 0.5546995377503852
+        },
+        {
+          "family": "apfree_q",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "q": 5,
+            "n": 5
+          },
+          "sense": "max",
+          "reference": 194,
+          "anchor": 1296,
+          "anchor_kind": "bound",
+          "anchor_ratio": 6.680412371134021,
+          "baseline": 156,
+          "baseline_ratio": 0.8041237113402062
+        }
+      ]
+    },
+    {
+      "family": "mols",
+      "reference_type": "published",
+      "n": 6,
+      "anchor_ratio": 3.475,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "mols",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "n": 14
+          },
+          "sense": "max",
+          "reference": 4,
+          "anchor": 12,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.0,
+          "baseline": 4,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "mols",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "n": 10
+          },
+          "sense": "max",
+          "reference": 2,
+          "anchor": 8,
+          "anchor_kind": "bound",
+          "anchor_ratio": 4.0,
+          "baseline": 2,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "mols",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "n": 18
+          },
+          "sense": "max",
+          "reference": 5,
+          "anchor": 17,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.4,
+          "baseline": 5,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "mols",
+          "plot_seed": 6,
+          "source_tier": "A3",
+          "source_seed": 6,
+          "params": {
+            "n": 15
+          },
+          "sense": "max",
+          "reference": 4,
+          "anchor": 14,
+          "anchor_kind": "bound",
+          "anchor_ratio": 3.5,
+          "baseline": 4,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "mols",
+          "plot_seed": 9,
+          "source_tier": "A3",
+          "source_seed": 9,
+          "params": {
+            "n": 12
+          },
+          "sense": "max",
+          "reference": 5,
+          "anchor": 11,
+          "anchor_kind": "bound",
+          "anchor_ratio": 2.2,
+          "baseline": 5,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "mols",
+          "plot_seed": 17,
+          "source_tier": "A3",
+          "source_seed": 17,
+          "params": {
+            "n": 20
+          },
+          "sense": "max",
+          "reference": 4,
+          "anchor": 19,
+          "anchor_kind": "bound",
+          "anchor_ratio": 4.75,
+          "baseline": 4,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "labs",
+      "reference_type": "construction",
+      "n": 5,
+      "anchor_ratio": 2.134813116989269,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "conjecture",
+      "anchor_kinds": [
+        "conjecture"
+      ],
+      "anchor_is_proven": false,
+      "instances": [
+        {
+          "family": "labs",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "N": 280
+          },
+          "sense": "max",
+          "reference": 5.577689243027889,
+          "anchor": 12.32,
+          "anchor_kind": "conjecture",
+          "anchor_ratio": 2.2088,
+          "baseline": 5.577689243027889,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "labs",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "N": 375
+          },
+          "sense": "max",
+          "reference": 5.919058843336981,
+          "anchor": 12.32,
+          "anchor_kind": "conjecture",
+          "anchor_ratio": 2.0814119822222223,
+          "baseline": 5.919058843336981,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "labs",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "N": 357
+          },
+          "sense": "max",
+          "reference": 5.862419503219871,
+          "anchor": 12.32,
+          "anchor_kind": "conjecture",
+          "anchor_ratio": 2.101521392870874,
+          "baseline": 5.862419503219871,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "labs",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "N": 281
+          },
+          "sense": "max",
+          "reference": 5.65299255441008,
+          "anchor": 12.32,
+          "anchor_kind": "conjecture",
+          "anchor_ratio": 2.1793766542976916,
+          "baseline": 5.65299255441008,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "labs",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "N": 240
+          },
+          "sense": "max",
+          "reference": 5.858421480878763,
+          "anchor": 12.32,
+          "anchor_kind": "conjecture",
+          "anchor_ratio": 2.1029555555555555,
+          "baseline": 5.858421480878763,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "heilbronn",
+      "reference_type": "construction",
+      "n": 10,
+      "anchor_ratio": 36.15334751231024,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "trivial",
+      "anchor_kinds": [
+        "trivial"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "heilbronn",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "n": 46
+          },
+          "sense": "max",
+          "reference": 0.00047375,
+          "anchor": 0.022727272727272728,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 47.973135044375155,
+          "baseline": 0.00047375,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "n": 26
+          },
+          "sense": "max",
+          "reference": 0.002620975,
+          "anchor": 0.041666666666666664,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 15.897391873889168,
+          "baseline": 0.002620975,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "n": 40
+          },
+          "sense": "max",
+          "reference": 0.0006907,
+          "anchor": 0.02631578947368421,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 38.1001729747853,
+          "baseline": 0.0006907,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "n": 50
+          },
+          "sense": "max",
+          "reference": 0.0002857,
+          "anchor": 0.020833333333333332,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 72.92031268230078,
+          "baseline": 0.0002857,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "n": 48
+          },
+          "sense": "max",
+          "reference": 0.00037548,
+          "anchor": 0.021739130434782608,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 57.896906452494434,
+          "baseline": 0.00037548,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn_shape",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "n": 32,
+            "T": [
+              [
+                9026,
+                8197
+              ],
+              [
+                1769,
+                9178
+              ],
+              [
+                7298,
+                1276
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference": 0.0014884960025223,
+          "anchor": 0.03333333333333333,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 22.3939689974639,
+          "baseline": 0.0014884960025223,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn_shape",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "n": 34,
+            "T": [
+              [
+                578,
+                9933
+              ],
+              [
+                8598,
+                7337
+              ],
+              [
+                2075,
+                588
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference": 0.0010042824240598402,
+          "anchor": 0.03125,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 31.11674490296364,
+          "baseline": 0.0010042824240598402,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn_shape",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "n": 31,
+            "T": [
+              [
+                411,
+                7999
+              ],
+              [
+                9004,
+                9890
+              ],
+              [
+                3031,
+                713
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference": 0.0016863811501138092,
+          "anchor": 0.034482758620689655,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 20.447784665028134,
+          "baseline": 0.0016863811501138092,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn_shape",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "n": 40,
+            "T": [
+              [
+                7922,
+                8793
+              ],
+              [
+                9917,
+                1548
+              ],
+              [
+                1510,
+                3942
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference": 0.0005937004438679532,
+          "anchor": 0.02631578947368421,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 44.325029137989304,
+          "baseline": 0.0005937004438679532,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "heilbronn_shape",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "n": 26,
+            "T": [
+              [
+                526,
+                8526
+              ],
+              [
+                8696,
+                8279
+              ],
+              [
+                8084,
+                1688
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference": 0.003982656623191187,
+          "anchor": 0.041666666666666664,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 10.462028391812591,
+          "baseline": 0.003982656623191187,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "spherical_code",
+      "reference_type": "construction",
+      "n": 5,
+      "anchor_ratio": 69.53931842068513,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "kissing_theta",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "d": 12,
+            "cos100": 24
+          },
+          "sense": "max",
+          "reference": 28,
+          "anchor": 1431,
+          "anchor_kind": "bound",
+          "anchor_ratio": 51.107142857142854,
+          "baseline": 28,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "kissing_theta",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "d": 12,
+            "cos100": 39
+          },
+          "sense": "max",
+          "reference": 152,
+          "anchor": 5020,
+          "anchor_kind": "bound",
+          "anchor_ratio": 33.026315789473685,
+          "baseline": 152,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "kissing_theta",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "d": 14,
+            "cos100": 36
+          },
+          "sense": "max",
+          "reference": 124,
+          "anchor": 12882,
+          "anchor_kind": "bound",
+          "anchor_ratio": 103.88709677419355,
+          "baseline": 124,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "kissing_theta",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "d": 14,
+            "cos100": 39
+          },
+          "sense": "max",
+          "reference": 132,
+          "anchor": 17759,
+          "anchor_kind": "bound",
+          "anchor_ratio": 134.53787878787878,
+          "baseline": 132,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "kissing_theta",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "d": 12,
+            "cos100": 36
+          },
+          "sense": "max",
+          "reference": 152,
+          "anchor": 3821,
+          "anchor_kind": "bound",
+          "anchor_ratio": 25.138157894736842,
+          "baseline": 152,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "corners",
+      "reference_type": "construction",
+      "n": 5,
+      "anchor_ratio": 6.710899425800667,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "trivial",
+      "anchor_kinds": [
+        "trivial"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "corners",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "n": 138
+          },
+          "sense": "max",
+          "reference": 3120,
+          "anchor": 19044,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 6.1038461538461535,
+          "baseline": 3120,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "corners",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "n": 183
+          },
+          "sense": "max",
+          "reference": 4698,
+          "anchor": 33489,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 7.128352490421456,
+          "baseline": 4698,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "corners",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "n": 150
+          },
+          "sense": "max",
+          "reference": 3504,
+          "anchor": 22500,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 6.421232876712328,
+          "baseline": 3504,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "corners",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "n": 162
+          },
+          "sense": "max",
+          "reference": 3888,
+          "anchor": 26244,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 6.75,
+          "baseline": 3888,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "corners",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "n": 185
+          },
+          "sense": "max",
+          "reference": 4786,
+          "anchor": 34225,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 7.151065608023401,
+          "baseline": 4786,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "lineq",
+      "reference_type": "construction",
+      "n": 5,
+      "anchor_ratio": 27.897524553467555,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "trivial",
+      "anchor_kinds": [
+        "trivial"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "lineq",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "a": 3,
+            "b": 4,
+            "n": 19044
+          },
+          "sense": "max",
+          "reference": 630,
+          "anchor": 19044,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 30.228571428571428,
+          "baseline": 630,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "lineq",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "a": 2,
+            "b": 5,
+            "n": 18883
+          },
+          "sense": "max",
+          "reference": 609,
+          "anchor": 18883,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 31.00656814449918,
+          "baseline": 609,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "lineq",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "a": 2,
+            "b": 3,
+            "n": 17965
+          },
+          "sense": "max",
+          "reference": 523,
+          "anchor": 17965,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 34.349904397705544,
+          "baseline": 523,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "lineq",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "a": 3,
+            "b": 4,
+            "n": 13312
+          },
+          "sense": "max",
+          "reference": 512,
+          "anchor": 13312,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 26.0,
+          "baseline": 512,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "lineq",
+          "plot_seed": 4,
+          "source_tier": "A3",
+          "source_seed": 4,
+          "params": {
+            "a": 3,
+            "b": 4,
+            "n": 6248
+          },
+          "sense": "max",
+          "reference": 349,
+          "anchor": 6248,
+          "anchor_kind": "trivial",
+          "anchor_ratio": 17.902578796561606,
+          "baseline": 349,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "apfree_q",
+      "reference_type": "construction",
+      "n": 1,
+      "anchor_ratio": 13.83495145631068,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "apfree_q",
+          "plot_seed": 6,
+          "source_tier": "A3",
+          "source_seed": 6,
+          "params": {
+            "q": 7,
+            "n": 4
+          },
+          "sense": "max",
+          "reference": 103,
+          "anchor": 1425,
+          "anchor_kind": "bound",
+          "anchor_ratio": 13.83495145631068,
+          "baseline": 103,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "shannon",
+      "reference_type": "construction",
+      "n": 4,
+      "anchor_ratio": 1.7281385448217337,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "shannon",
+          "plot_seed": 0,
+          "source_tier": "A3",
+          "source_seed": 0,
+          "params": {
+            "q": 7,
+            "d": 24
+          },
+          "sense": "max",
+          "reference": 1941100559147,
+          "anchor": 3162187977651,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.6290696341051987,
+          "baseline": 1941100559147,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "shannon",
+          "plot_seed": 1,
+          "source_tier": "A3",
+          "source_seed": 1,
+          "params": {
+            "q": 7,
+            "d": 40
+          },
+          "sense": "max",
+          "reference": 329100478707380211841,
+          "anchor": 681259866841424784655,
+          "anchor_kind": "bound",
+          "anchor_ratio": 2.070066471848457,
+          "baseline": 329100478707380211841,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "shannon",
+          "plot_seed": 2,
+          "source_tier": "A3",
+          "source_seed": 2,
+          "params": {
+            "q": 9,
+            "d": 48
+          },
+          "sense": "max",
+          "reference": 3433683820292512484657849089281,
+          "anchor": 4963405862891748299248249086377,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.4455046307871526,
+          "baseline": 3433683820292512484657849089281,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "shannon",
+          "plot_seed": 3,
+          "source_tier": "A3",
+          "source_seed": 3,
+          "params": {
+            "q": 9,
+            "d": 64
+          },
+          "sense": "max",
+          "reference": 47890060730248079154410960106868188422724,
+          "anchor": 84665482129355946576723483827356921914676,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.7679134425461265,
+          "baseline": 47890060730248079154410960106868188422724,
+          "baseline_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "family": "trifference",
+      "reference_type": "construction",
+      "n": 4,
+      "anchor_ratio": 3.082800603207713e+23,
+      "baseline_ratio": 1.0,
+      "anchor_kind": "bound",
+      "anchor_kinds": [
+        "bound"
+      ],
+      "anchor_is_proven": true,
+      "instances": [
+        {
+          "family": "trifference",
+          "plot_seed": 0,
+          "source_tier": "T1",
+          "source_seed": 0,
+          "params": {
+            "n": 64,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference": 19683,
+          "anchor": 372280745758,
+          "anchor_kind": "bound",
+          "anchor_ratio": 18913821.35639892,
+          "baseline": 19683,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "trifference",
+          "plot_seed": 1,
+          "source_tier": "T2",
+          "source_seed": 0,
+          "params": {
+            "n": 96,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference": 531441,
+          "anchor": 160616761495393674,
+          "anchor_kind": "bound",
+          "anchor_ratio": 302228773270.02185,
+          "baseline": 531441,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "trifference",
+          "plot_seed": 2,
+          "source_tier": "T3",
+          "source_seed": 0,
+          "params": {
+            "n": 144,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference": 387420489,
+          "anchor": 45516755744095603989155195,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.1748670252722645e+17,
+          "baseline": 387420489,
+          "baseline_ratio": 1.0
+        },
+        {
+          "family": "trifference",
+          "plot_seed": 3,
+          "source_tier": "T4",
+          "source_seed": 0,
+          "params": {
+            "n": 192,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference": 10460353203,
+          "anchor": 12898872036634087965856932295389781,
+          "anchor_kind": "bound",
+          "anchor_ratio": 1.2331201237960805e+24,
+          "baseline": 10460353203,
+          "baseline_ratio": 1.0
+        }
+      ]
+    }
+  ]
+}

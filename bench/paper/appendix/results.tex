@@ -1,0 +1,144 @@
+\appendixpage
+\section{Detailed experimental results}
+\label{app:more}
+\subsection{Quality across the tool-free model comparison}
+\readingnote{Although every tool-free configuration has a zero breakthrough rate on the 30 published-frontier instances, their mean relative quality spans \POneMin--\POneMax. The two panels place this comparison alongside quality on the 39 construction-baseline instances; Appendix~\ref{app:tools} extends the evaluation to tool-assisted responses.}
+\begin{center}
+\centering
+\includegraphics[width=\linewidth]{figs/fig2_headline.pdf}
+\captionof{figure}{Fourteen-family construction quality for all twelve tool-free configurations. Whiskers show $95\%$ confidence intervals obtained by resampling instances within each reference group: 30 with published frontiers and 39 with construction baselines.}
+\label{fig:headline}
+\end{center}
+The overall score in Table~\ref{tab:headline} combines all 69 instances using the definition in Section~\ref{sec:scoring}.
+\appendixpage
+\subsection{Performance across parameter ranges}
+\readingnote{The non-code experiments use three parameter ranges: A1 contains small familiar instances, A2 uses larger settings, and A3 supplies the main evaluation. Family coverage varies across these groups. Appendix~\ref{app:ladder_results} instead varies size within each family, allowing construction quality to be followed as the task grows.}
+\begin{center}
+\includegraphics[width=\linewidth]{figs/fig3_tiers.pdf}
+\captionof{figure}{Performance across parameter ranges. Legend brackets give the numbers of evaluated families in A1, A2 and A3, respectively; a dash denotes an unmeasured group. The family sets differ across groups.}
+\label{fig:tiers}
+\end{center}
+\appendixpage
+\subsection{Model size and reasoning effort}
+\label{app:effort_results}
+\readingnote{Qwen3.5's mean quality and validity increase across the three checkpoint sizes. The GPT-6 Astra experiment extends the reasoning-effort comparison to xhigh on shared smaller instances.}
+On the main 69 instances, Astra medium and high return \AstraMedValidCalls{} and \AstraHighValidCalls{} valid constructions. To include xhigh effort, we also compare Astra on \AstraEffN{} shared smaller instances. Its mean relative quality is $\AstraMedATwoHFR$ at medium, $\AstraHighATwoHFR$ at high and $\AstraXhighATwoHFR$ at xhigh.
+\begin{center}
+\centering
+\includegraphics[width=\linewidth]{figs/fig7_model_size.pdf}
+\captionof{figure}{Model-size comparison within Qwen3.5: 4B, 9B and 27B at high effort on the 69 instances. Left: mean relative quality with bootstrap CIs. Right: valid-response fraction. Model size varies while the problems remain fixed.}
+\label{fig:model_size}
+\end{center}
+\begin{center}
+\centering
+\includegraphics[width=\linewidth]{figs/fig4_effort.pdf}
+\captionof{figure}{Mean relative quality for GPT-6 Astra at medium, high and xhigh effort on the same \AstraEffN{} smaller instances (A2). Multiple responses are averaged within each instance. All responses are valid at each effort level.}
+\label{fig:effort}
+\end{center}
+\appendixpage
+\subsection{Size--quality curves: cap sets, spherical codes and graphs}
+\label{app:ladder_results}
+\readingnote{Cap-set products allow GPT-6 Astra to retain quality at larger dimensions. Its graphs with maximum degree three remain valid while falling behind the reference as diameter increases. The lower panels apply the displayed transformations to construction sizes, showing how the model answers and references scale.}
+\begin{center}\includegraphics[width=\linewidth]{figs/fig6_ladder_main.pdf}
+\captionof{figure}{Size--quality curves for cap sets, spherical codes and degree--diameter graphs. Upper panels average two independent responses per size, including zero scores; whiskers show their range and hollow markers indicate at least one invalid response. Lower panels use valid responses only; crosses below the axes mark sizes with no valid construction, using the model's colour. Transformations and line conventions follow Figure~\ref{fig:ladder}.}
+\label{fig:ladder_first}
+\end{center}
+\appendixpage
+\subsection{Size--quality curves: colourings, coverings and integer sets}
+\readingnote{These curves vary the number of Schur colours, the size of the set covered by a design, and the integer interval from which a progression-free subset is chosen. The integer task supplements the five benchmark families in this experiment. The lower panels show the transformed construction sizes specified above each panel.}
+\begin{center}\includegraphics[width=\linewidth]{figs/appendix/ladder_designs.pdf}
+\captionof{figure}{Size--quality curves for Schur colourings, covering designs and integer progression-free sets. Each size has two independent responses per configuration. Upper panels include zero scores; lower panels use valid answers. For Schur, $N$ is the largest coloured integer and $k$ the number of colours. For coverings, $B$ blocks of size $k$ cover every $t$-subset of a $v$-element set. For integer sets, $|S|$ elements are selected from $\{1,\ldots,n\}$. Whiskers show the range of the responses included in each panel.}
+\label{fig:ladder_designs}
+\end{center}
+\appendixpage
+\subsection{A changing reference: graphs with maximum degree four}
+\readingnote{GPT-6 Astra's relative quality falls from \QuarticMTwo{} to \QuarticMFour{}. Its graph size changes from 192 to 195 vertices as the allowed diameter increases from five to seven, while the reference grows more quickly.}
+\begin{center}\includegraphics[width=\linewidth]{figs/appendix/ladder_quartic.pdf}
+\captionof{figure}{Graphs with maximum degree four at diameters 4--7. The lower panel plots $N^{1/k}$, where $N$ is the number of vertices and $k$ the allowed diameter. Each point represents one response from GPT-6 Astra at high effort or DeepSeek V4.1 Flash at low effort.}
+\label{fig:ladder_quartic}
+\end{center}
+\appendixpage
+\subsection{Problem-size experiments: instances and references}
+\small
+\input{tables/ladder_parameters}
+\normalsize
+\appendixpage
+\subsection{Problem-size experiments: relative quality}
+\small\setlength{\tabcolsep}{2pt}
+\input{tables/ladder_scores}
+\normalsize
+\appendixpage
+\subsection{Code quality across increasing lengths}
+\readingnote{The same finite factors can generate large Shannon products, while trifference certificates represent codes far beyond an explicit list. Relative quality measures their quality at each length. The lower panels express code size $M$ as a per-coordinate growth base $M^{1/d}$ for Shannon and a ternary rate $\log_3 M/n$ for trifference, where $d$ and $n$ are codeword lengths.}
+\begin{center}
+\centering
+\includegraphics[width=\linewidth]{figs/fig8_code_scale.pdf}
+\captionof{figure}{Code-family size--quality curves for all twelve configurations. Top: relative quality, including zero scores. Bottom: per-coordinate growth for Shannon and ternary rate for trifference, using valid answers only; missing points break the curves. Dark dashed lines are references; dark dotted lines are proven upper bounds. Shannon has two codeword lengths per cycle size; trifference has four lengths at $m=1$. Each point represents one response.}
+\label{fig:code_scale}
+\end{center}
+\appendixpage
+\subsection{Code-family results}
+\label{app:code_comparison}
+Table~\ref{tab:code_comparison} compares all twelve tool-free configurations on four Shannon and four trifference instances. Appendix~\ref{case:shannon} gives the Shannon product construction and its verification.
+\begin{center}\footnotesize\setlength{\tabcolsep}{3pt}
+\input{tables/code_multimodel}
+\captionof{table}{Tool-free code-family results on four instances per family, including zero scores. A ratio of $1$ matches the construction baseline. The last column gives the trifference code size at length 192, or zero for failure.}
+\label{tab:code_comparison}
+\end{center}
+
+For trifference, GPT-6 Astra at high effort without tools produces 59,049 codewords at length 64, three times the baseline, and matches the construction baseline at the other three lengths. Astra medium and Claude Fable 5.1 medium match the baselines at all four lengths, certifying $3^{21}$ codewords at length 192. GPT-5.6 Luna at medium effort has no valid trifference answer, while Luna high matches the baseline only at length 192. Figure~\ref{fig:code_scale} shows how code size scales with length and compares the results with the references and proven bounds.
+
+\appendixpage
+Tables~\ref{tab:code_multimodel_detail} and \ref{tab:code_detail_trifference} give the individual outcomes behind these averages.
+\begin{center}\small\setlength{\tabcolsep}{5pt}
+\input{tables/code_detail_shannon}
+\captionof{table}{Shannon relative quality on the four evaluated instances. A dagger marks an invalid or budget-exhausted response, scored zero.}
+\label{tab:code_multimodel_detail}
+\end{center}
+\begin{center}\small\setlength{\tabcolsep}{5pt}
+\input{tables/code_detail_trifference}
+\captionof{table}{Trifference relative quality at separation multiplicity $m=1$. A dagger marks an invalid or budget-exhausted response, scored zero.}
+\label{tab:code_detail_trifference}
+\end{center}
+\appendixpage
+\subsection{Failures and answer formats}
+Zero-score responses arise from invalid mathematical constructions, malformed descriptions, or empty and budget-exhausted answers, with the reason for each response recorded in the released data. A format error can obscure a valid construction, as in DeepSeek V4.1 Flash's length-96 trifference response at low effort, which supplies generator rows as integer arrays rather than the required digit strings. Expressing those rows in the required format gives a valid 19,683-word code, although the reported score uses the submitted representation.
+
+\subsection{Smaller trifference instances}
+\label{app:codes}
+Four smaller trifference instances test the quality of finite codes that can serve as ingredients for larger constructions. Table~\ref{tab:codes} evaluates GPT-6 Astra at medium effort on $(n,m)=(30,1),(36,2),(42,3),(56,1)$, complementing the larger instances in the main evaluation.
+
+Astra matches the construction baselines at lengths 30, 36 and 42 with valid 729-word codes, and triples the reference at length 56 with a 6,561-word code. These finite constructions can be represented explicitly, while algebraic certificates (Appendix~\ref{app:trifference_certificates}) extend evaluation to larger codes whose words cannot all be listed within a response.
+\input{tables/code_extension}
+\appendixpage
+\subsection{Claude Opus 5 on shared instances}
+\label{app:opus_subset}
+Claude Opus 5 at medium effort is compared with the other configurations on their 45 shared instances.
+\begin{center}
+\centering\footnotesize
+\input{tables/opus_matched}
+\captionof{table}{Comparison with Claude Opus 5 at medium effort on 45 shared instances: 15 with published frontiers and 30 with construction baselines. The overall score is 100 times the mean relative quality over this subset.}
+\label{tab:opus_subset}
+\end{center}
+\subsection{Sensitivity to family selection}
+\label{app:selection}
+We examine the effect of including Kakeya as a scored family in Table~\ref{tab:selection}. This comparison uses the twelve non-code families, with and without Kakeya, on identical model responses. Spherical-code variants share one family label, as do the two Heilbronn domains; each distinct task and parameter setting retains equal weight. Kakeya affects only the mean relative quality on instances with construction baselines and the mean gap closed, leaving the published-frontier results unchanged.
+\begin{center}
+\centering\footnotesize
+\resizebox{\linewidth}{!}{\input{tables/selection_comparison}}
+\captionof{table}{Effect of including Kakeya in the aggregate. $+K$ includes Kakeya and $-K$ excludes it. Relative quality is averaged over instances with construction baselines; both settings use the same responses from the twelve non-code families and equal instance weights. Published-frontier scores are identical in the two cases.}
+\label{tab:selection}
+\end{center}
+
+\appendixpage
+\subsection{Gap closed and progress toward the LABS target}
+\label{app:gap_breakdown}
+Gap closed starts at the same reference as relative quality and measures logarithmic progress toward a proven bound. Table~\ref{tab:gap_breakdown} separates the two reference groups. The combined value gives each eligible instance equal weight, so the groups contribute in proportion to their 30 and 34 instances. Invalid answers and valid answers that do not exceed the reference contribute zero.
+
+The five LABS instances instead use the conjectured merit-factor target of 12.32. We compute progress from each construction baseline toward this target using the same logarithmic formula, and report it separately. These five values do not enter the proven-bound mean in Table~\ref{tab:headline}.
+\begin{center}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\input{tables/gap_closed_breakdown}
+\captionof{table}{Mean progress from the reference. The first three numeric columns use proven mathematical bounds; the last uses the conjectured LABS target. Each mean includes zero scores.}
+\label{tab:gap_breakdown}
+\end{center}

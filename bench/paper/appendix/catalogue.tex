@@ -1,0 +1,27 @@
+\begingroup
+\raggedbottom
+\setlength{\parskip}{4pt}
+\hypersetup{colorlinks=true,linkcolor=appendixink,citecolor=appendixink,urlcolor=appendixink}
+\section*{Appendix}
+\begin{constructionbox}[title=Reading guide]
+\small
+\begin{tabularx}{\linewidth}{@{}lXr@{}}
+\hyperref[app:families]{A\quad Task catalogue} & Fourteen families, examples and parameters controlling problem size & \pageref{app:families}\\
+\hyperref[app:cases]{B\quad Representative constructions} & Four examples from object to score & \pageref{app:cases}\\
+\hyperref[app:more]{C\quad Detailed results} & Model comparisons, size--quality curves and sensitivity & \pageref{app:more}\\
+\hyperref[app:formats]{D\quad Verification} & Compact formats and algebraic certificates & \pageref{app:formats}\\
+\hyperref[app:lit]{E\quad References and bounds} & Literature sources, construction baselines and the LABS target & \pageref{app:lit}\\
+\hyperref[app:tiers]{F\quad Instance parameters} & Main and smaller-instance parameter settings & \pageref{app:tiers}\\
+\hyperref[app:runner]{G\quad Evaluation settings} & Model settings and an example prompt & \pageref{app:runner}\\
+\hyperref[app:tools]{H\quad Code and web access} & Tool-assisted results and token usage & \pageref{app:tools}
+\end{tabularx}
+\end{constructionbox}
+\section{Task catalogue}
+\label{app:families}
+Each family page gives the objective, a checked small example, parameters controlling problem size and one evaluated instance with its reference values. Small diagrams illustrate the mathematical property. In the tables, the baseline is the better of an implemented mathematical construction and the ten-second search result. It can be weaker than a published frontier, which remains the scoring reference. The final column gives this baseline's relative quality, rather than a model score. Gap closed uses the scoring reference as its starting point, as defined in Section~\ref{sec:headroom}.
+\begin{center}\small\setlength{\tabcolsep}{3pt}
+\input{tables/families_table}
+\captionof{table}{The fourteen families. R denotes search-resistant, S families that can benefit from search and U unclassified search sensitivity. These labels concern the reference search procedures studied here. Spherical codes and Heilbronn each contain two variants. Reference types may depend on the parameters.}
+\label{tab:families}
+\end{center}
+\input{tables/family_catalogue}

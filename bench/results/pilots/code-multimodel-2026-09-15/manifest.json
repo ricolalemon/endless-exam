@@ -1,0 +1,196 @@
+{
+  "created_utc": "2026-09-15T20:57:34.146328+00:00",
+  "systems": {
+    "astra": {
+      "model": "gpt-6-astra",
+      "provider": "codex-cli",
+      "config": "codex-medium@nocap",
+      "effort": "medium",
+      "reuse": true,
+      "label": "Astra medium"
+    },
+    "deepseek": {
+      "model": "deepseek-flash",
+      "provider": "deepseek",
+      "config": "think-low@128k",
+      "api_config": "think-low",
+      "label": "DeepSeek low"
+    },
+    "luna": {
+      "model": "gpt-5.6-luna",
+      "provider": "codex-cli",
+      "config": "codex-medium@nocap",
+      "effort": "medium",
+      "label": "Luna medium"
+    },
+    "qwen38": {
+      "model": "Qwen/Qwen3.8-27B-FP8",
+      "provider": "qwen_local",
+      "config": "think-high@128k",
+      "api_config": "think-high",
+      "label": "Qwen3.8-27B high"
+    },
+    "qwen35": {
+      "model": "Qwen/Qwen3.5-27B-FP8",
+      "provider": "qwen35_local",
+      "config": "think-high@128k",
+      "api_config": "think-high",
+      "label": "Qwen3.5-27B high"
+    }
+  },
+  "cases": [
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "prompt": "Problem (Odd-Cycle-Zero-Error-Code, q=7, d=24). Find as many distinct words of length 24 over digits 0..6 as possible. For every two distinct words x,y, some coordinate i must satisfy min(abs(x_i-y_i), 7-abs(x_i-y_i)) >= 2. Symbols wrap around a cycle of length 7. This is an independent set in the 24-fold strong power of C_7. Objective: number of words. Literal lists and expanded products accept at most 4096 words. Certified factors may describe larger codes; their exact cardinality is computed from checked factors.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of digit strings, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified form allowed: {\"factors\": [{\"words\": [digit strings], \"power\": r}, ...]}. Each factor lists an actual independent code, r is an integer 1..256 (default 1), and factor length times power must sum to d. Each factor has 1..4096 distinct words, with at most 16384 words across factors. Every factor is checked; the product cardinality is computed exactly without expanding the product. Nested certificates and claimed counts are not accepted. Compact form allowed: {\"product\": [C1, C2, ...]}, where each Ci is a nonempty list of equal-length digit strings, denotes all concatenations of one word from each factor. Factor lengths must sum to d. The complete product is expanded and verified, with the same word limit.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "a0c588a9aac0123c930cb59f8b62e28cdb75eea12c272e1f58aca374048869c0",
+      "reference_path": "bench/refs/A3-shannon-0-t10.json",
+      "reference_sha256": "ad88282eacb0fd111c962e3a2b1567fe26d0356ef5e3a1a9c8dd865d987d5232",
+      "reference": 1941100559147,
+      "naive": 1941100559147,
+      "bound": 3162187977651
+    },
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "prompt": "Problem (Odd-Cycle-Zero-Error-Code, q=7, d=40). Find as many distinct words of length 40 over digits 0..6 as possible. For every two distinct words x,y, some coordinate i must satisfy min(abs(x_i-y_i), 7-abs(x_i-y_i)) >= 2. Symbols wrap around a cycle of length 7. This is an independent set in the 40-fold strong power of C_7. Objective: number of words. Literal lists and expanded products accept at most 4096 words. Certified factors may describe larger codes; their exact cardinality is computed from checked factors.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of digit strings, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified form allowed: {\"factors\": [{\"words\": [digit strings], \"power\": r}, ...]}. Each factor lists an actual independent code, r is an integer 1..256 (default 1), and factor length times power must sum to d. Each factor has 1..4096 distinct words, with at most 16384 words across factors. Every factor is checked; the product cardinality is computed exactly without expanding the product. Nested certificates and claimed counts are not accepted. Compact form allowed: {\"product\": [C1, C2, ...]}, where each Ci is a nonempty list of equal-length digit strings, denotes all concatenations of one word from each factor. Factor lengths must sum to d. The complete product is expanded and verified, with the same word limit.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "16d2fbcc34518bcdb6e9218e6152ff748059727221e8177b12bac1a7c619a0cb",
+      "reference_path": "bench/refs/A3-shannon-1-t10.json",
+      "reference_sha256": "5de7feee24eeb47783f4523cb464f4b8350917cba6eb4d6fa7f984c12f61037e",
+      "reference": 329100478707380211841,
+      "naive": 329100478707380211841,
+      "bound": 681259866841424784655
+    },
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "prompt": "Problem (Odd-Cycle-Zero-Error-Code, q=9, d=48). Find as many distinct words of length 48 over digits 0..8 as possible. For every two distinct words x,y, some coordinate i must satisfy min(abs(x_i-y_i), 9-abs(x_i-y_i)) >= 2. Symbols wrap around a cycle of length 9. This is an independent set in the 48-fold strong power of C_9. Objective: number of words. Literal lists and expanded products accept at most 4096 words. Certified factors may describe larger codes; their exact cardinality is computed from checked factors.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of digit strings, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified form allowed: {\"factors\": [{\"words\": [digit strings], \"power\": r}, ...]}. Each factor lists an actual independent code, r is an integer 1..256 (default 1), and factor length times power must sum to d. Each factor has 1..4096 distinct words, with at most 16384 words across factors. Every factor is checked; the product cardinality is computed exactly without expanding the product. Nested certificates and claimed counts are not accepted. Compact form allowed: {\"product\": [C1, C2, ...]}, where each Ci is a nonempty list of equal-length digit strings, denotes all concatenations of one word from each factor. Factor lengths must sum to d. The complete product is expanded and verified, with the same word limit.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "546ec8002d551e237a98d6886e32c778992e88557bde99a8f48c7fec9c4fd689",
+      "reference_path": "bench/refs/A3-shannon-2-t10.json",
+      "reference_sha256": "6a1e1e3ff1172f8abadfde87cbaabeea7104a6e3b932421e6f45ac801d2c6758",
+      "reference": 3433683820292512484657849089281,
+      "naive": 3433683820292512484657849089281,
+      "bound": 4963405862891748299248249086377
+    },
+    {
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "prompt": "Problem (Odd-Cycle-Zero-Error-Code, q=9, d=64). Find as many distinct words of length 64 over digits 0..8 as possible. For every two distinct words x,y, some coordinate i must satisfy min(abs(x_i-y_i), 9-abs(x_i-y_i)) >= 2. Symbols wrap around a cycle of length 9. This is an independent set in the 64-fold strong power of C_9. Objective: number of words. Literal lists and expanded products accept at most 4096 words. Certified factors may describe larger codes; their exact cardinality is computed from checked factors.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of digit strings, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified form allowed: {\"factors\": [{\"words\": [digit strings], \"power\": r}, ...]}. Each factor lists an actual independent code, r is an integer 1..256 (default 1), and factor length times power must sum to d. Each factor has 1..4096 distinct words, with at most 16384 words across factors. Every factor is checked; the product cardinality is computed exactly without expanding the product. Nested certificates and claimed counts are not accepted. Compact form allowed: {\"product\": [C1, C2, ...]}, where each Ci is a nonempty list of equal-length digit strings, denotes all concatenations of one word from each factor. Factor lengths must sum to d. The complete product is expanded and verified, with the same word limit.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "9b98a30a0d05b373d685bd0dc78068e432fbbded6618d06f22ff0031a4f55424",
+      "reference_path": "bench/refs/A3-shannon-3-t10.json",
+      "reference_sha256": "36a8b7feef8060933240d2acb8a27d146d0dab7d95b42945146274ecd81296ee",
+      "reference": 47890060730248079154410960106868188422724,
+      "naive": 47890060730248079154410960106868188422724,
+      "bound": 84665482129355946576723483827356921914676
+    },
+    {
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "prompt": "Problem (Ternary-Trifference-Code, n=64, m=1, representation=certified). Find as many distinct strings of length 64 over digits 0,1,2 as possible. For every THREE distinct strings x,y,z, at least 1 coordinates i must satisfy {x_i,y_i,z_i}={0,1,2}. Objective: number of strings. Literal lists accept at most 6561 strings. Certified linear and Reed-Solomon concatenation forms can describe larger sets, whose cardinality is computed exactly.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of strings over 0,1,2, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified forms allowed in addition to literal lists and the legacy linear form: {\"linear_code\": [g1,...,gs]} supplies 1..16 ternary generator rows of the required length. Actual rank must be at most 12; the exact number of words is 3^rank. The full three-word property is checked algebraically without expanding all strings; this form supports separation multiplicity m=1,2,3. {\"rs_concat\": {\"inner\": X, \"inner_n\": a, \"inner_m\": b, \"field\": [c0,...,cr], \"length\": N, \"dimension\": K}} describes a checked inner ternary code X of length a and multiplicity b, with exactly q=3^r words. X may be a literal list, legacy linear, or linear_code, but not another rs_concat. The field polynomial has coefficients 0,1,2 in increasing degree order, is monic, irreducible over F3, and has degree r<=12. The outer code evaluates every polynomial of degree less than K at the first N distinct field elements (base-3 coefficient order); map each field symbol to the corresponding inner word in lexicographic order. Require 1<=K<=N<=q, a*N<=n, and b*(N-3*K+3)>=m. Pad final words with zeroes to length n. Its exact size is q^K; there is no 6561-word limit on certified forms. All parameters, inner properties and field irreducibility are verified. No claimed counts or arbitrary programs are accepted.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "afdc02f1e37baaded1c96c5bfb5342cef0acf0dc31ffc901c05c6f2d70a67441",
+      "reference_path": "bench/refs/T1-trifference-0-t10.json",
+      "reference_sha256": "457ecde4f69e766a49996341c27c470a931e779d9d6da3656a94ec44e5f9b401",
+      "reference": 19683,
+      "naive": 19683,
+      "bound": 372280745758
+    },
+    {
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "prompt": "Problem (Ternary-Trifference-Code, n=96, m=1, representation=certified). Find as many distinct strings of length 96 over digits 0,1,2 as possible. For every THREE distinct strings x,y,z, at least 1 coordinates i must satisfy {x_i,y_i,z_i}={0,1,2}. Objective: number of strings. Literal lists accept at most 6561 strings. Certified linear and Reed-Solomon concatenation forms can describe larger sets, whose cardinality is computed exactly.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of strings over 0,1,2, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified forms allowed in addition to literal lists and the legacy linear form: {\"linear_code\": [g1,...,gs]} supplies 1..16 ternary generator rows of the required length. Actual rank must be at most 12; the exact number of words is 3^rank. The full three-word property is checked algebraically without expanding all strings; this form supports separation multiplicity m=1,2,3. {\"rs_concat\": {\"inner\": X, \"inner_n\": a, \"inner_m\": b, \"field\": [c0,...,cr], \"length\": N, \"dimension\": K}} describes a checked inner ternary code X of length a and multiplicity b, with exactly q=3^r words. X may be a literal list, legacy linear, or linear_code, but not another rs_concat. The field polynomial has coefficients 0,1,2 in increasing degree order, is monic, irreducible over F3, and has degree r<=12. The outer code evaluates every polynomial of degree less than K at the first N distinct field elements (base-3 coefficient order); map each field symbol to the corresponding inner word in lexicographic order. Require 1<=K<=N<=q, a*N<=n, and b*(N-3*K+3)>=m. Pad final words with zeroes to length n. Its exact size is q^K; there is no 6561-word limit on certified forms. All parameters, inner properties and field irreducibility are verified. No claimed counts or arbitrary programs are accepted.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "4af39c28920f715f22398484193e99aad4c8e8f1f216087ccadcf548cc97dca6",
+      "reference_path": "bench/refs/T2-trifference-0-t10.json",
+      "reference_sha256": "ca5e86bcc53594304e43e5247ff288bc0f18a9ade8f2613b62dce44e84401af0",
+      "reference": 531441,
+      "naive": 531441,
+      "bound": 160616761495393674
+    },
+    {
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "prompt": "Problem (Ternary-Trifference-Code, n=144, m=1, representation=certified). Find as many distinct strings of length 144 over digits 0,1,2 as possible. For every THREE distinct strings x,y,z, at least 1 coordinates i must satisfy {x_i,y_i,z_i}={0,1,2}. Objective: number of strings. Literal lists accept at most 6561 strings. Certified linear and Reed-Solomon concatenation forms can describe larger sets, whose cardinality is computed exactly.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of strings over 0,1,2, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified forms allowed in addition to literal lists and the legacy linear form: {\"linear_code\": [g1,...,gs]} supplies 1..16 ternary generator rows of the required length. Actual rank must be at most 12; the exact number of words is 3^rank. The full three-word property is checked algebraically without expanding all strings; this form supports separation multiplicity m=1,2,3. {\"rs_concat\": {\"inner\": X, \"inner_n\": a, \"inner_m\": b, \"field\": [c0,...,cr], \"length\": N, \"dimension\": K}} describes a checked inner ternary code X of length a and multiplicity b, with exactly q=3^r words. X may be a literal list, legacy linear, or linear_code, but not another rs_concat. The field polynomial has coefficients 0,1,2 in increasing degree order, is monic, irreducible over F3, and has degree r<=12. The outer code evaluates every polynomial of degree less than K at the first N distinct field elements (base-3 coefficient order); map each field symbol to the corresponding inner word in lexicographic order. Require 1<=K<=N<=q, a*N<=n, and b*(N-3*K+3)>=m. Pad final words with zeroes to length n. Its exact size is q^K; there is no 6561-word limit on certified forms. All parameters, inner properties and field irreducibility are verified. No claimed counts or arbitrary programs are accepted.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "eae70826b6bd553e3859315d8a20bdb914619ef6ba99110cd84f1c15cacf7f1c",
+      "reference_path": "bench/refs/T3-trifference-0-t10.json",
+      "reference_sha256": "7b7c64010a9c2394c4fa9784125d1ece7febd6925a1e944c5a884572f7fd0a2c",
+      "reference": 387420489,
+      "naive": 387420489,
+      "bound": 45516755744095603989155195
+    },
+    {
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "prompt": "Problem (Ternary-Trifference-Code, n=192, m=1, representation=certified). Find as many distinct strings of length 192 over digits 0,1,2 as possible. For every THREE distinct strings x,y,z, at least 1 coordinates i must satisfy {x_i,y_i,z_i}={0,1,2}. Objective: number of strings. Literal lists accept at most 6561 strings. Certified linear and Reed-Solomon concatenation forms can describe larger sets, whose cardinality is computed exactly.\n\nOutput format: a JSON object {\"answer\": X} where X is a JSON array of strings over 0,1,2, each of the required length.\nAn answer that violates the stated property, is malformed, contains duplicates, or is out of range scores zero. Among valid answers, a better objective scores higher. Give one answer.\nCertified forms allowed in addition to literal lists and the legacy linear form: {\"linear_code\": [g1,...,gs]} supplies 1..16 ternary generator rows of the required length. Actual rank must be at most 12; the exact number of words is 3^rank. The full three-word property is checked algebraically without expanding all strings; this form supports separation multiplicity m=1,2,3. {\"rs_concat\": {\"inner\": X, \"inner_n\": a, \"inner_m\": b, \"field\": [c0,...,cr], \"length\": N, \"dimension\": K}} describes a checked inner ternary code X of length a and multiplicity b, with exactly q=3^r words. X may be a literal list, legacy linear, or linear_code, but not another rs_concat. The field polynomial has coefficients 0,1,2 in increasing degree order, is monic, irreducible over F3, and has degree r<=12. The outer code evaluates every polynomial of degree less than K at the first N distinct field elements (base-3 coefficient order); map each field symbol to the corresponding inner word in lexicographic order. Require 1<=K<=N<=q, a*N<=n, and b*(N-3*K+3)>=m. Pad final words with zeroes to length n. Its exact size is q^K; there is no 6561-word limit on certified forms. All parameters, inner properties and field irreducibility are verified. No claimed counts or arbitrary programs are accepted.\n\nRules for this task: you have NO tools for this task -- do not run code, do not browse, do not read or write files, do not call any tool. Work it out by reasoning alone. Your entire final reply must be the single JSON object and nothing else.",
+      "prompt_sha256": "828434a5bafa825e1678e4f939da53671d4d613b689d89fbb667b33fcbfe9c3c",
+      "reference_path": "bench/refs/T4-trifference-0-t10.json",
+      "reference_sha256": "4c139f8c00f5a3b6bceb8ca8ea018b0ebb684ff7ce98ce26e3944fe3db974cb9",
+      "reference": 10460353203,
+      "naive": 10460353203,
+      "bound": 12898872036634087965856932295389781
+    }
+  ],
+  "output_budget": 128000,
+  "timeout_s": 7200,
+  "max_workers_per_system": 2,
+  "single_attempt": true,
+  "automatic_retries": 0,
+  "prompt_policy": "User/math prompt exactly matches the frozen Astra prompts; API system message follows the existing direct-API harness. Native provider harnesses are recorded.",
+  "source_sha256": {
+    "bench/code_multimodel.py": "d3994b1fac1622fb42cca852bdf9ccee010f33d99b12beeb81bad63b5f3ea0ae",
+    "bench/candidate_families.py": "04e7a87fd53ac605f36570eef2af42734ef10f293a1a29b58180ca907974e257",
+    "bench/trifference_certificates.py": "7d06b280b27482f10532cebbe7959cb769faad25eea3a1bd1053846fcace823a",
+    "bench/trifference_scaling.py": "81b38b47ac3f611de3441115bcdebbbb24943d840fbc74397d7a3567dd6ce949",
+    "bench/run_ladder.py": "f47c64d27bb5420f9f6308f96b3062a08eab075d7a6b32ecbb6a751eb6158592",
+    "bench/openceiling.py": "348c369b823d9af7f415287856edda2b947831071c2bf7a91baa20826d7e7ca9",
+    "bench/agent_bridge.py": "93e31dd0d5a68db871dcc80f9afcfb039be08741c3d92a4fd8828cb5acf18d5c",
+    "bench/headless_codex.py": "77e32934ba01aee9c39665e398aace6aa6322ea92378091364cbae72d149df70",
+    "bench/providers.py": "7454d8d605caff1dc6e74ee8fbdeda37132f5ac1408153eb1a4911731268f12c",
+    "bench/data/shannon_c7_base.json": "59a7c29b01ad596570a6f3b8ef3e905d00d40e67062ff2691a74a9e5b277ac16",
+    "bench/data/trifference_references.json": "76a70d5ba8f599d403858dcc147c97c29f1d033f942112ec272f714e527fbbbc",
+    "bench/data/trifference_certificate_pool.json": "69af0cbf11d48f2b279a4794ae8af264d7a421561b50a1d18a9b6023b2e822cc"
+  },
+  "api_system_sha256": "186f4827f947b696272d9cf87370ff493e451ae78202d0643b585e364a919163"
+}

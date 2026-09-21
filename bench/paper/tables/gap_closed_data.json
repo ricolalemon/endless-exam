@@ -1,0 +1,271 @@
+{
+  "definition": "Logarithmic progress from the fixed scoring reference; proven bounds and conjectured targets are reported separately.",
+  "systems": {
+    "qwen4": {
+      "label": "Qwen3.5-4B high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "qwen9": {
+      "label": "Qwen3.5-9B high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "qwen35": {
+      "label": "Qwen3.5-27B high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "qwen38": {
+      "label": "Qwen3.8-27B high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.003924268599230315,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.007386858539727653
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "luna_medium": {
+      "label": "GPT-5.6 Luna medium",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "luna_high": {
+      "label": "GPT-5.6 Luna high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0021155118519105083,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.003982139956537427
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "deepseek_low": {
+      "label": "DeepSeek V4.1 Flash low",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0002291643981365343,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.00043136827884524107
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "deepseek_high": {
+      "label": "DeepSeek V4.1 Flash high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.00583996948831633,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.01099288374271309
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "fable": {
+      "label": "Claude Fable 5.1 medium",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.012414109941926835,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.023367736361274042
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "fable_high": {
+      "label": "Claude Fable 5.1 high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.0031302020867995826,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.0058921451045639206
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "astra_medium": {
+      "label": "GPT-6 Astra medium",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.005702428372145626,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.010733982818156473
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "astra_high": {
+      "label": "GPT-6 Astra high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.016142439549545924,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.03038576856385115
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.006037937859621236
+      }
+    },
+    "astra_tools": {
+      "label": "GPT-6 Astra high + tools",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.06274475627494949,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.11810777651755199
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.4010082922925754
+      }
+    },
+    "luna_tools": {
+      "label": "GPT-5.6 Luna high + tools",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.04671113954663507,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.08792685091131307
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.24739313060586382
+      }
+    }
+  }
+}

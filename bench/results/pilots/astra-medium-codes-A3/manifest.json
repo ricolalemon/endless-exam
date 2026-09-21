@@ -1,0 +1,147 @@
+{
+  "created_utc": "2026-09-15T19:33:49.016785+00:00",
+  "status": "prepared",
+  "tier": "A3",
+  "model": "gpt-6-astra",
+  "effort": "medium",
+  "config": "codex-medium@nocap#A3",
+  "protocol": "p1; tools disabled",
+  "scoring_output_budget": 128000,
+  "wall_timeout_s": 7200,
+  "workers": 2,
+  "single_attempt": true,
+  "frontier_kind": "verified construction stand-in; no global record claims",
+  "cases": [
+    {
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "naive": 1941100559147,
+      "search10": 1941100559147,
+      "bound": 3162187977651,
+      "reference": "bench/refs/A3-shannon-0-t10.json",
+      "reference_sha256": "ad88282eacb0fd111c962e3a2b1567fe26d0356ef5e3a1a9c8dd865d987d5232",
+      "prompt_sha256": "a0c588a9aac0123c930cb59f8b62e28cdb75eea12c272e1f58aca374048869c0",
+      "preparation_wall_s": 10.002
+    },
+    {
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "naive": 329100478707380211841,
+      "search10": 329100478707380211841,
+      "bound": 681259866841424784655,
+      "reference": "bench/refs/A3-shannon-1-t10.json",
+      "reference_sha256": "5de7feee24eeb47783f4523cb464f4b8350917cba6eb4d6fa7f984c12f61037e",
+      "prompt_sha256": "16d2fbcc34518bcdb6e9218e6152ff748059727221e8177b12bac1a7c619a0cb",
+      "preparation_wall_s": 10.002
+    },
+    {
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "naive": 3433683820292512484657849089281,
+      "search10": 3433683820292512484657849089281,
+      "bound": 4963405862891748299248249086377,
+      "reference": "bench/refs/A3-shannon-2-t10.json",
+      "reference_sha256": "6a1e1e3ff1172f8abadfde87cbaabeea7104a6e3b932421e6f45ac801d2c6758",
+      "prompt_sha256": "546ec8002d551e237a98d6886e32c778992e88557bde99a8f48c7fec9c4fd689",
+      "preparation_wall_s": 10.001
+    },
+    {
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "naive": 47890060730248079154410960106868188422724,
+      "search10": 47890060730248079154410960106868188422724,
+      "bound": 84665482129355946576723483827356921914676,
+      "reference": "bench/refs/A3-shannon-3-t10.json",
+      "reference_sha256": "36a8b7feef8060933240d2acb8a27d146d0dab7d95b42945146274ecd81296ee",
+      "prompt_sha256": "9b98a30a0d05b373d685bd0dc78068e432fbbded6618d06f22ff0031a4f55424",
+      "preparation_wall_s": 10.001
+    },
+    {
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 30,
+        "m": 1
+      },
+      "naive": 729,
+      "search10": 729,
+      "bound": 383502,
+      "reference": "bench/refs/A3-trifference-0-t10.json",
+      "reference_sha256": "9ce0261eb35005963342521855efa39aa81d5a46a286e3961348390b0a8716b8",
+      "prompt_sha256": "e897d500e947e2b9797c58977241e6dbf6fe583ea1fc20eabaaeb04ceea281b9",
+      "preparation_wall_s": 0.025
+    },
+    {
+      "family": "trifference",
+      "seed": 1,
+      "params": {
+        "n": 36,
+        "m": 2
+      },
+      "naive": 729,
+      "search10": 729,
+      "bound": 4368328,
+      "reference": "bench/refs/A3-trifference-1-t10.json",
+      "reference_sha256": "7b9eb8952744e333ea814a712cdbe327835b79632a9a3724afebc600050da630",
+      "prompt_sha256": "ff03a49cd1b51942087d8fee63d53270169c40ff3e28022ffd81c6678cc383d6",
+      "preparation_wall_s": 0.034
+    },
+    {
+      "family": "trifference",
+      "seed": 2,
+      "params": {
+        "n": 42,
+        "m": 3
+      },
+      "naive": 729,
+      "search10": 729,
+      "bound": 49757995,
+      "reference": "bench/refs/A3-trifference-2-t10.json",
+      "reference_sha256": "8b31cdb9fc9fb7b4d301ec3feed7436ca64acc360ce7d0fa6c26d947af62f582",
+      "prompt_sha256": "784d82b25833804017594d2c176bcdd69a15eb423bf9e1ce790fee2868464e39",
+      "preparation_wall_s": 0.037
+    },
+    {
+      "family": "trifference",
+      "seed": 3,
+      "params": {
+        "n": 56,
+        "m": 1
+      },
+      "naive": 2187,
+      "search10": 2187,
+      "bound": 14525814801,
+      "reference": "bench/refs/A3-trifference-3-t10.json",
+      "reference_sha256": "72585324203fd8f29e521d8df9c8300769518be3f8893719429fe590ccd4a081",
+      "prompt_sha256": "cad0899cf2c2413af2892af12a751cefdeffacc1cedcfbc899a5a582f71a8a5f",
+      "preparation_wall_s": 0.232
+    }
+  ],
+  "code_sha256": {
+    "bench/candidate_families.py": "1007275bef454884e00257250cd4c5e6c038dfe4fee7b16dc9b81f2fce9a1e22",
+    "bench/openceiling.py": "348c369b823d9af7f415287856edda2b947831071c2bf7a91baa20826d7e7ca9",
+    "bench/run_ladder.py": "ad3b1d18b7efc3d95221d2e99d14e6fd7766433f63a09a6ffb1e6c528aeafda7",
+    "bench/headless_codex.py": "77e32934ba01aee9c39665e398aace6aa6322ea92378091364cbae72d149df70",
+    "bench/agent_bridge.py": "93e31dd0d5a68db871dcc80f9afcfb039be08741c3d92a4fd8828cb5acf18d5c",
+    "bench/code_extension.py": "83f12f7d5c61c3df174c07674d5ecb303f4c2bf5fdbdb37946c8a33aa09d33d6",
+    "bench/data/shannon_c7_base.json": "59a7c29b01ad596570a6f3b8ef3e905d00d40e67062ff2691a74a9e5b277ac16",
+    "bench/data/trifference_references.json": "76a70d5ba8f599d403858dcc147c97c29f1d033f942112ec272f714e527fbbbc",
+    "bench/scripts/build_code_references.py": "de5a930c8067e704b8668c8059b497bb573205e177a49e6c1ebc6564e21ae9cf"
+  }
+}

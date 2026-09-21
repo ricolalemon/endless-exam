@@ -1,0 +1,1063 @@
+{
+  "source_revision": "e1c56e6",
+  "status": "Construction baseline calibration included in version 1.",
+  "algorithm_sha256": "652858cc9114762963c2d2f45b5664c507f5a7d3034f743c5d26a149dfc7f4ea",
+  "calibration_parameters_disjoint": true,
+  "new_model_calls": 0,
+  "instances_attempted": 20,
+  "instances_improved": 8,
+  "comparisons": [
+    {
+      "family": "apfree_q",
+      "params": {
+        "n": 4,
+        "q": 7
+      },
+      "old": 103,
+      "candidate": 100,
+      "new": 103,
+      "improved": false
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 138
+      },
+      "old": 2504,
+      "candidate": 3120,
+      "new": 3120,
+      "improved": true
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 150
+      },
+      "old": 2832,
+      "candidate": 3504,
+      "new": 3504,
+      "improved": true
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 162
+      },
+      "old": 3203,
+      "candidate": 3888,
+      "new": 3888,
+      "improved": true
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 183
+      },
+      "old": 3936,
+      "candidate": 4698,
+      "new": 4698,
+      "improved": true
+    },
+    {
+      "family": "corners",
+      "params": {
+        "n": 185
+      },
+      "old": 4064,
+      "candidate": 4786,
+      "new": 4786,
+      "improved": true
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "cos100": 24,
+        "d": 12
+      },
+      "old": 24,
+      "candidate": 28,
+      "new": 28,
+      "improved": true
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "cos100": 36,
+        "d": 12
+      },
+      "old": 88,
+      "candidate": 152,
+      "new": 152,
+      "improved": true
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "cos100": 36,
+        "d": 14
+      },
+      "old": 124,
+      "candidate": 120,
+      "new": 124,
+      "improved": false
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "cos100": 39,
+        "d": 12
+      },
+      "old": 88,
+      "candidate": 152,
+      "new": 152,
+      "improved": true
+    },
+    {
+      "family": "kissing_theta",
+      "params": {
+        "cos100": 39,
+        "d": 14
+      },
+      "old": 132,
+      "candidate": 120,
+      "new": 132,
+      "improved": false
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 2,
+        "b": 3,
+        "n": 17965
+      },
+      "old": 523,
+      "candidate": 519,
+      "new": 523,
+      "improved": false
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 2,
+        "b": 5,
+        "n": 18883
+      },
+      "old": 609,
+      "candidate": 593,
+      "new": 609,
+      "improved": false
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 13312
+      },
+      "old": 512,
+      "candidate": 503,
+      "new": 512,
+      "improved": false
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 19044
+      },
+      "old": 630,
+      "candidate": 620,
+      "new": 630,
+      "improved": false
+    },
+    {
+      "family": "lineq",
+      "params": {
+        "a": 3,
+        "b": 4,
+        "n": 6248
+      },
+      "old": 349,
+      "candidate": 338,
+      "new": 349,
+      "improved": false
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "m": 1,
+        "n": 144,
+        "representation": "certified"
+      },
+      "old": 387420489,
+      "candidate": 387420489,
+      "new": 387420489,
+      "improved": false
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "m": 1,
+        "n": 192,
+        "representation": "certified"
+      },
+      "old": 10460353203,
+      "candidate": 10460353203,
+      "new": 10460353203,
+      "improved": false
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "m": 1,
+        "n": 64,
+        "representation": "certified"
+      },
+      "old": 19683,
+      "candidate": 19683,
+      "new": 19683,
+      "improved": false
+    },
+    {
+      "family": "trifference",
+      "params": {
+        "m": 1,
+        "n": 96,
+        "representation": "certified"
+      },
+      "old": 531441,
+      "candidate": 531441,
+      "new": 531441,
+      "improved": false
+    }
+  ],
+  "before": {
+    "qwen4": {
+      "label": "Qwen3.5-4B high",
+      "model": "Qwen/Qwen3.5-4B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.07068421085013735,
+        "ci": [
+          0.03229869105926084,
+          0.11612648368819005
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.09362600779499856,
+        "ci": [
+          0.03685747327516005,
+          0.16665599749525786
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 34,
+      "valid": 0.40476190476190477,
+      "headroom": 0.0,
+      "headroom_instances": 69
+    },
+    "qwen9": {
+      "label": "Qwen3.5-9B high",
+      "model": "Qwen/Qwen3.5-9B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.11369566594718096,
+        "ci": [
+          0.06304491359077186,
+          0.16883711154840939
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.1883427470776923,
+        "ci": [
+          0.07852183930944061,
+          0.31340247041270514
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 39,
+      "valid": 0.4642857142857143,
+      "headroom": 0.0015850465712917614,
+      "headroom_instances": 69
+    },
+    "qwen35": {
+      "label": "Qwen3.5-27B high",
+      "model": "Qwen/Qwen3.5-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.14429863988861552,
+        "ci": [
+          0.07144100320776953,
+          0.2288058757751406
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.20240794878116145,
+        "ci": [
+          0.09497964510219639,
+          0.3226740451025651
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 45,
+      "valid": 0.5357142857142857,
+      "headroom": 0.0033458476066811956,
+      "headroom_instances": 69
+    },
+    "qwen38": {
+      "label": "Qwen3.8-27B high",
+      "model": "Qwen/Qwen3.8-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.29838661569402153,
+        "ci": [
+          0.1920057105098314,
+          0.4080347409552564
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.4750170405811464,
+        "ci": [
+          0.3030958739367387,
+          0.6569668024381367
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 52,
+      "valid": 0.6190476190476191,
+      "headroom": 0.014708528709895597,
+      "headroom_instances": 69
+    },
+    "luna_medium": {
+      "label": "Luna medium",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-medium@128k.once-full",
+      "source_code_config": "codex-medium@128k.once-full",
+      "p1": {
+        "n": 30,
+        "mean": 0.1567384516326887,
+        "ci": [
+          0.09168950593871342,
+          0.23010972979829938
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.19750076275625605,
+        "ci": [
+          0.09486230605828892,
+          0.32015102816105584
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 47,
+      "valid": 0.5595238095238095,
+      "headroom": 0.010160756914864972,
+      "headroom_instances": 69
+    },
+    "luna_high": {
+      "label": "Luna high",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-high@128k.once-full",
+      "source_code_config": "codex-high@128k.once-full",
+      "p1": {
+        "n": 30,
+        "mean": 0.26089355892682015,
+        "ci": [
+          0.17120385329181653,
+          0.35123620760516394
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.37387250508963965,
+        "ci": [
+          0.23610049495117033,
+          0.5217267875043087
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 53,
+      "valid": 0.6309523809523809,
+      "headroom": 0.0208551563633146,
+      "headroom_instances": 69
+    },
+    "deepseek_low": {
+      "label": "DeepSeek low",
+      "model": "deepseek-flash",
+      "source_core_config": "think-low@128k",
+      "source_code_config": "think-low@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.38566264575106884,
+        "ci": [
+          0.2902842614169307,
+          0.48253865626448644
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.4002039485896298,
+        "ci": [
+          0.25275072510116303,
+          0.5567062335238138
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 67,
+      "valid": 0.7976190476190477,
+      "headroom": 0.009759398687761265,
+      "headroom_instances": 69
+    },
+    "deepseek_high": {
+      "label": "DeepSeek high",
+      "model": "deepseek-flash",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.3671524319795344,
+        "ci": [
+          0.25507310633467284,
+          0.47957208716788585
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.552299183161793,
+        "ci": [
+          0.3694660174562737,
+          0.7447644114711705
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 64,
+      "valid": 0.7619047619047619,
+      "headroom": 0.03377531064039553,
+      "headroom_instances": 69
+    },
+    "fable": {
+      "label": "Fable medium",
+      "model": "claude-fable-5-1",
+      "source_core_config": "headless-medium@128k",
+      "source_code_config": "headless-medium@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.6032145956426107,
+        "ci": [
+          0.5034654243818838,
+          0.698103807245298
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.89184516832403,
+        "ci": [
+          0.6972757762703999,
+          1.078468408782561
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 73,
+      "valid": 0.8690476190476191,
+      "headroom": 0.06745519818110483,
+      "headroom_instances": 69
+    },
+    "astra_medium": {
+      "label": "Astra medium",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-medium@nocap",
+      "source_code_config": "codex-medium@nocap",
+      "p1": {
+        "n": 30,
+        "mean": 0.6418667120005679,
+        "ci": [
+          0.5535512436604234,
+          0.7249552787613222
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.9168105166432944,
+        "ci": [
+          0.7751348021996946,
+          1.0597468275743107
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 83,
+      "valid": 0.9880952380952381,
+      "headroom": 0.07424110931729463,
+      "headroom_instances": 69
+    },
+    "astra_high": {
+      "label": "Astra high",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-high@nocap",
+      "source_code_config": "codex-high@128k.once",
+      "p1": {
+        "n": 30,
+        "mean": 0.7188403650855246,
+        "ci": [
+          0.6453268206592232,
+          0.7893964269034245
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 1.0522895910666175,
+        "ci": [
+          0.8773688061247418,
+          1.2450762654193064
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 83,
+      "valid": 0.9880952380952381,
+      "headroom": 0.09580645983852082,
+      "headroom_instances": 69
+    }
+  },
+  "after": {
+    "qwen4": {
+      "label": "Qwen3.5-4B high",
+      "model": "Qwen/Qwen3.5-4B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.07068421085013735,
+        "ci": [
+          0.03229869105926084,
+          0.11612648368819005
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.08178774410892942,
+        "ci": [
+          0.030875113690092517,
+          0.14624267692231255
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 34,
+      "valid": 0.40476190476190477,
+      "headroom": 0.0,
+      "headroom_instances": 69
+    },
+    "qwen9": {
+      "label": "Qwen3.5-9B high",
+      "model": "Qwen/Qwen3.5-9B",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.11369566594718096,
+        "ci": [
+          0.06304491359077186,
+          0.16883711154840939
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.1660635833336097,
+        "ci": [
+          0.06968025520514545,
+          0.2739864566893926
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 39,
+      "valid": 0.4642857142857143,
+      "headroom": 0.0,
+      "headroom_instances": 69
+    },
+    "qwen35": {
+      "label": "Qwen3.5-27B high",
+      "model": "Qwen/Qwen3.5-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.14429863988861552,
+        "ci": [
+          0.07144100320776953,
+          0.2288058757751406
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.18487556338555186,
+        "ci": [
+          0.08931034212850142,
+          0.2935494513192148
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 45,
+      "valid": 0.5357142857142857,
+      "headroom": 0.0026332302391297163,
+      "headroom_instances": 69
+    },
+    "qwen38": {
+      "label": "Qwen3.8-27B high",
+      "model": "Qwen/Qwen3.8-27B-FP8",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.29838661569402153,
+        "ci": [
+          0.1920057105098314,
+          0.4080347409552564
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.43533730935767156,
+        "ci": [
+          0.281800880214094,
+          0.5933841498585325
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 52,
+      "valid": 0.6190476190476191,
+      "headroom": 0.008819520580912711,
+      "headroom_instances": 69
+    },
+    "luna_medium": {
+      "label": "Luna medium",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-medium@128k.once-full",
+      "source_code_config": "codex-medium@128k.once-full",
+      "p1": {
+        "n": 30,
+        "mean": 0.1567384516326887,
+        "ci": [
+          0.09168950593871342,
+          0.23010972979829938
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.1693964642798221,
+        "ci": [
+          0.08301231908525719,
+          0.26962143239142067
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 47,
+      "valid": 0.5595238095238095,
+      "headroom": 0.005765327950360359,
+      "headroom_instances": 69
+    },
+    "luna_high": {
+      "label": "Luna high",
+      "model": "gpt-5.6-luna",
+      "source_core_config": "codex-high@128k.once-full",
+      "source_code_config": "codex-high@128k.once-full",
+      "p1": {
+        "n": 30,
+        "mean": 0.26089355892682015,
+        "ci": [
+          0.17120385329181653,
+          0.35123620760516394
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.3345351966760398,
+        "ci": [
+          0.2117148229664965,
+          0.4673583027680226
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 53,
+      "valid": 0.6309523809523809,
+      "headroom": 0.01691708608535807,
+      "headroom_instances": 69
+    },
+    "deepseek_low": {
+      "label": "DeepSeek low",
+      "model": "deepseek-flash",
+      "source_core_config": "think-low@128k",
+      "source_code_config": "think-low@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.38566264575106884,
+        "ci": [
+          0.2902842614169307,
+          0.48253865626448644
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.35577862938764626,
+        "ci": [
+          0.22583060146609035,
+          0.4843032534418933
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 67,
+      "valid": 0.7976190476190477,
+      "headroom": 0.005392177553811234,
+      "headroom_instances": 69
+    },
+    "deepseek_high": {
+      "label": "DeepSeek high",
+      "model": "deepseek-flash",
+      "source_core_config": "think-high@128k",
+      "source_code_config": "think-high@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.3671524319795344,
+        "ci": [
+          0.25507310633467284,
+          0.47957208716788585
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.503173945747506,
+        "ci": [
+          0.34047933142307824,
+          0.6680233299204736
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 64,
+      "valid": 0.7619047619047619,
+      "headroom": 0.028910590685125366,
+      "headroom_instances": 69
+    },
+    "fable": {
+      "label": "Fable medium",
+      "model": "claude-fable-5-1",
+      "source_core_config": "headless-medium@128k",
+      "source_code_config": "headless-medium@128k",
+      "p1": {
+        "n": 30,
+        "mean": 0.6032145956426107,
+        "ci": [
+          0.5034654243818838,
+          0.698103807245298
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.8180636328942129,
+        "ci": [
+          0.6534199793423418,
+          0.9912281933795362
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 73,
+      "valid": 0.8690476190476191,
+      "headroom": 0.05671736798213242,
+      "headroom_instances": 69
+    },
+    "astra_medium": {
+      "label": "Astra medium",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-medium@nocap",
+      "source_code_config": "codex-medium@nocap",
+      "p1": {
+        "n": 30,
+        "mean": 0.6418667120005679,
+        "ci": [
+          0.5535512436604234,
+          0.7249552787613222
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.8451733247486228,
+        "ci": [
+          0.7319442542784854,
+          0.9666357480877125
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 83,
+      "valid": 0.9880952380952381,
+      "headroom": 0.06300617673540784,
+      "headroom_instances": 69
+    },
+    "astra_high": {
+      "label": "Astra high",
+      "model": "gpt-6-astra",
+      "source_core_config": "codex-high@nocap",
+      "source_code_config": "codex-high@128k.once",
+      "p1": {
+        "n": 30,
+        "mean": 0.7188403650855246,
+        "ci": [
+          0.6453268206592232,
+          0.7893964269034245
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.9746257988326568,
+        "ci": [
+          0.8229342646582913,
+          1.1553327422009694
+        ],
+        "records": null
+      },
+      "calls": 84,
+      "accepted": 83,
+      "valid": 0.9880952380952381,
+      "headroom": 0.08477443609238852,
+      "headroom_instances": 69
+    }
+  },
+  "snapshots": {
+    "v1": {
+      "before": "7d07ae2f3635eaae7c5eeef443e21a6981b9d258a97c99eb992383bf929d0068",
+      "after": "5db3f2458c7d09e1e64d456cf4ac84c90f50dd8aca3ca7d66a4e641eeb2c3bc9"
+    },
+    "v1.1": {
+      "before": "200d10ce414d521e9cddd696ec6b9249b091367b097a442f93874b4f2afbea34",
+      "after": "822832610848921c7a2b4afecf155fa60bd7b0a23a8c5896e07b2187b11dc1d9"
+    },
+    "v1-core": {
+      "before": "f272c3fc954e8fc861e37899fb6f22fbfcf80057cd4cf874cdeca953f5f9ca47",
+      "after": "4678ccddf0841b275a9d2879686deff00b35f78301ca6ea605d577887ef76710"
+    },
+    "v1-codes": {
+      "before": "6ddd7a3870e3d7f4a75dadd4fe371b255e64de9dc6f5cdd9cfa8b1ebb33409f2",
+      "after": "2f618304b6e54c567bd3d585d55f19e4e3721f6560de2686a0bf2986203327c8"
+    },
+    "v1-trifference": {
+      "before": "e3a37d35d6c2643c77a073a7d9a1862a7e6514d741b9f20cabf808681f0f4d74",
+      "after": "79c02bb86b9d89df281a359a6cbedaa6f86d214180f5b0c42e5f8694bf14351e"
+    }
+  },
+  "unchanged_collection_sha256": {
+    "bench/refs/A3-capset-0-t10.json": "4eaf8a0f9145e06809c558de9631c35d8146e3936d0731825fa9e37a7337d810",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#A3.jsonl": "0968eb5c4031028ca2b2f6c847aa380912558c4c9318aaa856506fb750d83df0",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#A3.jsonl": "0229a30ac9084c38ea5cfa54219d979cd8d8bd1cb6a2700a25968df249b89cb6",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#A3.jsonl": "f7379a0a4719085880c6052930bab68530023ad4bcd89fffb1545908e13d946c",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#A3.jsonl": "e85596952ddbae368dab69184160b4df85f1d6303e7593ede1c127e0fe78360c",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#A3.jsonl": "04c9d2cd3d772456ca0fcd175c81ca8506646dd07799a4cdccdf0a08d94047de",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#A3.jsonl": "294b38cdcf267a69232f3027493bb736653d4b1f95299a28b47abbb454ab507b",
+    "bench/results/deepseek-flash-think-low@128k#A3.jsonl": "bf2b144cf16e7683269445ba5f29e3461ad4dac41fd126aba66a52652b6f6580",
+    "bench/results/deepseek-flash-think-high@128k#A3.jsonl": "f3eaf71aec1825575723b595f9d809bedeb5ba6abf45b2a623e20db7fd583e1e",
+    "bench/results/claude-fable-5-1-headless-medium@128k#A3.jsonl": "4e5087c9ae3fcb0a3f3e81b48f8698cb95ce5a130994bdeb2cebcef086024301",
+    "bench/results/gpt-6-astra-codex-medium@nocap#A3.jsonl": "cced1c94f058bdf3963635f50f45db1b68e0b448e6ca24b3c54ca53dfbc66342",
+    "bench/results/gpt-6-astra-codex-high@nocap#A3.jsonl": "56c9bbb79e66f8d7d9d0584d9553870988ef329269a85100c1b2a7d102e6d523",
+    "bench/refs/A3-capset-1-t10.json": "4eaf8a0f9145e06809c558de9631c35d8146e3936d0731825fa9e37a7337d810",
+    "bench/refs/A3-capset-2-t10.json": "9ff0a2432a87c6a8ae286bdf236366eddaabc3b1312d0c949bce7030c338f1b8",
+    "bench/refs/A3-capset-3-t10.json": "25a9433b94d25a3cede4cb10b9c1fea086634ea30c165234fba7c746cb6f5ef8",
+    "bench/refs/A3-capset-4-t10.json": "8bc76f2f125173c5d60f26ba5ddc29c4b059a32849b5565c15b59fe8f9d3807f",
+    "bench/refs/A3-labs-0-t10.json": "20e573990232ce3f6fe6002c27c378b8776f3c074b1650a41ce3286617d81d16",
+    "bench/refs/A3-labs-1-t10.json": "e3a31f0f774872c3394b11d0a0c585149145da4a88d0917f8d57ceecb0e01813",
+    "bench/refs/A3-labs-2-t10.json": "7580dafa53bee68dcc10bcc9b7ab95183973ef5c0bb117a2124da722570cb8f7",
+    "bench/refs/A3-labs-3-t10.json": "8a4a1b51c47f7ea124c2f3df22e6e4072981540621aee1f399c0aa610cb68a2a",
+    "bench/refs/A3-labs-4-t10.json": "2360bc931f4b575c9f65c2086fb2467f6bc47f19303b3f6818fcb88e13c6d511",
+    "bench/refs/A3-heilbronn-0-t10.json": "a491fa818526a4e0248b90e4265174f6abe856f02ef93ba33d1ff1b4fbebb471",
+    "bench/refs/A3-heilbronn-1-t10.json": "aed005767e52b454a7e7ed178312c96830d3160fe4ab1f9f57b08037975f2f32",
+    "bench/refs/A3-heilbronn-2-t10.json": "cf3d813aa941e9904bf9991ebaaa558bf2e669c97b7742b9cf261e0d326f061a",
+    "bench/refs/A3-heilbronn-3-t10.json": "22f7d15723e3c2597e06895773e8bd8bb6f9ada1151ecc81cfc7087fe807a6fc",
+    "bench/refs/A3-heilbronn-4-t10.json": "5b8f06cdecdb4aa0279c90cf65dfe268906fa6a1ba6d25612a07956c0e3df324",
+    "bench/refs/A3-kissing-0-t10.json": "9a3f054472130c16fb9fb7f0101e79849064f17e004277e262b169a9dbbbf6b8",
+    "bench/refs/A3-kissing-1-t10.json": "3920255b30893a0f50ee21ee5110c3291dba5611cfb0a4e4c23cfc6664977d01",
+    "bench/refs/A3-kissing-2-t10.json": "3920255b30893a0f50ee21ee5110c3291dba5611cfb0a4e4c23cfc6664977d01",
+    "bench/refs/A3-kissing-3-t10.json": "9a3f054472130c16fb9fb7f0101e79849064f17e004277e262b169a9dbbbf6b8",
+    "bench/refs/A3-kissing-4-t10.json": "9a3f054472130c16fb9fb7f0101e79849064f17e004277e262b169a9dbbbf6b8",
+    "bench/refs/A3-corners-0-t10.json": "f6ffed8ab0f2c79752b1fccaea3af2bdc91e46772f5315f70485872bc71e0d1e",
+    "bench/refs/A3-corners-1-t10.json": "e360530c87eb7f02aa92d48acb2635c530d6130d9c0307c748bbb57460f3e872",
+    "bench/refs/A3-corners-2-t10.json": "c21fc600e0ca2ad23fd72a9dd347a40fc7c8169cf891f8993eebaa21752a832e",
+    "bench/refs/A3-corners-3-t10.json": "4685a1030e6539cee0bdf4b4aac5a3f3eb438a252e403c541b152786a4a48a7a",
+    "bench/refs/A3-corners-4-t10.json": "b3c29e3311ecf3665cbadd2804a460486571214041489bf7f7e53435a3b91362",
+    "bench/refs/A3-kissing_theta-0-t10.json": "29651d4dc52bf8f2f6d4badb77443be439676c5a02d12d484358d113d9c3098c",
+    "bench/refs/A3-kissing_theta-1-t10.json": "77412c5882a7e89afb54a68f4a509dacbb11c202a0d60219fed34c4a07bf68fc",
+    "bench/refs/A3-kissing_theta-2-t10.json": "2cb2b86e84ce30ce036bfab176e9e57d8832eda45c4731e947cecf5891a125a1",
+    "bench/refs/A3-kissing_theta-3-t10.json": "d6f620efe28ed9b25b20d6e0313677af65796cc89f5a76117286d7a9e5e799ee",
+    "bench/refs/A3-kissing_theta-4-t10.json": "0b850e030e9a3a6d39d04a02dfd390cbc14f79c4a54249813840d3614b15389c",
+    "bench/refs/A3-heilbronn_shape-0-t10.json": "83e86a8fdb1e672ec1111c03147b927a92f6231affe0c20fc09cb932cc2ba558",
+    "bench/refs/A3-heilbronn_shape-1-t10.json": "5db25319af311a955bb2b53fb9c7072bb3fc5bad628ea45e75fe8f508263cb11",
+    "bench/refs/A3-heilbronn_shape-2-t10.json": "c5e2b22d3d15eb4729046c84e1b1e1aab968cfef26f5ff9e545c1491856e36e7",
+    "bench/refs/A3-heilbronn_shape-3-t10.json": "c94105d51b68ec54525d35104d545b038ecf58504533a9e9c19289d40fe1527a",
+    "bench/refs/A3-heilbronn_shape-4-t10.json": "716df68e1fcfb20e456168ece79cf05bcfdfdb88f0d2a5735ee7322753ee6c23",
+    "bench/refs/A3-matmul-0-t10.json": "714f9b5d1fb5b486a88c3b899e8c1401a891f50d24607ee1a41f3871b8bc92ee",
+    "bench/refs/A3-matmul-1-t10.json": "714f9b5d1fb5b486a88c3b899e8c1401a891f50d24607ee1a41f3871b8bc92ee",
+    "bench/refs/A3-matmul-2-t10.json": "714f9b5d1fb5b486a88c3b899e8c1401a891f50d24607ee1a41f3871b8bc92ee",
+    "bench/refs/A3-matmul-3-t10.json": "714f9b5d1fb5b486a88c3b899e8c1401a891f50d24607ee1a41f3871b8bc92ee",
+    "bench/refs/A3-matmul-4-t10.json": "b8f55b826b5a3e16219bd41a2d697a188d11dd2e5095c9d389d51d2fd831dbcd",
+    "bench/refs/A3-degdiam-0-t10.json": "0c67c1f5bc2dab75928c9231f989328823fabee7718183b300534f1db6d7bbee",
+    "bench/refs/A3-degdiam-1-t10.json": "ce727d90dbde80aa04e9f7d4326381317648c222d0f301bd0586537d8b9efa03",
+    "bench/refs/A3-degdiam-2-t10.json": "ce727d90dbde80aa04e9f7d4326381317648c222d0f301bd0586537d8b9efa03",
+    "bench/refs/A3-degdiam-3-t10.json": "72c38ea82b07318def687032ccf73cb3e74006747bd988a7e81a31b9bb3afda9",
+    "bench/refs/A3-degdiam-4-t10.json": "cfa07c1ef6c2744b97939c3214bd2c752d2eaa6583950bb5c0ccce8940c41736",
+    "bench/refs/A3-lineq-0-t10.json": "063ac2f6993831c63628ac3e015c2bc1adf5f8e17a2fe89eb30ab71f6f5e15e5",
+    "bench/refs/A3-lineq-1-t10.json": "eaacf4c991826361055e48d015be7c20df0c66e9895e0519bd85866408aa2bfe",
+    "bench/refs/A3-lineq-2-t10.json": "3bc36fd0e9606e5e64050ebc70adbf86e8fbae20332c5b12ba79c327bfb99a61",
+    "bench/refs/A3-lineq-3-t10.json": "04bfc0855858857c011d7fae0a1cdda9302ee718ae99c9ad3932e795805cadb2",
+    "bench/refs/A3-lineq-4-t10.json": "29a365ba9857e3ef4467ff77afb21cae74a6aa5d61c5f98fd80b4dd9f2c74c86",
+    "bench/refs/A3-apfree_q-0-t10.json": "aa130db29d84d5ef621bf0a2e325588dfa4665710d0a0ed3c9d9590675e17367",
+    "bench/refs/A3-apfree_q-1-t10.json": "f1ff366f8d63f61cf4dc56a00003cd6fb19003f55cbae73e2102504fa7181dfd",
+    "bench/refs/A3-apfree_q-2-t10.json": "f1ff366f8d63f61cf4dc56a00003cd6fb19003f55cbae73e2102504fa7181dfd",
+    "bench/refs/A3-apfree_q-3-t10.json": "f1ff366f8d63f61cf4dc56a00003cd6fb19003f55cbae73e2102504fa7181dfd",
+    "bench/refs/A3-apfree_q-4-t10.json": "f1ff366f8d63f61cf4dc56a00003cd6fb19003f55cbae73e2102504fa7181dfd",
+    "bench/refs/A3-mols-0-t10.json": "81b28d265a99b25f53c352bf5a9dc4bf28550cbe299efd0a27dc5b554b2dae88",
+    "bench/refs/A3-mols-1-t10.json": "fa959f95c22fb02a22cb82c5e0cb64a1c9bc8d81c175b662d222787b392fe2cc",
+    "bench/refs/A3-mols-2-t10.json": "fdde53d3a4b7b3442b69d8da23270c0da3470596de4a1851bc8f1e27cfa6140a",
+    "bench/refs/A3-mols-3-t10.json": "fa959f95c22fb02a22cb82c5e0cb64a1c9bc8d81c175b662d222787b392fe2cc",
+    "bench/refs/A3-mols-4-t10.json": "fdde53d3a4b7b3442b69d8da23270c0da3470596de4a1851bc8f1e27cfa6140a",
+    "bench/refs/A3-capset-11-t10.json": "e152138ceb96b8f9c065c20ae57c1010f14f02b405f94804d3c1d0bec3630379",
+    "bench/refs/A3-kissing-6-t10.json": "60fcb0863441a581edf6baed02e52327143ebe5755e8e3d29cbf0ced9ffa7f19",
+    "bench/refs/A3-matmul-6-t10.json": "10cd56650751b9146a1ab033e68b7453919bced4fe872b95a7782ff4a0d1f2b8",
+    "bench/refs/A3-degdiam-7-t10.json": "05e751c5f26796abb1326c397de7787e2d40990c676abc72be6748b170433796",
+    "bench/refs/A3-degdiam-8-t10.json": "8d6c5e67073da878722a58e4175db3c03c8d895a6b3c84e5d794130adfe82104",
+    "bench/refs/A3-degdiam-20-t10.json": "4c5c4e5d3860973bcc6799ace7316d0a83b366a07006cfc0c198b1be86a2433f",
+    "bench/refs/A3-apfree_q-6-t10.json": "19de8ddf74d24dc844a36e00655146c8589668aacc4144f7928c1637fa0eb14a",
+    "bench/refs/A3-mols-6-t10.json": "53e80304da8456ee5974712cd77a7bfa7d64fe3bf95baf8d055eb27aed073dd0",
+    "bench/refs/A3-mols-9-t10.json": "c5036e34c5ffca093d56d899a697b642c3946ee8d0134448c0fafbc561dea91f",
+    "bench/refs/A3-mols-17-t10.json": "9465737c6eeb0b8687ffc471d5c623ca4a38bda41e70f1c269f799c751da5315",
+    "bench/refs/A3-schur-0-t10.json": "c5b53b1206a3b4435aeea1de2d7641af2874e249484687224f45bbe8b8fe5552",
+    "bench/refs/A3-schur-1-t10.json": "1d8abc5a59923a53ba701990d939d504b943203aaf79eacd49cc9d4b8388a4f5",
+    "bench/refs/A3-schur-2-t10.json": "7f5ac16b302f5be0884688a577237abc59e5d451f14cae4256f0e9cad18beff2",
+    "bench/refs/A3-covering-0-t10.json": "b356c5a1bf5287cb80c8e3cccb43885c09e994bf4b437d72b847c102479318c9",
+    "bench/refs/A3-covering-1-t10.json": "1e163afdc3e6d6f3e0b441c962bac0bd2ff3481980d632009afa9b07a735e55a",
+    "bench/refs/A3-covering-2-t10.json": "932099c407cb529166cf425ec506a73c4e9bc131029adcd358c1ac2d08dd127f",
+    "bench/refs/A3-shannon-0-t10.json": "ad88282eacb0fd111c962e3a2b1567fe26d0356ef5e3a1a9c8dd865d987d5232",
+    "bench/results/gpt-6-astra-codex-high@128k.once#A3.jsonl": "6dd5bf90b66bc6b869d0c708a2f7b170ab5b0bd6fa5ff1615ca9fa0e1b7c8d55",
+    "bench/refs/A3-shannon-1-t10.json": "5de7feee24eeb47783f4523cb464f4b8350917cba6eb4d6fa7f984c12f61037e",
+    "bench/refs/A3-shannon-2-t10.json": "6a1e1e3ff1172f8abadfde87cbaabeea7104a6e3b932421e6f45ac801d2c6758",
+    "bench/refs/A3-shannon-3-t10.json": "36a8b7feef8060933240d2acb8a27d146d0dab7d95b42945146274ecd81296ee",
+    "bench/refs/T1-trifference-0-t10.json": "457ecde4f69e766a49996341c27c470a931e779d9d6da3656a94ec44e5f9b401",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T1.jsonl": "40dc4c476bbd5cbacabd9b0a678a9ca91fc7defa49c8657e24998d01124fb9e3",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T1.jsonl": "0d567d84c8edc6834097b94c79644a5940b14ee7dfa0909697dac8fd4cbc6589",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T1.jsonl": "fe16fee548300eb10329a807073817faf76d5152bd9262cc54919fd898b0ccea",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T1.jsonl": "f350aebd2a6f5e0a07117702e7ab81fbf2fc8702e6811135cf3eea7e15c98054",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T1.jsonl": "1229be0b91d956b215d28c54c057b6f18837bfcfa497ad0d47a38b5ed2dc6e08",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#T1.jsonl": "b206be512b673e6144b7a44b40cce3123f42cabedc764a11d26d13707f31c979",
+    "bench/results/deepseek-flash-think-low@128k#T1.jsonl": "4cbefaa1c2f95a516dc5ebc7b0636071ca647ad2ca515d2b1201f179fc82c889",
+    "bench/results/deepseek-flash-think-high@128k#T1.jsonl": "7d971ac62ce33e092d0a5b80beb9b8b36f79446bb3b5e32fc0270c20e7b40d71",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T1.jsonl": "e7870cb6c61765187b0e69b271fbac3f12bcf442f285865e639dd5ec19deedae",
+    "bench/results/gpt-6-astra-codex-medium@nocap#T1.jsonl": "8c6e676834a405c16a1c0c14a7b662020474968d963d96bc3bb42da731558f67",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T1.jsonl": "8ee369becca6de318e1e0bec4b9677c652644e415119c7de56f0ded2c3604fc4",
+    "bench/refs/T2-trifference-0-t10.json": "ca5e86bcc53594304e43e5247ff288bc0f18a9ade8f2613b62dce44e84401af0",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T2.jsonl": "80f5848fb5fc7bf8a2b6e8f701338f70c8cf27e25b54b9984dfb8e1783a06a8c",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T2.jsonl": "086f5002dac04e7fb4a687ea4d103031a81b1fd975d9140cce310f9f18c25f8e",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T2.jsonl": "115efcc473b4faef4c20cf5c39b9e2e1b71f1875674b3060c6ebcab05d0a6d9e",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T2.jsonl": "f5306f6349aa7560d0608533b69cc3ec4957e7bc7ce89595f9320860f8ce6e3b",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T2.jsonl": "1399262fb1dbbf353ad2f6e714de454e14724345d1349962a73fccee21038c26",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#T2.jsonl": "315782d84f0bf49f0396c047f8f8ad6417d3076b671eff55536e6d13088fbae4",
+    "bench/results/deepseek-flash-think-low@128k#T2.jsonl": "4194c6daaea60730af7e65e2746c6c2b376b6177578ae4df66eb1bdd5ecc81eb",
+    "bench/results/deepseek-flash-think-high@128k#T2.jsonl": "bfb1bb24bee19605d5176134da09d4e4dfba7a8d0d86e4002d6f905e4105eeeb",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T2.jsonl": "7a932d867f26d0874b6a8f59efd5e73e0498576e2ad598d4ad105cfef1d8f064",
+    "bench/results/gpt-6-astra-codex-medium@nocap#T2.jsonl": "b4501b230f7083638697e46e0b120b226cfc183b00c98cfb904811b828a4f49f",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T2.jsonl": "3cb68cbb24f7eaace319e2819adc820c6462c7b099e8a581ea532b36deeae261",
+    "bench/refs/T3-trifference-0-t10.json": "7b7c64010a9c2394c4fa9784125d1ece7febd6925a1e944c5a884572f7fd0a2c",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T3.jsonl": "e088691c5c3af1e82abe3c1ab068f49efc90d697c24a6bbd8bb8c0a00b256c55",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T3.jsonl": "5c25bb3c61caa98b2a8b39d8f7315996b4d5862a3e421563a69bf95d4025c764",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T3.jsonl": "49beeabc0832c34505d524912e20bb46d33fecc0c7bc0410f9c27ee4a33abc82",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T3.jsonl": "ab850cf020b4e2c567ca0a5761eec12ea494282b6ce835b84ac9341fa227e7fc",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T3.jsonl": "ff547eae0db4b52cf22f624a79fc93e9cc41c9cda10e1377f357ff60e21ed694",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#T3.jsonl": "544ad914d638ed53ccc2f457beb20af02ba94dcedea6603c9999e4db497a1f8b",
+    "bench/results/deepseek-flash-think-low@128k#T3.jsonl": "ad3effeb40f39ccf1ecb9beea978f88de57eeedc9b927c2b60ee5796c5d091ed",
+    "bench/results/deepseek-flash-think-high@128k#T3.jsonl": "52bfac331bcbbc771beef43f403a3d2267a2dbd573480d585a8758148356c099",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T3.jsonl": "3329bfa0a48a61907d0bfa2f67c41c4074c00a06a258f6ee719b96e78569e870",
+    "bench/results/gpt-6-astra-codex-medium@nocap#T3.jsonl": "e5597c176eeb988b9bcc3ef6d63bfc040ff24d9b74582cd627f1fb36998c10cb",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T3.jsonl": "8c393a26e883e31c6176b81387876f8ff720bb6991fdbe510be6ad499dbaa72b",
+    "bench/refs/T4-trifference-0-t10.json": "4c139f8c00f5a3b6bceb8ca8ea018b0ebb684ff7ce98ce26e3944fe3db974cb9",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T4.jsonl": "7c10cafd7f17154df69a2ae3cf0afe503cd0bae7f95056cafd8e72f8c79b861a",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k#T4.jsonl": "9684eb459d4ae449bab031767f8a9e921b7fb1495832b9c43dd45821456b3b0d",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k#T4.jsonl": "0fa9605a62c7b0eb6de35443977431b4c30d6e659742935b8decef51b4160cbd",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k#T4.jsonl": "90a87d812b2c9604e8f815f7e727d0efdc7dc881ea14b74194515c541aa771a1",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.once-full#T4.jsonl": "27010ad892a0c3a172a6f65cbdea57720519706647f89311cbb108da83b06b1a",
+    "bench/results/gpt-5.6-luna-codex-high@128k.once-full#T4.jsonl": "1dc6db27c99a09399c4e6fa62a20904e96ea18d8d06e5b74af692a07c961e93e",
+    "bench/results/deepseek-flash-think-low@128k#T4.jsonl": "9c299ff7048fc84bbe957d3998cc5f75a042f7fb78d0cf21ac5f028c3e39562a",
+    "bench/results/deepseek-flash-think-high@128k#T4.jsonl": "115ea78a591ebf946994e2c89dd356bc955f0806f8f77d4a6d13cd050b5d47a0",
+    "bench/results/claude-fable-5-1-headless-medium@128k#T4.jsonl": "e4787b851f9e78e14d0eaa169c02103dea37a82b000180adfe36855d8d84b7d4",
+    "bench/results/gpt-6-astra-codex-medium@nocap#T4.jsonl": "19e7ed853faddf9dd8f0fce9393287b028237554c790982a3d8b094fedb8e8fd",
+    "bench/results/gpt-6-astra-codex-high@128k.once#T4.jsonl": "09700ae07790b1d063fcc018bbc0f603a9cbbf6afe47b071904c11b81e0d6216"
+  }
+}

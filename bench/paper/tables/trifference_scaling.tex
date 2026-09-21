@@ -1,0 +1,14 @@
+\begin{center}\begin{minipage}{\linewidth}\centering\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+instance & length & reference words & verified words & \shortstack{Relative\\quality} & generation (s) \\
+\midrule
+T1 & 64 & 19,683 & 19,683 & 1.000 & 52.3 \\
+T2 & 96 & 531,441 & 531,441 & 1.000 & 53.8 \\
+T3 & 144 & 387,420,489 & 387,420,489 & 1.000 & 37.0 \\
+T4 & 192 & 10,460,353,203 & 10,460,353,203 & 1.000 & 63.8 \\
+\bottomrule
+\end{tabular}
+\captionof{table}{GPT-6 Astra at medium effort on four trifference lengths. The evaluator checks each submitted construction and computes its exact size. Ratios use the construction baselines; invalid or budget-exhausted responses score zero.}
+\label{tab:trifference_scaling}
+\end{minipage}\end{center}

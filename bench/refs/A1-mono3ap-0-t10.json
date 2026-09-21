@@ -1,0 +1,1 @@
+{"params": {"n": 40}, "naive": 81, "search": 69, "bound": 19, "sense": "min", "search_answer": "1110110011111000000001011111110000110100", "budget_s": 10.0}

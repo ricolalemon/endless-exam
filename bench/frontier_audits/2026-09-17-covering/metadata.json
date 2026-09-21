@@ -1,0 +1,108 @@
+{
+  "source": "https://zenodo.org/records/19735294/files/coverdata.json?download=1",
+  "full_file_sha256": "9e7da3710921066b10234fdc95379a18df3a7d3ae0f8a08ae188ea6bbca92f87",
+  "records": {
+    "C(24,6,3)": {
+      "size": 116,
+      "low_bd": 112,
+      "imps": [
+        [
+          "116",
+          "",
+          "JCD article",
+          "1996-11-14 17:08:00"
+        ]
+      ]
+    },
+    "C(30,6,3)": {
+      "size": 225,
+      "low_bd": 210,
+      "imps": [
+        [
+          "225",
+          "",
+          "Riccardo Bertolo & Francesco Santisi",
+          "2001-07-30 00:00:00"
+        ],
+        [
+          "232",
+          "",
+          "Alessandro Jurcovich",
+          "2001-07-18 00:00:00"
+        ],
+        [
+          "234",
+          "",
+          "Felix Rodriguez Martin",
+          "2000-12-19 00:00:00"
+        ],
+        [
+          "237",
+          "",
+          "JCD article",
+          "1996-11-14 17:08:00"
+        ]
+      ]
+    },
+    "C(18,7,4)": {
+      "size": 126,
+      "low_bd": 111,
+      "imps": [
+        [
+          "126",
+          "",
+          "Chaoying Dai, Ben Li and Michel Toulouse",
+          "2006-04-11 00:00:00"
+        ],
+        [
+          "130",
+          "",
+          "Claus Friis",
+          "2003-09-14 00:00:00"
+        ],
+        [
+          "131",
+          "Covering provided by Dietmar Pree",
+          "",
+          "1997-05-21 00:00:00"
+        ],
+        [
+          "142",
+          "Covering provided by Dietmar Pree",
+          "",
+          "1997-05-16 00:00:00"
+        ],
+        [
+          "144",
+          "Dynamic programming covering",
+          "",
+          "1997-04-25 00:00:00"
+        ],
+        [
+          "147",
+          "Covering provided by Rade Belic",
+          "",
+          "1997-04-11 00:00:00"
+        ],
+        [
+          "148",
+          "Dynamic programming covering",
+          "",
+          "1997-04-02 00:00:00"
+        ],
+        [
+          "149",
+          "Dynamic programming covering",
+          "",
+          "1997-03-27 00:00:00"
+        ],
+        [
+          "157",
+          "",
+          "JCD article",
+          "1996-11-14 17:08:00"
+        ]
+      ]
+    }
+  }
+}
