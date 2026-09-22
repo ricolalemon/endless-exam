@@ -27,8 +27,8 @@ mark indicates reference parity at 100, and higher scores extend past it. Evalua
 both tracks are available below the table.
 
 An interactive scatterplot below the leaderboard uses the same data: overall
-score against mean output tokens per instance. Select a point or use the
-configuration dropdown for exact values. Filled circles denote no tools and
+score against mean output tokens per instance. Hover or focus a point for exact values in a nearby tooltip; on mobile, tap a
+point. Move away, tap outside, scroll or press Escape to dismiss it. Filled circles denote no tools and
 filled diamonds denote code + web. Asterisks retain incomplete-usage accounting;
 input tokens and external tool computation are not represented on the x axis.
 

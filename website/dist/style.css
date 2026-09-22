@@ -103,7 +103,7 @@
 .plot-key-dot{width:8px;height:8px;border-radius:50%;background:#77816d}
 .plot-key-diamond{width:8px;height:8px;background:#997438;transform:rotate(45deg)}
 .plot-interaction-hint{margin-left:auto;font-size:12px}
-.token-plot{width:100%;min-height:355px}
+.token-plot{position:relative;width:100%;min-height:355px}
 .token-plot svg{display:block;width:100%;height:auto;overflow:visible}
 .plot-grid{stroke:#dedfd7;stroke-width:.7}
 .plot-axis{stroke:#a2a994;stroke-width:1}
@@ -124,13 +124,15 @@
 .plot-point-label{font:12px var(--sans);fill:#747e68}
 .plot-point-label.is-selected{fill:#4b583f;font-weight:550}
 .plot-leader{stroke:#b2b9a6;stroke-width:.8}
-.token-plot-inspector{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:32px;padding-top:14px;border-top:1px solid var(--line);align-items:start}
-.plot-choice label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}
-.plot-choice select{width:100%;min-width:0;padding:9px 26px 9px 10px;border:1px solid #c8cdbd;background:var(--paper);color:var(--ink);font:14px var(--sans);border-radius:0}
-.token-plot-details>p:first-child{font-size:14px;font-weight:550;line-height:1.6}
-.plot-selected-values{display:flex;flex-wrap:wrap;gap:6px 25px;margin-top:6px;color:var(--muted);font-size:12px}
-.plot-selected-values strong{font-size:18px;font-weight:550;color:#80612e;font-variant-numeric:tabular-nums;margin-right:5px}
-#token-selected-usage-note{font-size:12px;color:var(--muted);line-height:1.65;margin-top:5px}
 .token-plot-note{font-size:12px;line-height:1.8;color:var(--muted);max-width:920px;margin-top:19px}
 .plot-loading{font-size:14px;color:var(--muted);padding-top:25px}
-@media(max-width:640px){.token-figure-section{margin-top:34px;padding-top:26px}.token-figure-heading h2{font-size:26px}.token-figure-heading p{font-size:14px}.token-plot-key{gap:9px 20px;font-size:12px}.plot-interaction-hint{margin-left:0;width:100%}.token-plot-inspector{grid-template-columns:1fr;gap:15px}.plot-choice select{font-size:16px}.token-plot-note{margin-top:16px}.plot-tick{font-size:11px}.plot-axis-title{font-size:12px}}
+@media(max-width:640px){.token-figure-section{margin-top:34px;padding-top:26px}.token-figure-heading h2{font-size:26px}.token-figure-heading p{font-size:14px}.token-plot-key{gap:9px 20px;font-size:12px}.plot-interaction-hint{margin-left:0;width:100%}.token-plot-note{margin-top:16px}.plot-tick{font-size:11px}.plot-axis-title{font-size:12px}}
+
+.token-plot-tooltip{position:absolute;z-index:5;width:260px;max-width:calc(100% - 16px);padding:12px 14px;background:var(--paper);border:1px solid #c7cdbe;color:var(--ink);line-height:1.5}
+.token-plot-tooltip>strong{display:block;font-size:14px;font-weight:600}
+#token-tooltip-setting{font-size:12px;color:var(--muted);margin-top:2px}
+.plot-tooltip-values{margin:10px 0 0;font-size:12px}
+.plot-tooltip-values>div{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-top:4px}
+.plot-tooltip-values dt{color:var(--muted)}
+.plot-tooltip-values dd{margin:0;font-size:15px;font-weight:550;font-variant-numeric:tabular-nums;color:#80612e}
+#token-tooltip-note{font-size:11px;color:var(--muted);line-height:1.6;margin-top:9px}

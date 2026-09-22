@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#f8f8f5">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=06882668c8">
-  <link rel="stylesheet" href="style.css?v=54a4162e7e"><link rel="stylesheet" href="motion.css?v=cb706deefd"><script defer src="score-tokens.js?v=f190fea079"></script><script defer src="app.js?v=78251435d8"></script><script defer src="story-data.js?v=4500c3ec85"></script><script defer src="animations.js?v=f2019db5da"></script>
+  <link rel="stylesheet" href="style.css?v=5b523f5538"><link rel="stylesheet" href="motion.css?v=cb706deefd"><script defer src="score-tokens.js?v=eaf60ef59d"></script><script defer src="app.js?v=78251435d8"></script><script defer src="story-data.js?v=4500c3ec85"></script><script defer src="animations.js?v=f2019db5da"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -34,9 +34,8 @@
   </section>
   <section class="token-figure-section wrap" id="score-tokens" aria-labelledby="score-tokens-title">
     <div class="token-figure-heading"><h2 id="score-tokens-title">Score vs. output tokens</h2><p>Each point is one configuration from the leaderboard. Higher points score better; points farther right use more output tokens.</p></div>
-    <div class="token-plot-key"><span><i class="plot-key-dot" aria-hidden="true"></i>No tools</span><span><i class="plot-key-diamond" aria-hidden="true"></i>Code + web</span><span class="plot-interaction-hint">Hover or tap a point to inspect it.</span></div>
-    <div id="token-plot" class="token-plot"><p class="plot-loading">The same data are available in the leaderboard above.</p></div>
-    <div class="token-plot-inspector"><div class="plot-choice"><label for="token-plot-select">Inspect a configuration</label><select id="token-plot-select" aria-controls="token-plot-details"></select></div><div id="token-plot-details" class="token-plot-details" role="status" aria-live="polite" aria-atomic="true"><p id="token-selected-model"></p><div class="plot-selected-values"><span><strong id="token-selected-score">—</strong> score</span><span><strong id="token-selected-usage">—</strong> output tokens / instance</span></div><p id="token-selected-usage-note"></p></div></div>
+    <div class="token-plot-key"><span><i class="plot-key-dot" aria-hidden="true"></i>No tools</span><span><i class="plot-key-diamond" aria-hidden="true"></i>Code + web</span><span class="plot-interaction-hint">Hover or tap a point for details.</span></div>
+    <div id="token-plot" class="token-plot"><p class="plot-loading">The same data are available in the leaderboard above.</p><div id="token-plot-tooltip" class="token-plot-tooltip" role="tooltip" hidden><strong id="token-tooltip-model"></strong><p id="token-tooltip-setting"></p><dl class="plot-tooltip-values"><div><dt>Score</dt><dd id="token-tooltip-score"></dd></div><div><dt>Output tokens / instance</dt><dd id="token-tooltip-usage"></dd></div></dl><p id="token-tooltip-note" hidden></p></div></div>
     <p class="token-plot-note">Output tokens include reasoning and all model turns when tools are used. <sup>*</sup> Some usage was not reported; actual token use may be higher. The line at 100 marks reference-level quality. Scores are uncapped.</p>
   </section>
   <section class="motion-section wrap" id="constructions" aria-labelledby="motion-title">
