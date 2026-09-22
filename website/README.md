@@ -20,6 +20,11 @@ system reduced-motion preference are supported.
 
 ## Data and illustrations
 
+The leaderboard ranks configurations with and without tools together, with tool
+access shown explicitly. Score bars share a zero-based linear scale that expands
+to fit the data; the thin mark indicates a score of 100. Evaluation settings for
+both tracks are available below the table.
+
 `dist/results.json` contains the displayed scores, validity and reported token
 usage. Token means divide reported output by all 69 instances, include reasoning,
 and include all model turns in tool-assisted trajectories. Inputs and earlier
