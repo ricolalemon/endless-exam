@@ -4,6 +4,9 @@ Endless Exam defines tasks and verifies submitted constructions. You can use you
 own model client, agent framework, scheduler or compute environment. Its output
 connects to the same scorer; adopting the default runner is optional.
 
+For tool-free Codex and Claude Code, use the [built-in CLI adapters](EVALUATING.md#run-with-codex-or-claude-code).
+The custom wrapper interface below is for other harnesses or protocols.
+
 ## Simplest integration: tasks in, answers out
 
 ```bash
@@ -70,7 +73,7 @@ The request has this shape:
 
 Only `messages` belongs in the model context. `settings` comes from `--options`;
 it configures your harness and must contain no secrets. Your wrapper may use a
-provider SDK, Codex CLI or Claude Code. Native CLI system instructions differ
+provider SDK or another CLI. Native CLI system instructions differ
 from API system messages, so record that distinction and the exact CLI version.
 Disable any automatic continuation after a completed answer or output-limit stop;
 transport reconnection is allowed if its events and usage are retained.

@@ -8,6 +8,88 @@ collect responses with your own client and follow the export/score workflow.
 [Custom harnesses and tool-assisted scoring](HARNESSES.md) are documented separately.
 The mathematical tasks and references are the same across harnesses.
 
+## Run with Codex or Claude Code
+
+Install the CLI, sign in normally, and choose the model and effort explicitly:
+
+```bash
+python bench/exam.py run --adapter codex --model gpt-6-astra --effort high \
+  --workers 4 --output output/codex-astra
+
+python bench/exam.py run --adapter claude-code --model claude-fable-5-1 --effort high \
+  --workers 4 --output output/claude-fable
+```
+
+Use an exact model identifier available to your account. Replace the example
+models as needed. No API key is required when the CLI already has a working
+stored login. Add `--dry-run` first to check the installed CLI and inspect the
+exact prompt and command without generating an answer. To start that prepared
+run, repeat the command with `--resume` in place of `--dry-run`.
+
+The validated versions are **Codex CLI 0.154.0** and **Claude Code 2.1.269**.
+`--cli-binary /path/to/executable` selects another installation. The runner records
+its version and executable hash; it never installs/upgrades a CLI or edits global
+settings. Other versions require `--allow-untested-cli` and must still provide the
+required isolation flags. That option records an untested configuration, not a
+compatibility guarantee. Pin the CLI and its dependencies for the whole run.
+
+Both adapters use the same mathematical prompt plus the paper's no-tools
+instruction. They retain each CLI's native system instructions instead of adding
+the API system message. Prompts contain no reference values or budget reminders.
+Each invocation starts in an empty temporary directory outside the checkout.
+Tools, MCP, skills/plugins, memory and user/project customizations are disabled;
+Codex additionally uses a read-only sandbox. Claude's native initialization is
+checked for unexpected tools/MCP. Administrative policies can still affect a CLI;
+protocol violations pause collection for inspection.
+
+**Budget and completion.** The scored output budget is 128,000 tokens, including
+reasoning. Claude receives this limit through its native output setting, and the
+adapter stops at the first native output-limit signal to prevent continuation.
+Codex uses native output-limit events and the reported final-turn count; it has
+no adapter-supplied hard `max_output_tokens` request parameter. An over-budget
+completed turn scores zero. Unknown counts remain unknown, and each model may
+also have its own native limit. `--timeout` is the native CLI evaluation deadline,
+default two hours. An active generation reaching it scores zero; startup failures
+and interrupted transport remain missing. No partial answer is scored after a
+tool-free deadline.
+
+**Recovery and accounting.** Codex's isolated provider enables four request and
+five stream retries; Claude enables four native request retries and retains any
+native stream-recovery events. There are no automatic outer CLI resubmissions.
+After an exhausted infrastructure failure, inspect its logs and explicitly use
+`--resume --retry-infrastructure`. Completed invalid answers and genuine budget
+zeroes are never regenerated. Extra turns after completion trigger a protocol
+alert while preserving the first completed answer.
+
+`events.jsonl`, `stderr.txt`, `prompt.txt`, `request.json` and
+`native-summary.json` are retained for each attempt. Token accounting includes
+all reported generations, including interrupted ones. The scored response's
+`output_tokens` is kept separately from aggregate attempt `usage.output_tokens`,
+so known tokens from a network-interrupted generation do not reduce the next
+generation's scored allowance. Interrupted usage stays incomplete. Claude's
+overlapping streaming and summary counters are not added twice. Its input total
+includes cache-read and cache-creation tokens. Codex reasoning counts are retained
+when reported, as a subset of output.
+
+Claude's reported model ID is checked against a requested full identifier. Codex
+may not expose a backend model ID in its JSON events; in that case `response_model`
+stays null and the requested ID is recorded separately. CLI versions and requested
+names do not prove an undisclosed backend deployment fingerprint.
+
+The default `--cli-auth login` removes provider-key/routing environment overrides
+for the child process and uses the CLI's stored authentication. To deliberately
+use environment-based credentials/routing, add `--cli-auth environment`:
+Codex uses the key named by `--api-key-env` and the Responses endpoint under
+`--base-url`; Claude uses its native `ANTHROPIC_*` environment settings. This may
+use API billing. Values of credentials are not copied to manifests. Authentication
+files remain under the CLI's control and are not copied by the runner.
+
+These adapters cover the **tool-free track**. Use the [external tool-assisted
+harness interface](HARNESSES.md#tool-assisted-harnesses) for code and web access.
+For installation and CLI behavior, see the official [Codex non-interactive
+reference](https://learn.chatgpt.com/docs/developer-commands#codex-exec) and
+[Claude Code CLI reference](https://code.claude.com/docs/en/cli-reference).
+
 ## Run with an API
 
 Set `OPENAI_API_KEY` in your environment, then:

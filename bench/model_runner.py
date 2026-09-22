@@ -12,6 +12,9 @@ import time
 from urllib.parse import urlsplit
 
 import model_adapters as A
+import native_cli as N
+
+NATIVE = {'codex', 'claude-code'}
 
 
 def now():
@@ -37,7 +40,7 @@ def run_lock(root):
 
 def add_parser(commands):
     p = commands.add_parser('run', help='Collect tool-free answers with an API or your own harness')
-    p.add_argument('--adapter', choices=['chat-completions', 'responses', 'command'], default='chat-completions')
+    p.add_argument('--adapter', choices=['chat-completions', 'responses', 'command', 'codex', 'claude-code'], default='chat-completions')
     p.add_argument('--model', required=True)
     p.add_argument('--effort')
     p.add_argument('--base-url', default='https://api.openai.com/v1')
@@ -45,9 +48,13 @@ def add_parser(commands):
     p.add_argument('--token-parameter', choices=['max_completion_tokens', 'max_tokens'], default='max_completion_tokens')
     p.add_argument('--options', type=Path, help='JSON object of provider-specific generation settings')
     p.add_argument('--command-file', type=Path, help='JSON argv array with {request} and {response} paths')
+    p.add_argument('--cli-binary', help='Path/name of a specific Codex or Claude Code executable')
+    p.add_argument('--cli-auth', choices=['login', 'environment'], default='login',
+                   help='Native CLI stored login, or explicitly allow environment-based provider credentials')
+    p.add_argument('--allow-untested-cli', action='store_true', help='Explicitly use a CLI version outside the validated pair')
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--workers', type=int, default=4)
-    p.add_argument('--timeout', type=float, default=7200, help='Transport/process timeout in seconds; not a scored model deadline')
+    p.add_argument('--timeout', type=float, default=7200, help='Seconds: API/custom transport timeout; native CLI evaluation deadline')
     p.add_argument('--retries', type=int, default=4, help='Additional HTTP attempts for transient transport failures')
     p.add_argument('--only', nargs='+', help='Subset of call IDs; results are labelled partial')
     p.add_argument('--resume', action='store_true')
@@ -63,6 +70,16 @@ def configuration(args):
     options = json.loads(args.options.read_text()) if args.options else {}
     if not isinstance(options, dict):
         raise ValueError('--options must contain a JSON object')
+    if args.adapter in NATIVE and not args.effort:
+        raise ValueError('--effort is required for native CLI adapters')
+    if args.adapter in NATIVE and (options or args.retries != 4 or args.token_parameter != 'max_completion_tokens'):
+        raise ValueError('Native CLI adapters use their recorded 128k and retry settings; --options/API overrides are not supported')
+    if args.adapter not in NATIVE and (args.cli_binary or args.allow_untested_cli or args.cli_auth != 'login'):
+        raise ValueError('CLI options require --adapter codex or claude-code')
+    if args.adapter == 'claude-code' and args.base_url != 'https://api.openai.com/v1':
+        raise ValueError('Claude routing uses ANTHROPIC_BASE_URL with --cli-auth environment')
+    if args.adapter == 'codex' and args.cli_auth == 'login' and args.base_url != 'https://api.openai.com/v1':
+        raise ValueError('A custom Codex endpoint requires --cli-auth environment')
     argv = json.loads(args.command_file.read_text()) if args.command_file else None
     if args.adapter == 'command':
         if not isinstance(argv, list) or not argv or not all(isinstance(x, str) for x in argv):
@@ -76,10 +93,18 @@ def configuration(args):
         raise ValueError('Use a base URL without credentials, query or fragment')
     if parsed.scheme != 'https' and not (parsed.scheme == 'http' and parsed.hostname in {'localhost', '127.0.0.1', '::1'}):
         raise ValueError('Use HTTPS, or HTTP on a loopback host')
-    return {'adapter': args.adapter, 'model': args.model, 'effort': args.effort,
+    config = {'adapter': args.adapter, 'model': args.model, 'effort': args.effort,
             'base_url': args.base_url.rstrip('/'), 'api_key_env': args.api_key_env,
             'token_parameter': args.token_parameter, 'options': options, 'argv': argv,
             'timeout': args.timeout, 'retries': args.retries, 'workers': args.workers}
+    if args.adapter in NATIVE:
+        config['native'] = N.preflight(args.adapter, args.cli_binary, args.allow_untested_cli)
+        config['cli_auth'] = args.cli_auth
+    return config
+
+
+def model_input(case, config):
+    return N.input_record(case) if config['adapter'] in NATIVE else A.messages(case)
 
 
 def history(root, cases):
@@ -113,16 +138,17 @@ def collect(case, config, root):
         attempt.mkdir()
         started = now()
         A.write_json(attempt / 'started.json', {'call_id': case['call_id'], 'started_at': started,
-                     'messages_sha256': digest(A.messages(case))})
+                     'messages_sha256': digest(model_input(case, config))})
         start = time.monotonic()
         try:
-            row = (A.call_command if config['adapter'] == 'command' else A.call_api)(case, config, attempt)
+            collector = N.call_cli if config['adapter'] in NATIVE else A.call_command if config['adapter'] == 'command' else A.call_api
+            row = collector(case, config, attempt)
         except Exception as error:
             # Leave raw evidence and a terminal collector failure; no automatic repeat.
             row = A.missing('collector_error', exception_type=type(error).__name__)
         row.update(call_id=case['call_id'], attempt=str(attempt.relative_to(root)),
                    started_at=started, completed_at=now(), seconds=time.monotonic() - start)
-        row['output_tokens'] = row.get('usage', {}).get('output_tokens')
+        row.setdefault('output_tokens', row.get('usage', {}).get('output_tokens'))
         A.write_json(attempt / 'outcome.json', row)
         if row['scored'] or not row.get('retryable') or retry == config['retries']:
             return row
@@ -164,17 +190,17 @@ def run(args):
     if args.only and (set(args.only) - known or len(args.only) != len(set(args.only))):
         raise ValueError('--only contains unknown or duplicate call IDs')
     cases = [c for c in all_cases if not args.only or c['call_id'] in args.only]
-    if config['adapter'] != 'command':
+    if config['adapter'] not in NATIVE | {'command'}:
         for case in cases:
             A.request_body(case, config)  # Validate before any requests.
     manifest = {'schema_version': 1, 'track': 'tool-free', 'config': config,
                 'suite_sha256': digest(all_cases), 'call_ids': [c['call_id'] for c in cases],
                 'runner_sha256': digest([Path(p).read_text() for p in
-                                         (__file__, A.__file__, exam.__file__)]),
+                                         (__file__, A.__file__, N.__file__, exam.__file__)]),
                 'command_file_hashes': {arg: hashlib.sha256(Path(arg).read_bytes()).hexdigest()
                                        for arg in (config['argv'] or [])
                                        if Path(arg).is_absolute() and Path(arg).is_file()},
-                'messages_sha256': {c['call_id']: digest(A.messages(c)) for c in cases}}
+                'messages_sha256': {c['call_id']: digest(model_input(c, config)) for c in cases}}
     root = args.output.resolve()
     root.mkdir(parents=True, exist_ok=True)
     with run_lock(root):
@@ -192,10 +218,14 @@ def run(args):
             A.write_json(existing, manifest)
         if args.dry_run:
             A.write_json(root / 'request-preview.json',
+                         {**N.input_record(cases[0]), 'argv': N.command(config, root), 'native': config['native']}
+                         if config['adapter'] in NATIVE else
                          A.request_body(cases[0], config) if config['adapter'] != 'command' else
                          {'messages': A.messages(cases[0]), 'track': 'tool-free'})
             return {'state': 'dry_run', 'calls': len(cases), 'output': str(root), 'model_calls': 0}
         selected, failed, _ = history(root, cases)
+        if any(row.get('halt_collection') for row in selected.values()):
+            raise ValueError('A scored native response has a protocol alert; inspect its saved events before continuing')
         unresolved = [key for key, row in failed.items() if row['finish_reason'] not in
                       {'transport_error', 'server_error', 'rate_limit', 'quota'}]
         if unresolved:
@@ -206,7 +236,7 @@ def run(args):
             reports(root, cases, 'needs_attention')
             raise ValueError('Infrastructure failures remain; inspect attempts, then use --resume --retry-infrastructure')
         pending = [c for c in cases if c['call_id'] not in selected]
-        if pending and config['adapter'] != 'command' and config['api_key_env'] and not os.environ.get(config['api_key_env']):
+        if pending and config['adapter'] not in NATIVE | {'command'} and config['api_key_env'] and not os.environ.get(config['api_key_env']):
             raise ValueError(f"Set the {config['api_key_env']} environment variable; its value is not written to logs")
         A.write_json(root / 'status.json', {'state': 'running', 'started_at': now(),
                      'selected': len(selected), 'requested': len(cases), 'pid': os.getpid()})
@@ -226,14 +256,14 @@ def run(args):
                 for future in done:
                     key = active.pop(future)
                     outcome = future.result()
-                    stopped = stopped or not outcome['scored']
+                    stopped = stopped or not outcome['scored'] or outcome.get('halt_collection', False)
                     print(f"{key}: {outcome['finish_reason']}", flush=True)
                 fill()
                 A.write_json(root / 'status.json', {'state': 'draining' if stopped else 'running',
                              'updated_at': now(), 'active': list(active.values()), 'pid': os.getpid()})
         result = reports(root, cases, 'needs_attention' if stopped else 'complete')
         if stopped:
-            raise ValueError(f'Collection paused after infrastructure failure; inspect {root / "status.json"}')
+            raise ValueError(f'Collection paused after infrastructure/protocol failure; inspect {root / "status.json"}')
         return {'state': 'complete', 'calls': result['calls'], 'complete_suite': result['complete'],
                 'output': str(root), 'score' if result['complete'] else 'subset_score':
                 result.get('score', result.get('subset_score'))}

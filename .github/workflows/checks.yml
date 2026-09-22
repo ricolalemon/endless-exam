@@ -24,6 +24,7 @@ jobs:
         run: |
           python bench/test_exam.py
           python bench/test_model_runner.py
+          python bench/test_native_cli.py
           python bench/test_publication_data.py
           python bench/test_result_selection.py
           python bench/paper/test_analysis.py

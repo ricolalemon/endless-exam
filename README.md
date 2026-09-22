@@ -70,6 +70,18 @@ usage and attempt logs. Use `--base-url` for another provider or local server,
 without making a model call. See [the runner guide](docs/EVALUATING.md#run-with-an-api)
 for effort settings, concurrency and resume.
 
+Already using Codex or Claude Code? Sign in with the CLI, then use its adapter:
+
+```bash
+python bench/exam.py run --adapter codex --model gpt-6-astra --effort high --output output/codex-astra
+python bench/exam.py run --adapter claude-code --model claude-fable-5-1 --effort high --output output/claude-fable
+```
+
+These are **tool-free** runs using each CLI's native system instructions. The
+adapters disable tools and customizations, retain native events and usage, and
+stop at the first completed answer or budget exhaustion. See [CLI setup and
+supported versions](docs/EVALUATING.md#run-with-codex-or-claude-code).
+
 You can also use **your own harness**. Export only the model inputs, collect
 answers in the [standard format](docs/HARNESSES.md), then score them:
 
