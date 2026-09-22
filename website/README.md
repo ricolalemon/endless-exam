@@ -3,7 +3,7 @@
 The project website presents the leaderboard and illustrated explanations of all
 fourteen mathematical construction families.
 
-Website: https://endless-exam.grpodiamond.chatgpt.site/
+Website: https://ricolalemon.github.io/endless-exam/
 
 ## Run locally
 
@@ -43,3 +43,9 @@ node --check website/dist/animations.js
 Mathematical checks use the repository's benchmark dependencies and Node. They
 verify all fourteen examples, 120 geometric configurations, the matrix identity,
 graph distances and code-separation conditions.
+
+## Hosting
+
+GitHub Pages publishes `website/dist` from `main` through `.github/workflows/pages.yml`.
+Changes to the site trigger automatic deployment. Assets use relative URLs so that
+styles, scripts, data and the PDF resolve beneath `/endless-exam/`.
