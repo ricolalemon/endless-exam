@@ -3,6 +3,12 @@
 Version 1 consists of **69 distinct instances, evaluated once each**. The 14 families
 have 16 task variants. Each configuration is evaluated on the same call list.
 
+This guide covers the **tool-free track**. The public CLI exports tasks and scores
+saved responses; use your model's client to collect the responses. The paper's
+tool-assisted evaluations use a different resource protocol, described in its
+evaluation appendix. The scorer below applies the tool-free token and completion
+rules.
+
 ## 1. Export the tasks
 
 ```bash
@@ -20,7 +26,9 @@ suite. The older short-code experiments are supplementary data.
 
 ## 2. Collect the first scorable outcome per call
 
-Send the exported system message and prompt to your model. Use a tool-free
+Send only the exported `system` and `prompt` fields to your model. The remaining
+fields support evaluation; reference values, mathematical bounds and resource
+metadata must not be added to the model's messages. Use a tool-free
 configuration with no web browsing, file access, code execution or verifier
 queries. Allow up to **128,000 output tokens, including reasoning**. Record the
 model version, effort and harness settings. Invalid answers and exhausted token

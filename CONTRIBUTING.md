@@ -31,9 +31,10 @@ belong to a later benchmark version.
 
 Use the exported call list and the protocol in [Evaluating models](docs/EVALUATING.md).
 Report the model version, effort, token budget, generation harness and dates.
-Include all 84 call records, including explicit failures, and submit the output
-of `bench/exam.py score`. Keep repeated parameter settings as separate calls;
-the scorer averages them before aggregation.
+Include one scored outcome for each of the 69 distinct instances, including
+invalid answers and budget-exhausted calls, and submit the output of
+`bench/exam.py score`. Retain infrastructure-attempt metadata and available usage.
+Use the first scorable outcome; do not select among responses by answer quality.
 
 ## Pull requests
 
