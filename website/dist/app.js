@@ -23,7 +23,7 @@ fetch('results.json', {cache: 'no-store'}).then(r => { if (!r.ok) throw Error('R
   body.replaceChildren();
   body.closest('table').style.setProperty('--reference-mark', `${100 / scoreScale * 100}%`);
   $('leaderboard-caption').textContent = `All configurations, with and without tools, on ${data.instances} distinct instances`;
-  $('score-scale-note').textContent = `Shared bar scale: 0–${scoreScale}`;
+  $('score-reference-note').textContent = '100 = reference · uncapped scores';
   $('token-description').textContent = 'Mean output tokens per instance, including reasoning and all model turns when tools are used.';
   $('token-unknown-note').hidden = !rows.some(row => row.token_usage_is_lower_bound);
   $('protocol-tool-free').textContent = 'Without tools: ' + data.tracks['tool-free'].protocol;
@@ -42,7 +42,7 @@ fetch('results.json', {cache: 'no-store'}).then(r => { if (!r.ok) throw Error('R
         const fill = document.createElement('span'); fill.className = 'score-fill'; fill.style.width = `${row.score / scoreScale * 100}%`;
         const reference = document.createElement('span'); reference.className = 'score-reference';
         bar.append(fill, reference); chart.append(bar, value); td.append(chart);
-        td.title = `Score ${row.score.toFixed(2)} on a shared 0–${scoreScale} linear scale. The thin mark is at 100.`;
+        td.title = `Score ${row.score.toFixed(2)}. The thin mark is at 100, the reference level. Scores are uncapped.`;
       } else td.append(value);
       if (mobileLabel) {
         const label = document.createElement('span'); label.className = 'mobile-cell-label';

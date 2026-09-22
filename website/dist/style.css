@@ -56,7 +56,7 @@
 .leaderboard-key>span{display:inline-flex;align-items:center;gap:7px}
 .leaderboard-key i{width:17px;height:6px;display:inline-block;background:#818979}
 .leaderboard-key i.key-tools{background:#a68447}
-#score-scale-note{margin-left:auto;font-size:12px;color:#7d8375}
+#score-reference-note{margin-left:auto;font-size:12px;color:#7d8375}
 .leaderboard-table{table-layout:fixed;min-width:0}
 .leaderboard-table th,.leaderboard-table td{padding-inline:10px}
 .leaderboard-table .rank-col{width:5%}.leaderboard-table .model-col{width:23%}.leaderboard-table .effort-col{width:8%}.leaderboard-table .tools-col{width:11%}.leaderboard-table .score-col{width:29%}.leaderboard-table .token-head{width:14%}.leaderboard-table .valid-head{width:10%}
@@ -65,7 +65,7 @@
 .leaderboard-table .tool-assisted .tools{color:#86652f}
 .score-display{display:grid;grid-template-columns:minmax(0,1fr) 4.1em;align-items:center;gap:10px}
 .score-display>.cell-value{text-align:right}
-.score-bar{display:block;position:relative;height:8px;background:#e8eae2}
+.score-bar{display:block;position:relative;height:8px;background:transparent}
 .score-fill{display:block;height:100%;background:#818979}
 .tool-assisted .score-fill{background:#a68447}
 .score-reference{position:absolute;left:var(--reference-mark);top:-3px;width:1px;height:14px;background:#606855;opacity:.6}
@@ -74,7 +74,7 @@
 .evaluation-settings p{font-size:12px;line-height:1.8;margin-top:7px;max-width:850px}
 @media(max-width:760px){
   .leaderboard-key{gap:8px 19px;margin-bottom:15px;font-size:12px}
-  #score-scale-note{margin-left:0;font-size:11px}
+  #score-reference-note{margin-left:0;font-size:11px}
   .leaderboard-table tbody tr{grid-template-areas:"rank model model effort" ". tools tokens valid" ". score score score";row-gap:9px;padding:13px 8px 14px}
   .leaderboard-table td{padding:0}
   .leaderboard-table .rank{padding:0}
@@ -88,3 +88,9 @@
   .score-reference{height:13px}
 }
 @media(max-width:360px){.leaderboard-table tbody tr{padding-inline:5px;column-gap:6px}.leaderboard-table .tools>.cell-value{font-size:12px}}
+@media(min-width:761px) and (max-width:1000px){.leaderboard-table th,.leaderboard-table td{padding-inline:8px}.leaderboard-table .effort{font-size:13px}}
+
+.score-heading{display:grid;grid-template-columns:minmax(0,1fr) 4.1em;column-gap:10px;row-gap:1px;font-size:14px}
+.score-heading>span:first-child{font-size:13px}
+.score-header-reference{position:relative;grid-column:1;height:15px;font-weight:400}
+.score-header-reference>span{position:absolute;left:var(--reference-mark);transform:translateX(-50%);font-size:11px;color:#77806d}

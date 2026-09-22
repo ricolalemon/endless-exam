@@ -22,7 +22,8 @@ system reduced-motion preference are supported.
 
 The leaderboard ranks configurations with and without tools together, with tool
 access shown explicitly. Score bars share a zero-based linear scale that expands
-to fit the data; the thin mark indicates a score of 100. Evaluation settings for
+to fit the data. They have no fixed background rail or endpoint label; the thin
+mark indicates reference parity at 100, and higher scores extend past it. Evaluation settings for
 both tracks are available below the table.
 
 `dist/results.json` contains the displayed scores, validity and reported token
