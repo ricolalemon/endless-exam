@@ -34,15 +34,20 @@ fetch('results.json', {cache: 'no-store'}).then(r => { if (!r.ok) throw Error('R
       : 'Mean output tokens per instance, including reasoning.';
     $('token-unknown-note').hidden = !rows.some(row => row.token_usage_is_lower_bound);
     rows.forEach((row, i) => {
-      const tr = document.createElement('tr'); if (i === 0) tr.className = 'leader-row';
+      const tr = document.createElement('tr'); tr.setAttribute('role', 'row'); if (i === 0) tr.className = 'leader-row';
       const tokens = Math.round(row.mean_output_tokens).toLocaleString('en-US');
-      const cells = [[String(i + 1).padStart(2, '0'), 'rank'], [row.model, 'model'], [row.effort, 'effort'], [row.score.toFixed(2), 'numeric score-cell'], [tokens, 'numeric token-col'], [`${row.valid.toFixed(1)}%`, 'numeric valid-col']];
-      cells.forEach(([text, cls]) => {
-        const td = document.createElement('td'); td.className = cls; td.textContent = text;
+      const cells = [[String(i + 1).padStart(2, '0'), 'rank'], [row.model, 'model'], [row.effort, 'effort'], [row.score.toFixed(2), 'numeric score-cell', 'Score'], [tokens, 'numeric token-col', 'Tokens / instance'], [`${row.valid.toFixed(1)}%`, 'numeric valid-col', 'Valid']];
+      cells.forEach(([text, cls, mobileLabel]) => {
+        const td = document.createElement('td'); td.className = cls; td.setAttribute('role', 'cell');
+        const value = document.createElement('span'); value.className = 'cell-value'; value.textContent = text; td.append(value);
+        if (mobileLabel) {
+          const label = document.createElement('span'); label.className = 'mobile-cell-label';
+          label.textContent = mobileLabel; label.setAttribute('aria-hidden', 'true'); td.append(label);
+        }
         if (cls.includes('token-col')) {
           td.title = `${row.output_tokens.toLocaleString('en-US')} reported output tokens across ${data.instances} instances. Complete usage for ${row.token_usage_complete_instances}/${data.instances}.`;
           if (row.token_usage_is_lower_bound) {
-            const star = document.createElement('sup'); star.className = 'usage-star'; star.textContent = '*'; star.setAttribute('aria-hidden', 'true'); td.append(star);
+            const star = document.createElement('sup'); star.className = 'usage-star'; star.textContent = '*'; star.setAttribute('aria-hidden', 'true'); value.append(star);
             td.setAttribute('aria-label', `${tokens} output tokens per instance, lower bound; some usage was not reported.`);
           }
         }

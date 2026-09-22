@@ -12,25 +12,25 @@
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#f8f8f5">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=06882668c8">
-  <link rel="stylesheet" href="style.css?v=1b334626dc"><link rel="stylesheet" href="motion.css?v=cb706deefd"><script defer src="app.js?v=3c0647b397"></script><script defer src="story-data.js?v=4500c3ec85"></script><script defer src="animations.js?v=f2019db5da"></script>
+  <link rel="stylesheet" href="style.css?v=b42dcd6a96"><link rel="stylesheet" href="motion.css?v=cb706deefd"><script defer src="app.js?v=901bae3a43"></script><script defer src="story-data.js?v=4500c3ec85"></script><script defer src="animations.js?v=f2019db5da"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header wrap">
   <a class="brand" href="#" aria-label="The Endless Exam home"><img class="brand-mark" src="assets/construction-mark.svg?v=35234a81b9" width="32" height="32" alt=""><span>THE ENDLESS EXAM</span></a>
-  <nav aria-label="Main navigation"><a href="#leaderboard">Leaderboard</a><a href="#constructions">Constructions</a><a href="assets/endless-exam.pdf" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/ricolalemon/endless-exam" target="_blank" rel="noopener">GitHub ↗</a></nav>
+  <nav aria-label="Main navigation"><a href="#leaderboard">Leaderboard</a><a href="#constructions">Constructions</a><a href="assets/endless-exam.pdf" target="_blank" rel="noopener">Paper <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4.5 4H12v7.5"/></svg></a><a href="https://github.com/ricolalemon/endless-exam" target="_blank" rel="noopener">GitHub <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4.5 4H12v7.5"/></svg></a></nav>
 </header>
 <main id="main">
   <section class="intro wrap" aria-labelledby="hero-title">
     <div><h1 id="hero-title">The Endless Exam</h1><p>A benchmark for mathematical constructions with verifiable, uncapped scores.</p></div>
-    <a class="play-link" href="#constructions">See the constructions <span aria-hidden="true">↓</span></a>
+    <a class="play-link" href="#constructions">See the constructions <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2v12M3 9l5 5 5-5"/></svg></a>
   </section>
   <section class="leaderboard-section wrap" id="leaderboard" aria-labelledby="results-title">
     <div class="section-heading"><h2 id="results-title">Leaderboard</h2><p id="leaderboard-scope">14 families <span>·</span> 69 instances <span>·</span> 12 configurations</p><span class="edition">V1</span></div>
     <div class="track-switch" role="group" aria-label="Evaluation track"><button type="button" data-track="tool-free" aria-pressed="true">Without tools <span>12</span></button><button type="button" data-track="tool-assisted" aria-pressed="false">Code + web <span>2</span></button></div>
     <p id="track-protocol" class="track-protocol">One response per instance · 128k output tokens, including reasoning.</p>
-    <div class="table-shell" role="region" aria-label="Model results; scroll horizontally on small screens" tabindex="0"><table><caption id="leaderboard-caption" class="sr-only">Overall results without tools on 69 distinct instances</caption><thead><tr><th scope="col" class="rank-col">Rank</th><th scope="col">Model</th><th scope="col">Effort</th><th scope="col" class="numeric">Score</th><th scope="col" class="numeric">Output tokens<br><span class="column-unit">per instance</span></th><th scope="col" class="numeric">Valid</th></tr></thead><tbody id="leaderboard-body"><tr><td colspan="6">Loading results…</td></tr></tbody></table></div>
-    <div class="table-footer"><div class="leaderboard-notes"><p><strong>Score:</strong> 100 matches the task references on average; higher is better.</p><p><strong>Tokens:</strong> <span id="token-description">Mean output tokens per instance, including reasoning.</span> <span id="token-unknown-note"><sup>*</sup> Some usage was not reported; marked values are lower bounds.</span></p></div><a href="results.json" download="endless-exam-results.json">Results JSON ↓</a></div>
+    <div class="table-shell" role="region" aria-label="Model results"><table class="leaderboard-table" role="table"><caption id="leaderboard-caption" class="sr-only">Overall results without tools on 69 distinct instances</caption><thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col" class="rank-col">Rank</th><th role="columnheader" scope="col">Model</th><th role="columnheader" scope="col">Effort</th><th role="columnheader" scope="col" class="numeric">Score</th><th role="columnheader" scope="col" class="numeric">Output tokens<br><span class="column-unit">per instance</span></th><th role="columnheader" scope="col" class="numeric">Valid</th></tr></thead><tbody id="leaderboard-body" role="rowgroup"><tr><td colspan="6">Loading results…</td></tr></tbody></table></div>
+    <div class="table-footer"><div class="leaderboard-notes"><p><strong>Score:</strong> 100 matches the task references on average; higher is better.</p><p><strong>Tokens:</strong> <span id="token-description">Mean output tokens per instance, including reasoning.</span> <span id="token-unknown-note"><sup>*</sup> Some usage was not reported; marked values are lower bounds.</span></p></div><a href="results.json" download="endless-exam-results.json">Results JSON <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2v12M3 9l5 5 5-5"/></svg></a></div>
   </section>
   <section class="motion-section wrap" id="constructions" aria-labelledby="motion-title">
     <div class="essay-intro"><div><h2 id="motion-title">The construction families</h2><p>These animations use small, verified examples to make the rules easy to see. The benchmark uses much larger instances—with higher dimensions, longer codes and larger grids—where finding high-quality constructions is substantially harder. These illustrations are separate from the model results above.</p></div><button id="story-motion" type="button" aria-pressed="false"><span aria-hidden="true">◒</span><span data-motion-label>Scroll animation</span></button></div>
@@ -154,5 +154,5 @@ python bench/exam.py verify \
   --answer examples/capset.json</code></pre><div class="code-result"><span aria-hidden="true">✓</span> valid: true <span class="code-divider">/</span> objective: 4</div><p>Run from the repository after installing its requirements.</p><span id="copy-status" class="sr-only" aria-live="polite"></span></div></div></details>
   </section>
 </main>
-<footer class="wrap"><span>The Endless Exam · 2026</span><a href="https://arxiv.org/abs/2609.24555" target="_blank" rel="noopener">arXiv</a><a href="assets/endless-exam.pdf" target="_blank" rel="noopener">PDF</a><a href="https://github.com/ricolalemon/endless-exam" target="_blank" rel="noopener">Code &amp; data</a><a href="#main">Back to top ↑</a></footer>
+<footer class="wrap"><span>The Endless Exam · 2026</span><a href="https://arxiv.org/abs/2609.24555" target="_blank" rel="noopener">arXiv</a><a href="assets/endless-exam.pdf" target="_blank" rel="noopener">PDF</a><a href="https://github.com/ricolalemon/endless-exam" target="_blank" rel="noopener">Code &amp; data</a><a href="#main">Back to top <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 14V2M3 7l5-5 5 5"/></svg></a></footer>
 </body></html>
