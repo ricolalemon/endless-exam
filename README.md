@@ -4,7 +4,7 @@
 
 **Mathematical constructions, from today's models toward superintelligence.**
 
-[Paper](bench/paper/endless-exam.pdf) · [Quick start](#quick-start) · [Results](bench/results/README.md) · [Evaluate a model](docs/EVALUATING.md) · [Reproduce the paper](docs/REPRODUCING.md) · [Specification](SPEC.md)
+[Paper](https://arxiv.org/abs/2609.24555) · [PDF](bench/paper/endless-exam.pdf) · [Quick start](#quick-start) · [Results](bench/results/README.md) · [Evaluate a model](docs/EVALUATING.md) · [Reproduce the paper](docs/REPRODUCING.md) · [Specification](SPEC.md)
 
 The Endless Exam is a benchmark of mathematical construction problems. A model
 produces an object, a verifier checks its defining property, and the score
@@ -164,12 +164,15 @@ reference evidence.
 ## Citation
 
 ```bibtex
-@software{zhang2026endless,
+@misc{zhang2026endless,
   author = {Muhan Zhang},
   title = {The Endless Exam: Mathematical Constructions from Today's Models toward Superintelligence},
   year = {2026},
-  version = {1},
-  url = {https://github.com/ricolalemon/endless-exam}
+  eprint = {2609.24555},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  doi = {10.48550/arXiv.2609.24555},
+  url = {https://arxiv.org/abs/2609.24555}
 }
 ```
 

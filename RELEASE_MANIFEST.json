@@ -1,7 +1,6 @@
 {
   "version": "1",
   "repository": "https://github.com/ricolalemon/endless-exam",
-  "source_revision": "3ea98f56d70b7fe1158001ac26c6c6c56f1cd85b",
   "data_policy": "Final responses, usage and selection evidence retained; private reasoning and operational metadata unrelated to evaluation omitted.",
   "transformed_result_files": [
     {
@@ -2359,12 +2358,12 @@
     ".github/pull_request_template.md": "34db790cb2c9d9b3f88d6ed71dc6637efaa9b96fcf6560e98fe4ad9b2133a09a",
     ".github/workflows/checks.yml": "2a455a6178cbb730e147bf6c660b32f97a8008884efc8fd4e780121aa25015e5",
     ".gitignore": "b7a6d026ac73cf7c1b94c04bea12b24a466144377897a583d69f59a2c16d5e67",
-    "CITATION.cff": "2ad4c851b21c5997bd17b003aa04cd5c1a431d7845a106cd38d36128f52acbee",
+    "CITATION.cff": "9b806feffcbb0446ec53bf366b3920221f35599036a18143362172637540bde6",
     "CONTRIBUTING.md": "42cb2a7d571ec133f9ab71af20c9f5d127074d580ff0bdd1a940b9f33fb129fb",
     "LICENSE": "2a8164a7d0e429027a16db485e2a236da572aaa53073198861f55e2ca6ffb78a",
     "LICENSES/CC-BY-4.0-LJCR.txt": "9cb9783c30f3d37b39cbeb814d8d752f21522ca7a6b26dedaefaca3cf745838f",
     "LICENSES/LPPL-1.3c.txt": "3d262cdf34dafa6955f703c634a8c238ec44109bc8dd6ef34fb7aa54809f7e66",
-    "README.md": "97f18ef5aa718d3ed8b80711ee4623d00df03dcfb0d2e822f7be4a62df0c2806",
+    "README.md": "9ca0b851f8a5f02407b91638830b3475192eaf692a5759ceb499d22d763e0660",
     "SPEC.md": "e08a75d7b57a187be9ce2491e37da2f37da276a62be30e343624b19a79d38c97",
     "THIRD_PARTY_NOTICES.md": "ec98ca517b95f74137d3a2e0f2edaf332bac37b90f6b44f1bffb608d98f4986b",
     "bench/README.md": "cc111e1af9f12324e0faa15caa61443496e3d2657d0582839af7967ea3d322a8",
@@ -2480,7 +2479,6 @@
     "bench/frontiers/v1.1.json": "822832610848921c7a2b4afecf155fa60bd7b0a23a8c5896e07b2187b11dc1d9",
     "bench/frontiers/v1.json": "5db3f2458c7d09e1e64d456cf4ac84c90f50dd8aca3ca7d66a4e641eeb2c3bc9",
     "bench/openceiling.py": "1b22bf7c7ebf360f8bddd88d45f1b42707d55a834b43094d57f5ca0609d5df36",
-    "bench/paper/FIGURE_STYLE.md": "98195f07c6452763c983211640d74734440ccdab1c3ccacd5a23f4031b9a82b0",
     "bench/paper/PUBLICATION.md": "07d02d372cacebbda407dcbcd0fc21a9057ba89aee95fc044b07803d0a25a050",
     "bench/paper/appendix/appendix.tex": "d6e5a4fbc1efcd34170606f3fce68a4fbd01273b74cabb51f7305831f54711f6",
     "bench/paper/appendix/cases.tex": "878f16b0d742ca0a3ed69ea6b0f395c72a7a84b6d47d5315178792ea01529df3",
