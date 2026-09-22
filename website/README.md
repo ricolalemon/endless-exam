@@ -26,6 +26,12 @@ to fit the data. They have no fixed background rail or endpoint label; the thin
 mark indicates reference parity at 100, and higher scores extend past it. Evaluation settings for
 both tracks are available below the table.
 
+An interactive scatterplot below the leaderboard uses the same data: overall
+score against mean output tokens per instance. Select a point or use the
+configuration dropdown for exact values. Filled circles denote no tools and
+filled diamonds denote code + web. Asterisks retain incomplete-usage accounting;
+input tokens and external tool computation are not represented on the x axis.
+
 `dist/results.json` contains the displayed scores, validity and reported token
 usage. Token means divide reported output by all 69 instances, include reasoning,
 and include all model turns in tool-assisted trajectories. Inputs and earlier

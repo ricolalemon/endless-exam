@@ -59,9 +59,11 @@ fetch('results.json', {cache: 'no-store'}).then(r => { if (!r.ok) throw Error('R
     });
     body.append(tr);
   });
+  if (window.EndlessScoreTokens) window.EndlessScoreTokens.render(data);
   document.dispatchEvent(new Event('endless:results-ready'));
-  if (location.hash === '#constructions' || location.hash === '#play') {
-    requestAnimationFrame(() => window.scrollTo({top: $('constructions').offsetTop - 28, behavior: 'instant'}));
+  if (['#constructions', '#play', '#score-tokens'].includes(location.hash)) {
+    const section = location.hash === '#score-tokens' ? $('score-tokens') : $('constructions');
+    requestAnimationFrame(() => window.scrollTo({top: section.offsetTop - 28, behavior: 'instant'}));
   }
 }).catch(() => { const td = document.createElement('td'); td.colSpan = 7; td.className = 'error'; td.textContent = 'Results could not be loaded. The complete table is available in the paper.'; $('leaderboard-body').replaceChildren(Object.assign(document.createElement('tr'), {})); $('leaderboard-body').firstChild.append(td); });
 

@@ -31,6 +31,7 @@ jobs:
       - name: Check static scripts
         run: |
           node --check website/dist/app.js
+          node --check website/dist/score-tokens.js
           node --check website/dist/animations.js
           node --check website/dist/story-data.js
           test -s website/dist/index.html
