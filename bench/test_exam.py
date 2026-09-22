@@ -66,6 +66,22 @@ class PublicExamTests(unittest.TestCase):
             self.assertIsNone(partial['infrastructure_failures'][0]['ratio'])
             self.assertEqual(partial['subset_score'],0)
 
+    def test_tool_scoring_uses_saved_answer_not_tool_free_token_cap(self):
+        case = {'call_id': 'test', 'instance_id': 'cap2', 'family': 'capset', 'params': {'d': 2},
+                'reference': 2, 'reference_type': 'construction', 'sense': 'max'}
+        row = {'answer': ['00', '01', '10', '11'], 'output_tokens': 200000,
+               'finish_reason': 'timeout', 'submission_within_deadline': True}
+        self.assertEqual(exam.score_record(case, row, 'tool-assisted')['ratio'], 2)
+        self.assertEqual(exam.score_record(case, row)['ratio'], 0)
+        row['submission_within_deadline'] = False
+        self.assertEqual(exam.score_record(case, row, 'tool-assisted')['ratio'], 0)
+        row.pop('submission_within_deadline')
+        with self.assertRaisesRegex(ValueError, 'submission_within_deadline'):
+            exam.score_record(case, row, 'tool-assisted')
+        row.update(finish_reason='transport_error', submission_within_deadline=True)
+        with self.assertRaisesRegex(ValueError, 'Unscored infrastructure'):
+            exam.score_record(case, row, 'tool-assisted')
+
 
 if __name__ == '__main__':
     unittest.main()

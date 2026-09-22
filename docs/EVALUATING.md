@@ -3,13 +3,100 @@
 Version 1 consists of **69 distinct instances, evaluated once each**. The 14 families
 have 16 task variants. Each configuration is evaluated on the same call list.
 
-This guide covers the **tool-free track**. The public CLI exports tasks and scores
-saved responses; use your model's client to collect the responses. The paper's
-tool-assisted evaluations use a different resource protocol, described in its
-evaluation appendix. The scorer below applies the tool-free token and completion
-rules.
+This guide covers the **tool-free track**. Use the default API runner below, or
+collect responses with your own client and follow the export/score workflow.
+[Custom harnesses and tool-assisted scoring](HARNESSES.md) are documented separately.
+The mathematical tasks and references are the same across harnesses.
 
-## 1. Export the tasks
+## Run with an API
+
+Set `OPENAI_API_KEY` in your environment, then:
+
+```bash
+python bench/exam.py run --model YOUR_MODEL --effort high \
+  --workers 4 --output output/your-model
+```
+
+Omit `--effort` for models that do not support it. No effort is imposed by default.
+The command uses a non-streaming Chat Completions-compatible endpoint. Use
+`--base-url https://YOUR_PROVIDER/v1` and `--api-key-env YOUR_KEY_VARIABLE` for
+another provider. For an unauthenticated local server use, for example,
+`--base-url http://127.0.0.1:8000/v1 --api-key-env ''`.
+
+For the Responses API:
+
+```bash
+python bench/exam.py run --adapter responses --model YOUR_MODEL \
+  --effort high --workers 4 --output output/your-model-responses
+```
+
+Before collecting, append `--dry-run` to either command. It writes the configuration
+and one request preview, with **zero model calls**. Remove `--dry-run` and add
+`--resume` to start that prepared run. The preview contains only the original
+system and mathematical prompt as model messages; references, bounds and resource
+settings are never appended to those messages.
+
+The runner requests **128,000 total output tokens**, including reasoning. It uses
+`max_completion_tokens` for Chat Completions and `max_output_tokens` for Responses.
+For compatible servers that require the older field, specify
+`--token-parameter max_tokens`. Confirm that the provider counts reasoning inside
+that limit. Unsupported settings stop collection; the runner never silently
+reduces the budget or switches models. A model with a smaller native output limit
+requires a separately documented configuration. Provider-specific settings can
+be supplied as a JSON object with `--options settings.json`, for example
+`{"thinking":{"type":"enabled"}}`. Only generation settings are accepted;
+message, tool, model and token-limit overrides are rejected.
+
+The default runner offers no tools and makes no continuation requests. A provider
+must expose a tool-free endpoint; an API alias that secretly invokes its own
+agent cannot be made tool-free by this client. This is a new-model evaluation
+interface, not a byte-for-byte reproduction of each paper model's native harness.
+
+### Resume and failures
+
+Repeat the **same command and settings**, adding `--resume`. Completed outcomes
+are reused, including invalid answers, refusals and token-limit zeroes. A lock
+prevents two controllers from using one output directory. Changing the model,
+prompts, settings or runner code requires another directory.
+
+HTTP connection failures, rate limits and server errors receive up to four
+additional attempts by default (`--retries 4`). Every attempt is retained.
+Authentication/configuration errors and exhausted retries stop new dispatch;
+already-running requests drain. Network failures remain missing, not model
+zeroes. After inspecting the terminal failure and resolving it, resume with
+`--retry-infrastructure`. This only recollects confirmed transport/service failures;
+malformed responses, collector errors and unfinished journals require inspection
+and repair of saved evidence before collection can proceed.
+
+`--timeout` is a socket/process timeout (default 7,200 seconds), **not evidence of
+model budget exhaustion**. A timed-out request may still be running on the server;
+retrying can cause another underlying generation. The first scorable outcome is
+kept, with unknown usage for any interrupted generation. This runner does not
+enforce a provider-side two-hour evaluation deadline. A custom harness can do so
+and record genuine deadline exhaustion explicitly.
+
+### Output files
+
+| File | Contents |
+| --- | --- |
+| `manifest.json` | Model, settings, cohort and prompt/code hashes |
+| `attempts/<call_id>/<number>/` | Request, raw response, timestamps and normalised outcome for every attempt |
+| `answers.jsonl` | First scorable response per call; unresolved infrastructure failures are labelled |
+| `scores.json` | Overall and reference-group scores, validity and per-instance verification |
+| `usage.json` | Reported token totals across **all** attempts and counts with unknown usage |
+| `status.json` | Collection state and missing/untouched calls |
+
+Scores and usage are rebuilt when the batch finishes or drains. Native reasoning
+tokens are a subset of output tokens and are not added twice. Unknown usage remains
+unknown, so an incomplete reported total is a lower bound. `--only CALL_ID ...`
+runs a subset and produces `subset_score`; a full Score still requires all 69.
+Credentials are read from the named environment variable and never written to
+requests or manifests. Keep credentials out of option files and URLs. Raw provider
+responses may include reasoning or diagnostics; inspect them before sharing.
+
+## Use your own client
+
+### 1. Export the tasks
 
 ```bash
 python bench/exam.py export --output prompts.jsonl
@@ -20,11 +107,14 @@ Each JSONL record contains `call_id`, `instance_id`, the mathematical parameters
 `system` and `prompt`, the frozen reference, and the resource limits. Each record
 has a unique `call_id` and `instance_id`.
 
+Prefer `export --model-inputs-only` when feeding an external harness: it omits
+scoring metadata entirely and retains only the IDs, `system` and `prompt`.
+
 The four certified trifference calls have IDs `t1-trifference-0` through
 `t4-trifference-0`, with lengths 64, 96, 144 and 192. They are part of the formal
 suite. The older short-code experiments are supplementary data.
 
-## 2. Collect the first scorable outcome per call
+### 2. Collect the first scorable outcome per call
 
 Send only the exported `system` and `prompt` fields to your model. The remaining
 fields support evaluation; reference values, mathematical bounds and resource
@@ -62,7 +152,7 @@ or `server_error` remain missing evaluations. A normal completion at exactly the
 unless the provider reports a budget stop. Retain the full generation metadata
 with your submission so the stated conditions can be checked.
 
-## 3. Verify and score
+### 3. Verify and score
 
 ```bash
 python bench/exam.py score answers.jsonl --output scores.json

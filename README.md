@@ -57,15 +57,30 @@ python bench/exam.py export --output prompts.jsonl
 python bench/exam.py prompt a3-capset-0
 ```
 
-To evaluate a model, make one tool-free generation for each exported call, save
-its answer and completion metadata as JSONL, then run:
+To evaluate a model through a Chat Completions-compatible API, set its key in
+`OPENAI_API_KEY`, then run:
 
 ```bash
+python bench/exam.py run --model YOUR_MODEL --output output/your-model
+```
+
+This collects the 69 tool-free answers, verifies them and writes scores, token
+usage and attempt logs. Use `--base-url` for another provider or local server,
+`--adapter responses` for the Responses API, and `--dry-run` to inspect a request
+without making a model call. See [the runner guide](docs/EVALUATING.md#run-with-an-api)
+for effort settings, concurrency and resume.
+
+You can also use **your own harness**. Export only the model inputs, collect
+answers in the [standard format](docs/HARNESSES.md), then score them:
+
+```bash
+python bench/exam.py export --model-inputs-only --output prompts.jsonl
 python bench/exam.py score answers.jsonl --output scores.json
 ```
 
-See [Evaluating a model](docs/EVALUATING.md) for the answer format, token budget,
-failed calls and partial runs. The commands above make no model API requests.
+Only `run` without `--dry-run` invokes a model or an external harness. Export,
+verification and scoring work offline. Tool-assisted harnesses can use the same
+task interface and a [separate scoring mode](docs/HARNESSES.md#tool-assisted-harnesses).
 
 ## Results
 

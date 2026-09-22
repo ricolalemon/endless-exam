@@ -2632,7 +2632,7 @@
     "bench/data/fable_high_publication.json": "c04f9a2b8665ee90abf3b4d315b3117f7fa9342bd0a9b4039a21613820c62f4d",
     "bench/data/formal_suite_v1.json": "5ab37c4a6dea8981d38b7d658ec2562747d555d46bbcf6260d460d9cbdded074",
     "bench/evaluation_outcomes.py": "cc726323ddd666144d53ddcf8d8856ee2910602c16686fd132f215e0e5cfeb54",
-    "bench/exam.py": "04991478dac918e0788620e97ac0e0ca8ea7a38fa75197893826e89691b85450",
+    "bench/exam.py": "622e9f387e20cf17c88ce4967f913ea9d1094e1dfc949bd3000e37782f286045",
     "bench/formal_cohort.py": "5617ca525f961e0ced6791760347d87724bbd310b4158832781123b4f4e66987",
     "bench/freeze_frontier.py": "337543b7ba9da03fd1a1bffd63fc331a03b9b094c0b2441bc849488b0bd488ea",
     "bench/openceiling.py": "1b22bf7c7ebf360f8bddd88d45f1b42707d55a834b43094d57f5ca0609d5df36",

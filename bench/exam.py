@@ -19,6 +19,8 @@ from openceiling import FAMILIES, anchor, effective_frontier, verify_with_timeou
 from evaluation_outcomes import infrastructure_reason, require_scored
 
 TOKEN_LIMIT = 128000
+TRACKS = ('tool-free', 'tool-assisted')
+SUBMISSION_INSTRUCTION = 'Save your final answer as a single JSON object to /workspace/answer.json.'
 
 
 def suite():
@@ -57,12 +59,26 @@ def verify(family, params, answer):
     return {'valid': bool(valid), 'objective': objective if valid else 0, 'message': message}
 
 
-def score_record(case, record):
+def score_record(case, record, track='tool-free'):
     require_scored(record)
+    if track not in TRACKS or record.get('track', track) != track:
+        raise ValueError('Record track does not match the selected scoring track')
     tokens = record.get('output_tokens')
     if tokens is not None and (type(tokens) is not int or tokens < 0):
         raise ValueError('output_tokens must be a nonnegative integer or null')
-    if record.get('finish_reason', 'stop') != 'stop':
+    reason = record.get('finish_reason', 'stop')
+    if track == 'tool-assisted':
+        if type(record.get('submission_within_deadline')) is not bool:
+            raise ValueError('Tool-assisted records require submission_within_deadline from the harness')
+        if not record['submission_within_deadline']:
+            checked = {'valid': False, 'objective': 0, 'message': 'No submission saved within the deadline'}
+        elif reason not in {'stop', 'timeout', 'resource_limit', 'length'}:
+            checked = {'valid': False, 'objective': 0, 'message': 'Invalid tool-assisted completion status'}
+        elif len(json.dumps(record.get('answer'), ensure_ascii=False).encode()) > 32 * 1024 * 1024:
+            checked = {'valid': False, 'objective': 0, 'message': 'Submission exceeds 32 MiB'}
+        else:
+            checked = verify(case['family'], case['params'], record.get('answer'))
+    elif reason != 'stop':
         checked = {'valid': False, 'objective': 0, 'message': 'Generation did not finish normally'}
     elif tokens is not None and tokens > TOKEN_LIMIT:
         checked = {'valid': False, 'objective': 0, 'message': 'Output exceeded the 128k token budget'}
@@ -100,7 +116,7 @@ def aggregate(rows, complete):
     }
 
 
-def score_submission(path, allow_partial=False):
+def score_submission(path, allow_partial=False, track='tool-free'):
     cases = {c['call_id']: c for c in suite()}
     records = {}
     with Path(path).open() as stream:
@@ -124,8 +140,9 @@ def score_submission(path, allow_partial=False):
     missing = sorted((set(cases) - set(records)) | set(unavailable))
     if missing and not allow_partial:
         raise ValueError(f'Missing {len(missing)} of 69 calls; use --allow-partial for a labelled subset score')
-    rows = [score_record(cases[key], record) for key, record in records.items() if key not in unavailable]
+    rows = [score_record(cases[key], record, track) for key, record in records.items() if key not in unavailable]
     report = aggregate(rows, not missing)
+    report['track'] = track
     report['missing_call_ids'] = missing
     report['infrastructure_failures'] = [
         {'call_id':key,'reason':infrastructure_reason(record),'ratio':None}
@@ -147,6 +164,8 @@ def main():
     commands.add_parser('families', help='List the fourteen headline families')
     export = commands.add_parser('export', help='Export the 69 unique formal instances as JSONL')
     export.add_argument('--output', type=Path, required=True)
+    export.add_argument('--model-inputs-only', action='store_true', help='Omit references, bounds and evaluation metadata')
+    export.add_argument('--track', choices=TRACKS, default='tool-free')
     prompt = commands.add_parser('prompt', help='Show the prompt and metadata of one formal call')
     prompt.add_argument('call_id')
     check = commands.add_parser('verify', help='Verify a construction without making a model call')
@@ -159,12 +178,25 @@ def main():
     score.add_argument('submission', type=Path)
     score.add_argument('--output', type=Path)
     score.add_argument('--allow-partial', action='store_true')
+    score.add_argument('--track', choices=TRACKS, default='tool-free')
+    import model_runner
+    model_runner.add_parser(commands)
     args = parser.parse_args()
     try:
         if args.command == 'families':
             emit([{'family': g, 'name': GROUP_LABELS[g], 'task_variants': list(fs)} for g, fs in CORE_GROUPS.items()])
         elif args.command == 'export':
-            args.output.write_text(''.join(json.dumps(c, ensure_ascii=False, allow_nan=False) + '\n' for c in suite()))
+            cases = suite()
+            if args.track == 'tool-assisted' and not args.model_inputs_only:
+                raise ValueError('Tool-assisted export requires --model-inputs-only; references are available in the default export')
+            if args.model_inputs_only:
+                cases = [{k: c[k] for k in ('call_id', 'instance_id', 'system', 'prompt')} for c in cases]
+                if args.track == 'tool-assisted':
+                    # Native agent harnesses keep their own system instructions.
+                    for c in cases:
+                        c.pop('system')
+                        c['prompt'] += '\n\n' + SUBMISSION_INSTRUCTION
+            args.output.write_text(''.join(json.dumps(c, ensure_ascii=False, allow_nan=False) + '\n' for c in cases))
             print(f'Exported 69 calls / 69 distinct instances to {args.output}')
         elif args.command == 'prompt':
             found = next((c for c in suite() if c['call_id'] == args.call_id), None)
@@ -185,8 +217,10 @@ def main():
                 if not isinstance(params, dict):
                     raise ValueError('--params must be a JSON object')
                 emit(verify(args.family, params, answer))
+        elif args.command == 'run':
+            emit(model_runner.run(args))
         else:
-            emit(score_submission(args.submission, args.allow_partial), args.output)
+            emit(score_submission(args.submission, args.allow_partial, args.track), args.output)
     except (ValueError, OSError, json.JSONDecodeError) as error:
         parser.exit(2, f'Error: {error}\n')
 
