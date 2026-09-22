@@ -4,7 +4,7 @@
 
 **Mathematical constructions, from today's models toward superintelligence.**
 
-[Paper](https://arxiv.org/abs/2609.24555) · [PDF](bench/paper/endless-exam.pdf) · [Quick start](#quick-start) · [Results](bench/results/README.md) · [Evaluate a model](docs/EVALUATING.md) · [Reproduce the paper](docs/REPRODUCING.md) · [Specification](SPEC.md)
+[Website](https://endless-exam.grpodiamond.chatgpt.site/) · [Paper](https://arxiv.org/abs/2609.24555) · [PDF](bench/paper/endless-exam.pdf) · [Quick start](#quick-start) · [Results](bench/results/README.md) · [Evaluate a model](docs/EVALUATING.md) · [Reproduce the paper](docs/REPRODUCING.md) · [Specification](SPEC.md)
 
 The Endless Exam is a benchmark of mathematical construction problems. A model
 produces an object, a verifier checks its defining property, and the score
