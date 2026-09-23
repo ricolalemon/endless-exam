@@ -3,16 +3,14 @@
   const NS = 'http://www.w3.org/2000/svg';
   const byId = id => document.getElementById(id);
   const format = value => Math.round(value).toLocaleString('en-US');
-  const labelSettings = {
-    astra_tools: ['Astra · tools', 12, -12], luna_tools: ['Luna · tools', 12, -10],
-    astra_high: ['Astra high', 20, 3], astra_medium: ['Astra medium', 12, -6],
-    fable: ['Fable medium', 12, -10], fable_high: ['Fable high', 12, 8],
-    deepseek_high: ['DeepSeek high', -12, -22, 'end'], deepseek_low: ['DeepSeek low', -12, -10, 'end'],
-    luna_high: ['Luna high', 12, -8], luna_medium: ['Luna medium', 12, 10],
-    qwen38: ['Qwen3.8 27B', -10, 27, 'end'],
-    qwen35: ['Qwen3.5 27B', -18, -20, 'end', true],
-    qwen9: ['Qwen3.5 9B', 20, -2, 'start', true],
-    qwen4: ['Qwen3.5 4B', -14, 7, 'end', true],
+  const labelOffsets = {
+    astra_tools: [12, -12], luna_tools: [12, -10],
+    astra_high: [20, 3], astra_medium: [12, -6],
+    fable: [12, -10], fable_high: [12, 8],
+    deepseek_high: [-12, -24, 'end'], deepseek_low: [-12, -10, 'end'],
+    luna_high: [12, -8], luna_medium: [12, 10],
+    qwen38: [-10, 27, 'end'], qwen35: [-18, -20, 'end'],
+    qwen9: [20, -2], qwen4: [-14, 7, 'end'],
   };
   function el(tag, attrs = {}, text) {
     const node = document.createElementNS(NS, tag);
@@ -25,6 +23,8 @@
       const host = byId('token-plot'), tooltip = byId('token-plot-tooltip');
       if (!host || !tooltip) return;
       const rows = [...data.rows].sort((a, b) => b.score - a.score);
+      const modelCounts = new Map();
+      for (const row of rows) modelCounts.set(row.model, (modelCounts.get(row.model) || 0) + 1);
       const xMax = Math.max(25000, Math.ceil(Math.max(...rows.map(r => r.mean_output_tokens)) / 25000) * 25000);
       const yMax = Math.max(150, Math.ceil(Math.max(...rows.map(r => r.score)) * 1.08 / 25) * 25);
       let active = null, frame = 0, geometry = [], svg, labelLayer, referenceY = 0, dimensions, groups = new Map();
@@ -75,24 +75,54 @@
         labelLayer.replaceChildren();
         const compact = host.clientWidth < 640;
         if (compact) return;
+        const occupied = [], {width, height} = dimensions;
+        const overlap = (a, b) => Math.max(0, Math.min(a.right,b.right)-Math.max(a.left,b.left)) * Math.max(0, Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top));
         for (const p of geometry) {
-          const settings = labelSettings[p.row.id] || [p.row.model, 12, -12];
-          let [name, dx, dy, anchor = 'start', leader = false] = settings;
-          if (p.row.token_usage_is_lower_bound && dx > 0 && dy < 0) dx = 20;
-          let x = p.x + dx, y = p.y + dy;
-          if (Math.abs(y - referenceY) < 13) y = p.y + 18;
-          const estimatedWidth = name.length * 6.1;
-          if (anchor === 'start' && x + estimatedWidth > host.clientWidth - 12) { anchor = 'end'; x = p.x - 12; }
-          if (anchor === 'end' && x - estimatedWidth < 8) { anchor = 'start'; x = p.x + 12; }
-          if (leader) labelLayer.append(el('line', {x1:p.x,y1:p.y,x2:x + (anchor === 'end' ? 4 : -4),y2:y - 3,class:'plot-leader'}));
-          labelLayer.append(el('text', {x,y,'text-anchor':anchor,class:'plot-point-label' + (p.row.id === active ? ' is-selected' : '')}, name));
+          const label = el('text', {'data-id':p.row.id,class:'plot-point-label' + (p.row.id === active ? ' is-selected' : '')});
+          label.append(el('tspan',{x:0,y:0,class:'plot-label-model'},p.row.model));
+          if (modelCounts.get(p.row.model) > 1 || p.row.track === 'tool-assisted') {
+            const setting = p.row.effort + (p.row.track === 'tool-assisted' ? ' · code + web' : '');
+            label.append(el('tspan',{x:0,y:14,class:'plot-label-setting'},setting));
+          }
+          labelLayer.append(label);
+          const preferred = [...(labelOffsets[p.row.id] || [12,-12])];
+          const rightOffset = p.row.token_usage_is_lower_bound ? 20 : 12;
+          if (preferred[0] > 0) preferred[0] = Math.max(preferred[0],rightOffset);
+          const candidates = [preferred];
+          for (const dy of [-12, 4, -28, 22, -44, 38]) {
+            candidates.push([rightOffset,dy,'start'],[-12,dy,'end']);
+          }
+          let best;
+          for (const [dx,dy,anchor='start'] of candidates) {
+            label.setAttribute('text-anchor',anchor);
+            const box = label.getBBox();
+            let x=p.x+dx, y=p.y+dy;
+            x=Math.max(60-box.x,Math.min(x,width-12-box.x-box.width));
+            y=Math.max(31-box.y,Math.min(y,height-72-box.y-box.height));
+            const bounds={left:x+box.x-3,right:x+box.x+box.width+3,top:y+box.y-3,bottom:y+box.y+box.height+3};
+            let penalty=occupied.reduce((sum,other)=>sum+overlap(bounds,other)*100,0);
+            for (const point of geometry) {
+              penalty+=overlap(bounds,{left:point.x-9,right:point.x+9,top:point.y-9,bottom:point.y+9})*100;
+              if (point.row.token_usage_is_lower_bound) penalty+=overlap(bounds,{left:point.x+5,right:point.x+17,top:point.y-18,bottom:point.y-3})*100;
+            }
+            if (bounds.top<referenceY+5 && bounds.bottom>referenceY-5) penalty+=10000;
+            penalty+=Math.abs(dx-preferred[0])+Math.abs(dy-preferred[1]);
+            if (!best || penalty<best.penalty) best={x,y,anchor,bounds,penalty};
+          }
+          const {x,y,anchor,bounds}=best;
+          label.setAttribute('text-anchor',anchor);
+          label.setAttribute('transform',`translate(${x} ${y})`);
+          occupied.push(bounds);
+          const nearX=Math.max(bounds.left,Math.min(p.x,bounds.right));
+          const nearY=Math.max(bounds.top,Math.min(p.y,bounds.bottom));
+          if (Math.hypot(nearX-p.x,nearY-p.y)>16) labelLayer.insertBefore(el('line',{x1:p.x,y1:p.y,x2:nearX,y2:nearY,class:'plot-leader'}),label);
         }
       }
       function draw() {
         frame = 0;
         const width = host.clientWidth;
         if (width < 1) return;
-        const compact = width < 640, height = compact ? 355 : 445;
+        const compact = width < 640, height = compact ? 355 : 480;
         dimensions={width,height};
         const margin = {left:compact ? 40 : 52,right:compact ? 18 : 30,top:34,bottom:62};
         const plotWidth = width - margin.left - margin.right, plotHeight = height - margin.top - margin.bottom;
@@ -156,6 +186,7 @@
       document.addEventListener('keydown',event=>{if(event.key==='Escape')hideTooltip();});
       window.addEventListener('scroll',hideTooltip,{passive:true});
       new ResizeObserver(schedule).observe(host);
+      if (document.fonts) document.fonts.ready.then(schedule);
       draw();
     }
   };
