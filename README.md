@@ -24,12 +24,12 @@ constructions earn higher scores, including after the reference is surpassed.
   products, algebraic representations and certificates.
 
 Version 1 samples **69 distinct instances from 14 families**, with **one response
-per instance and configuration**. The paper evaluates **8 models in 12 tool-free
-configurations**, plus Astra high and Luna high with code and web access.
+per instance and configuration**. The paper evaluates **9 models in 14 tool-free
+configurations**, plus Astra high, Luna high and Opus 5.5 high with code and web access.
 Thirty instances use published frontiers to compare models directly with existing mathematical results. The other 39 use parameters outside published construction tables to reduce direct retrieval of ready-made answers and test adaptation of known methods; verified construction baselines provide their references.
 Across the 30 published-frontier instances, every configuration has a 0%
 breakthrough rate, while continuous relative quality separates tool-free models from 0.07 to 0.76
-and reaches 0.998 for Astra and 0.961 for Luna with tools.
+and reaches 0.998 for Astra, 0.961 for Luna and 0.985 for Opus 5.5 with tools.
 
 ## Quick start
 
@@ -109,6 +109,8 @@ The Published frontiers column reports mean relative quality over those 30 insta
 | GPT-6 Astra | high | 91.90 | 0.76 | 100.0% |
 | GPT-6 Astra | medium | 75.34 | 0.66 | 98.6% |
 | Claude Fable 5.1 | medium | 71.90 | 0.59 | 85.5% |
+| Claude Opus 5.5 | high | 69.81 | 0.57 | 82.6% |
+| Claude Opus 5.5 | medium | 66.70 | 0.58 | 88.4% |
 | DeepSeek V4.1 Flash | high | 44.90 | 0.38 | 75.4% |
 | Claude Fable 5.1 | high | 43.73 | 0.54 | 52.2% |
 | Qwen3.8-27B | high | 38.07 | 0.31 | 62.3% |
@@ -120,7 +122,7 @@ The Published frontiers column reports mean relative quality over those 30 insta
 | Qwen3.5-4B | high | 7.55 | 0.07 | 37.7% |
 
 All rows use the same 69-instance suite and a 128k output-token budget, including
-reasoning. Full results, uncertainty intervals and the historical Opus subset
+reasoning. Full results, uncertainty intervals and the historical Opus 5 subset
 are in the paper and [machine-readable results](bench/paper/tables/publication_data.json).
 The [per-instance index](bench/results/published/index.csv) lists each published outcome
 and links it to the saved response, including failures.
@@ -129,15 +131,19 @@ and links it to the saved response, including failures.
 
 | Model | Effort | Score | Published frontiers | Valid |
 |---|---|---:|---:|---:|
+| Claude Opus 5.5 | high | 180.06 | 0.985 | 100.0% |
 | GPT-6 Astra | high | 143.16 | 0.998 | 100.0% |
 | GPT-5.6 Luna | high | 119.35 | 0.961 | 95.7% |
 
-Both models receive the same mathematical prompts on all 69 instances, with four
+All three models receive the same mathematical prompts on all 69 instances, with four
 CPU threads, 16 GiB and two hours per instance, without a cumulative output-token
-cap. Astra matches 29 published frontiers and Luna 23; neither exceeds one.
-They exceed 33 and 25 construction baselines, respectively. The
+cap. Astra matches 29 published frontiers, and Luna and Opus 5.5 each match 23; none exceeds one.
+They exceed 33, 25 and 33 construction baselines, respectively. The
 [tool results](bench/paper/tables/tool_publication_data.json) include all outcomes,
 including Luna's two invalid answers and one memory-limit stop without an answer.
+Opus 5.5 has 69 valid submissions; its final covering construction remains valid
+at the two-hour deadline. Claude Code and Codex use different native tool interfaces;
+client versions and usage completeness are recorded with the released results.
 
 ![Construction quality relative to the frontier](bench/paper/figs/fig1_scale.png)
 
@@ -175,7 +181,7 @@ and scoring, and the paper appendix gives illustrated examples and parameters.
 | `bench/refs/`, `bench/frontiers/` | Frozen reference constructions and scoring values |
 | `bench/data/reference_witnesses/` | Verified constructions attaining all 69 reference values |
 | `bench/results/` | Released final responses and evaluation metadata |
-| `bench/results/published/index.csv` | The 966 main-evaluation outcomes and their source records |
+| `bench/results/published/index.csv` | The 1,173 main-evaluation outcomes and their source records |
 | `bench/paper/` | Paper, figures, tables and reproduction scripts |
 | `examples/` | Small runnable construction examples |
 

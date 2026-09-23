@@ -25,7 +25,7 @@ def generate():
     # The main-text zero-breakthrough observation is a rescore of the same calls.
     if any(s["p1"]["binary_breakthrough_rate"] > 0 for s in by_id.values()):
         raise ValueError('New results include published-frontier breakthroughs. Revise the zero-breakthrough prose before rebuilding; retain the new outcomes.')
-    vals = {"FamilyCount": 14, "EvaluatedFamilyCount": 14, "ModelCount": 8, "ConfigCount": len(ORDER),
+    vals = {"FamilyCount": 14, "EvaluatedFamilyCount": 14, "ModelCount": len({REGISTRY[s][1] for s in ORDER}), "ConfigCount": len(ORDER),
             "AThreeCalls": 69, "PanelOneN": 30, "PanelTwoN": 39, "DistinctN": 69,
             "POneMin": f"{min(s['p1']['mean'] for s in by_id.values()):.2f}",
             "POneMax": f"{max(s['p1']['mean'] for s in by_id.values()):.2f}",
@@ -35,6 +35,11 @@ def generate():
             "AstraMedScore": f"{medium['overall']['score']:.2f}",
             "FableScore": f"{by_id['fable']['overall']['score']:.2f}",
             "FableHighScore": f"{by_id['fable_high']['overall']['score']:.2f}",
+            "OpusHighScore": f"{by_id['opus55_high']['overall']['score']:.2f}",
+            "OpusMediumScore": f"{by_id['opus55_medium']['overall']['score']:.2f}",
+            "OpusHighValid": by_id['opus55_high']['accepted'],
+            "OpusMediumValid": by_id['opus55_medium']['accepted'],
+            "OpusHighBudgetStops": sum(r.get('finish_reason')=='length' for r in rows[REGISTRY['opus55_high'][1],REGISTRY['opus55_high'][3]+'#A3'].values()),
             "FableHighBudgetStops": sum(r.get('finish_reason')=='length' for r in rows[REGISTRY['fable_high'][1],REGISTRY['fable_high'][3]+'#A3'].values()),
             "BinaryBreakthroughMaxPct": f"{100*max(s['p1']['binary_breakthrough_rate'] for s in by_id.values()):.0f}",
             "PTwoMin": f"{min(s['p2']['mean'] for s in by_id.values()):.2f}",

@@ -96,7 +96,7 @@ def headline_table(tier="A3"):
                      f"{tool_cell(tool, 'p2')} & {tool['valid']:.2f} & {tool['headroom']:.3f}" + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     open(os.path.join(OUT, "headline_table.tex"), "w").write("\n".join(lines) + "\n")
-    print(f"wrote headline_table.tex: {len(ORDER)} tool-free and two tool-assisted configurations")
+    print(f"wrote headline_table.tex: {len(ORDER)} tool-free and {len(tools)} tool-assisted configurations")
 
 
 if __name__ == "__main__":

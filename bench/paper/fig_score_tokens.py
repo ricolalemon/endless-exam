@@ -70,10 +70,10 @@ def collect():
         sources[tool['source']] = tool['source_sha256']
         systems.append({'id': sid, 'baseline_id': tool['baseline_id'], 'label': tool['label'],
                         'overall_score': tool['overall']['score'],
-                        'reported_output_tokens': tool['usage']['outputTokens'], 'is_lower_bound': False,
-                        'known_usage_instances': 69, 'complete_usage_instances': 69, 'instances': 69,
+                        'reported_output_tokens': tool['usage']['outputTokens'], 'is_lower_bound': not tool['usage_complete'],
+                        'known_usage_instances': 69, 'complete_usage_instances': tool['complete_usage_instances'], 'instances': 69,
                         'records': [{'tier': r['tier'], 'family': r['family'], 'seed': r['seed'],
-                                     'output_tokens': r['usage']['outputTokens'], 'usage_complete': True,
+                                     'output_tokens': r['usage']['outputTokens'], 'usage_complete': r['usage_complete'],
                                      'provenance': 'sum of native response usage over the tool trajectory'}
                                     for r in tool['cases']]})
     return {
@@ -92,10 +92,10 @@ def draw(data, out):
     fig, ax = plt.subplots(figsize=(10.4, 6.7))
     fig.subplots_adjust(left=.095, right=.97, bottom=.18, top=.85)
     fig.text(.095, .948, "Overall score vs. token usage", fontsize=17, weight="bold")
-    fig.text(.095, .904, f"69 instances  ·  {len(P.ORDER)} tool-free configurations  ·  Astra and Luna high with code and web",
+    fig.text(.095, .904, f"69 instances  ·  {len(P.ORDER)} tool-free configurations  ·  3 code-and-web configurations",
              fontsize=10.5, color=T.MUTED)
 
-    ax.set(xlim=(0, 7.35), ylim=(0, 160), xlabel="Reported output tokens across 69 instances (millions)",
+    ax.set(xlim=(0, 7.35), ylim=(0, 200), xlabel="Reported output tokens across 69 instances (millions)",
            ylabel="Overall score")
     ax.xaxis.set_major_locator(MultipleLocator(1))
     ax.yaxis.set_major_locator(MultipleLocator(20))
@@ -114,6 +114,8 @@ def draw(data, out):
         "fable": (10, 10, "left"), "fable_high": (10, -10, "left"), "luna_high": (10, 12, "left"),
         "luna_medium": (10, 12, "left"), "deepseek_low": (0, 12, "center"),
         "deepseek_high": (0, 12, "center"), "qwen38": (0, -20, "center"),
+        "opus55_tools": (10, 10, "left"), "opus55_high": (10, -14, "left"),
+        "opus55_medium": (10, -14, "left"),
     }
     # Separate the three closely spaced Qwen3.5 labels with light leader lines.
     leaders = {"qwen35": (3.35, 24.5, "right"), "qwen9": (4.45, 17.5, "left"),
@@ -156,23 +158,25 @@ def draw(data, out):
 def draw_paper(data):
     """Paper-width vector figure; the LaTeX caption carries the explanatory note."""
     S.apply()
-    fig, ax = plt.subplots(figsize=(S.WIDTH, 2.40))
+    fig, ax = plt.subplots(figsize=(S.WIDTH, 3.10))
     fig.subplots_adjust(left=.10, right=.985, bottom=.17, top=.965)
-    ax.set(xlim=(0, 7.5), ylim=(0, 160), xlabel="Reported output tokens (millions)",
+    ax.set(xlim=(0, 7.5), ylim=(0, 200), xlabel="Reported output tokens (millions)",
            ylabel="Overall score")
     ax.xaxis.set_major_locator(MultipleLocator(1))
-    ax.yaxis.set_major_locator(MultipleLocator(20))
+    ax.yaxis.set_major_locator(MultipleLocator(40))
     ax.grid(axis="y")
     ax.axhline(100, color=T.OCHRE, linewidth=.8, linestyle=(0, (4, 4)), alpha=.7)
     ax.text(7.4, 101.5, "Reference parity", ha="right", fontsize=6.5, color=T.MUTED)
     positions = {
         "astra_tools": (.68, 143, "left"), "luna_tools": (1.10, 120, "left"),
-        "astra_high": (1.23, 89, "left"), "astra_medium": (.49, 66, "left"),
-        "fable": (2.85, 73, "left"), "fable_high": (5.62, 42, "left"), "luna_medium": (.47, 18, "left"),
+        "astra_high": (1.23, 96, "left"), "astra_medium": (.49, 79, "left"),
+        "fable": (2.90, 91, "left"), "fable_high": (5.62, 42, "left"), "luna_medium": (.47, 18, "left"),
         "luna_high": (1.27, 37, "left"), "deepseek_low": (3.49, 48, "center"),
-        "deepseek_high": (5.1, 56, "center"), "qwen38": (7.15, 28, "right"),
+        "deepseek_high": (5.45, 62, "center"), "qwen38": (7.15, 28, "right"),
         "qwen35": (4.55, 23.5, "left"), "qwen9": (4.55, 13.5, "left"),
         "qwen4": (4.55, 5.5, "left"),
+        "opus55_tools": (1.93, 181, "left"), "opus55_medium": (1.34, 63, "left"),
+        "opus55_high": (3.06, 65, "left"),
     }
     for system in data["systems"]:
         sid = system["id"]
@@ -189,9 +193,11 @@ def draw_paper(data):
             text += r"$^{*}$"
         tx, ty, ha = positions[sid]
         kwargs = {}
-        if sid in ("qwen4", "qwen9", "qwen35"):
+        if sid in ("qwen4", "qwen9", "qwen35", "fable", "opus55_high", "opus55_medium", "deepseek_high"):
             kwargs["arrowprops"] = {"arrowstyle": "-", "color": T.NEUTRAL,
                                     "lw": .7, "shrinkA": 3, "shrinkB": 5}
+        if sid == 'astra_high':
+            kwargs['bbox'] = {'facecolor':'white','edgecolor':'none','pad':.2}
         ax.annotate(text, xy=(x, y), xytext=(tx, ty), fontsize=6.8,
                     ha=ha, va="center", linespacing=1.1, **kwargs)
     S.save(fig, "fig_score_tokens")

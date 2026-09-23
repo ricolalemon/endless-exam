@@ -2,8 +2,22 @@
   "instances": 69,
   "families": 14,
   "published": 30,
-  "configurations": 14,
+  "configurations": 17,
   "rows": [
+    {
+      "id": "opus55_tools",
+      "model": "Claude Opus 5.5",
+      "effort": "high",
+      "track": "tool-assisted",
+      "score": 180.05879794613446,
+      "hfr": 0.9850625231363075,
+      "valid": 100.0,
+      "output_tokens": 1702589,
+      "mean_output_tokens": 24675.202898550724,
+      "token_usage_is_lower_bound": true,
+      "token_usage_known_instances": 69,
+      "token_usage_complete_instances": 68
+    },
     {
       "id": "astra_tools",
       "model": "GPT-6 Astra",
@@ -70,6 +84,34 @@
       "valid": 85.5072463768116,
       "output_tokens": 2655322,
       "mean_output_tokens": 38482.92753623189,
+      "token_usage_is_lower_bound": false,
+      "token_usage_known_instances": 69,
+      "token_usage_complete_instances": 69
+    },
+    {
+      "id": "opus55_high",
+      "model": "Claude Opus 5.5",
+      "effort": "high",
+      "track": "tool-free",
+      "score": 69.81016939692064,
+      "hfr": 0.5738437106351996,
+      "valid": 82.6086956521739,
+      "output_tokens": 2843896,
+      "mean_output_tokens": 41215.884057971016,
+      "token_usage_is_lower_bound": false,
+      "token_usage_known_instances": 69,
+      "token_usage_complete_instances": 69
+    },
+    {
+      "id": "opus55_medium",
+      "model": "Claude Opus 5.5",
+      "effort": "medium",
+      "track": "tool-free",
+      "score": 66.69944099739205,
+      "hfr": 0.5785533665514241,
+      "valid": 88.40579710144928,
+      "output_tokens": 1103648,
+      "mean_output_tokens": 15994.898550724638,
       "token_usage_is_lower_bound": false,
       "token_usage_known_instances": 69,
       "token_usage_complete_instances": 69
@@ -213,12 +255,12 @@
   "tracks": {
     "tool-free": {
       "label": "Without tools",
-      "configurations": 12,
+      "configurations": 14,
       "protocol": "One response per instance \u00b7 128k output tokens, including reasoning."
     },
     "tool-assisted": {
       "label": "Code + web",
-      "configurations": 2,
+      "configurations": 3,
       "protocol": "Per instance: 4 CPU threads \u00b7 16 GiB memory \u00b7 2 hours \u00b7 no cumulative output-token cap."
     }
   }

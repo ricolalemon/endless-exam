@@ -27,7 +27,8 @@ METRICS = {"published": T.OCHRE, "stand_in": T.PRIMARY, "valid": T.PRIMARY,
            "raw_search": T.NEUTRAL, "retained_search": T.MUTED, "best_model": T.OCHRE}
 MARKERS = {"qwen4": "v", "qwen9": ">", "qwen35": "^", "qwen38": "s",
            "luna_medium": "o", "luna_high": "o", "deepseek_low": "P", "deepseek_high": "P",
-           "fable": "h", "fable_high": "h", "astra_medium": "D", "astra_high": "D", "opus": "*"}
+           "fable": "h", "fable_high": "h", "astra_medium": "D", "astra_high": "D", "opus": "*",
+           "opus55_medium": "p", "opus55_high": "p"}
 OPUS_COLOR = T.OPUS_COLOR
 EFFORT_LINES = {"low": "-", "medium": "-", "high": (0, (4, 1.8)), "xhigh": (0, (4, 1.5, 1, 1.5))}
 

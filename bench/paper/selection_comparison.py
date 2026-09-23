@@ -27,10 +27,10 @@ def main():
         path = ROOT / f"bench/frontiers/{snapshot}.json"
         result["snapshots"][selection] = {"file": str(path.relative_to(ROOT)), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
         fams, lit, tf = split_families(ref, selection)
-        # This paired control experiment includes only the configurations whose
-        # Kakeya controls were collected; the new formal-only high run has none.
-        from publication_data import REGISTRY
-        control_systems=[s for s in SYSTEMS if s[:2] != (REGISTRY['fable_high'][1],REGISTRY['fable_high'][3])]
+        # Formal-only collections have no additional Kakeya controls. Keep this
+        # historical sensitivity analysis restricted to its paired observations.
+        control_systems=[s for s in SYSTEMS if any(family=='kakeya'
+                         for family,seed in rows.get((s[0],s[1]+'#A3'),{}))]
         for model, config, name, _ in [*control_systems, *EXTRA]:
             cfg = config + "#A3"
             selected = [r for (f, _), r in rows.get((model,cfg), {}).items() if f in expand_groups(fams,selection)]

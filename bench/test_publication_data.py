@@ -9,6 +9,25 @@ import publication_data as P
 from openceiling import FAMILIES, frontier_ratio
 
 class PublicationTests(unittest.TestCase):
+    def test_opus55_admission_preserves_audited_scores_and_deadline_answer(self):
+        from tool_results import load
+        free=P.summaries(['opus55_medium','opus55_high'])
+        self.assertAlmostEqual(free['opus55_medium']['overall']['score'],66.69944099739205)
+        self.assertAlmostEqual(free['opus55_high']['overall']['score'],69.81016939692064)
+        self.assertEqual((free['opus55_medium']['accepted'],free['opus55_high']['accepted']),(61,57))
+        tool=load('opus55_tools')
+        self.assertAlmostEqual(tool['overall']['score'],180.05879794613446)
+        self.assertEqual((tool['accepted'],tool['p1']['above'],tool['p1']['equal'],tool['p2']['above']),(69,0,23,33))
+        self.assertEqual(tool['usage']['outputTokens'],1702589)
+        self.assertEqual(tool['complete_usage_instances'],68)
+        final=next(r for r in tool['cases'] if r['call_id']=='a3-covering-1')
+        self.assertEqual((final['finish_reason'],final['valid'],final['objective'],final['reference_ratio']),('resource_budget',True,225,1))
+        self.assertFalse(final['usage_complete'])
+        self.assertEqual(tool['protocol']['cpu_threads'],4)
+        self.assertEqual(tool['protocol']['memory_gib'],16)
+        self.assertEqual(tool['protocol']['deadline_seconds'],7200)
+        self.assertEqual(tool['protocol']['cli_version'],'2.1.280 (Claude Code)')
+
     def test_gap_progress_uses_fixed_witness_references_and_proven_bounds(self):
         import math
         from tool_results import load_all
@@ -128,7 +147,7 @@ class PublicationTests(unittest.TestCase):
     def test_two_tool_models_share_the_same_protocol_and_instances(self):
         from tool_results import load_all
         tools = load_all()
-        self.assertEqual(set(tools), {'astra_tools', 'luna_tools'})
+        self.assertEqual(set(tools), {'astra_tools', 'luna_tools', 'opus55_tools'})
         astra, luna = tools['astra_tools'], tools['luna_tools']
         self.assertEqual(astra['protocol'], luna['protocol'])
         pairs = list(zip(astra['cases'], luna['cases']))
@@ -142,11 +161,16 @@ class PublicationTests(unittest.TestCase):
     def test_score_token_figure_contains_both_full_tool_runs(self):
         from fig_score_tokens import collect
         data = collect()
-        self.assertEqual(len(data['systems']), 14)
+        self.assertEqual(len(data['systems']), 17)
         systems = {s['id']: s for s in data['systems']}
         self.assertEqual(systems['luna_tools']['reported_output_tokens'], 866731)
         self.assertEqual(systems['astra_tools']['reported_output_tokens'], 445123)
         self.assertFalse(systems['luna_tools']['is_lower_bound'])
+        self.assertEqual(systems['opus55_tools']['reported_output_tokens'], 1702589)
+        self.assertTrue(systems['opus55_tools']['is_lower_bound'])
+        self.assertEqual(systems['opus55_tools']['complete_usage_instances'], 68)
+        self.assertFalse(systems['opus55_high']['is_lower_bound'])
+        self.assertFalse(systems['opus55_medium']['is_lower_bound'])
         self.assertTrue(systems['luna_high']['is_lower_bound'])
 
     def test_tool_track_uses_same_instances_and_fixed_references(self):
@@ -159,7 +183,7 @@ class PublicationTests(unittest.TestCase):
         self.assertAlmostEqual(tool['overall']['score'], 100 * (30 * tool['p1']['mean'] + 39 * tool['p2']['mean']) / 69)
         self.assertAlmostEqual(100 * sum(r['without_tools_ratio'] for r in tool['cases']) / 69,
                                P.summaries(['astra_high'])['astra_high']['overall']['score'])
-        self.assertEqual(len(P.ORDER), 12)
+        self.assertEqual(len(P.ORDER), 14)
 
     def test_tool_usage_includes_reasoning_once_and_preserves_submission(self):
         from tool_results import load
@@ -173,7 +197,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_exact_formal_scope_and_cross_tier_source_mapping(self):
         refs, rows = P.load_formal()
-        self.assertEqual(len(refs),69);self.assertEqual(len(rows),12)
+        self.assertEqual(len(refs),69);self.assertEqual(len(rows),14)
         self.assertEqual(len({(f,json.dumps(r['params'],sort_keys=True)) for (f,s),r in refs.items()}),69)
         for rs in rows.values():
             self.assertEqual(len(rs),69)
@@ -229,8 +253,8 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(s['overall']['n'],45)
         self.assertAlmostEqual(s['overall']['score'],100*(15*s['p1']['mean']+30*s['p2']['mean'])/45)
 
-    def test_budget_failures_remain_zero_and_codes_are_96(self):
-        cases,rows=P.code_data();self.assertEqual(len(cases),8);self.assertEqual(len(rows),96)
+    def test_budget_failures_remain_zero_and_all_code_configurations_are_present(self):
+        cases,rows=P.code_data();self.assertEqual(len(cases),8);self.assertEqual(len(rows),8*len(P.ORDER))
         fable=[r for r in rows if r['system']=='fable' and r['family']=='shannon']
         self.assertEqual([r['ratio'] for r in fable],[0,0,0,1])
         self.assertEqual([r['finish_reason'] for r in fable[:2]],['length','length'])

@@ -3455,6 +3455,8 @@
           "without_tools_valid": true
         }
       ],
+      "usage_complete": true,
+      "complete_usage_instances": 69,
       "source": "bench/results/tool-assisted/astra-high-v1.json",
       "source_sha256": "5f1cfaff774d33e5135007d6c4fd5088b5aab1c53469abd7687026b58bb960a8"
     },
@@ -7048,8 +7050,3747 @@
           "without_tools_valid": true
         }
       ],
+      "usage_complete": true,
+      "complete_usage_instances": 69,
       "source": "bench/results/tool-assisted/luna-high-v1.json",
       "source_sha256": "fdf3f35e11a112b97a1691febe9e9f38622858c0dea3a9a0c5b2b303b92e9706"
+    },
+    "opus55_tools": {
+      "id": "opus55_tools",
+      "baseline_id": "opus55_high",
+      "label": "Claude Opus 5.5 high + tools",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "track": "tool-assisted",
+      "overall": {
+        "n": 69,
+        "score": 180.05879794613446,
+        "ci": [
+          126.30352338998495,
+          270.92267732199105
+        ]
+      },
+      "p1": {
+        "n": 30,
+        "mean": 0.9850625231363075,
+        "ci": [
+          0.9651033770509093,
+          0.9978987200502215
+        ],
+        "above": 0,
+        "equal": 23
+      },
+      "p2": {
+        "n": 39,
+        "mean": 2.427915253557527,
+        "ci": [
+          1.516935736943534,
+          4.1030823879656095
+        ],
+        "above": 33,
+        "equal": 6
+      },
+      "valid": 1.0,
+      "accepted": 69,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.07452701211434165,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.14028614045052545
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.18563996696046484
+      },
+      "headroom": 0.07452701211434165,
+      "headroom_instances": 64,
+      "improved": 62,
+      "tied": 7,
+      "declined": 0,
+      "without_tools_score": 69.81016939692064,
+      "usage": {
+        "inputTokens": 157011011,
+        "cachedInputTokens": 149741729,
+        "cacheWriteInputTokens": 2565166,
+        "outputTokens": 1702589,
+        "reasoningOutputTokens": 668352,
+        "totalTokens": 158713600
+      },
+      "protocol": {
+        "tools": [
+          "code",
+          "web"
+        ],
+        "cpu_threads": 4,
+        "memory_gib": 16,
+        "deadline_seconds": 7200,
+        "cumulative_output_token_cap": null,
+        "cli_version": "2.1.280 (Claude Code)",
+        "request_max_retries": 4,
+        "stream_max_retries": null,
+        "prompt_policy": "Same mathematical prompt and answer formats; remove no-tools instruction and ask for /workspace/answer.json. No reference values or budget reminders.",
+        "response_policy": "One agent trajectory per instance; score its submitted construction at completion or deadline.",
+        "usage_policy": "Native modelUsage includes web-search model usage; final streamed usage is retained as a lower bound when that aggregate is missing.",
+        "process_limit": 128,
+        "max_submission_bytes": 33554432,
+        "verification_seconds": 60,
+        "collection_date": "2026-09-22",
+        "cli": "Claude Code",
+        "native_per_response_output_limit": 128000,
+        "execution": "Native WebSearch and an MCP shell in the isolated CPU environment; no local file tools or subagents.",
+        "maximum_collection_concurrency": 14
+      },
+      "cases": [
+        {
+          "call_id": "a3-capset-0",
+          "instance_id": "capset-e561943a0230",
+          "tier": "A3",
+          "seed": 0,
+          "family": "capset",
+          "family_group": "capset",
+          "params": {
+            "d": 10
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 2432,
+          "valid": true,
+          "objective": 2240,
+          "reference_ratio": 0.9210526315789473,
+          "verification": {
+            "primary": [
+              true,
+              2240,
+              ""
+            ],
+            "independent": [
+              true,
+              2240
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 85.92120289802551,
+          "submission_sha256": "dc70cd7f8b40a4ea561441b5e845b5f15aa0b41b44aa9bec497bd46a569a0161",
+          "source_answer_sha256": "43955ae1610ae35659af857f40e98f22ae8133c64ae05a7fd936101775706ef5",
+          "usage": {
+            "inputTokens": 141873,
+            "cachedInputTokens": 37315,
+            "cacheWriteInputTokens": 12098,
+            "outputTokens": 7670,
+            "reasoningOutputTokens": 2594,
+            "totalTokens": 149543
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1.577864,
+          "model_responses": 6,
+          "code_commands": 4,
+          "web_actions": 4,
+          "resource_result": "success",
+          "without_tools_ratio": 0.7845394736842105,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-capset-2",
+          "instance_id": "capset-fb287354fb10",
+          "tier": "A3",
+          "seed": 2,
+          "family": "capset",
+          "family_group": "capset",
+          "params": {
+            "d": 11
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 5504,
+          "valid": true,
+          "objective": 5488,
+          "reference_ratio": 0.997093023255814,
+          "verification": {
+            "primary": [
+              true,
+              5488,
+              ""
+            ],
+            "independent": [
+              true,
+              5488
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 187.5006160736084,
+          "submission_sha256": "f5af8e0f0f50b69e14bfaf7997c769a806af96582f537a85c3b878e56be92c6c",
+          "source_answer_sha256": "620a64d8cdf42977476ca9eaeba5a73956111277be5915a2016dc47c812dd157",
+          "usage": {
+            "inputTokens": 559251,
+            "cachedInputTokens": 178694,
+            "cacheWriteInputTokens": 29872,
+            "outputTokens": 8498,
+            "reasoningOutputTokens": 4317,
+            "totalTokens": 567749
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 79.25109,
+          "model_responses": 9,
+          "code_commands": 4,
+          "web_actions": 8,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9156976744186046,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-labs-0",
+          "instance_id": "labs-8e3bca55269d",
+          "tier": "A3",
+          "seed": 0,
+          "family": "labs",
+          "family_group": "labs",
+          "params": {
+            "N": 280
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 5.577689243027889,
+          "valid": true,
+          "objective": 6.261980830670926,
+          "reference_ratio": 1.1226837060702874,
+          "verification": {
+            "primary": [
+              true,
+              6.261980830670926,
+              ""
+            ],
+            "independent": [
+              true,
+              6.261980830670926
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 521.9155790805817,
+          "submission_sha256": "bc29591a68bf180fc316a4be2331bce0ac34631bfd361d18e6aa86baa4ede347",
+          "source_answer_sha256": "53f9e4c91aad16ee07b4135c24722798a0bea857ecc6fab7d62e1147f1727a80",
+          "usage": {
+            "inputTokens": 388039,
+            "cachedInputTokens": 369485,
+            "cacheWriteInputTokens": 18492,
+            "outputTokens": 11488,
+            "reasoningOutputTokens": 4115,
+            "totalTokens": 399527
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1944.168008,
+          "model_responses": 31,
+          "code_commands": 24,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-labs-1",
+          "instance_id": "labs-0b0c9e75a95d",
+          "tier": "A3",
+          "seed": 1,
+          "family": "labs",
+          "family_group": "labs",
+          "params": {
+            "N": 375
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 5.919058843336981,
+          "valid": true,
+          "objective": 6.238355070535001,
+          "reference_ratio": 1.0539437494454795,
+          "verification": {
+            "primary": [
+              true,
+              6.238355070535001,
+              ""
+            ],
+            "independent": [
+              true,
+              6.238355070535001
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 1050.3077409267426,
+          "submission_sha256": "ee4e3dc9c493ac15d44ebf670556898130bfc0a3bd51b88ac145c472321d8804",
+          "source_answer_sha256": "471c05f23d96fa61a43d16aae4fc06f5ac529c2b95754769c38ce961f6705660",
+          "usage": {
+            "inputTokens": 524524,
+            "cachedInputTokens": 505546,
+            "cacheWriteInputTokens": 18892,
+            "outputTokens": 13517,
+            "reasoningOutputTokens": 3122,
+            "totalTokens": 538041
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 3968.634845,
+          "model_responses": 43,
+          "code_commands": 22,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-labs-2",
+          "instance_id": "labs-69bcd35b5eda",
+          "tier": "A3",
+          "seed": 2,
+          "family": "labs",
+          "family_group": "labs",
+          "params": {
+            "N": 357
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 5.862419503219871,
+          "valid": true,
+          "objective": 6.261004126547455,
+          "reference_ratio": 1.0679897818824915,
+          "verification": {
+            "primary": [
+              true,
+              6.261004126547455,
+              ""
+            ],
+            "independent": [
+              true,
+              6.261004126547455
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 266.7872941493988,
+          "submission_sha256": "0043c9809549b10bc3d9468ba26436f0859ec5e58bf4247afc0670a034204f59",
+          "source_answer_sha256": "b5d8e394b9e3afc5f9f2b464be7cd943e0464754d0c7087c4fc5b2d5d7685104",
+          "usage": {
+            "inputTokens": 205093,
+            "cachedInputTokens": 192844,
+            "cacheWriteInputTokens": 12203,
+            "outputTokens": 9042,
+            "reasoningOutputTokens": 2456,
+            "totalTokens": 214135
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 911.416097,
+          "model_responses": 23,
+          "code_commands": 20,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9658787986493691,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-labs-3",
+          "instance_id": "labs-112648954874",
+          "tier": "A3",
+          "seed": 3,
+          "family": "labs",
+          "family_group": "labs",
+          "params": {
+            "N": 281
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 5.65299255441008,
+          "valid": true,
+          "objective": 8.5752606429192,
+          "reference_ratio": 1.5169417897480453,
+          "verification": {
+            "primary": [
+              true,
+              8.5752606429192,
+              ""
+            ],
+            "independent": [
+              true,
+              8.5752606429192
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 269.7923288345337,
+          "submission_sha256": "ff4a3f20745757f280c8f479113ca7dae59b18a917586681012e6a19dafd5fda",
+          "source_answer_sha256": "6482e13fad568da13470fe8880b8f398e12d6ab326525eddad0af4bf59b91b31",
+          "usage": {
+            "inputTokens": 305283,
+            "cachedInputTokens": 268692,
+            "cacheWriteInputTokens": 23082,
+            "outputTokens": 11387,
+            "reasoningOutputTokens": 2828,
+            "totalTokens": 316670
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 935.261901,
+          "model_responses": 20,
+          "code_commands": 18,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-labs-4",
+          "instance_id": "labs-824c59888322",
+          "tier": "A3",
+          "seed": 4,
+          "family": "labs",
+          "family_group": "labs",
+          "params": {
+            "N": 240
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 5.858421480878763,
+          "valid": true,
+          "objective": 6.25,
+          "reference_ratio": 1.0668402777777777,
+          "verification": {
+            "primary": [
+              true,
+              6.25,
+              ""
+            ],
+            "independent": [
+              true,
+              6.25
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 623.6237242221832,
+          "submission_sha256": "ff15f014fc8ba62b98321b292befeaa8d818c579304f028afe61b7153ffde362",
+          "source_answer_sha256": "9c96bad903be5495f6537a0935fe69fc450fd1c9a5e9337366b964c61b45ab72",
+          "usage": {
+            "inputTokens": 409289,
+            "cachedInputTokens": 393938,
+            "cacheWriteInputTokens": 15279,
+            "outputTokens": 10424,
+            "reasoningOutputTokens": 2590,
+            "totalTokens": 419713
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 2375.555918,
+          "model_responses": 36,
+          "code_commands": 27,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9310606060606059,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn-0",
+          "instance_id": "heilbronn-c4d41ce5a93d",
+          "tier": "A3",
+          "seed": 0,
+          "family": "heilbronn",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 46
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.00047375,
+          "valid": true,
+          "objective": 0.00097898,
+          "reference_ratio": 2.066448548812665,
+          "verification": {
+            "primary": [
+              true,
+              0.00097898,
+              ""
+            ],
+            "independent": [
+              true,
+              0.00097898
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 569.761757850647,
+          "submission_sha256": "a5ac508fb12a8cdd5cc474b0f2196b787544e039b864537c769e5204f1f8eb0d",
+          "source_answer_sha256": "c279f5bf3fc4f0bf40edef68ac2f9c9c7c7363c3b0fd10e3a41d96cae2c7bb23",
+          "usage": {
+            "inputTokens": 432478,
+            "cachedInputTokens": 414022,
+            "cacheWriteInputTokens": 18388,
+            "outputTokens": 11163,
+            "reasoningOutputTokens": 2624,
+            "totalTokens": 443641
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 537.074017,
+          "model_responses": 34,
+          "code_commands": 32,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.49698153034300796,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn-1",
+          "instance_id": "heilbronn-0c621382b805",
+          "tier": "A3",
+          "seed": 1,
+          "family": "heilbronn",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 26
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.002620975,
+          "valid": true,
+          "objective": 0.00756784,
+          "reference_ratio": 2.8874140348534416,
+          "verification": {
+            "primary": [
+              true,
+              0.00756784,
+              ""
+            ],
+            "independent": [
+              true,
+              0.00756784
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 189.22488403320312,
+          "submission_sha256": "21a2af2731f06351e0ce3f4545bc41ffb0e4d3d36d959cb497cbf54b908a3ece",
+          "source_answer_sha256": "f649e3d8b37f813b490ff238de3acae10bcd0fde91d0e905d0eea60bdb3f47b6",
+          "usage": {
+            "inputTokens": 397767,
+            "cachedInputTokens": 172580,
+            "cacheWriteInputTokens": 17680,
+            "outputTokens": 9876,
+            "reasoningOutputTokens": 1768,
+            "totalTokens": 407643
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 523.249122,
+          "model_responses": 17,
+          "code_commands": 14,
+          "web_actions": 6,
+          "resource_result": "success",
+          "without_tools_ratio": 0.2724177071509648,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn-2",
+          "instance_id": "heilbronn-a5c5c8aa2e3f",
+          "tier": "A3",
+          "seed": 2,
+          "family": "heilbronn",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 40
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.0006907,
+          "valid": true,
+          "objective": 0.0012384,
+          "reference_ratio": 1.7929636600550165,
+          "verification": {
+            "primary": [
+              true,
+              0.0012384,
+              ""
+            ],
+            "independent": [
+              true,
+              0.0012384
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 502.4541392326355,
+          "submission_sha256": "572a60fa5cb81a9bf0a09904ebefbe1daf76ce419f34f75b60951a30205f83f3",
+          "source_answer_sha256": "94967b600d0eb61c24ea40d03a22b985ab11deadf445e84fd317f5b3f969029b",
+          "usage": {
+            "inputTokens": 302487,
+            "cachedInputTokens": 289925,
+            "cacheWriteInputTokens": 12498,
+            "outputTokens": 8938,
+            "reasoningOutputTokens": 1532,
+            "totalTokens": 311425
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 467.075338,
+          "model_responses": 32,
+          "code_commands": 25,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.46329810337338934,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn-3",
+          "instance_id": "heilbronn-d9588eea537f",
+          "tier": "A3",
+          "seed": 3,
+          "family": "heilbronn",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 50
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.0002857,
+          "valid": true,
+          "objective": 0.001699965,
+          "reference_ratio": 5.9501750087504375,
+          "verification": {
+            "primary": [
+              true,
+              0.001699965,
+              ""
+            ],
+            "independent": [
+              true,
+              0.001699965
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2138.187952041626,
+          "submission_sha256": "9e5863d0b29c752863e9b8499b44cd5a1c26ca257f955accdb943a7210be9563",
+          "source_answer_sha256": "8b9c66478430d9fec3251b42fb3fd28c79ec24917cbe349299ff5b11ff14867b",
+          "usage": {
+            "inputTokens": 3802573,
+            "cachedInputTokens": 3686372,
+            "cacheWriteInputTokens": 52603,
+            "outputTokens": 35932,
+            "reasoningOutputTokens": 8635,
+            "totalTokens": 3838505
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 7700.807782,
+          "model_responses": 118,
+          "code_commands": 84,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 0.6854742737136856,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn-4",
+          "instance_id": "heilbronn-ce0964a3b547",
+          "tier": "A3",
+          "seed": 4,
+          "family": "heilbronn",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 48
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.00037548,
+          "valid": true,
+          "objective": 0.00167845,
+          "reference_ratio": 4.470144881218707,
+          "verification": {
+            "primary": [
+              true,
+              0.00167845,
+              ""
+            ],
+            "independent": [
+              true,
+              0.00167845
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2283.024795770645,
+          "submission_sha256": "d43d1691b0b05adb7bc7b3249bef847074abafc134c6da9ab09888092c2a96ec",
+          "source_answer_sha256": "562463e9443e54af96e42f6e19bdacc1f27bd841a2ec739a1563994df9083c1b",
+          "usage": {
+            "inputTokens": 2188717,
+            "cachedInputTokens": 2072158,
+            "cacheWriteInputTokens": 51688,
+            "outputTokens": 32351,
+            "reasoningOutputTokens": 6229,
+            "totalTokens": 2221068
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 8036.634857,
+          "model_responses": 79,
+          "code_commands": 98,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 0.4908916586768936,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-kissing-0",
+          "instance_id": "kissing-7c7466431087",
+          "tier": "A3",
+          "seed": 0,
+          "family": "kissing",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 14
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 1932,
+          "valid": true,
+          "objective": 1932,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              1932,
+              ""
+            ],
+            "independent": [
+              true,
+              1932
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 134.86990332603455,
+          "submission_sha256": "856cae4bbdf0d47623f75ac2a6c85d430883adcd91fc3cda51ddebc8d0e95b64",
+          "source_answer_sha256": "205a45231e486650f4ae6362326f619b256617423881c0b0d56d91786d51ad7a",
+          "usage": {
+            "inputTokens": 512955,
+            "cachedInputTokens": 276504,
+            "cacheWriteInputTokens": 28690,
+            "outputTokens": 11255,
+            "reasoningOutputTokens": 4601,
+            "totalTokens": 524210
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 9.430226,
+          "model_responses": 17,
+          "code_commands": 15,
+          "web_actions": 6,
+          "resource_result": "success",
+          "without_tools_ratio": 0.7681159420289855,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-kissing-1",
+          "instance_id": "kissing-0e2702baa0cb",
+          "tier": "A3",
+          "seed": 1,
+          "family": "kissing",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 15
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 2564,
+          "valid": true,
+          "objective": 2564,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              2564,
+              ""
+            ],
+            "independent": [
+              true,
+              2564
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 1912.5222239494324,
+          "submission_sha256": "d0629be0f9a6d55c8b15524479153563a9030dc6fef7c1a7eab751191a8b5137",
+          "source_answer_sha256": "a1af246f1d322cc521984dbb8efbc0b8292312c311ee239d75e5c8843863e296",
+          "usage": {
+            "inputTokens": 7576977,
+            "cachedInputTokens": 7184926,
+            "cacheWriteInputTokens": 151873,
+            "outputTokens": 116537,
+            "reasoningOutputTokens": 83885,
+            "totalTokens": 7693514
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 2648.788078,
+          "model_responses": 89,
+          "code_commands": 68,
+          "web_actions": 12,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9126365054602185,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-corners-0",
+          "instance_id": "corners-5c0a651526bb",
+          "tier": "A3",
+          "seed": 0,
+          "family": "corners",
+          "family_group": "corners",
+          "params": {
+            "n": 138
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 3120,
+          "valid": true,
+          "objective": 3364,
+          "reference_ratio": 1.0782051282051281,
+          "verification": {
+            "primary": [
+              true,
+              3364,
+              ""
+            ],
+            "independent": [
+              true,
+              3364
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2739.8097620010376,
+          "submission_sha256": "6ea4c8d1be5ee3f6cfb914aad8e751d29c4bf9d212e973941a8d11e83bcf26ac",
+          "source_answer_sha256": "c017912f5f84f9b8d45f6ac91699bf79110b553b1a6f1f1161368ffeed2c8ff0",
+          "usage": {
+            "inputTokens": 2671245,
+            "cachedInputTokens": 2462954,
+            "cacheWriteInputTokens": 37072,
+            "outputTokens": 24628,
+            "reasoningOutputTokens": 4557,
+            "totalTokens": 2695873
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 9739.21367,
+          "model_responses": 107,
+          "code_commands": 34,
+          "web_actions": 5,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-corners-1",
+          "instance_id": "corners-df38f45e8b38",
+          "tier": "A3",
+          "seed": 1,
+          "family": "corners",
+          "family_group": "corners",
+          "params": {
+            "n": 183
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 4698,
+          "valid": true,
+          "objective": 5377,
+          "reference_ratio": 1.1445295870583228,
+          "verification": {
+            "primary": [
+              true,
+              5377,
+              ""
+            ],
+            "independent": [
+              true,
+              5377
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2712.992949962616,
+          "submission_sha256": "0704199987dc080a681b285abaf41c19e7314c7ff87da9289f6ed3968f25bed0",
+          "source_answer_sha256": "b6eceea0eafbd83d76c0ea37f7d6de70723ae5cf1b93bd41362cc65c54248ca0",
+          "usage": {
+            "inputTokens": 2204850,
+            "cachedInputTokens": 2173039,
+            "cacheWriteInputTokens": 31605,
+            "outputTokens": 18527,
+            "reasoningOutputTokens": 2885,
+            "totalTokens": 2223377
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 9394.627813,
+          "model_responses": 103,
+          "code_commands": 34,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0076628352490422,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-corners-2",
+          "instance_id": "corners-dce415bc82c9",
+          "tier": "A3",
+          "seed": 2,
+          "family": "corners",
+          "family_group": "corners",
+          "params": {
+            "n": 150
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 3504,
+          "valid": true,
+          "objective": 3845,
+          "reference_ratio": 1.0973173515981736,
+          "verification": {
+            "primary": [
+              true,
+              3845,
+              ""
+            ],
+            "independent": [
+              true,
+              3845
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2901.2697439193726,
+          "submission_sha256": "6d051ea3c525bcdadf551fc3f912f3bffe4b8adc7b262af3320c74801bcaa5cb",
+          "source_answer_sha256": "73a437f8c7dde07a73a0d9de768b73561bebf08e3dac66f7e98365a587c9a961",
+          "usage": {
+            "inputTokens": 2026222,
+            "cachedInputTokens": 1986175,
+            "cacheWriteInputTokens": 39865,
+            "outputTokens": 23302,
+            "reasoningOutputTokens": 4520,
+            "totalTokens": 2049524
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 10642.413334,
+          "model_responses": 91,
+          "code_commands": 38,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.018835616438356,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-corners-3",
+          "instance_id": "corners-299b1caf450c",
+          "tier": "A3",
+          "seed": 3,
+          "family": "corners",
+          "family_group": "corners",
+          "params": {
+            "n": 162
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 3888,
+          "valid": true,
+          "objective": 4358,
+          "reference_ratio": 1.1208847736625513,
+          "verification": {
+            "primary": [
+              true,
+              4358,
+              ""
+            ],
+            "independent": [
+              true,
+              4358
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 1063.5877952575684,
+          "submission_sha256": "267ab9df7c85a4acf8cdf410630d82a106ae97003c30e0b65e187e7953bac590",
+          "source_answer_sha256": "6ddd92a8de10c69aac786688fa18ee7f56588f7c474d6b17a0c369d55da100ef",
+          "usage": {
+            "inputTokens": 1085920,
+            "cachedInputTokens": 902137,
+            "cacheWriteInputTokens": 29962,
+            "outputTokens": 19283,
+            "reasoningOutputTokens": 5570,
+            "totalTokens": 1105203
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 3496.309392,
+          "model_responses": 47,
+          "code_commands": 22,
+          "web_actions": 5,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0185185185185186,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-corners-4",
+          "instance_id": "corners-b92c953c9648",
+          "tier": "A3",
+          "seed": 4,
+          "family": "corners",
+          "family_group": "corners",
+          "params": {
+            "n": 185
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 4786,
+          "valid": true,
+          "objective": 5467,
+          "reference_ratio": 1.142290012536565,
+          "verification": {
+            "primary": [
+              true,
+              5467,
+              ""
+            ],
+            "independent": [
+              true,
+              5467
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 584.1735169887543,
+          "submission_sha256": "f80b133bb29be7585109cf68246ec6c341ec71e7a1cbb78869a673f0ad43dbde",
+          "source_answer_sha256": "0ea244ab1b5f2e739411c6268d1608eb5453e954ec12a5d20e28908b2b7ea966",
+          "usage": {
+            "inputTokens": 313138,
+            "cachedInputTokens": 297562,
+            "cacheWriteInputTokens": 15522,
+            "outputTokens": 10168,
+            "reasoningOutputTokens": 2526,
+            "totalTokens": 323306
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1904.768365,
+          "model_responses": 27,
+          "code_commands": 13,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-kissing_theta-0",
+          "instance_id": "kissing_theta-48ea4a32bea2",
+          "tier": "A3",
+          "seed": 0,
+          "family": "kissing_theta",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 12,
+            "cos100": 24
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 28,
+          "valid": true,
+          "objective": 72,
+          "reference_ratio": 2.5714285714285716,
+          "verification": {
+            "primary": [
+              true,
+              72,
+              ""
+            ],
+            "independent": [
+              true,
+              72
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 459.96105098724365,
+          "submission_sha256": "947e1e55b0bf879bfad9d17c667e2590cb534f9eaaf270bca180b7b5a1ccd523",
+          "source_answer_sha256": "2ace994f94a74be5f0299dbbbca5489967a13ac85b42497a2401c112d55d214d",
+          "usage": {
+            "inputTokens": 557241,
+            "cachedInputTokens": 480781,
+            "cacheWriteInputTokens": 26651,
+            "outputTokens": 16903,
+            "reasoningOutputTokens": 6359,
+            "totalTokens": 574144
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 962.793996,
+          "model_responses": 29,
+          "code_commands": 25,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-kissing_theta-1",
+          "instance_id": "kissing_theta-88cc99fc7fbd",
+          "tier": "A3",
+          "seed": 1,
+          "family": "kissing_theta",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 12,
+            "cos100": 39
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 152,
+          "valid": true,
+          "objective": 231,
+          "reference_ratio": 1.519736842105263,
+          "verification": {
+            "primary": [
+              true,
+              231,
+              ""
+            ],
+            "independent": [
+              true,
+              231
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 215.81417274475098,
+          "submission_sha256": "e1a90b7f5d8bacc9966d9641e26d8d13bb0af49b4fa4b0c6d0dd1df47a78d572",
+          "source_answer_sha256": "5c2d3959b116a2cb5463d575a15267f24e68943bbb73af4cb6707fd14e657e57",
+          "usage": {
+            "inputTokens": 202888,
+            "cachedInputTokens": 172822,
+            "cacheWriteInputTokens": 16354,
+            "outputTokens": 10237,
+            "reasoningOutputTokens": 2966,
+            "totalTokens": 213125
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 406.765243,
+          "model_responses": 16,
+          "code_commands": 13,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 1.105263157894737,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-kissing_theta-2",
+          "instance_id": "kissing_theta-18c29aeaf14f",
+          "tier": "A3",
+          "seed": 2,
+          "family": "kissing_theta",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 14,
+            "cos100": 36
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 124,
+          "valid": true,
+          "objective": 343,
+          "reference_ratio": 2.7661290322580645,
+          "verification": {
+            "primary": [
+              true,
+              343,
+              ""
+            ],
+            "independent": [
+              true,
+              343
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 3172.4325008392334,
+          "submission_sha256": "1bf0ad153013343fedf9cde69a12d0a219c80aa3f34c0eb4c9369886e3a1476b",
+          "source_answer_sha256": "c8e1f84b2849893aca3f8519efeb94548886352cc02120d06b6d2a3e27b8fd77",
+          "usage": {
+            "inputTokens": 7066853,
+            "cachedInputTokens": 6970903,
+            "cacheWriteInputTokens": 82134,
+            "outputTokens": 52478,
+            "reasoningOutputTokens": 19554,
+            "totalTokens": 7119331
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 9221.772965,
+          "model_responses": 139,
+          "code_commands": 80,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-kissing_theta-3",
+          "instance_id": "kissing_theta-6cdc8634ec21",
+          "tier": "A3",
+          "seed": 3,
+          "family": "kissing_theta",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 14,
+            "cos100": 39
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 132,
+          "valid": true,
+          "objective": 420,
+          "reference_ratio": 3.1818181818181817,
+          "verification": {
+            "primary": [
+              true,
+              420,
+              ""
+            ],
+            "independent": [
+              true,
+              420
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 874.5922451019287,
+          "submission_sha256": "8d96f6391a1c3a676f090a494214a5461301ab6b8e56452ce55c35c2c96ea0c2",
+          "source_answer_sha256": "48ce7bb17905caabc9ce27e2f81db4c3ca5d31d0490c19bc56098da0aeee2a98",
+          "usage": {
+            "inputTokens": 1686926,
+            "cachedInputTokens": 1609811,
+            "cacheWriteInputTokens": 42753,
+            "outputTokens": 18810,
+            "reasoningOutputTokens": 6392,
+            "totalTokens": 1705736
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 961.609076,
+          "model_responses": 53,
+          "code_commands": 35,
+          "web_actions": 2,
+          "resource_result": "success",
+          "without_tools_ratio": 2.696969696969697,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-kissing_theta-4",
+          "instance_id": "kissing_theta-5c1803b86d2d",
+          "tier": "A3",
+          "seed": 4,
+          "family": "kissing_theta",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 12,
+            "cos100": 36
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 152,
+          "valid": true,
+          "objective": 187,
+          "reference_ratio": 1.230263157894737,
+          "verification": {
+            "primary": [
+              true,
+              187,
+              ""
+            ],
+            "independent": [
+              true,
+              187
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 4402.2707352638245,
+          "submission_sha256": "2102a3ad1e27bcbf752a184cf2c8b2a0e717b03ea39b81ea732751de4c014f72",
+          "source_answer_sha256": "8af258cf4a4f378b34d0e39ca4fcf553dc3ca4a9d1649a75c1e201615f09e1b1",
+          "usage": {
+            "inputTokens": 10195008,
+            "cachedInputTokens": 10037778,
+            "cacheWriteInputTokens": 79058,
+            "outputTokens": 56675,
+            "reasoningOutputTokens": 22999,
+            "totalTokens": 10251683
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 14616.764054,
+          "model_responses": 186,
+          "code_commands": 85,
+          "web_actions": 4,
+          "resource_result": "success",
+          "without_tools_ratio": 1.105263157894737,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn_shape-0",
+          "instance_id": "heilbronn_shape-170f6064b3d7",
+          "tier": "A3",
+          "seed": 0,
+          "family": "heilbronn_shape",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 32,
+            "T": [
+              [
+                9026,
+                8197
+              ],
+              [
+                1769,
+                9178
+              ],
+              [
+                7298,
+                1276
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.0014884960025223,
+          "valid": true,
+          "objective": 0.0029664374813478164,
+          "reference_ratio": 1.992909269706537,
+          "verification": {
+            "primary": [
+              true,
+              0.0029664374813478164,
+              ""
+            ],
+            "independent": [
+              true,
+              0.0029664374813478164
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 538.1559269428253,
+          "submission_sha256": "7a3850314a8fbd5bd53f4f8082cdbd4532a735b35b36ac19a62223e48bd0aeb0",
+          "source_answer_sha256": "d0c9cf95f6a545b2d489ed10987ce884106a7b6ba69ec0dd549cbbbd8b8a741d",
+          "usage": {
+            "inputTokens": 299061,
+            "cachedInputTokens": 285710,
+            "cacheWriteInputTokens": 13291,
+            "outputTokens": 8559,
+            "reasoningOutputTokens": 1244,
+            "totalTokens": 307620
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1478.416024,
+          "model_responses": 30,
+          "code_commands": 22,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.45642047513068684,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn_shape-1",
+          "instance_id": "heilbronn_shape-0cef36bc9728",
+          "tier": "A3",
+          "seed": 1,
+          "family": "heilbronn_shape",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 34,
+            "T": [
+              [
+                578,
+                9933
+              ],
+              [
+                8598,
+                7337
+              ],
+              [
+                2075,
+                588
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.0010042824240598402,
+          "valid": true,
+          "objective": 0.0028589084304953536,
+          "reference_ratio": 2.846717578644994,
+          "verification": {
+            "primary": [
+              true,
+              0.0028589084304953536,
+              ""
+            ],
+            "independent": [
+              true,
+              0.0028589084304953536
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 317.4154770374298,
+          "submission_sha256": "fe838379b8b128c0bd13419592deeac242d257d443c67e9abd2defb78167fb92",
+          "source_answer_sha256": "929099e01c8ace9cb6b768401c8220bf96282a793f6ab2fc2951bf51b2f4f607",
+          "usage": {
+            "inputTokens": 392896,
+            "cachedInputTokens": 373182,
+            "cacheWriteInputTokens": 19658,
+            "outputTokens": 14272,
+            "reasoningOutputTokens": 2939,
+            "totalTokens": 407168
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 999.092384,
+          "model_responses": 28,
+          "code_commands": 27,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.5346318223218665,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn_shape-2",
+          "instance_id": "heilbronn_shape-0e86da8665f2",
+          "tier": "A3",
+          "seed": 2,
+          "family": "heilbronn_shape",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 31,
+            "T": [
+              [
+                411,
+                7999
+              ],
+              [
+                9004,
+                9890
+              ],
+              [
+                3031,
+                713
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.0016863811501138092,
+          "valid": true,
+          "objective": 0.002748426661461452,
+          "reference_ratio": 1.6297778596943926,
+          "verification": {
+            "primary": [
+              true,
+              0.002748426661461452,
+              ""
+            ],
+            "independent": [
+              true,
+              0.002748426661461452
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 667.3346722126007,
+          "submission_sha256": "9c8da91944ef4c1ff7a020eb8a954217c9f3e7af372453575ec5e93a1d484548",
+          "source_answer_sha256": "fbdb20a77a062c97218f90234e4763218e29e7b232e06ebb275d5aec8558dd18",
+          "usage": {
+            "inputTokens": 580598,
+            "cachedInputTokens": 561450,
+            "cacheWriteInputTokens": 19064,
+            "outputTokens": 12066,
+            "reasoningOutputTokens": 1920,
+            "totalTokens": 592664
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 2525.971969,
+          "model_responses": 42,
+          "code_commands": 33,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.45370687309653585,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn_shape-3",
+          "instance_id": "heilbronn_shape-4efe4b6d2f48",
+          "tier": "A3",
+          "seed": 3,
+          "family": "heilbronn_shape",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 40,
+            "T": [
+              [
+                7922,
+                8793
+              ],
+              [
+                9917,
+                1548
+              ],
+              [
+                1510,
+                3942
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.0005937004438679532,
+          "valid": true,
+          "objective": 0.0026567230838859747,
+          "reference_ratio": 4.474854467982956,
+          "verification": {
+            "primary": [
+              true,
+              0.0026567230838859747,
+              ""
+            ],
+            "independent": [
+              true,
+              0.0026567230838859747
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2921.4557728767395,
+          "submission_sha256": "c6f638b68e263545759cab9db12fb61ce66754cb56c419441d074d338d15392d",
+          "source_answer_sha256": "a68a8c4cb129faa09926a8466dcefe1adab12ed5be80a92cadb468adc53f1543",
+          "usage": {
+            "inputTokens": 9987909,
+            "cachedInputTokens": 9891486,
+            "cacheWriteInputTokens": 96085,
+            "outputTokens": 65880,
+            "reasoningOutputTokens": 15564,
+            "totalTokens": 10053789
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 10322.17399,
+          "model_responses": 169,
+          "code_commands": 132,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.5902598571685771,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-heilbronn_shape-4",
+          "instance_id": "heilbronn_shape-7654620d3ab8",
+          "tier": "A3",
+          "seed": 4,
+          "family": "heilbronn_shape",
+          "family_group": "heilbronn",
+          "params": {
+            "n": 26,
+            "T": [
+              [
+                526,
+                8526
+              ],
+              [
+                8696,
+                8279
+              ],
+              [
+                8084,
+                1688
+              ]
+            ]
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 0.003982656623191187,
+          "valid": true,
+          "objective": 0.004985700458636442,
+          "reference_ratio": 1.2518529540318606,
+          "verification": {
+            "primary": [
+              true,
+              0.004985700458636442,
+              ""
+            ],
+            "independent": [
+              true,
+              0.004985700458636442
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 886.6290249824524,
+          "submission_sha256": "a75527e428792390328d97600971dca7ffd87ba314b2b83292927c17792f6061",
+          "source_answer_sha256": "e3b5ef2c009b7df2d87054d309fca5a622ffbf6266c3cba2efe9d552a35e0681",
+          "usage": {
+            "inputTokens": 1208570,
+            "cachedInputTokens": 1177937,
+            "cacheWriteInputTokens": 30513,
+            "outputTokens": 20986,
+            "reasoningOutputTokens": 4009,
+            "totalTokens": 1229556
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 2786.023654,
+          "model_responses": 60,
+          "code_commands": 49,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.1195283220652649,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-matmul-0",
+          "instance_id": "matmul-ffd9b6a99452",
+          "tier": "A3",
+          "seed": 0,
+          "family": "matmul",
+          "family_group": "matmul",
+          "params": {
+            "n": 4,
+            "m": 4,
+            "p": 5
+          },
+          "sense": "min",
+          "reference_type": "published",
+          "reference": 61,
+          "valid": true,
+          "objective": 61,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              61,
+              ""
+            ],
+            "independent": [
+              true,
+              61
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 325.9919090270996,
+          "submission_sha256": "ea6f7562cdd508e51a7b162b00d6b4d182bc5924631310f54bb5d543b00557aa",
+          "source_answer_sha256": "e60cb7079f0424ca09a6979faf8a8a0dc4567a66b5a38c8fcff4da23e55bc7f6",
+          "usage": {
+            "inputTokens": 345432,
+            "cachedInputTokens": 253594,
+            "cacheWriteInputTokens": 30188,
+            "outputTokens": 15271,
+            "reasoningOutputTokens": 5234,
+            "totalTokens": 360703
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 402.616432,
+          "model_responses": 18,
+          "code_commands": 12,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9384615384615385,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-matmul-4",
+          "instance_id": "matmul-7c87a93e97c3",
+          "tier": "A3",
+          "seed": 4,
+          "family": "matmul",
+          "family_group": "matmul",
+          "params": {
+            "n": 5,
+            "m": 5,
+            "p": 5
+          },
+          "sense": "min",
+          "reference_type": "published",
+          "reference": 93,
+          "valid": true,
+          "objective": 93,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              93,
+              ""
+            ],
+            "independent": [
+              true,
+              93
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 78.74430990219116,
+          "submission_sha256": "7cad573d5cffdd5e9f2fa7d6a138a905d090cbd29387d3b6bbd9bd74273d8a40",
+          "source_answer_sha256": "0a7c274afcafe8cbc3d12e885fa350c0b53f7f8df256c255b87247bb3fb08011",
+          "usage": {
+            "inputTokens": 250978,
+            "cachedInputTokens": 71260,
+            "cacheWriteInputTokens": 15666,
+            "outputTokens": 6678,
+            "reasoningOutputTokens": 1015,
+            "totalTokens": 257656
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1.15963,
+          "model_responses": 9,
+          "code_commands": 6,
+          "web_actions": 8,
+          "resource_result": "success",
+          "without_tools_ratio": 0.8454545454545455,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-degdiam-0",
+          "instance_id": "degdiam-698a36ec659c",
+          "tier": "A3",
+          "seed": 0,
+          "family": "degdiam",
+          "family_group": "degdiam",
+          "params": {
+            "d": 4,
+            "k": 5
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 364,
+          "valid": true,
+          "objective": 364,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              364,
+              ""
+            ],
+            "independent": [
+              true,
+              364
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 289.951623916626,
+          "submission_sha256": "0bdcb9bd452ad0d992ff498ec7bfc9ed38fc1c63741bcbf3a389ab73421fa978",
+          "source_answer_sha256": "2465f388b5fcace18faa8cd280e8d52a0ca3cf3f3e7b498f991f04b61b9e7329",
+          "usage": {
+            "inputTokens": 445961,
+            "cachedInputTokens": 209986,
+            "cacheWriteInputTokens": 20897,
+            "outputTokens": 17556,
+            "reasoningOutputTokens": 6983,
+            "totalTokens": 463517
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 135.987064,
+          "model_responses": 15,
+          "code_commands": 11,
+          "web_actions": 6,
+          "resource_result": "success",
+          "without_tools_ratio": 0.5576923076923077,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-degdiam-1",
+          "instance_id": "degdiam-550afae4f1d9",
+          "tier": "A3",
+          "seed": 1,
+          "family": "degdiam",
+          "family_group": "degdiam",
+          "params": {
+            "d": 7,
+            "k": 3
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 168,
+          "valid": true,
+          "objective": 168,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              168,
+              ""
+            ],
+            "independent": [
+              true,
+              168
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 250.4212679862976,
+          "submission_sha256": "2d177866ff5bd8d27ab491ed70acfe98042cb7e2dcb89a167134915b371c7440",
+          "source_answer_sha256": "3175554e00663aad86db5e5da907e93666b8a05837f0bd61f4bd0703f8acecf3",
+          "usage": {
+            "inputTokens": 328276,
+            "cachedInputTokens": 140298,
+            "cacheWriteInputTokens": 18569,
+            "outputTokens": 14453,
+            "reasoningOutputTokens": 4137,
+            "totalTokens": 342729
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 158.2208,
+          "model_responses": 13,
+          "code_commands": 8,
+          "web_actions": 8,
+          "resource_result": "success",
+          "without_tools_ratio": 0.39285714285714285,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-degdiam-3",
+          "instance_id": "degdiam-1bb88a3f7ec5",
+          "tier": "A3",
+          "seed": 3,
+          "family": "degdiam",
+          "family_group": "degdiam",
+          "params": {
+            "d": 4,
+            "k": 4
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 104,
+          "valid": true,
+          "objective": 99,
+          "reference_ratio": 0.9519230769230769,
+          "verification": {
+            "primary": [
+              true,
+              99,
+              ""
+            ],
+            "independent": [
+              true,
+              99
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 1249.4666681289673,
+          "submission_sha256": "acd3374204175375a5ab12263e34913824ca2ea88572cdf0ef715acb63b3af7a",
+          "source_answer_sha256": "d536948008d664118a6060ee4878bd46b5484bbde6d3dcf0c7e8acb6497fcaab",
+          "usage": {
+            "inputTokens": 1945318,
+            "cachedInputTokens": 1892131,
+            "cacheWriteInputTokens": 53051,
+            "outputTokens": 38770,
+            "reasoningOutputTokens": 14515,
+            "totalTokens": 1984088
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 2963.338157,
+          "model_responses": 68,
+          "code_commands": 51,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.5480769230769231,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-degdiam-4",
+          "instance_id": "degdiam-69fe33ce30ae",
+          "tier": "A3",
+          "seed": 4,
+          "family": "degdiam",
+          "family_group": "degdiam",
+          "params": {
+            "d": 3,
+            "k": 7
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 196,
+          "valid": true,
+          "objective": 196,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              196,
+              ""
+            ],
+            "independent": [
+              true,
+              196
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 244.21675992012024,
+          "submission_sha256": "1b51a8d1a7e176da8343fb9138416ec00de1596d7d151540d7937560f7e7d98c",
+          "source_answer_sha256": "2ee64a7cc39408d4d3ef601f592fff4f739eb36ef743d4b2a2bcc888863488c4",
+          "usage": {
+            "inputTokens": 179713,
+            "cachedInputTokens": 98163,
+            "cacheWriteInputTokens": 12627,
+            "outputTokens": 7462,
+            "reasoningOutputTokens": 2071,
+            "totalTokens": 187175
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 571.650138,
+          "model_responses": 13,
+          "code_commands": 8,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 0.5510204081632653,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-lineq-0",
+          "instance_id": "lineq-dbd7ed2a31a1",
+          "tier": "A3",
+          "seed": 0,
+          "family": "lineq",
+          "family_group": "lineq",
+          "params": {
+            "a": 3,
+            "b": 4,
+            "n": 19044
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 630,
+          "valid": true,
+          "objective": 775,
+          "reference_ratio": 1.2301587301587302,
+          "verification": {
+            "primary": [
+              true,
+              775,
+              ""
+            ],
+            "independent": [
+              true,
+              775
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 980.8028900623322,
+          "submission_sha256": "c5a416bcf95f7399f3988c9b38084e0829107e88faad203f5145004938110cf5",
+          "source_answer_sha256": "cba817d1ac4eaebd0176f43330e7424f35dde9c659a84038551eaecb5ecf1eca",
+          "usage": {
+            "inputTokens": 1327769,
+            "cachedInputTokens": 1289909,
+            "cacheWriteInputTokens": 37766,
+            "outputTokens": 29640,
+            "reasoningOutputTokens": 15260,
+            "totalTokens": 1357409
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1039.001978,
+          "model_responses": 47,
+          "code_commands": 34,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.1174603174603175,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-lineq-1",
+          "instance_id": "lineq-8e24e186040f",
+          "tier": "A3",
+          "seed": 1,
+          "family": "lineq",
+          "family_group": "lineq",
+          "params": {
+            "a": 2,
+            "b": 5,
+            "n": 18883
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 609,
+          "valid": true,
+          "objective": 976,
+          "reference_ratio": 1.6026272577996716,
+          "verification": {
+            "primary": [
+              true,
+              976,
+              ""
+            ],
+            "independent": [
+              true,
+              976
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2469.058025121689,
+          "submission_sha256": "c30753838f9595719c5bda74c99bbda6489af0d54e2f8b74608731645e757b1b",
+          "source_answer_sha256": "6092647a12776407b1c921313ab791a34297ab7d0f6449e2a09a57587edd769b",
+          "usage": {
+            "inputTokens": 2637023,
+            "cachedInputTokens": 2587510,
+            "cacheWriteInputTokens": 49339,
+            "outputTokens": 33851,
+            "reasoningOutputTokens": 12649,
+            "totalTokens": 2670874
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 8900.24353,
+          "model_responses": 87,
+          "code_commands": 67,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.5763546798029557,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-lineq-2",
+          "instance_id": "lineq-9920caf37ad6",
+          "tier": "A3",
+          "seed": 2,
+          "family": "lineq",
+          "family_group": "lineq",
+          "params": {
+            "a": 2,
+            "b": 3,
+            "n": 17965
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 523,
+          "valid": true,
+          "objective": 744,
+          "reference_ratio": 1.4225621414913958,
+          "verification": {
+            "primary": [
+              true,
+              744,
+              ""
+            ],
+            "independent": [
+              true,
+              744
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 3383.2554450035095,
+          "submission_sha256": "8d2af8a9cd401702435006f47a12c1f906f9239e6c669188f36cf244ebe3326d",
+          "source_answer_sha256": "d28da38da16ec1a62d4af5393660fe916811465368ac1cbdfcbc1af367abd769",
+          "usage": {
+            "inputTokens": 5818420,
+            "cachedInputTokens": 5756217,
+            "cacheWriteInputTokens": 61929,
+            "outputTokens": 41926,
+            "reasoningOutputTokens": 16476,
+            "totalTokens": 5860346
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 12055.875899,
+          "model_responses": 137,
+          "code_commands": 65,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9636711281070746,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-lineq-3",
+          "instance_id": "lineq-3e1492fbf38e",
+          "tier": "A3",
+          "seed": 3,
+          "family": "lineq",
+          "family_group": "lineq",
+          "params": {
+            "a": 3,
+            "b": 4,
+            "n": 13312
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 512,
+          "valid": true,
+          "objective": 639,
+          "reference_ratio": 1.248046875,
+          "verification": {
+            "primary": [
+              true,
+              639,
+              ""
+            ],
+            "independent": [
+              true,
+              639
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2231.0674159526825,
+          "submission_sha256": "319054a9b1eb1b0667d4bdeb4da57da9ae6188a1c40341a24823c68a471261ed",
+          "source_answer_sha256": "9814430dc862b8d0463d757180d785cda0bf5e031eaecd831c55192bf73b0539",
+          "usage": {
+            "inputTokens": 1838825,
+            "cachedInputTokens": 1790664,
+            "cacheWriteInputTokens": 48021,
+            "outputTokens": 30203,
+            "reasoningOutputTokens": 8848,
+            "totalTokens": 1869028
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 7681.374887,
+          "model_responses": 70,
+          "code_commands": 113,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.19921875,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-lineq-4",
+          "instance_id": "lineq-4cf345605795",
+          "tier": "A3",
+          "seed": 4,
+          "family": "lineq",
+          "family_group": "lineq",
+          "params": {
+            "a": 3,
+            "b": 4,
+            "n": 6248
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 349,
+          "valid": true,
+          "objective": 500,
+          "reference_ratio": 1.4326647564469914,
+          "verification": {
+            "primary": [
+              true,
+              500,
+              ""
+            ],
+            "independent": [
+              true,
+              500
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 1894.9277348518372,
+          "submission_sha256": "5caf1d28c8026f1b46310c17e035259aa33b1623d555e12d5d3983e275f44dd6",
+          "source_answer_sha256": "3fc91da971fb2582dbe78fd963233bd7fef1737682db4e1b29ce1910858bf43a",
+          "usage": {
+            "inputTokens": 2789927,
+            "cachedInputTokens": 2741421,
+            "cacheWriteInputTokens": 48338,
+            "outputTokens": 34318,
+            "reasoningOutputTokens": 17458,
+            "totalTokens": 2824245
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 5383.608744,
+          "model_responses": 84,
+          "code_commands": 52,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-apfree_q-0",
+          "instance_id": "apfree_q-01c7215e28dc",
+          "tier": "A3",
+          "seed": 0,
+          "family": "apfree_q",
+          "family_group": "apfree_q",
+          "params": {
+            "q": 5,
+            "n": 6
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 649,
+          "valid": true,
+          "objective": 649,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              649,
+              ""
+            ],
+            "independent": [
+              true,
+              649
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 96.75778079032898,
+          "submission_sha256": "6ba119e100559c0fef29af708ae62b2fedc6f40b1908d5ce43b36e0948553bef",
+          "source_answer_sha256": "fa1fd8ee86df3245cfadeaa11ca245d23d3b473623822ed2e2c93980c048780c",
+          "usage": {
+            "inputTokens": 434213,
+            "cachedInputTokens": 118605,
+            "cacheWriteInputTokens": 17798,
+            "outputTokens": 7741,
+            "reasoningOutputTokens": 3489,
+            "totalTokens": 441954
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1.53309,
+          "model_responses": 9,
+          "code_commands": 7,
+          "web_actions": 7,
+          "resource_result": "success",
+          "without_tools_ratio": 0.963020030816641,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-apfree_q-1",
+          "instance_id": "apfree_q-ea15a8323290",
+          "tier": "A3",
+          "seed": 1,
+          "family": "apfree_q",
+          "family_group": "apfree_q",
+          "params": {
+            "q": 5,
+            "n": 5
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 194,
+          "valid": true,
+          "objective": 193,
+          "reference_ratio": 0.9948453608247423,
+          "verification": {
+            "primary": [
+              true,
+              193,
+              ""
+            ],
+            "independent": [
+              true,
+              193
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 4566.272882223129,
+          "submission_sha256": "4d4c984a6157591159dd40e1ed7c6ac1568938d9894629d1d55281ba9680c60a",
+          "source_answer_sha256": "ef606156a7556f076b4c78bc5ed14f04f43ebff7ff9ad8e0debf716ffbcc1461",
+          "usage": {
+            "inputTokens": 8002099,
+            "cachedInputTokens": 7672903,
+            "cacheWriteInputTokens": 63946,
+            "outputTokens": 42317,
+            "reasoningOutputTokens": 12659,
+            "totalTokens": 8044416
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 15760.490828,
+          "model_responses": 159,
+          "code_commands": 40,
+          "web_actions": 10,
+          "resource_result": "success",
+          "without_tools_ratio": 0.7731958762886598,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-mols-0",
+          "instance_id": "mols-9f35e847148f",
+          "tier": "A3",
+          "seed": 0,
+          "family": "mols",
+          "family_group": "mols",
+          "params": {
+            "n": 14
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 4,
+          "valid": true,
+          "objective": 4,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              4,
+              ""
+            ],
+            "independent": [
+              true,
+              4
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 250.30937504768372,
+          "submission_sha256": "e53108582758213739b8dd2492a7d7cdd3fcb615dbe326da8aaf82adec213587",
+          "source_answer_sha256": "763679c07a39215e1d2c23394431f54abc951a3d3088957e7915a7c28fef77ef",
+          "usage": {
+            "inputTokens": 203980,
+            "cachedInputTokens": 135330,
+            "cacheWriteInputTokens": 15522,
+            "outputTokens": 11760,
+            "reasoningOutputTokens": 4463,
+            "totalTokens": 215740
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 876.667517,
+          "model_responses": 15,
+          "code_commands": 9,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 0.5,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-mols-1",
+          "instance_id": "mols-7c78ac4f7920",
+          "tier": "A3",
+          "seed": 1,
+          "family": "mols",
+          "family_group": "mols",
+          "params": {
+            "n": 10
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 2,
+          "valid": true,
+          "objective": 2,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              2,
+              ""
+            ],
+            "independent": [
+              true,
+              2
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 176.71851301193237,
+          "submission_sha256": "1d1a85dda18364cb1e7612aac0cde8dca05aac978a73751825179a8543675d10",
+          "source_answer_sha256": "20956c773196c17db532954768080730af341b940e14c6351ee1b270c1c47ca7",
+          "usage": {
+            "inputTokens": 55295,
+            "cachedInputTokens": 49545,
+            "cacheWriteInputTokens": 5730,
+            "outputTokens": 4265,
+            "reasoningOutputTokens": 812,
+            "totalTokens": 59560
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 146.212475,
+          "model_responses": 10,
+          "code_commands": 6,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-mols-2",
+          "instance_id": "mols-934e5656a894",
+          "tier": "A3",
+          "seed": 2,
+          "family": "mols",
+          "family_group": "mols",
+          "params": {
+            "n": 18
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 5,
+          "valid": true,
+          "objective": 5,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              5,
+              ""
+            ],
+            "independent": [
+              true,
+              5
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 178.81858110427856,
+          "submission_sha256": "d12e27d983eb8b5f7fc0b43ec795437038cde203a512dadf7f20f025ecd7d78a",
+          "source_answer_sha256": "fa0500ff9b0b78b47e9e9ccb1bb1e1a2635d5a55388726694f4a0dd5bec34c12",
+          "usage": {
+            "inputTokens": 110914,
+            "cachedInputTokens": 60394,
+            "cacheWriteInputTokens": 11512,
+            "outputTokens": 8964,
+            "reasoningOutputTokens": 2930,
+            "totalTokens": 119878
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 442.37467,
+          "model_responses": 9,
+          "code_commands": 6,
+          "web_actions": 2,
+          "resource_result": "success",
+          "without_tools_ratio": 0.4,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-capset-11",
+          "instance_id": "capset-253c1b38c406",
+          "tier": "A3",
+          "seed": 11,
+          "family": "capset",
+          "family_group": "capset",
+          "params": {
+            "d": 9
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 1082,
+          "valid": true,
+          "objective": 1024,
+          "reference_ratio": 0.9463955637707948,
+          "verification": {
+            "primary": [
+              true,
+              1024,
+              ""
+            ],
+            "independent": [
+              true,
+              1024
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 308.2962658405304,
+          "submission_sha256": "2bdebc9ffcc24c741f0756424a875d1687715f9bba8a1583a8229d8bd88a7d23",
+          "source_answer_sha256": "63de3ba6d0b5b2345a692cb7e2082f0937335c5e602b5cc3ff5f7ae5fa8c9880",
+          "usage": {
+            "inputTokens": 229552,
+            "cachedInputTokens": 201763,
+            "cacheWriteInputTokens": 14033,
+            "outputTokens": 11318,
+            "reasoningOutputTokens": 4548,
+            "totalTokens": 240870
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 538.303612,
+          "model_responses": 19,
+          "code_commands": 14,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9316081330868762,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-kissing-6",
+          "instance_id": "kissing-a4c5596cf65f",
+          "tier": "A3",
+          "seed": 6,
+          "family": "kissing",
+          "family_group": "spherical_code",
+          "params": {
+            "d": 13,
+            "representation": "quadratic"
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 1154,
+          "valid": true,
+          "objective": 1154,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              1154,
+              ""
+            ],
+            "independent": [
+              true,
+              1154
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2321.297449827194,
+          "submission_sha256": "ea8ea4a36ab3d24e9bea62f16f888c2c667e74fb94b2015800211bcde3a6bba4",
+          "source_answer_sha256": "da899a408a500de4accfa1dd7ad8a57829a38f880a9883e3bcd8c8c8916e0107",
+          "usage": {
+            "inputTokens": 8571245,
+            "cachedInputTokens": 8277294,
+            "cacheWriteInputTokens": 128052,
+            "outputTokens": 83737,
+            "reasoningOutputTokens": 50663,
+            "totalTokens": 8654982
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 7471.51717,
+          "model_responses": 103,
+          "code_commands": 53,
+          "web_actions": 7,
+          "resource_result": "success",
+          "without_tools_ratio": 0.8266897746967071,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-matmul-6",
+          "instance_id": "matmul-857618e58878",
+          "tier": "A3",
+          "seed": 6,
+          "family": "matmul",
+          "family_group": "matmul",
+          "params": {
+            "n": 4,
+            "m": 5,
+            "p": 5
+          },
+          "sense": "min",
+          "reference_type": "published",
+          "reference": 76,
+          "valid": true,
+          "objective": 76,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              76,
+              ""
+            ],
+            "independent": [
+              true,
+              76
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 68.34076189994812,
+          "submission_sha256": "5b8a61e155cdf4f473489b51f54851491a800783411850e8b35838ca9a14f90d",
+          "source_answer_sha256": "96954036deb8e4d9fe80e8fdf0d933db8bf42023b8d0fe1c851ff27e527a2da9",
+          "usage": {
+            "inputTokens": 194258,
+            "cachedInputTokens": 78351,
+            "cacheWriteInputTokens": 10709,
+            "outputTokens": 5522,
+            "reasoningOutputTokens": 1586,
+            "totalTokens": 199780
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1.585069,
+          "model_responses": 11,
+          "code_commands": 10,
+          "web_actions": 4,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-degdiam-7",
+          "instance_id": "degdiam-b8f67d96ee68",
+          "tier": "A3",
+          "seed": 7,
+          "family": "degdiam",
+          "family_group": "degdiam",
+          "params": {
+            "d": 6,
+            "k": 3
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 111,
+          "valid": true,
+          "objective": 111,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              111,
+              ""
+            ],
+            "independent": [
+              true,
+              111
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 360.85083389282227,
+          "submission_sha256": "6acf4f0bedf75c6fe8d98202224696abbb93811f6a0b568e81e3837d5d3e961a",
+          "source_answer_sha256": "b40305a4e64bfb51655b9383b3b981bfb0c998e4976ff5ff5cf79823a8ba6ba2",
+          "usage": {
+            "inputTokens": 428085,
+            "cachedInputTokens": 288809,
+            "cacheWriteInputTokens": 25453,
+            "outputTokens": 13434,
+            "reasoningOutputTokens": 3493,
+            "totalTokens": 441519
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 341.348343,
+          "model_responses": 24,
+          "code_commands": 19,
+          "web_actions": 6,
+          "resource_result": "success",
+          "without_tools_ratio": 0.4954954954954955,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-degdiam-8",
+          "instance_id": "degdiam-708cd938b766",
+          "tier": "A3",
+          "seed": 8,
+          "family": "degdiam",
+          "family_group": "degdiam",
+          "params": {
+            "d": 5,
+            "k": 4
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 212,
+          "valid": true,
+          "objective": 210,
+          "reference_ratio": 0.9905660377358491,
+          "verification": {
+            "primary": [
+              true,
+              210,
+              ""
+            ],
+            "independent": [
+              true,
+              210
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 108.13762187957764,
+          "submission_sha256": "baedf255c1d1b872b5f8a3ec79876ab0342b27760a462e1231cb1b23a6433ad3",
+          "source_answer_sha256": "b3807c89b51336af54eb8116b8ea6b401233a5bbcf4d4664ed05d0384e2ddea7",
+          "usage": {
+            "inputTokens": 52294,
+            "cachedInputTokens": 45327,
+            "cacheWriteInputTokens": 6951,
+            "outputTokens": 5716,
+            "reasoningOutputTokens": 1918,
+            "totalTokens": 58010
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 11.710565,
+          "model_responses": 8,
+          "code_commands": 6,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.3018867924528302,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-degdiam-20",
+          "instance_id": "degdiam-71d28a377ba1",
+          "tier": "A3",
+          "seed": 20,
+          "family": "degdiam",
+          "family_group": "degdiam",
+          "params": {
+            "d": 3,
+            "k": 6
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 132,
+          "valid": true,
+          "objective": 132,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              132,
+              ""
+            ],
+            "independent": [
+              true,
+              132
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 451.1381719112396,
+          "submission_sha256": "a8aff509bfcdb9c504ef3af37caf960dbcfbef93bb4cce2e5442c949cf8a9f06",
+          "source_answer_sha256": "b9d5ca230ced8f934fca49126f0c61d14c3ebf7a0d612a703e923fe179fe53d2",
+          "usage": {
+            "inputTokens": 390281,
+            "cachedInputTokens": 353729,
+            "cacheWriteInputTokens": 19702,
+            "outputTokens": 12354,
+            "reasoningOutputTokens": 2837,
+            "totalTokens": 402635
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1379.796344,
+          "model_responses": 31,
+          "code_commands": 23,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.48484848484848486,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-apfree_q-6",
+          "instance_id": "apfree_q-84ab372c1270",
+          "tier": "A3",
+          "seed": 6,
+          "family": "apfree_q",
+          "family_group": "apfree_q",
+          "params": {
+            "q": 7,
+            "n": 4
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 103,
+          "valid": true,
+          "objective": 175,
+          "reference_ratio": 1.6990291262135921,
+          "verification": {
+            "primary": [
+              true,
+              175,
+              ""
+            ],
+            "independent": [
+              true,
+              175
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 2184.78839969635,
+          "submission_sha256": "8b67aef23d28a26cbf62889329fed40b1112cb7a598de43f3bf70c1baaacd44f",
+          "source_answer_sha256": "ef696a4c4600be5a7559e1de1b49b3a3b9de413e06579f502f45b59967812698",
+          "usage": {
+            "inputTokens": 3762667,
+            "cachedInputTokens": 3554577,
+            "cacheWriteInputTokens": 55105,
+            "outputTokens": 40382,
+            "reasoningOutputTokens": 17526,
+            "totalTokens": 3803049
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 8272.351662,
+          "model_responses": 95,
+          "code_commands": 58,
+          "web_actions": 5,
+          "resource_result": "success",
+          "without_tools_ratio": 0.970873786407767,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-mols-6",
+          "instance_id": "mols-dfb4c3a55793",
+          "tier": "A3",
+          "seed": 6,
+          "family": "mols",
+          "family_group": "mols",
+          "params": {
+            "n": 15
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 4,
+          "valid": true,
+          "objective": 4,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              4,
+              ""
+            ],
+            "independent": [
+              true,
+              4
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 164.22051787376404,
+          "submission_sha256": "33af7d52312bfd847bb415397635ceba1fa59fc456c60f9e6de9680ca8eb21ea",
+          "source_answer_sha256": "f699c055defe63af42b0fd4ab91502d3fd7277911687a42245e0c5bb271be0a9",
+          "usage": {
+            "inputTokens": 86564,
+            "cachedInputTokens": 59037,
+            "cacheWriteInputTokens": 11227,
+            "outputTokens": 10539,
+            "reasoningOutputTokens": 5096,
+            "totalTokens": 97103
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 102.958716,
+          "model_responses": 8,
+          "code_commands": 5,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.5,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-mols-9",
+          "instance_id": "mols-5e98497ace6a",
+          "tier": "A3",
+          "seed": 9,
+          "family": "mols",
+          "family_group": "mols",
+          "params": {
+            "n": 12
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 5,
+          "valid": true,
+          "objective": 5,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              5,
+              ""
+            ],
+            "independent": [
+              true,
+              5
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 82.21900796890259,
+          "submission_sha256": "653b04c3816f57a442a054e2cc4a230b8897343e08776d086ef9d738ef8ed5c5",
+          "source_answer_sha256": "2c4662fc927ff4396713ce845762732aa228c74c10d7e1a1a270870d6aeaf497",
+          "usage": {
+            "inputTokens": 19722,
+            "cachedInputTokens": 15851,
+            "cacheWriteInputTokens": 3863,
+            "outputTokens": 3249,
+            "reasoningOutputTokens": 1481,
+            "totalTokens": 22971
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 50.050797,
+          "model_responses": 4,
+          "code_commands": 2,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 0.4,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-mols-17",
+          "instance_id": "mols-0e29c62754e2",
+          "tier": "A3",
+          "seed": 17,
+          "family": "mols",
+          "family_group": "mols",
+          "params": {
+            "n": 20
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 4,
+          "valid": true,
+          "objective": 3,
+          "reference_ratio": 0.75,
+          "verification": {
+            "primary": [
+              true,
+              3,
+              ""
+            ],
+            "independent": [
+              true,
+              3
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 5838.151796102524,
+          "submission_sha256": "4bf336fc925d6782621465d612995797670f9a5be2fa190451b8dff220b06b1f",
+          "source_answer_sha256": "6be12f24f01fe2993ebb4472835676e2ab9fa9f5c88a7157271f71dc0d006aae",
+          "usage": {
+            "inputTokens": 3706166,
+            "cachedInputTokens": 3615763,
+            "cacheWriteInputTokens": 75456,
+            "outputTokens": 49009,
+            "reasoningOutputTokens": 15094,
+            "totalTokens": 3755175
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 20873.43059,
+          "model_responses": 100,
+          "code_commands": 50,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.75,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-schur-0",
+          "instance_id": "schur-133b39146db2",
+          "tier": "A3",
+          "seed": 0,
+          "family": "schur",
+          "family_group": "schur",
+          "params": {
+            "k": 7
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 1696,
+          "valid": true,
+          "objective": 1696,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              1696,
+              ""
+            ],
+            "independent": [
+              true,
+              1696
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 214.8078112602234,
+          "submission_sha256": "6c5f65fc2f6558ba16a6cddd349b6337d611574b9a1e32fb65346e1f35d04c51",
+          "source_answer_sha256": "e052642632d675c0b184f9d36c2baba3a5eb0a1adea1e9fa9c9459ffb5fbbf7b",
+          "usage": {
+            "inputTokens": 236263,
+            "cachedInputTokens": 205399,
+            "cacheWriteInputTokens": 16638,
+            "outputTokens": 9094,
+            "reasoningOutputTokens": 2787,
+            "totalTokens": 245357
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 302.426897,
+          "model_responses": 20,
+          "code_commands": 17,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-schur-1",
+          "instance_id": "schur-4f4fcef4287a",
+          "tier": "A3",
+          "seed": 1,
+          "family": "schur",
+          "family_group": "schur",
+          "params": {
+            "k": 6
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 536,
+          "valid": true,
+          "objective": 536,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              536,
+              ""
+            ],
+            "independent": [
+              true,
+              536
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 217.57988595962524,
+          "submission_sha256": "3bae281eb1fb771125a13a32013a1cf20e99b26f9549b1a0368bf2010be2cb07",
+          "source_answer_sha256": "51e385ffaa41dce12d51714b5f68442c873296cf33467a398c7696f9e72a30e7",
+          "usage": {
+            "inputTokens": 269850,
+            "cachedInputTokens": 212287,
+            "cacheWriteInputTokens": 21129,
+            "outputTokens": 9260,
+            "reasoningOutputTokens": 2302,
+            "totalTokens": 279110
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 383.968874,
+          "model_responses": 22,
+          "code_commands": 18,
+          "web_actions": 2,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-schur-2",
+          "instance_id": "schur-16d4130a2932",
+          "tier": "A3",
+          "seed": 2,
+          "family": "schur",
+          "family_group": "schur",
+          "params": {
+            "k": 8
+          },
+          "sense": "max",
+          "reference_type": "published",
+          "reference": 5362,
+          "valid": true,
+          "objective": 5362,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              5362,
+              ""
+            ],
+            "independent": [
+              true,
+              5362
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 160.9577898979187,
+          "submission_sha256": "48e18e92385b301a7860e1e6d41aa3361289c6eb819765bacd5d82b576e82aef",
+          "source_answer_sha256": "965b6104b63b94e80a92870911a21cc69cc81aa5dbf8d5e60dfc8d85fa9223ab",
+          "usage": {
+            "inputTokens": 507441,
+            "cachedInputTokens": 462230,
+            "cacheWriteInputTokens": 30742,
+            "outputTokens": 10866,
+            "reasoningOutputTokens": 2981,
+            "totalTokens": 518307
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 88.363406,
+          "model_responses": 24,
+          "code_commands": 22,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.7385303991048117,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-covering-0",
+          "instance_id": "covering-96b61f7899e7",
+          "tier": "A3",
+          "seed": 0,
+          "family": "covering",
+          "family_group": "covering",
+          "params": {
+            "v": 18,
+            "k": 7,
+            "t": 4
+          },
+          "sense": "min",
+          "reference_type": "published",
+          "reference": 126,
+          "valid": true,
+          "objective": 126,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              126,
+              ""
+            ],
+            "independent": [
+              true,
+              126
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 4240.204113006592,
+          "submission_sha256": "ea6a980d4c82715fea04875aae0e082df5954e7e19ca519bf92eb824fe2adf08",
+          "source_answer_sha256": "58019fafa4c5dcdb9b5ea7deb7cb305ea53c5d7bd5246e75f9311cf422c1bee3",
+          "usage": {
+            "inputTokens": 6131804,
+            "cachedInputTokens": 5973923,
+            "cacheWriteInputTokens": 62031,
+            "outputTokens": 43368,
+            "reasoningOutputTokens": 8941,
+            "totalTokens": 6175172
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 14823.519232,
+          "model_responses": 145,
+          "code_commands": 44,
+          "web_actions": 5,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-covering-1",
+          "instance_id": "covering-551581f999ca",
+          "tier": "A3",
+          "seed": 1,
+          "family": "covering",
+          "family_group": "covering",
+          "params": {
+            "v": 30,
+            "k": 6,
+            "t": 3
+          },
+          "sense": "min",
+          "reference_type": "published",
+          "reference": 225,
+          "valid": true,
+          "objective": 225,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              225,
+              ""
+            ],
+            "independent": [
+              true,
+              225
+            ],
+            "agree": true
+          },
+          "finish_reason": "resource_budget",
+          "elapsed_seconds": 7200.5284469127655,
+          "submission_sha256": "8b2500b8d4574adb9393d95694092cbbf507dd43d18bdaf4513f48144a3eec6f",
+          "source_answer_sha256": "38b8b84497464627ac3e16c1889ee8c2410b930ffa3a5310f9d0b5bed0661880",
+          "usage": {
+            "inputTokens": 28879907,
+            "cachedInputTokens": 28706314,
+            "cacheWriteInputTokens": 173041,
+            "outputTokens": 118062,
+            "reasoningOutputTokens": 51972,
+            "totalTokens": 28997969
+          },
+          "usage_complete": false,
+          "usage_provenance": "streamed_reported_lower_bound",
+          "usage_incomplete_reason": "Native WebSearch aggregate was not returned before the task deadline; retained streamed usage is a lower bound.",
+          "cpu_seconds": 18600.973458,
+          "model_responses": 276,
+          "code_commands": 109,
+          "web_actions": 3,
+          "resource_result": "timeout",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-covering-2",
+          "instance_id": "covering-e208a41ac8b5",
+          "tier": "A3",
+          "seed": 2,
+          "family": "covering",
+          "family_group": "covering",
+          "params": {
+            "v": 24,
+            "k": 6,
+            "t": 3
+          },
+          "sense": "min",
+          "reference_type": "published",
+          "reference": 116,
+          "valid": true,
+          "objective": 116,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              116,
+              ""
+            ],
+            "independent": [
+              true,
+              116
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 791.7786920070648,
+          "submission_sha256": "97e3d6c72e4b4d79796c1ad9d70ac1ce84f4fe9ee5a10f568e871eeda8d1b010",
+          "source_answer_sha256": "681c731245185743e4151209089a657c5b469a0a61ba9ed46ce11697bdc8ec8d",
+          "usage": {
+            "inputTokens": 737302,
+            "cachedInputTokens": 610895,
+            "cacheWriteInputTokens": 32211,
+            "outputTokens": 25911,
+            "reasoningOutputTokens": 9760,
+            "totalTokens": 763213
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 1279.026906,
+          "model_responses": 30,
+          "code_commands": 21,
+          "web_actions": 5,
+          "resource_result": "success",
+          "without_tools_ratio": 0.9354838709677419,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-shannon-0",
+          "instance_id": "shannon-4d7467466a4c",
+          "tier": "A3",
+          "seed": 0,
+          "family": "shannon",
+          "family_group": "shannon",
+          "params": {
+            "q": 7,
+            "d": 24
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 1941100559147,
+          "valid": true,
+          "objective": 1959241685868,
+          "reference_ratio": 1.0093457943925233,
+          "verification": {
+            "primary": [
+              true,
+              1959241685868,
+              ""
+            ],
+            "independent": [
+              true,
+              1959241685868
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 1355.1209211349487,
+          "submission_sha256": "2471f191e9640b4fa2227e1058a509e70bb40d3c376e47522c59bb291ffe0e10",
+          "source_answer_sha256": "2e0530af816eaf06e3fd0146e4e6fefb3f16e64029c2395fcc97ae0b469ccbe9",
+          "usage": {
+            "inputTokens": 3630100,
+            "cachedInputTokens": 3508307,
+            "cacheWriteInputTokens": 67724,
+            "outputTokens": 33068,
+            "reasoningOutputTokens": 11643,
+            "totalTokens": 3663168
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 4793.705792,
+          "model_responses": 67,
+          "code_commands": 41,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 0.7130638923252093,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-shannon-1",
+          "instance_id": "shannon-dbd709082fa3",
+          "tier": "A3",
+          "seed": 1,
+          "family": "shannon",
+          "family_group": "shannon",
+          "params": {
+            "q": 7,
+            "d": 40
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 329100478707380211841,
+          "valid": true,
+          "objective": 329100478707380211841,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              329100478707380211841,
+              ""
+            ],
+            "independent": [
+              true,
+              329100478707380211841
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 314.513151884079,
+          "submission_sha256": "c1e42619b999c7447608883e54518f91206228d39c26ab4964969723883b2d02",
+          "source_answer_sha256": "95e83fc5edac16cddad804e535e1c6f89bab7f6bd588ea7c112a51f34f64fe0f",
+          "usage": {
+            "inputTokens": 207327,
+            "cachedInputTokens": 169015,
+            "cacheWriteInputTokens": 23016,
+            "outputTokens": 9181,
+            "reasoningOutputTokens": 2640,
+            "totalTokens": 216508
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 235.651872,
+          "model_responses": 18,
+          "code_commands": 13,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 0.0,
+          "without_tools_valid": false
+        },
+        {
+          "call_id": "a3-shannon-2",
+          "instance_id": "shannon-3ba3fb861c12",
+          "tier": "A3",
+          "seed": 2,
+          "family": "shannon",
+          "family_group": "shannon",
+          "params": {
+            "q": 9,
+            "d": 48
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 3433683820292512484657849089281,
+          "valid": true,
+          "objective": 3433683820292512484657849089281,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              3433683820292512484657849089281,
+              ""
+            ],
+            "independent": [
+              true,
+              3433683820292512484657849089281
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 92.28068494796753,
+          "submission_sha256": "74980a56eced6cb9159e19e212dc3ec9d873a13d702269438af28ebc1d1632e1",
+          "source_answer_sha256": "78eded37f2d0c173b835873e391f011bed505b56eeb97a81f0fa735cd5cde0b5",
+          "usage": {
+            "inputTokens": 332089,
+            "cachedInputTokens": 37087,
+            "cacheWriteInputTokens": 12189,
+            "outputTokens": 8167,
+            "reasoningOutputTokens": 2763,
+            "totalTokens": 340256
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 0.976624,
+          "model_responses": 5,
+          "code_commands": 2,
+          "web_actions": 10,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "a3-shannon-3",
+          "instance_id": "shannon-feb50364a0a8",
+          "tier": "A3",
+          "seed": 3,
+          "family": "shannon",
+          "family_group": "shannon",
+          "params": {
+            "q": 9,
+            "d": 64
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 47890060730248079154410960106868188422724,
+          "valid": true,
+          "objective": 47890060730248079154410960106868188422724,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              47890060730248079154410960106868188422724,
+              ""
+            ],
+            "independent": [
+              true,
+              47890060730248079154410960106868188422724
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 96.19196391105652,
+          "submission_sha256": "27676a0c1e382837832a4dbe26faf1f655bf126f8bcf252fb3e99b7dde0fd22e",
+          "source_answer_sha256": "520bd24dfb70232898b5ec0760c8a8d6ac71a78a2c4e5e4d6e48f0b9b55fd083",
+          "usage": {
+            "inputTokens": 211914,
+            "cachedInputTokens": 22471,
+            "cacheWriteInputTokens": 9532,
+            "outputTokens": 7466,
+            "reasoningOutputTokens": 2927,
+            "totalTokens": 219380
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 0.129211,
+          "model_responses": 4,
+          "code_commands": 1,
+          "web_actions": 7,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "t1-trifference-0",
+          "instance_id": "trifference-f9a51728af9d",
+          "tier": "T1",
+          "seed": 0,
+          "family": "trifference",
+          "family_group": "trifference",
+          "params": {
+            "n": 64,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 19683,
+          "valid": true,
+          "objective": 531441,
+          "reference_ratio": 27.0,
+          "verification": {
+            "primary": [
+              true,
+              531441,
+              ""
+            ],
+            "independent": [
+              true,
+              531441
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 3005.3976621627808,
+          "submission_sha256": "3b341b8925e9b6d970cd179a59c4d5a08dfe306fca2fd8e70a499974d1c25870",
+          "source_answer_sha256": "39519276045b768aa0bd95d364e673fad53bbb3bb50cdf0ddef93508a71ae749",
+          "usage": {
+            "inputTokens": 13270777,
+            "cachedInputTokens": 12945357,
+            "cacheWriteInputTokens": 184277,
+            "outputTokens": 152386,
+            "reasoningOutputTokens": 86100,
+            "totalTokens": 13423163
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 9836.706213,
+          "model_responses": 127,
+          "code_commands": 119,
+          "web_actions": 6,
+          "resource_result": "success",
+          "without_tools_ratio": 3.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "t2-trifference-0",
+          "instance_id": "trifference-0809543b57d9",
+          "tier": "T2",
+          "seed": 0,
+          "family": "trifference",
+          "family_group": "trifference",
+          "params": {
+            "n": 96,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 531441,
+          "valid": true,
+          "objective": 531441,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              531441,
+              ""
+            ],
+            "independent": [
+              true,
+              531441
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 90.10523700714111,
+          "submission_sha256": "0e8bb1e8ddfc05ad5e6d0fd6da557a75b0ac8aeddfc8cacd0ac4ff78153b7f40",
+          "source_answer_sha256": "c65411d5e1d70b341e3fe346c951d9be5e8cef364c902162863b0f7f4c02d87b",
+          "usage": {
+            "inputTokens": 19518,
+            "cachedInputTokens": 13401,
+            "cacheWriteInputTokens": 6111,
+            "outputTokens": 5308,
+            "reasoningOutputTokens": 3277,
+            "totalTokens": 24826
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 9.545681,
+          "model_responses": 3,
+          "code_commands": 2,
+          "web_actions": 0,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "t3-trifference-0",
+          "instance_id": "trifference-144e830d3cd7",
+          "tier": "T3",
+          "seed": 0,
+          "family": "trifference",
+          "family_group": "trifference",
+          "params": {
+            "n": 144,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 387420489,
+          "valid": true,
+          "objective": 387420489,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              387420489,
+              ""
+            ],
+            "independent": [
+              true,
+              387420489
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 90.97288584709167,
+          "submission_sha256": "d6b9b5deb3ad8e4e7b92887fdc63f62065f3d9d6a8fe8e83ef2a1b08c3d2c087",
+          "source_answer_sha256": "26af323e9ac64e9ad5cd0a24ed37372549d2fe2ff36007fc4a9529b00fc2f70a",
+          "usage": {
+            "inputTokens": 95816,
+            "cachedInputTokens": 16581,
+            "cacheWriteInputTokens": 10503,
+            "outputTokens": 9033,
+            "reasoningOutputTokens": 6128,
+            "totalTokens": 104849
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 0.135678,
+          "model_responses": 3,
+          "code_commands": 1,
+          "web_actions": 3,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        },
+        {
+          "call_id": "t4-trifference-0",
+          "instance_id": "trifference-2878b90f82e4",
+          "tier": "T4",
+          "seed": 0,
+          "family": "trifference",
+          "family_group": "trifference",
+          "params": {
+            "n": 192,
+            "m": 1,
+            "representation": "certified"
+          },
+          "sense": "max",
+          "reference_type": "construction",
+          "reference": 10460353203,
+          "valid": true,
+          "objective": 10460353203,
+          "reference_ratio": 1.0,
+          "verification": {
+            "primary": [
+              true,
+              10460353203,
+              ""
+            ],
+            "independent": [
+              true,
+              10460353203
+            ],
+            "agree": true
+          },
+          "finish_reason": "completed",
+          "elapsed_seconds": 147.71440410614014,
+          "submission_sha256": "b8c7b495be3a0708edb63f42da6c541f913b1f5ab8a582e7350b6f401a646e9d",
+          "source_answer_sha256": "f841bb8b6ec01707114ce4ce3ef4d5138f652dde407d49784f0f7a331b18575b",
+          "usage": {
+            "inputTokens": 99295,
+            "cachedInputTokens": 73303,
+            "cacheWriteInputTokens": 11647,
+            "outputTokens": 10132,
+            "reasoningOutputTokens": 5590,
+            "totalTokens": 109427
+          },
+          "usage_complete": true,
+          "usage_provenance": "native_result_modelUsage",
+          "usage_incomplete_reason": null,
+          "cpu_seconds": 94.876642,
+          "model_responses": 8,
+          "code_commands": 4,
+          "web_actions": 1,
+          "resource_result": "success",
+          "without_tools_ratio": 1.0,
+          "without_tools_valid": true
+        }
+      ],
+      "usage_complete": false,
+      "complete_usage_instances": 68,
+      "source": "bench/results/tool-assisted/opus55-high-v1.json",
+      "source_sha256": "d602e51035351a446c8ecf2e32995588f3bfff288fb42dacc3a55ee41f4c36f6"
     }
   },
   "comparison": {

@@ -595,6 +595,114 @@
       "headroom": 0.001623504375822519,
       "headroom_instances": 40
     },
+    "opus55_medium": {
+      "label": "Claude Opus 5.5 medium",
+      "model": "claude-opus-5-5",
+      "source_core_config": "headless-medium@128k.frozen69",
+      "source_code_config": "headless-medium@128k.frozen69",
+      "p1": {
+        "n": 15,
+        "mean": 0.5766771408655101,
+        "ci": [
+          0.42158778718581974,
+          0.7323130908116756
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.6139932865603389,
+        "ci": [
+          0.4685216333536662,
+          0.7604229121898631
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 60.15545713287293,
+        "ci": [
+          49.10738502440574,
+          70.85208561730863
+        ]
+      },
+      "calls": 45,
+      "accepted": 39,
+      "valid": 0.8666666666666667,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.004473950989266194,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.00715832158282591
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.004473950989266194,
+      "headroom_instances": 40
+    },
+    "opus55_high": {
+      "label": "Claude Opus 5.5 high",
+      "model": "claude-opus-5-5",
+      "source_core_config": "headless-high@128k.frozen69",
+      "source_code_config": "headless-high@128k.frozen69",
+      "p1": {
+        "n": 15,
+        "mean": 0.7233845578935363,
+        "ci": [
+          0.6139964549984669,
+          0.8334384891222809
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 30,
+        "mean": 0.7089922628695428,
+        "ci": [
+          0.5100518543862367,
+          0.9342155224274951
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 45,
+        "score": 71.37896945442073,
+        "ci": [
+          57.75234704330223,
+          85.75050973302994
+        ]
+      },
+      "calls": 45,
+      "accepted": 39,
+      "valid": 0.8666666666666667,
+      "gap_closed": {
+        "n": 40,
+        "mean": 0.012661258059066312,
+        "published": {
+          "n": 15,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 25,
+          "mean": 0.0202580128945061
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.012661258059066312,
+      "headroom_instances": 40
+    },
     "astra_medium": {
       "label": "GPT-6 Astra medium",
       "model": "gpt-6-astra",

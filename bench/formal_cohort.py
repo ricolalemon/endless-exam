@@ -25,6 +25,8 @@ SYSTEMS = [
     ("opus", "claude-opus-5", "Opus medium", "headless-medium@128k", "headless-medium@128k", True),
     ("fable", "claude-fable-5-1", "Fable medium", "headless-medium@128k", "headless-medium@128k", False),
     ("fable_high", "claude-fable-5-1", "Fable high", "headless-high@128k.frozen69", "headless-high@128k.frozen69", False),
+    ("opus55_medium", "claude-opus-5-5", "Opus 5.5 medium", "headless-medium@128k.frozen69", "headless-medium@128k.frozen69", False),
+    ("opus55_high", "claude-opus-5-5", "Opus 5.5 high", "headless-high@128k.frozen69", "headless-high@128k.frozen69", False),
 ]
 
 

@@ -2,8 +2,8 @@
 
 ## Main evaluation
 
-The [result index](../bench/results/published/index.csv) lists all 966 published outcomes:
-14 configurations on 69 instances. It links each result to its saved response,
+The [result index](../bench/results/published/index.csv) lists all 1,173 published outcomes:
+17 configurations on 69 instances. It links each result to its saved response,
 including zero-score outcomes. A [JSONL version](../bench/results/published/index.jsonl)
 provides the same information for analysis.
 
@@ -32,6 +32,13 @@ A retained evidence hash identifies an original artifact; it does not imply that
 the artifact itself is included.
 [RELEASE_MANIFEST.json](../RELEASE_MANIFEST.json) records hashes of released
 files and the transformations applied to source records.
+
+Opus 5.5 collection settings and output-file hashes are recorded in
+[opus55_publication.json](../bench/data/opus55_publication.json). Its two tool-free
+efforts use complete provider token reports, including final usage on output-budget
+stops. The tool-assisted total includes native web-search model usage where reported;
+one deadline-stopped instance lacks that aggregate, so its token total remains a
+lower bound. No answer is regenerated to recover missing usage.
 
 ## References and witnesses
 

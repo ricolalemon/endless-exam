@@ -1,6 +1,6 @@
 # Paper and analysis
 
-The paper compares 12 tool-free configurations and two tool-assisted
+The paper compares 14 tool-free configurations and three tool-assisted
 configurations on 69 instances from fourteen families. Thirty instances use
 published frontiers and 39 use construction baselines.
 
@@ -22,7 +22,7 @@ outcome and its saved response. Both tracks use the same mathematical instances
 and references, with their respective resource limits described in the paper.
 
 The supplementary analyses include model-size and reasoning-effort comparisons,
-size-quality curves, computational search budgets and the matched Opus subset.
+size-quality curves, computational search budgets and the matched historical Opus 5 subset.
 The [data guide](../../docs/DATA.md) describes their source records.
 
 ## Rebuild the paper

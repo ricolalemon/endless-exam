@@ -547,6 +547,114 @@
       "headroom": 0.0031302020867995826,
       "headroom_instances": 64
     },
+    "opus55_medium": {
+      "label": "Claude Opus 5.5 medium",
+      "model": "claude-opus-5-5",
+      "source_core_config": "headless-medium@128k.frozen69",
+      "source_code_config": "headless-medium@128k.frozen69",
+      "p1": {
+        "n": 30,
+        "mean": 0.5785533665514241,
+        "ci": [
+          0.4729522483025675,
+          0.6813011977854769
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.7350259818373792,
+        "ci": [
+          0.5725061639185953,
+          0.9274032637214688
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 66.69944099739205,
+        "ci": [
+          56.11001258384799,
+          77.94670337187661
+        ]
+      },
+      "calls": 69,
+      "accepted": 61,
+      "valid": 0.8840579710144928,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.00593622561742343,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.011174071750444103
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.00593622561742343,
+      "headroom_instances": 64
+    },
+    "opus55_high": {
+      "label": "Claude Opus 5.5 high",
+      "model": "claude-opus-5-5",
+      "source_core_config": "headless-high@128k.frozen69",
+      "source_code_config": "headless-high@128k.frozen69",
+      "p1": {
+        "n": 30,
+        "mean": 0.5738437106351996,
+        "ci": [
+          0.4569888445509609,
+          0.686846734568006
+        ],
+        "records": 0,
+        "binary_breakthrough_rate": 0.0
+      },
+      "p2": {
+        "n": 39,
+        "mean": 0.7936847580722887,
+        "ci": [
+          0.6060899778168176,
+          1.0063853396006612
+        ],
+        "records": null
+      },
+      "overall": {
+        "n": 69,
+        "score": 69.81016939692064,
+        "ci": [
+          57.526048373245466,
+          83.00791740900556
+        ]
+      },
+      "calls": 69,
+      "accepted": 57,
+      "valid": 0.8260869565217391,
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.008937780684137996,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.016824057758377402
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      },
+      "headroom": 0.008937780684137996,
+      "headroom_instances": 64
+    },
     "astra_medium": {
       "label": "GPT-6 Astra medium",
       "model": "gpt-6-astra",
@@ -2298,6 +2406,334 @@
       "outcome": "valid"
     },
     {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1000000000000,
+      "ratio": 0.515171661399882,
+      "tokens": 3257,
+      "latency_s": 33.27589175000321,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": true,
+      "objective": 100000000000000000000,
+      "ratio": 0.3038585674283234,
+      "tokens": 2407,
+      "latency_s": 26.027540624985704,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": 2914,
+      "latency_s": 29.705771957989782,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": 3217,
+      "latency_s": 31.825560416007647,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 59049,
+      "ratio": 3.0,
+      "tokens": 18698,
+      "latency_s": 176.02423762500985,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": 8011,
+      "latency_s": 92.65390312499949,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": true,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "tokens": 3821,
+      "latency_s": 37.63989458300057,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_medium",
+      "label": "Claude Opus 5.5 medium",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "tokens": 5832,
+      "latency_s": 56.44721420801943,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 0,
+      "params": {
+        "q": 7,
+        "d": 24
+      },
+      "reference": 1941100559147,
+      "valid": true,
+      "objective": 1384128720100,
+      "ratio": 0.7130638923252093,
+      "tokens": 23099,
+      "latency_s": 205.94032279099338,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 1,
+      "params": {
+        "q": 7,
+        "d": 40
+      },
+      "reference": 329100478707380211841,
+      "valid": false,
+      "objective": 0,
+      "ratio": 0.0,
+      "tokens": null,
+      "latency_s": 1117.0948425410024,
+      "finish_reason": "length",
+      "verify_msg": "length",
+      "outcome": "length"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 2,
+      "params": {
+        "q": 9,
+        "d": 48
+      },
+      "reference": 3433683820292512484657849089281,
+      "valid": true,
+      "objective": 3433683820292512484657849089281,
+      "ratio": 1.0,
+      "tokens": 3512,
+      "latency_s": 32.637705458997516,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "A3",
+      "family": "shannon",
+      "seed": 3,
+      "params": {
+        "q": 9,
+        "d": 64
+      },
+      "reference": 47890060730248079154410960106868188422724,
+      "valid": true,
+      "objective": 47890060730248079154410960106868188422724,
+      "ratio": 1.0,
+      "tokens": 3086,
+      "latency_s": 29.805346875014948,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "T1",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 64,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 19683,
+      "valid": true,
+      "objective": 59049,
+      "ratio": 3.0,
+      "tokens": 29939,
+      "latency_s": 273.02372395800194,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "T2",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 96,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 531441,
+      "valid": true,
+      "objective": 531441,
+      "ratio": 1.0,
+      "tokens": 21419,
+      "latency_s": 202.22962966701016,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "T3",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 144,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 387420489,
+      "valid": true,
+      "objective": 387420489,
+      "ratio": 1.0,
+      "tokens": 5248,
+      "latency_s": 51.58843320800224,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
+      "system": "opus55_high",
+      "label": "Claude Opus 5.5 high",
+      "tier": "T4",
+      "family": "trifference",
+      "seed": 0,
+      "params": {
+        "n": 192,
+        "m": 1,
+        "representation": "certified"
+      },
+      "reference": 10460353203,
+      "valid": true,
+      "objective": 10460353203,
+      "ratio": 1.0,
+      "tokens": 7045,
+      "latency_s": 66.98333679098869,
+      "finish_reason": "stop",
+      "verify_msg": "",
+      "outcome": "valid"
+    },
+    {
       "system": "astra_medium",
       "label": "GPT-6 Astra medium",
       "tier": "A3",
@@ -2631,12 +3067,13 @@
     "bench/construction_references.json": "e9aeb855a5922a8a4d2f4094a6a2ac452e934e3b64869769aabb66ac837909ce",
     "bench/data/fable_high_publication.json": "c04f9a2b8665ee90abf3b4d315b3117f7fa9342bd0a9b4039a21613820c62f4d",
     "bench/data/formal_suite_v1.json": "5ab37c4a6dea8981d38b7d658ec2562747d555d46bbcf6260d460d9cbdded074",
+    "bench/data/opus55_publication.json": "2564c7242f1a798cad6a83305d8447158dfca9ef64553268f6f5af8dcfcf4b6d",
     "bench/evaluation_outcomes.py": "cc726323ddd666144d53ddcf8d8856ee2910602c16686fd132f215e0e5cfeb54",
     "bench/exam.py": "622e9f387e20cf17c88ce4967f913ea9d1094e1dfc949bd3000e37782f286045",
-    "bench/formal_cohort.py": "5617ca525f961e0ced6791760347d87724bbd310b4158832781123b4f4e66987",
+    "bench/formal_cohort.py": "abed9399ea1a651f90d61eff07635f00c57bc17e4852305de91ecb8d4eb55a14",
     "bench/freeze_frontier.py": "337543b7ba9da03fd1a1bffd63fc331a03b9b094c0b2441bc849488b0bd488ea",
     "bench/openceiling.py": "1b22bf7c7ebf360f8bddd88d45f1b42707d55a834b43094d57f5ca0609d5df36",
-    "bench/paper/publication_data.py": "730f889802831a30a5e0bb51266898b8692194975f29e813d5fbd1e5c4d7b6b1",
+    "bench/paper/publication_data.py": "443a08aef126ae9e88a9eb980ee085358aa7d0bf97a94dd9a690d20f08bb59b1",
     "bench/quadratic_kissing.py": "ae8f888c8578c67cebc9e6cfa752c9565d341031d850e2931f7aafd52d5477d0",
     "bench/reference_calibration/2026-09-16/formal-01-corners.json": "d7590c7d43fd33b1d5a17a29bd535e523e9b544d427fdfd83d3b5eeb6b5b16e6",
     "bench/reference_calibration/2026-09-16/formal-02-corners.json": "3ea1c3661e2076d2c45a07db16d0225fa0196009ca066975359490163e9c3fdc",
@@ -2649,49 +3086,49 @@
     "bench/result_selection.py": "904f8389072d23c7e3998dc7fe7408a1e8bd17e2c84f9470873b7f2c6c7f7c9a",
     "bench/data/result_replacements.json": "351b65a49b53a3b23af08b6507bc6ba37fbb60088a610ad2799c9f5442b41d9d",
     "bench/data/kissing13_quadratic.json": "2eef54abc37a28cae6d1e6bab2710d4b38971fda2e490c1bc51c43ff33bab3d6",
-    "bench/results/gpt-6-astra-codex-xhigh@128k.once-refresh#A2.jsonl": "c63309379b399445613c26e2977e8917e91fd652236dab5b4b9b1710be3f011a",
-    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T2.jsonl": "5d9faa2bf6e643cc976e8a512475aff8caf88cf35b44c2371d6c060c34924971",
-    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl": "e52ca23df2e5656749044b5ff73172d0eecc1856b755e5d396c782f44f98406c",
-    "bench/results/Qwen_Qwen3.5-4B-think-high@128k.kissing-q3.once#A3.jsonl": "78c8a480e90c4df66559642d0826802740ee79144c4e6426a109ce550aa3a6ac",
-    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A2.jsonl": "1686964e7f1313fe044f86729596b450c97f15fcff3b150b57e84fab0477872a",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M3.jsonl": "3b53d5231e5071b14d1b46abe3dfef3d560f6a803df380cdbe359d7a8e4fe18b",
-    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k.kissing-q3.once#A3.jsonl": "c5632c8a73a09241b7ffae80851cd5a2c09d13a6850dbce474667083b7db2dc5",
-    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#T3.jsonl": "9b05305d0dba4fdb16943a42604e6884c94c3bd41ddf1406fd0f065a3330e9c9",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M2.jsonl": "ccdbb885fdddff09395aa937ace95ff81b60486f6a2572b8a432a40d014b8214",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M1.jsonl": "f6ea83e8a46640fd54be9644d097f7cc13a2ae327fecbc0d75c7b4d37064327d",
-    "bench/refs/A3-kissing-6-quadratic-t10.json": "1dc091289ecbebebb1d612ebcb930a08fae2cb008ce100e922dd0affe6873f9f",
-    "bench/results/gpt-6-astra-codex-high@128k.kissing-q3.once#A3.jsonl": "2678208bdedaf913f90627f8366ed59bd79532180cd40d49920b41d3e231a844",
-    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L3.jsonl": "0072f1259c79e7ff67f20a4f291ade1d7b3fe1d4fa4beb74600dc0dfc2d24d85",
-    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#A3.jsonl": "1d514b5312c1a3d2b8dbc7955cea185fb3b19de51d654a230efb9e234dc0ec6d",
-    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T4.jsonl": "76377dda36bd9dd055e6f2f0f5d7f9b303f1870e28f45de4b9fda7ea753d65e0",
-    "bench/results/deepseek-flash-think-low@128k.kissing-q3.once#L3.jsonl": "32510618c43fe623a104e29808c446e8f4a371603b06d16973c244ef8d338c6f",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M4.jsonl": "64592c15eb08b06d24faf5d1b725f8d413bbb762e161095cec0a6f29f7494e28",
-    "bench/results/deepseek-flash-think-high@128k.kissing-q3.once#A3.jsonl": "60af0522f0a6994ac8444bded84270465f66776d13f35bc01befd748240165ca",
-    "bench/results/gpt-5.6-luna-codex-high@128k.kissing-q3.once#A3.jsonl": "6f5c862c7bae9315c23588e042bf1bdd53da873618e71eb169467f601a68c62f",
-    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k.kissing-q3.once#L3.jsonl": "f668e27fa3f2915181bd08f445b424fdae127cb06db64eea60300da51b357f50",
-    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L1.jsonl": "2c194bba0e1a00f8855c6174c036e39368a4aae9c8e87d3b5dde33f716f53d75",
-    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k.kissing-q3.once#A3.jsonl": "c1805a3b9f99ed5a132c8bf71cb1fa86686188ee86d3748ea064e5a0dcc29524",
-    "bench/results/gpt-6-astra-codex-medium@128k.kissing-q3.once#A3.jsonl": "a32e8eeeb7193853b4fb26ed68cf25720ebc604ffa2ee64c90d91977dcc29e9b",
-    "bench/results/deepseek-flash-think-low@128k.kissing-q3.once#A3.jsonl": "911550d9efd1f73c7e4c8e512b06de77bd485e2ae2a34a6c439dbf47371b8618",
-    "bench/results/claude-fable-5-1-headless-medium@128k.kissing-q3.once#A3.jsonl": "f18db6df68d656ffce9adadb59ecca6d2bd7b90ad2ca681fa65c9e99dec273c4",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#A3.jsonl": "a18f0ebe067d7736a75b67a3fc11bef120c0daec91950bbd2442bd6c2fc48424",
-    "bench/results/gpt-6-astra-codex-high@128k.infra-recovery#A3.jsonl": "1c9ee2f552fa30fb7db19a9ca0df2b21dfb7e1ccd933ae1502a48e7896fe052b",
-    "bench/results/Qwen_Qwen3.5-9B-think-high@128k.kissing-q3.once#A3.jsonl": "8317650f7f241323975c3d8bbb4d700a4f76a3453fb37f5316a5305d04c6a523",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L3.jsonl": "d8dc15b571c6fdf8f59ae771fc58f0be4532282d4a30056c4325200ffc1eff1d",
-    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T3.jsonl": "3966df783548387760ada3a6dfa191ad66583baf6c72dce08ccd526657559c9d",
-    "bench/results/gpt-5.6-luna-codex-high@128k.kissing-q3.once#L3.jsonl": "581b2b522a9812fbe2cdeae0cb9ceaec4c5d699c4f8f69ec0db684f36e1f1a91",
-    "bench/results/gpt-6-astra-codex-high@128k.kissing-q3.once#L3.jsonl": "7db51b7395adbf2fb36c44030439b9375a937e8cb9c9b8ab32d30401b89807a0",
-    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L4.jsonl": "a17a7a6428ac3916b83b6e121b837fc744c0b80770eeacac497ecdb49c930e66",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L2.jsonl": "e04f12891683a4a6875464d980c64a0723ff563d09660792324b583871d0b4b8",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#A2.jsonl": "053869a2a341fbf6dd7bc95db24c867bb2e29e2825efcb5404b3ad31b10fe082",
-    "bench/refs/L3-kissing-0-quadratic-t10.json": "cf3a697568563adb40aac5a0456e9eae4d777c8c698180a8cffa2a1e722d172b",
-    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T1.jsonl": "399cef7339fa87ed1a98ced3e0b399a7b5c6f90e56059a94099f078c0b362c0e",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L1.jsonl": "d7ee900f9fbdaeac6b8589b44e62d3e601d79e023e78621b915134513f51daeb",
-    "bench/refs/L3-kissing-1-quadratic-t10.json": "52f6edd3777dd416fc6790b050ede28750f3592ea6769de5c287318e91339898",
-    "bench/results/gpt-5.6-luna-codex-medium@128k.kissing-q3.once#A3.jsonl": "eb87de0b1175f3070d444687038aef34e43eb95c8984261443b10816204df9f7",
-    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L4.jsonl": "5e5c0b644127fd42e01f526a54ce28e21f174051c0dfc12d373ad93af70c32cb",
-    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L2.jsonl": "110ab7b61a286f7a60fd9ff1357889210ee5998e5e1f972f325cbeae7ac34df0",
     "bench/results/gpt-5.6-luna-codex-medium@128k.infra-recovery#A3.jsonl": "3183caf9735630c0ee8b6f3865d511c9fd8e3d67c92278dc6ef0fa8f3a71489c",
+    "bench/refs/L3-kissing-0-quadratic-t10.json": "cf3a697568563adb40aac5a0456e9eae4d777c8c698180a8cffa2a1e722d172b",
+    "bench/results/gpt-6-astra-codex-high@128k.kissing-q3.once#A3.jsonl": "2678208bdedaf913f90627f8366ed59bd79532180cd40d49920b41d3e231a844",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#A3.jsonl": "1d514b5312c1a3d2b8dbc7955cea185fb3b19de51d654a230efb9e234dc0ec6d",
+    "bench/results/gpt-6-astra-codex-medium@128k.kissing-q3.once#A3.jsonl": "a32e8eeeb7193853b4fb26ed68cf25720ebc604ffa2ee64c90d91977dcc29e9b",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M2.jsonl": "ccdbb885fdddff09395aa937ace95ff81b60486f6a2572b8a432a40d014b8214",
+    "bench/results/Qwen_Qwen3.5-4B-think-high@128k.kissing-q3.once#A3.jsonl": "78c8a480e90c4df66559642d0826802740ee79144c4e6426a109ce550aa3a6ac",
+    "bench/results/gpt-5.6-luna-codex-high@128k.kissing-q3.once#L3.jsonl": "581b2b522a9812fbe2cdeae0cb9ceaec4c5d699c4f8f69ec0db684f36e1f1a91",
+    "bench/results/gpt-5.6-luna-codex-high@128k.kissing-q3.once#A3.jsonl": "6f5c862c7bae9315c23588e042bf1bdd53da873618e71eb169467f601a68c62f",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L2.jsonl": "e04f12891683a4a6875464d980c64a0723ff563d09660792324b583871d0b4b8",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k.kissing-q3.once#A3.jsonl": "c5632c8a73a09241b7ffae80851cd5a2c09d13a6850dbce474667083b7db2dc5",
+    "bench/results/deepseek-flash-think-high@128k.kissing-q3.once#A3.jsonl": "60af0522f0a6994ac8444bded84270465f66776d13f35bc01befd748240165ca",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#A3.jsonl": "a18f0ebe067d7736a75b67a3fc11bef120c0daec91950bbd2442bd6c2fc48424",
+    "bench/refs/A3-kissing-6-quadratic-t10.json": "1dc091289ecbebebb1d612ebcb930a08fae2cb008ce100e922dd0affe6873f9f",
+    "bench/results/gpt-6-astra-codex-high@128k.kissing-q3.once#L3.jsonl": "7db51b7395adbf2fb36c44030439b9375a937e8cb9c9b8ab32d30401b89807a0",
+    "bench/results/gpt-6-astra-codex-xhigh@128k.once-refresh#A2.jsonl": "c63309379b399445613c26e2977e8917e91fd652236dab5b4b9b1710be3f011a",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L4.jsonl": "a17a7a6428ac3916b83b6e121b837fc744c0b80770eeacac497ecdb49c930e66",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L1.jsonl": "d7ee900f9fbdaeac6b8589b44e62d3e601d79e023e78621b915134513f51daeb",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T2.jsonl": "5d9faa2bf6e643cc976e8a512475aff8caf88cf35b44c2371d6c060c34924971",
+    "bench/results/Qwen_Qwen3.5-27B-FP8-think-high@128k.kissing-q3.once#A3.jsonl": "c1805a3b9f99ed5a132c8bf71cb1fa86686188ee86d3748ea064e5a0dcc29524",
+    "bench/results/deepseek-flash-think-low@128k.kissing-q3.once#A3.jsonl": "911550d9efd1f73c7e4c8e512b06de77bd485e2ae2a34a6c439dbf47371b8618",
+    "bench/results/Qwen_Qwen3.8-27B-FP8-think-high@128k.kissing-q3.once#L3.jsonl": "f668e27fa3f2915181bd08f445b424fdae127cb06db64eea60300da51b357f50",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#A2.jsonl": "053869a2a341fbf6dd7bc95db24c867bb2e29e2825efcb5404b3ad31b10fe082",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L1.jsonl": "2c194bba0e1a00f8855c6174c036e39368a4aae9c8e87d3b5dde33f716f53d75",
+    "bench/results/gpt-6-astra-codex-high@128k.infra-recovery#A3.jsonl": "1c9ee2f552fa30fb7db19a9ca0df2b21dfb7e1ccd933ae1502a48e7896fe052b",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T3.jsonl": "3966df783548387760ada3a6dfa191ad66583baf6c72dce08ccd526657559c9d",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L4.jsonl": "5e5c0b644127fd42e01f526a54ce28e21f174051c0dfc12d373ad93af70c32cb",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M1.jsonl": "f6ea83e8a46640fd54be9644d097f7cc13a2ae327fecbc0d75c7b4d37064327d",
+    "bench/results/gpt-5.6-luna-codex-medium@128k.kissing-q3.once#A3.jsonl": "eb87de0b1175f3070d444687038aef34e43eb95c8984261443b10816204df9f7",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L3.jsonl": "0072f1259c79e7ff67f20a4f291ade1d7b3fe1d4fa4beb74600dc0dfc2d24d85",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A2.jsonl": "1686964e7f1313fe044f86729596b450c97f15fcff3b150b57e84fab0477872a",
+    "bench/refs/L3-kissing-1-quadratic-t10.json": "52f6edd3777dd416fc6790b050ede28750f3592ea6769de5c287318e91339898",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T1.jsonl": "399cef7339fa87ed1a98ced3e0b399a7b5c6f90e56059a94099f078c0b362c0e",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#T4.jsonl": "76377dda36bd9dd055e6f2f0f5d7f9b303f1870e28f45de4b9fda7ea753d65e0",
+    "bench/results/Qwen_Qwen3.5-9B-think-high@128k.kissing-q3.once#A3.jsonl": "8317650f7f241323975c3d8bbb4d700a4f76a3453fb37f5316a5305d04c6a523",
+    "bench/results/claude-fable-5-1-headless-medium@128k.kissing-q3.once#A3.jsonl": "f18db6df68d656ffce9adadb59ecca6d2bd7b90ad2ca681fa65c9e99dec273c4",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#L2.jsonl": "110ab7b61a286f7a60fd9ff1357889210ee5998e5e1f972f325cbeae7ac34df0",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#L3.jsonl": "d8dc15b571c6fdf8f59ae771fc58f0be4532282d4a30056c4325200ffc1eff1d",
+    "bench/results/deepseek-flash-think-low@128k.kissing-q3.once#L3.jsonl": "32510618c43fe623a104e29808c446e8f4a371603b06d16973c244ef8d338c6f",
+    "bench/results/gpt-6-astra-codex-medium@128k.once-refresh#A3.jsonl": "e52ca23df2e5656749044b5ff73172d0eecc1856b755e5d396c782f44f98406c",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M4.jsonl": "64592c15eb08b06d24faf5d1b725f8d413bbb762e161095cec0a6f29f7494e28",
+    "bench/results/gpt-5.6-luna-codex-high@128k.infra-recovery#T3.jsonl": "9b05305d0dba4fdb16943a42604e6884c94c3bd41ddf1406fd0f065a3330e9c9",
+    "bench/results/gpt-6-astra-codex-high@128k.once-refresh#M3.jsonl": "3b53d5231e5071b14d1b46abe3dfef3d560f6a803df380cdbe359d7a8e4fe18b",
     "bench/refs/A3-capset-0-t10.json": "4eaf8a0f9145e06809c558de9631c35d8146e3936d0731825fa9e37a7337d810",
     "bench/results/Qwen_Qwen3.5-4B-think-high@128k#A3.jsonl": "b6b6ce6129972039fa8db633de394013731aa3288186a8d44cdd7775f98bffbe",
     "bench/results/Qwen_Qwen3.5-9B-think-high@128k#A3.jsonl": "aafcaf4b40589e012ababf92769316e81eafa023d68a4759553dd60633082593",
@@ -2703,6 +3140,8 @@
     "bench/results/deepseek-flash-think-high@128k#A3.jsonl": "57179af0cd2f8ca02845fe9a4429bbb006631eeed12424e1fb039292c4bbe306",
     "bench/results/claude-fable-5-1-headless-medium@128k#A3.jsonl": "f8bc86d142439a8c7c26bccf5c2c46c09271bb48ed0a2fe1948da64c3bac77f9",
     "bench/results/claude-fable-5-1-headless-high@128k.frozen69#A3.jsonl": "88ed1fd4256163151a44b220195abb1be43c163e33d95317749fc0be51e54524",
+    "bench/results/claude-opus-5-5-headless-medium@128k.frozen69#A3.jsonl": "9511023778723db9084cad14b356773d77102f198b1dac5d254ee150f3562e7c",
+    "bench/results/claude-opus-5-5-headless-high@128k.frozen69#A3.jsonl": "c78f99981af46d14d22c5be4befa0bc18bbbff652c2ef2ad6ebb02ada31eade3",
     "bench/refs/A3-capset-2-t10.json": "9ff0a2432a87c6a8ae286bdf236366eddaabc3b1312d0c949bce7030c338f1b8",
     "bench/refs/A3-labs-0-t10.json": "20e573990232ce3f6fe6002c27c378b8776f3c074b1650a41ce3286617d81d16",
     "bench/refs/A3-labs-1-t10.json": "e3a31f0f774872c3394b11d0a0c585149145da4a88d0917f8d57ceecb0e01813",
@@ -2778,6 +3217,8 @@
     "bench/results/deepseek-flash-think-high@128k#T1.jsonl": "83077f81f334e149fd4f23a9502c549482eb01a54f395bdd0734d0c3f8259f5a",
     "bench/results/claude-fable-5-1-headless-medium@128k#T1.jsonl": "6e76a78e35cef69db6b48038383d014406234c523daea77baaedc0afcf4b1eb9",
     "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T1.jsonl": "7adaef4feb3f4cfe9ad8cc26f3ff55b07388fb558905d8400755d3da238c7805",
+    "bench/results/claude-opus-5-5-headless-medium@128k.frozen69#T1.jsonl": "53a0184007519581012439ae792773c388900a42b3bb697b1e795bd7c39a63b6",
+    "bench/results/claude-opus-5-5-headless-high@128k.frozen69#T1.jsonl": "2934255ee5b65f66a6a5a56ceb87c8cc5eb2b82fbbe24a4ce1f26684b4027762",
     "bench/results/gpt-6-astra-codex-high@128k.once#T1.jsonl": "50dd7ecd72bda26dedd1c554877435439d854dce9c4c89ed53b22eeabaf6be87",
     "bench/refs/T2-trifference-0-t10.json": "ca5e86bcc53594304e43e5247ff288bc0f18a9ade8f2613b62dce44e84401af0",
     "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T2.jsonl": "531d5205bd881a44f67a228daf0c4bd14d914f658588055a3d40bdf927c94ed1",
@@ -2790,6 +3231,8 @@
     "bench/results/deepseek-flash-think-high@128k#T2.jsonl": "e69663b64849d9a843cc79d3e1e06eb8103b7304ad4b2245f19c64e8537f9b13",
     "bench/results/claude-fable-5-1-headless-medium@128k#T2.jsonl": "fa8fcc00bb46428ba880011220f9302efa03efe70eaedf719f187cd6998bf3bd",
     "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T2.jsonl": "7e5a612e46e15ad041fa23bb0965362aeba212b10fcd16ef8febac3acb46beb8",
+    "bench/results/claude-opus-5-5-headless-medium@128k.frozen69#T2.jsonl": "c666b54324dd226a7ee028284ad524f4ef72aee5bec8029237a07cd9ab35982d",
+    "bench/results/claude-opus-5-5-headless-high@128k.frozen69#T2.jsonl": "22fe9004165d5ecae8c6c23f3efb098966f6e05ef1107f029cae07aac93be941",
     "bench/results/gpt-6-astra-codex-high@128k.once#T2.jsonl": "0422d4ee25a09c7fa13968acc81325fc9bc88528e543e9af47808051780073e6",
     "bench/refs/T3-trifference-0-t10.json": "7b7c64010a9c2394c4fa9784125d1ece7febd6925a1e944c5a884572f7fd0a2c",
     "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T3.jsonl": "7ed88c09bd739c67b9b530e84cbdc7bdc43214f1cf5507d673f2d8ca575125fa",
@@ -2801,6 +3244,8 @@
     "bench/results/deepseek-flash-think-high@128k#T3.jsonl": "71c8ec0b184938d97271392ebc28f5390fbb4ab7bc512c7fdbdd6f56da21496d",
     "bench/results/claude-fable-5-1-headless-medium@128k#T3.jsonl": "f6d58af48fb2179a90fbdae8e41e1fdb0d881f6f30684e9d76c7724e761d8780",
     "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T3.jsonl": "0b5abb9b39c71e7c12729bdb4a14d4f609570553c461e662a6e06368bbc17a37",
+    "bench/results/claude-opus-5-5-headless-medium@128k.frozen69#T3.jsonl": "6f93dc057be051001eccd3bcee4ce4506a36dc059afd4a357258fb991123d02e",
+    "bench/results/claude-opus-5-5-headless-high@128k.frozen69#T3.jsonl": "17132567d6f4d322124bcb883db8bc09b46b90544f74e3030dbd3ff33f942d52",
     "bench/results/gpt-6-astra-codex-high@128k.once#T3.jsonl": "8a3e0885b94b2f07adb64bfb750501974be479c5fe2d0b75bec5d6b73cab5af3",
     "bench/refs/T4-trifference-0-t10.json": "4c139f8c00f5a3b6bceb8ca8ea018b0ebb684ff7ce98ce26e3944fe3db974cb9",
     "bench/results/Qwen_Qwen3.5-4B-think-high@128k#T4.jsonl": "54e362a1a8f5153e056375d9a0407ce72ae7ac40835b7aa8d6f249adaa29843f",
@@ -2813,6 +3258,8 @@
     "bench/results/deepseek-flash-think-high@128k#T4.jsonl": "01fe50e6a670dbc9853d4e8e8a9d2f508b0c73e29303d8ad82e0be9d56a24536",
     "bench/results/claude-fable-5-1-headless-medium@128k#T4.jsonl": "552a9557cfa449c246d459637fa09433a2250587663943721e6da927f1fa689f",
     "bench/results/claude-fable-5-1-headless-high@128k.frozen69#T4.jsonl": "fa29369b5b64684a53b44e373dc7c623445e5a90e5021c0c61db2e5c7efb254f",
+    "bench/results/claude-opus-5-5-headless-medium@128k.frozen69#T4.jsonl": "d8598542945ee5df5adbc8254653343b53390538e4c8bdc53360f9cb53a07bb1",
+    "bench/results/claude-opus-5-5-headless-high@128k.frozen69#T4.jsonl": "709cc7832df32f7f1f63bb997c6caf1e33cef38c65bde149369bbf260f487695",
     "bench/results/gpt-6-astra-codex-high@128k.once#T4.jsonl": "1bdd20b5a08355a36dff0a11f682658bbeabeba8c61d1440af68161553a6e86a"
   },
   "overall_score": {

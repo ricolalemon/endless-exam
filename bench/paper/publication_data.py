@@ -20,12 +20,13 @@ from openceiling import FAMILIES, closed_gap, conjectured_gap, frontier_ratio, e
 from result_selection import source_for
 
 ORDER = ["qwen4", "qwen9", "qwen35", "qwen38", "luna_medium", "luna_high",
-         "deepseek_low", "deepseek_high", "fable", "fable_high", "astra_medium", "astra_high"]
+         "deepseek_low", "deepseek_high", "fable", "fable_high", "opus55_medium", "opus55_high", "astra_medium", "astra_high"]
 MODEL_NAMES = {
     "gpt-6-astra": "GPT-6 Astra",
     "gpt-5.6-luna": "GPT-5.6 Luna",
     "claude-fable-5-1": "Claude Fable 5.1",
     "claude-opus-5": "Claude Opus 5",
+    "claude-opus-5-5": "Claude Opus 5.5",
     "deepseek-flash": "DeepSeek V4.1 Flash",
     "Qwen/Qwen3.8-27B-FP8": "Qwen3.8-27B",
     "Qwen/Qwen3.5-27B-FP8": "Qwen3.5-27B",
@@ -165,7 +166,7 @@ def code_data():
 
 def export():
     result = summaries();cases, codes = code_data()
-    assert len(result) == len(ORDER) == 12
+    assert len(result) == len(ORDER) == 14
     assert all((s["calls"], s["p1"]["n"], s["p2"]["n"]) == (69, 30, 39) for s in result.values())
     assert all(s["overall"]["n"] == 69 for s in result.values())
     snapshot = "bench/frontiers/v1-trifference.json"
@@ -178,7 +179,7 @@ def export():
     for p in sorted(construction_files | {"bench/openceiling.py", "bench/quadratic_kissing.py", "bench/freeze_frontier.py", "bench/paper/publication_data.py",
                                          "bench/construction_references.json", "bench/formal_cohort.py",
                                          "bench/result_selection.py", "bench/evaluation_outcomes.py", "bench/exam.py",
-                                         "bench/data/formal_suite_v1.json", "bench/data/fable_high_publication.json"}):
+                                         "bench/data/formal_suite_v1.json", "bench/data/fable_high_publication.json", "bench/data/opus55_publication.json"}):
         sources[p] = hashlib.sha256((ROOT / p).read_bytes()).hexdigest()
     selection = ROOT / 'bench/data/result_replacements.json'
     if selection.exists():

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Index the 966 published outcomes and their saved responses; no model calls."""
+"""Index published outcomes and their saved responses; no model calls."""
 import csv
 import hashlib
 import json
@@ -61,7 +61,8 @@ def generate():
                 'source_pointer': f'/cases/{index}',
             })
 
-    assert len(records) == 14 * 69
+    configurations = len(P.ORDER) + len(T.SYSTEMS)
+    assert len(records) == configurations * 69
     assert len({(r['configuration_id'], r['instance_id']) for r in records}) == len(records)
     out = ROOT / 'bench/results/published'
     out.mkdir(parents=True, exist_ok=True)
@@ -73,7 +74,7 @@ def generate():
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         writer.writerows({**r, 'params': json.dumps(r['params'], sort_keys=True)} for r in records)
-    print(f'Indexed {len(records)} outcomes across 14 configurations and 69 instances.')
+    print(f'Indexed {len(records)} outcomes across {configurations} configurations and 69 instances.')
 
 
 if __name__ == '__main__':

@@ -191,6 +191,44 @@
         "mean": 0.0
       }
     },
+    "opus55_medium": {
+      "label": "Claude Opus 5.5 medium",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.00593622561742343,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.011174071750444103
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
+    "opus55_high": {
+      "label": "Claude Opus 5.5 high",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.008937780684137996,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.016824057758377402
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.0
+      }
+    },
     "astra_medium": {
       "label": "GPT-6 Astra medium",
       "gap_closed": {
@@ -265,6 +303,25 @@
       "target_progress": {
         "n": 5,
         "mean": 0.24739313060586382
+      }
+    },
+    "opus55_tools": {
+      "label": "Claude Opus 5.5 high + tools",
+      "gap_closed": {
+        "n": 64,
+        "mean": 0.07452701211434165,
+        "published": {
+          "n": 30,
+          "mean": 0.0
+        },
+        "construction": {
+          "n": 34,
+          "mean": 0.14028614045052545
+        }
+      },
+      "target_progress": {
+        "n": 5,
+        "mean": 0.18563996696046484
       }
     }
   }

@@ -145,9 +145,9 @@ def fig_scale(tier="A3"):
     order = lit + tf
     reference_groups = scale_reference_values(ref)
     tools = tool_scale_values() if tier == 'A3' else {}
-    offsets = {'astra_tools': .27, 'luna_tools': -.27}
+    offsets = {'astra_tools': .30, 'luna_tools': -.30, 'opus55_tools': 0}
     tool_handles = []
-    fig, ax = plt.subplots(figsize=(S.WIDTH, 4.15))
+    fig, ax = plt.subplots(figsize=(S.WIDTH, 4.50))
     for i, f in enumerate(order):
         published = i < len(lit)
         summary = reference_groups[f, 'published' if published else 'construction']
@@ -185,8 +185,8 @@ def fig_scale(tier="A3"):
     ax.grid(axis="x")
     S.legend(fig, *ax.get_legend_handles_labels(), ncol=3, y=.048 if tools else .01)
     if tools:
-        S.legend(fig, tool_handles, [s['label'] for s in tools.values()], ncol=2, y=.002)
-    fig.subplots_adjust(left=.245, right=.965, bottom=.295 if tools else .255, top=.96)
+        S.legend(fig, tool_handles, [s['label'] for s in tools.values()], ncol=3, y=.002)
+    fig.subplots_adjust(left=.245, right=.965, bottom=.32 if tools else .255, top=.96)
     save(fig, "fig1_scale")
     if tier == 'A3':
         from pathlib import Path

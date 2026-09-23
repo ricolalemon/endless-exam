@@ -1,36 +1,41 @@
 \appendixpage
 \section{Code and web access}
 \label{app:tools}
-\readingnote{At high effort, tools raise GPT-6 Astra's overall score on the 69 instances from \AstraHighScore{} to \ToolScore{} and GPT-5.6 Luna's from \LunaToolFreeScore{} to \LunaToolScore{}. Both approach the published frontiers and improve beyond construction baselines, with gains that vary across families.}
+\readingnote{Code and web access improve all three models' overall scores. Claude Opus 5.5 achieves the highest overall score, while GPT-6 Astra comes closest to the published frontiers. Family and instance comparisons distinguish these patterns.}
 
 \subsection{Protocol}
 We evaluated GPT-6 Astra and GPT-5.6 Luna at high effort through Codex CLI 0.154.0 on 18 September 2026, with code execution and live web search. Each instance has an independent environment with four CPU threads, 16\,GiB of memory and a two-hour wall-clock limit, with no limit on total output tokens. An evaluation may contain multiple model and tool interactions. Models can inspect constructions and stop when ready, saving their submission as a JSON file of at most 32\,MiB. When the evaluation ends or reaches a resource limit, we score the saved construction if it was written within the time limit and passes verification. Missing, late or invalid submissions receive zero. Both verifiers and their 60-second verification limit are the same as in the tool-free track.
 
-Mathematical prompts, parameters and formats match the tool-free evaluation; we replace the no-tools instruction with: ``Save your final answer as a single JSON object to /workspace/answer.json.'' Prompts give no reference values, strategies or budget reminders, and environments contain no benchmark library, reference objects or prior answers. Subagents are disabled and bounded reconnection is enabled, although none occurred in these 138 evaluations. Network and service failures are unscored. We retain the first result that can be scored and do not repeat an evaluation to improve its answer.
+Claude Opus 5.5 was evaluated at high effort through Claude Code 2.1.280 on 22--23 September 2026. It uses native web search and an MCP shell connected to the same CPU environment and resource limits. The native system instructions and tool interfaces therefore differ between Claude Code and Codex. Claude's per-response output limit is 128k; there is no cumulative limit across the trajectory. At an output or resource stop, the saved construction is scored under the same rule.
+
+Mathematical prompts, parameters and formats match the tool-free evaluation; we replace the no-tools instruction with: ``Save your final answer as a single JSON object to /workspace/answer.json.'' Prompts give no reference values, strategies or budget reminders, and environments contain no benchmark library, reference objects or prior answers. Subagents are disabled and bounded reconnection is enabled. Network and service failures are unscored. We retain the first result that can be scored and do not repeat an evaluation to improve its answer.
 
 \subsection{Construction quality}
 GPT-6 Astra returns \ToolValid{} valid constructions, improving \ToolImproved{} and tying \ToolTied{} tool-free outcomes. GPT-5.6 Luna returns \LunaToolValid{} valid constructions, with \LunaToolImproved{} improvements, \LunaToolTied{} ties and \LunaToolDeclined{} declines. Luna's three zeroes comprise two invalid submissions and one evaluation that exceeded the memory limit before producing a submission. Both verifiers agree on every scored outcome.
+
+Opus 5.5 returns \OpusToolValid{} valid constructions, with \OpusToolImproved{} improvements and \OpusToolTied{} ties against its high-effort tool-free answers. Its final covering evaluation reaches the two-hour limit with a valid 225-block construction saved, matching the reference and receiving full relative quality. Its mean relative quality is \OpusToolPublishedHFR{} on published frontiers and \OpusToolConstructionRatio{} on construction baselines, matching \OpusToolPublishedMatched{} published references and exceeding \OpusToolConstructionAbove{} construction baselines.
 
 Mean relative quality on instances with published frontiers reaches \ToolPublishedHFR{} for Astra and \LunaToolPublishedHFR{} for Luna, matching \ToolPublishedMatched{} and \LunaToolPublishedMatched{} references without exceeding any. On the 39 construction baselines, Astra improves \ToolConstructionAbove{} and Luna \LunaToolConstructionAbove{}, reaching mean ratios of \ToolConstructionRatio{} and \LunaToolConstructionRatio{}. Luna exceeds Astra on \LunaToolBeatsAstra{} Heilbronn instances, with a higher mean across the ten instances in that family. These comparisons include web retrieval, code execution and the different generation budgets of the two tracks.
 
 \begin{center}\small\setlength{\tabcolsep}{3pt}
 \input{tables/tool_families}
-\captionof{table}{GPT-6 Astra and GPT-5.6 Luna at high effort, with and without tools on the 69 instances. Family means average relative quality over instances, including zeroes.}
+\captionof{table}{GPT-6 Astra, GPT-5.6 Luna and Claude Opus 5.5 at high effort, with and without tools on the 69 instances. Family means average relative quality over instances, including zeroes.}
 \label{tab:tool_families}
 \end{center}
 
-For the length-64 trifference example in Section~\ref{sec:representative_tasks}, tools increase Astra's code size from 59,049 to \ToolTriWords{} codewords, raising relative quality from 3 to \ToolTriRatio{}. Luna matches the construction baselines at lengths 64, 96 and 192, but its length-144 certificate is invalid. All submitted objects are released.
+For the length-64 trifference example in Section~\ref{sec:representative_tasks}, tools increase Astra's code size from 59,049 to \ToolTriWords{} codewords, raising relative quality from 3 to \ToolTriRatio{}. Opus 5.5 constructs \OpusToolTriWords{} codewords, with relative quality \OpusToolTriRatio{} against the same construction baseline. This instance and stronger Heilbronn constructions account for much of its overall advantage over Astra; it does not lead on every family. Luna matches the construction baselines at lengths 64, 96 and 192, but its length-144 certificate is invalid. All submitted objects are released.
 
 \subsection{Token usage}
-Table~\ref{tab:tool_usage} sums the reported token usage across all model turns in each model's 69 evaluations. Usage was reported for every instance. Reasoning tokens are included in output totals, and cached tokens are included in input totals. Figure~\ref{fig:score_tokens} uses output totals to describe generation length; these totals do not measure CPU computation or web access.
+Table~\ref{tab:tool_usage} sums reported token usage across all model turns in each model's 69 evaluations. Reasoning tokens are included in output totals, and cached tokens are included in input totals. For Claude Code, we also include model usage reported by its native web-search tool. The final deadline-stopped Opus evaluation lacks that aggregate, so its retained streamed usage and the resulting total are lower bounds, marked with a star. Figure~\ref{fig:score_tokens} describes model generation, including reported search-related model usage; it does not measure external CPU computation or search-service work.
 \begin{center}\small
 \input{tables/tool_usage}
-\captionof{table}{Reported token usage for GPT-6 Astra and GPT-5.6 Luna at high effort with code and web access.}
+\captionof{table}{Reported token usage at high effort with code and web access. Stars indicate totals with some unreported usage; actual consumption may be higher.}
 \label{tab:tool_usage}
 \end{center}
 
+\clearpage
 \subsection{Individual instances}
 Parameters and reference types are listed in Appendix~\ref{app:tiers}; the release includes every submitted object and its verification result.
-\small\setlength{\tabcolsep}{3pt}
+\small\setlength{\tabcolsep}{2pt}
 \input{tables/tool_instances}
 \normalsize

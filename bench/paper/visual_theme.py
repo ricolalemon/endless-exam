@@ -23,6 +23,7 @@ MODEL_COLORS = {
     'qwen38': '#9162A8', 'luna_medium': '#CE9650', 'luna_high': '#AD681F',
     'deepseek_low': '#878787', 'deepseek_high': '#505050', 'fable': '#AD4055', 'fable_high': '#70283C',
     'astra_medium': '#4B90AD', 'astra_high': '#2359A0',
+    'opus55_medium': '#62A6A6', 'opus55_high': '#1B7476',
 }
 OPUS_COLOR = '#856B3E'
 

@@ -31,14 +31,14 @@ python bench/paper/manuscript_numbers.py
 python scripts/index_results.py
 ```
 
-All twelve tool-free configurations have one selected response on each of the
+All fourteen tool-free configurations have one selected response on each of the
 same 69 instances. The overall Score, panel means and bootstrap intervals are written
 to `bench/paper/tables/publication_data.json`. Claude Opus 5 is a supplementary
 comparison on its shared 45-instance subset.
 
-The separate Astra high and Luna high code-and-web evaluations use the same 69 instances. Their final
+The separate Astra high, Luna high and Opus 5.5 high code-and-web evaluations use the same 69 instances. Their final
 objects, prompts, verification results, usage and resource settings are in
-`bench/results/tool-assisted/astra-high-v1.json` and `luna-high-v1.json`. `tool_results.py` recomputes their
+`bench/results/tool-assisted/astra-high-v1.json`, `luna-high-v1.json` and `opus55-high-v1.json`. `tool_results.py` recomputes their
 scores against the same frozen references and writes `tables/tool_publication_data.json`,
 the manuscript macros, family comparisons and individual-instance tables. Tool-free
 selections stay in their original files. The combined score/token plot is generated
@@ -72,8 +72,12 @@ retains the four Shannon responses already shown in the main code comparison.
 
 Qwen models use vLLM 0.29.0 with prefix caching disabled. Qwen3.5-4B and 9B use
 tensor parallelism 2; the 27B FP8 checkpoints use tensor parallelism 4. Collection
-concurrency for these vLLM runs is at most four, or two for the code-family evaluations. Fable high uses independent tool-free sessions with peak collection concurrency 43; its client version, output budget and provenance are recorded in `bench/data/fable_high_publication.json`. Native CLI
-models retain their system instructions, while API models receive the mathematical
+concurrency for these vLLM runs is at most four, or two for the code-family evaluations. Fable high uses independent tool-free sessions with peak collection concurrency 43; its client version, output budget and provenance are recorded in `bench/data/fable_high_publication.json`. Opus 5.5 uses Claude Code 2.1.280 at medium and high effort without tools, and
+at high effort with native web search and an isolated MCP shell. It shares the
+mathematical prompts and CPU/memory/time limits of the other tool evaluations;
+the native system prompt and tool interfaces differ. Its peak concurrency is two
+per tool-free effort and fourteen with tools, using disjoint physical CPU groups.
+Native CLI models retain their system instructions, while API models receive the mathematical
 construction system message. All models receive the same mathematical task and
 answer-format instructions. See [evaluation rules](EVALUATING.md) for infrastructure
 recovery, terminal failures and token accounting.
