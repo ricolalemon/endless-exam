@@ -15,7 +15,7 @@ The overall score in Table~\ref{tab:headline} combines all 69 instances using th
 \readingnote{The non-code experiments use three parameter ranges: A1 contains small familiar instances, A2 uses larger settings, and A3 supplies the main evaluation. Family coverage varies across these groups. Appendix~\ref{app:ladder_results} instead varies size within each family, allowing construction quality to be followed as the task grows.}
 \begin{center}
 \includegraphics[width=\linewidth]{figs/fig3_tiers.pdf}
-\captionof{figure}{Performance across parameter ranges. Legend brackets give the numbers of evaluated families in A1, A2 and A3, respectively; a dash denotes an unmeasured group. The family sets differ across groups.}
+\captionof{figure}{Performance across parameter ranges. Legend brackets give the numbers of evaluated families in A1, A2 and A3, respectively; a dash denotes an unmeasured group. The family sets differ across groups. Claude Opus 5 is an earlier checkpoint included in these auxiliary comparisons.}
 \label{fig:tiers}
 \end{center}
 \appendixpage
@@ -52,7 +52,7 @@ On the main 69 instances, Astra medium and high return \AstraMedValidCalls{} and
 \end{center}
 \appendixpage
 \subsection{A changing reference: graphs with maximum degree four}
-\readingnote{GPT-6 Astra's relative quality falls from \QuarticMTwo{} to \QuarticMFour{}. Its graph size changes from 192 to 195 vertices as the allowed diameter increases from five to seven, while the reference grows more quickly.}
+\readingnote{GPT-6 Astra's relative quality is \QuarticMTwo{} at diameter 5, $0.98$ at diameter 6 and \QuarticMFour{} at diameter 7. Between diameters 5 and 7, its graph size changes from 192 to 195 vertices, while the reference grows more quickly.}
 \begin{center}\includegraphics[width=\linewidth]{figs/appendix/ladder_quartic.pdf}
 \captionof{figure}{Graphs with maximum degree four at diameters 4--7. The lower panel plots $N^{1/k}$, where $N$ is the number of vertices and $k$ the allowed diameter. Each point represents one response from GPT-6 Astra at high effort or DeepSeek V4.1 Flash at low effort.}
 \label{fig:ladder_quartic}
@@ -86,7 +86,7 @@ Table~\ref{tab:code_comparison} compares all fourteen tool-free configurations o
 \label{tab:code_comparison}
 \end{center}
 
-For trifference, GPT-6 Astra at high effort without tools produces 59,049 codewords at length 64, three times the baseline, and matches the construction baseline at the other three lengths. Astra medium and Claude Fable 5.1 medium match the baselines at all four lengths, certifying $3^{21}$ codewords at length 192. GPT-5.6 Luna at medium effort has no valid trifference answer, while Luna high matches the baseline only at length 192. Figure~\ref{fig:code_scale} shows how code size scales with length and compares the results with the references and proven bounds.
+Without tools, GPT-6 Astra at high effort and Claude Opus 5.5 at medium and high effort each produce 59,049 trifference codewords at length 64, three times the baseline. All three configurations match the baselines at the other three lengths. Astra medium and Claude Fable 5.1 medium match the baselines at all four lengths, certifying $3^{21}$ codewords at length 192. GPT-5.6 Luna at medium effort has no valid trifference answer, while Luna high matches the baseline only at length 192. Figure~\ref{fig:code_scale} shows how code size scales with length and compares the results with the references and proven bounds.
 
 \appendixpage
 Tables~\ref{tab:code_multimodel_detail} and \ref{tab:code_detail_trifference} give the individual outcomes behind these averages.
@@ -113,7 +113,7 @@ Astra matches the construction baselines at lengths 30, 36 and 42 with valid 729
 \appendixpage
 \subsection{Claude Opus 5 on shared instances}
 \label{app:opus_subset}
-Claude Opus 5 at medium effort is compared with the other configurations on their 45 shared instances.
+We also report an auxiliary comparison with the earlier Claude Opus 5 checkpoint at medium effort on 45 shared instances.
 \begin{center}
 \centering\footnotesize
 \input{tables/opus_matched}
@@ -126,7 +126,7 @@ We examine the effect of including Kakeya as a scored family in Table~\ref{tab:s
 \begin{center}
 \centering\footnotesize
 \resizebox{\linewidth}{!}{\input{tables/selection_comparison}}
-\captionof{table}{Effect of including Kakeya in the aggregate. $+K$ includes Kakeya and $-K$ excludes it. Relative quality is averaged over instances with construction baselines; both settings use the same responses from the twelve non-code families and equal instance weights. Published-frontier scores are identical in the two cases.}
+\captionof{table}{Effect of including Kakeya in the aggregate for the eleven configurations with control results. $+K$ includes Kakeya and $-K$ excludes it. Relative quality is averaged over instances with construction baselines; both settings use the same responses from the twelve non-code families and equal instance weights. Published-frontier scores are identical in the two cases.}
 \label{tab:selection}
 \end{center}
 

@@ -33,6 +33,7 @@ Covering, $(v,k,t)$: $(18,7,4)$, $(24,6,3)$, $(30,6,3)$ & 126, 116, 225; block l
 \end{center}
 \appendixpage
 \subsection{Construction baselines and controls}
+Construction baselines are verified outputs of documented construction and search procedures, providing reproducible comparison points across the evaluation. Published LABS sequences~\citep{dimitrov2022sequences}, spherical-code tables~\citep{cohn_spherical_tables} and Heilbronn configurations~\citep{stead_heilbronn_archive} provide stronger constructions at some evaluated parameters. References remain unchanged within \texttt{bench-v1.0}; exceeding a construction baseline alone does not establish a mathematical record.
 \begin{center}\small\setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\linewidth}{@{}P{.20\linewidth}YY@{}}
 \toprule
@@ -52,7 +53,7 @@ Spherical codes & Expert construction or reference search. & Cap-packing bound; 
 \captionof{table}{Construction baselines and controls, with proven bounds or the conjectured LABS target.}\label{tab:construction_refs}
 \end{center}
 \subsection{Constructing the code references}
-Shannon references optimise products of small codes: the Polak--Schrijver 367-word code in $C_7^5$, its projections, and the 81-word code $\{(i,j,2i+4j\bmod9):i,j\in\mathbb Z_9\}$ in $C_9^3$. The ten-second search modifies these small codes and recomputes their best products. The resulting references reach roughly $4.8\times10^{40}$ words and have short certificates. Recent recursive improvements~\citep{tandon2026shannon} suggest further composition methods.
+Shannon references optimise products of small codes: the Polak--Schrijver 367-word code in $C_7^5$, its projections, and the 81-word code $\{(i,j,2i+4j\bmod9):i,j\in\mathbb Z_9\}$ in $C_9^3$. The ten-second search modifies these small codes and recomputes their best products. The resulting references reach roughly $4.8\times10^{40}$ words and have short certificates. Recent recursive improvements~\citep{tandon2026shannon} suggest further composition methods. At $(q,d)=(7,24)$, the \texttt{bench-v1.0} baseline uses $367^4\times107$; the 108-word factor in $C_7^4$ due to Vesel and \v{Z}erovnik, listed in \citet[Table~1]{polak2019shannon}, gives the stronger product $367^4\times108$, explaining the corresponding tool-assisted improvement over this baseline.
 
 For the shorter trifference instances, references include 729-word linear codes of lengths 26, 35 and 41 with separation multiplicities 1, 2 and 3, and a 2,187-word code of length 49. The first three augment a published generator array with selected coordinates; the last uses projective columns of weight one or two. Zero padding gives codes at the required lengths.
 
@@ -70,6 +71,13 @@ Every reference construction passes both verifiers and is shared by all models. 
 \begin{center}
 \centering\footnotesize\setlength{\tabcolsep}{3pt}
 \resizebox{\linewidth}{!}{\input{tables/search_budget_table}}
-\captionof{table}{Search gains for seeds 0--2, with all four evaluated instances included for Shannon. R denotes search-resistant families; S denotes families that can benefit from search, for the procedures studied here. $\Delta_r$ compares raw 600- and 10-second search objectives; $\Delta_z$ compares the baselines after including the expert construction. Both are log improvement ratios, with direction adjusted for minimisation. Repeats are averaged within each instance before computing the means; maxima are over paired runs.}
+\captionof{table}{Search gains for seeds 0--2, with all four evaluated instances included for Shannon. R denotes search-resistant families; S denotes families that may benefit from search, for the procedures studied here. $\Delta_r$ compares raw 600- and 10-second search objectives; $\Delta_z$ compares the baselines after including the expert construction. Both are log improvement ratios, with direction adjusted for minimisation. Repeats are averaged within each instance before computing the means; maxima are over paired runs.}
 \label{tab:search_audit}
+\end{center}
+
+\begin{center}
+\centering
+\includegraphics[width=\linewidth]{figs/fig5_search.pdf}
+\captionof{figure}{Effect of increasing reference search time. Light grey shows the improvement in the search result from 10 to 600 seconds. Dark grey shows the improvement after taking the better of the search result and the established construction at each budget. Ochre compares the best valid tool-free answer with the 10-second search result. For minimisation, ratios are inverted before taking logarithms; log ratios are then averaged over distinct instances. The dotted line marks a 1.1-fold improvement.}
+\label{fig:search}
 \end{center}

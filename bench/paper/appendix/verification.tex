@@ -25,7 +25,7 @@ For the thirteen-dimensional kissing instance, a coordinate may be written as $a
 \subsection{Code products and explicit codewords}
 Shannon codes may be listed explicitly, expanded as products of up to 4,096 words, or specified by factors $C_i$ and integer powers $r_i$. The factors must satisfy $\sum_i r_i\dim(C_i)=d$. Verifying each factor establishes the full product's separation property, and its exact size is $\prod_i|C_i|^{r_i}$. Certificates may list at most 16,384 factor words in total and describe dimension at most 256. The supported alphabets are $q\in\{5,7,9\}$, with $C_5$ used for calibration. We compute a rational upper bound on $\vartheta(C_q)^d$~\citep{lovasz1979shannon} and round it down to an integer, since code sizes are integers.
 
-Explicit trifference representations allow up to 6,561 words of length at most 128, or up to eight ternary generator rows. For a verified linear code, translating a triple to include zero reduces verification to pairs of codewords. Nonlinear codes require the direct triple check. Both procedures have the same 60-second limit.
+The explicit-expansion format for trifference accepts up to 6,561 words of length at most 128, or a ternary generator matrix with at most eight rows. For a verified linear code, translating a triple to include zero reduces verification to pairs of codewords. Nonlinear codes require the direct triple check. Both procedures have the same 60-second limit.
 \appendixpage
 \subsection{Linear trifference certificates}
 \label{app:trifference_certificates}
@@ -37,7 +37,7 @@ Verification enumerates $(3^k-1)/2$ projective directions. For $m\le3$, reduced 
 \end{constructionbox}
 \input{tables/trifference_verifier}
 \begin{minipage}{\linewidth}
-\subsection{Reed--Solomon concatenation}
+\subsection{Reed--Solomon concatenation}\label{app:representation_limits}
 \begin{constructionbox}[title=Construction and separation guarantee]
 A Reed--Solomon concatenation certificate supplies a verified inner code of length $a$ and size $q=3^r$, a monic irreducible polynomial defining $\mathbb F_q$, and outer parameters $1\le K\le N\le q$. Every triple of distinct inner codewords must be separated in at least $b$ coordinates. The outer code evaluates all polynomials of degree below $K$ at $N$ distinct field elements. Replacing its symbols by the $q$ inner words gives exactly $q^K$ words of length $aN$, with zero padding to $n$ allowed.
 
@@ -53,3 +53,6 @@ $aN$ & $q^K$ & $b(N-3K+3)$
 \end{resultbox}
 The certificate is accepted when its guaranteed separation $b(N-3K+3)$ is at least $m$. The finite inner code and irreducible polynomial make both the cardinality and the separation claim checkable.
 \end{minipage}
+
+\paragraph{Representation limits.}
+At length 64, the \texttt{bench-v1.0} formats admit at most $3^{12}=531{,}441$ words (relative quality 27), attained by Opus 5.5. Direct and explicit formats obey this cap. For concatenation, $3^r\le\lfloor2(3/2)^a\rfloor$, $N\le\min(3^r,\lfloor64/a\rfloor)$, $K\le\lfloor(N+2)/3\rfloor$ and $r\le12$ give $rK\le12$. This is a representation limit, not a known mathematical optimum; scores are not clipped at reference parity.

@@ -67,10 +67,14 @@ Let `a` be the verified objective and `h` the instance's fixed reference:
 
 Relative quality 1 matches the reference, and every improvement raises the
 score. All instances use this same metric. Thirty use published frontiers for
-direct comparison with existing mathematical results. The other 39 use parameters
-outside published construction tables to reduce direct retrieval of ready-made
-answers and test adaptation of known methods. Their construction baselines take
-the best value from verified constructions and the ten-second reference search.
+direct comparison with existing mathematical results. The other 39 use
+construction baselines: the best value from the specified verified constructions
+and the ten-second reference search. These are reproducible comparison points,
+not necessarily the strongest published constructions. Scores are not clipped
+at reference parity; answer-format and verification-resource limits still apply.
+In particular, the version-1 length-64 trifference formats admit at most 3^12
+words (relative quality 27), which is a representation limit rather than a
+mathematical optimality result.
 
 Each instance contributes one response. The total is
 `Score = 100 × mean(instance ratios)` across all 69 instances. Reference parity

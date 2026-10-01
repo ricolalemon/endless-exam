@@ -26,7 +26,8 @@ constructions earn higher scores, including after the reference is surpassed.
 Version 1 samples **69 distinct instances from 14 families**, with **one response
 per instance and configuration**. The paper evaluates **9 models in 14 tool-free
 configurations**, plus Astra high, Luna high and Opus 5.5 high with code and web access.
-Thirty instances use published frontiers to compare models directly with existing mathematical results. The other 39 use parameters outside published construction tables to reduce direct retrieval of ready-made answers and test adaptation of known methods; verified construction baselines provide their references.
+The revised manuscript uses **bench-v1.0**, retaining its 69 instances, references and scoring rules.
+Thirty instances use published frontiers to compare models directly with existing mathematical results. The other 39 use verified construction baselines obtained from mathematical constructions and computational search. These are reproducible comparison points, not necessarily the strongest published constructions. Scores are not clipped at reference parity; accepted answer formats and verification budgets still constrain which constructions can be evaluated.
 Across the 30 published-frontier instances, every configuration has a 0%
 breakthrough rate, while continuous relative quality separates tool-free models from 0.07 to 0.76
 and reaches 0.998 for Astra, 0.961 for Luna and 0.985 for Opus 5.5 with tools.
