@@ -2,7 +2,7 @@
   "instances": 69,
   "families": 14,
   "published": 30,
-  "configurations": 17,
+  "configurations": 19,
   "rows": [
     {
       "id": "opus55_tools",
@@ -31,6 +31,24 @@
       "token_usage_is_lower_bound": false,
       "token_usage_known_instances": 69,
       "token_usage_complete_instances": 69
+    },
+    {
+      "id": "sonnet55_tools",
+      "model": "Claude Sonnet 5.5",
+      "effort": "high",
+      "track": "tool-assisted",
+      "score": 122.25410847968894,
+      "hfr": 0.8768056262204474,
+      "valid": 94.20289855072464,
+      "output_tokens": 639411,
+      "mean_output_tokens": 9266.826086956522,
+      "token_usage_is_lower_bound": false,
+      "token_usage_known_instances": 69,
+      "token_usage_complete_instances": 69,
+      "evaluation_data": "evaluations/sonnet55-high.json",
+      "completed_utc": "2026-10-04T05:00:07.767447+00:00",
+      "evaluation_note_id": "sonnet55-search-exposure",
+      "evaluation_note": "Sonnet 5.5 with tools: a search result on one instance included this paper and a description of its published reference construction."
     },
     {
       "id": "luna_tools",
@@ -115,6 +133,22 @@
       "token_usage_is_lower_bound": false,
       "token_usage_known_instances": 69,
       "token_usage_complete_instances": 69
+    },
+    {
+      "id": "sonnet55_high",
+      "model": "Claude Sonnet 5.5",
+      "effort": "high",
+      "track": "tool-free",
+      "score": 53.120323707530986,
+      "hfr": 0.48342350380676674,
+      "valid": 85.5072463768116,
+      "output_tokens": 572624,
+      "mean_output_tokens": 8298.898550724638,
+      "token_usage_is_lower_bound": false,
+      "token_usage_known_instances": 69,
+      "token_usage_complete_instances": 69,
+      "evaluation_data": "evaluations/sonnet55-high.json",
+      "completed_utc": "2026-10-04T04:20:28.422778+00:00"
     },
     {
       "id": "deepseek_high",
@@ -246,7 +280,28 @@
   "sources": [
     "bench/paper/tables/publication_data.json",
     "bench/paper/tables/tool_publication_data.json",
-    "output/figures/score-vs-tokens/data.json"
+    "output/figures/score-vs-tokens/data.json",
+    "website/dist/evaluations/sonnet55-high.json"
+  ],
+  "benchmark_version": "bench-v1.0",
+  "evaluation_notes": [
+    {
+      "id": "sonnet55-search-exposure",
+      "configuration_id": "sonnet55_tools",
+      "case_id": "a3-apfree_q-0",
+      "params": {
+        "q": 5,
+        "n": 6
+      },
+      "short_text": "Sonnet 5.5 with tools: a search result on one instance included this paper and a description of its published reference construction.",
+      "details": "A WebSearch result included this paper title/URL and a summary describing the 649-point reference construction. No explicit follow-up request for the paper or repository was found among recorded assistant tool requests. Absence of further explicit requests does not exclude indirect influence.",
+      "paper_url": "https://arxiv.org/html/2609.24555",
+      "search_query": "Elsholtz Pach \"Z_5^n\" progression-free Edel 649 construction dimension 6 size 3-AP-free set",
+      "recorded_paper_title": "The Endless Exam: Mathematical Constructions from Today\u2019s Models toward Superintelligence",
+      "score_adjusted": false,
+      "answer_repeated": false,
+      "evaluation_data": "evaluations/sonnet55-high.json"
+    }
   ],
   "token_accounting": {
     "definition": "Reported output tokens, including reasoning, for the 69 selected responses. Input tokens and earlier failed/superseded submissions are excluded. For tools, count all model responses in the selected trajectory. Unknown or interrupted usage makes the reported sum a lower bound.",
@@ -255,12 +310,12 @@
   "tracks": {
     "tool-free": {
       "label": "Without tools",
-      "configurations": 14,
+      "configurations": 15,
       "protocol": "One response per instance \u00b7 128k output tokens, including reasoning."
     },
     "tool-assisted": {
       "label": "Code + web",
-      "configurations": 3,
+      "configurations": 4,
       "protocol": "Per instance: 4 CPU threads \u00b7 16 GiB memory \u00b7 2 hours \u00b7 no cumulative output-token cap."
     }
   }

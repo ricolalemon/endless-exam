@@ -42,6 +42,18 @@ failed or superseded submissions are excluded. A star marks incomplete usage;
 these reported values are lower bounds. The download also retains the separate
 published-frontier ratios and accounting definitions.
 
+The leaderboard also includes later evaluations on the unchanged `bench-v1.0`
+instances and references. `dist/evaluations/sonnet55-high.json` contains all 138
+Sonnet 5.5 high submissions, exact prompts, verification results and token usage.
+`sync_publication.py` derives its two displayed rows from these case records,
+alongside the 17 configurations reported in the paper. The existing paper and
+its result selection remain unchanged.
+
+A dagger on Sonnet 5.5 with tools links to the recorded search exposure: on one
+instance, a search result included this paper and a description of its published
+reference construction. The original outcome is retained. The downloadable
+evaluation data gives the instance, query and audit finding.
+
 `dist/story-data.js` contains verified small constructions and their explanations.
 These illustrate the rules and are separate from the model results. Each family
 also describes the larger parameter settings used in the benchmark.

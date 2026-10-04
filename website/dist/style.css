@@ -89,6 +89,10 @@
 }
 @media(max-width:360px){.leaderboard-table tbody tr{padding-inline:5px;column-gap:6px}.leaderboard-table .tools>.cell-value{font-size:12px}}
 @media(min-width:761px) and (max-width:1000px){.leaderboard-table th,.leaderboard-table td{padding-inline:8px}.leaderboard-table .effort{font-size:13px}}
+.evaluation-note-marker{font-size:.75em;margin-left:3px;font-weight:400;color:var(--muted)}
+.evaluation-notes{font-size:12px;line-height:1.65;color:var(--muted);margin-top:10px;max-width:940px}
+.evaluation-notes a,.evaluation-settings a{text-decoration:underline;text-underline-offset:3px}
+.evaluation-notes p{scroll-margin-top:24px}
 
 .score-heading{display:grid;grid-template-columns:minmax(0,1fr) 4.1em;column-gap:10px;row-gap:1px;font-size:14px}
 .score-heading>span:first-child{font-size:13px}

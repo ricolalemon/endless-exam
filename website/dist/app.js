@@ -28,6 +28,15 @@ fetch('results.json', {cache: 'no-store'}).then(r => { if (!r.ok) throw Error('R
   $('token-unknown-note').hidden = !rows.some(row => row.token_usage_is_lower_bound);
   $('protocol-tool-free').textContent = 'Without tools: ' + data.tracks['tool-free'].protocol;
   $('protocol-tool-assisted').textContent = 'Code + web: ' + data.tracks['tool-assisted'].protocol;
+  const notes = $('evaluation-notes');
+  notes.replaceChildren();
+  for (const note of data.evaluation_notes || []) {
+    const paragraph = document.createElement('p'); paragraph.id = note.id;
+    paragraph.append(document.createTextNode('† ' + note.short_text + ' '));
+    const link = document.createElement('a'); link.href = note.evaluation_data;
+    link.textContent = 'Evaluation data'; paragraph.append(link); notes.append(paragraph);
+  }
+  notes.hidden = !notes.childElementCount;
   rows.forEach((row, i) => {
     const tr = document.createElement('tr'); tr.setAttribute('role', 'row');
     tr.className = row.track + (i === 0 ? ' leader-row' : ''); tr.dataset.id = row.id;
@@ -44,6 +53,12 @@ fetch('results.json', {cache: 'no-store'}).then(r => { if (!r.ok) throw Error('R
         bar.append(fill, reference); chart.append(bar, value); td.append(chart);
         td.title = `Score ${row.score.toFixed(2)}. The thin mark is at 100, the reference level. Scores are uncapped.`;
       } else td.append(value);
+      if (cls === 'model' && row.evaluation_note_id) {
+        const marker = document.createElement('sup'); marker.className = 'evaluation-note-marker';
+        const link = document.createElement('a'); link.href = '#' + row.evaluation_note_id;
+        link.textContent = '†'; link.setAttribute('aria-label', 'Evaluation note for ' + row.model + ' with tools');
+        marker.append(link); value.append(marker);
+      }
       if (mobileLabel) {
         const label = document.createElement('span'); label.className = 'mobile-cell-label';
         label.textContent = mobileLabel; label.setAttribute('aria-hidden', 'true'); td.append(label);

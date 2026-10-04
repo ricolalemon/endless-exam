@@ -5,6 +5,7 @@
   const format = value => Math.round(value).toLocaleString('en-US');
   const labelOffsets = {
     astra_tools: [12, -12], luna_tools: [12, -10],
+    sonnet55_tools: [92, -38], sonnet55_high: [12, -12],
     astra_high: [20, 3], astra_medium: [12, -6],
     fable: [12, -10], fable_high: [12, 8],
     deepseek_high: [-12, -24, 'end'], deepseek_low: [-12, -10, 'end'],
@@ -63,8 +64,10 @@
         byId('token-tooltip-setting').textContent=`${row.effort} effort · ${row.track==='tool-assisted'?'Code + web':'No tools'}`;
         byId('token-tooltip-score').textContent=row.score.toFixed(2);
         byId('token-tooltip-usage').textContent=format(row.mean_output_tokens)+(row.token_usage_is_lower_bound?'*':'');
-        const note=byId('token-tooltip-note');note.hidden=!row.token_usage_is_lower_bound;
-        note.textContent=row.token_usage_is_lower_bound?'* Some usage was not reported; actual token use may be higher.':'';
+        const note=byId('token-tooltip-note'), notes=[];
+        if(row.token_usage_is_lower_bound)notes.push('* Some usage was not reported; actual token use may be higher.');
+        if(row.evaluation_note)notes.push('† '+row.evaluation_note);
+        note.hidden=!notes.length;note.textContent=notes.join(' ');
         tooltip.hidden=false;updateSelection();positionTooltip();
       }
       function hideTooltip() {
@@ -79,7 +82,7 @@
         const overlap = (a, b) => Math.max(0, Math.min(a.right,b.right)-Math.max(a.left,b.left)) * Math.max(0, Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top));
         for (const p of geometry) {
           const label = el('text', {'data-id':p.row.id,class:'plot-point-label' + (p.row.id === active ? ' is-selected' : '')});
-          label.append(el('tspan',{x:0,y:0,class:'plot-label-model'},p.row.model));
+          label.append(el('tspan',{x:0,y:0,class:'plot-label-model'},p.row.model+(p.row.evaluation_note_id?'†':'')));
           if (modelCounts.get(p.row.model) > 1 || p.row.track === 'tool-assisted') {
             const setting = p.row.effort + (p.row.track === 'tool-assisted' ? ' · code + web' : '');
             label.append(el('tspan',{x:0,y:14,class:'plot-label-setting'},setting));
